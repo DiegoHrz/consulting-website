@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "anna-1":'#D7E2DC',
+        "anna-2":'#FFE4D9',
+        "anna-3":'#FFCAD4',
+        "anna-4":'#F4ACB8',
+        "anna-5":'#9F8189',
       },
     },
   },
