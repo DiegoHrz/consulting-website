@@ -10,12 +10,15 @@ const Hero = () => {
           alt="Full-width GIF"
           className="w-screen h-screen object-cover"
         />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
+        <div className="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full ">
           <img
             src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
             alt="White Logo"
-            className="h-auto w-96  mx-auto px-3 animate-fade-title"
+            className="h-auto w-96  mx-auto px-3 animate-fade-title mb-10   "
           />
+          <div className="w-full flex justify-center animate-fade-subtitle" >
+            <button className="text-white mx-auto w-fit border px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">CONTACT US</button>
+          </div>
           {/* <img
             src="/assets/logo/logo-no-bg/logo-cafe-bistre-no-bg.png "
             alt="Cafe Logo"

@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Logo from "../../public/assets/Logo.svg";
 import Facebook from "../../public/assets/Facebook.svg";
@@ -7,7 +8,7 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { ImLocation2 } from "react-icons/im";
 
-export function Footer() {
+const Footer = () => {
   return (
     <div className="pt-32 pb-[40px] bg-black    text-white lg:text-[#d9d9d9] relative w-full ">
       {/* <div className="flex items-center justify-center gap-x-[12px]">
@@ -21,7 +22,7 @@ export function Footer() {
         <li>Enterprise</li>
         <li>Careers</li>
       </ul> */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:px-5   text-center w-[88%] max-w-7xl text-xs sm:text-base bg-white shadow-black shadow-[0px_0px_5px] ">
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:px-5   text-center w-[88%] max-w-7xl text-xs sm:text-base bg-white shadow-black shadow-[0px_0px_5px] ">
         <div>
           <p className=" text-sm md:text-lg lg:text-xl m-5 text-black">
             &quot;Este es el milagro que sucede a aquellos que aman de
@@ -29,7 +30,7 @@ export function Footer() {
           </p>
           <p className="mb-2 text-black">-Rainer Maria Rilke</p>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start gap-10 md:gap-40 w-[90%] max-w-7xl mx-auto">
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-2 w-full lg:w-1/3 ">
           <p className="text-[#464646] border-[#464646] font-black ">
@@ -120,4 +121,6 @@ export function Footer() {
       </div>
     </div>
   );
-}
+};
+
+export default Footer;

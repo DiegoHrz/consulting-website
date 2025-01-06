@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logoCafe from "../../public/assets/logo/logo-no-bg/logo-white-no-bg.png";
+import logoWhite from "../../public/assets/logo/logo-no-bg/logo-white-no-bg.png";
 import logoBlack from "../../public/assets/logo/logo-no-bg/logo-black-no-bg.png";
 import User from "../../public/assets/User.svg";
 import Menu from "../../public/assets/Menu.svg";
@@ -8,6 +8,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 
 import { IoIosMenu } from "react-icons/io";
 import { useNavStore } from "../store/useNavStore";
+import Link from "next/link";
 
 const smoothScroll = (targetId: string) => {
   const target = document.getElementById(targetId);
@@ -17,17 +18,15 @@ const smoothScroll = (targetId: string) => {
 };
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Leistungen", href: "#carta" },
-  { name: "Über Uns", href: "#galeria" },
-  // { name: "Testimonios", href: "#testimonios" },
-  // { name: "Evento", href: "#evento" },
-  { name: "Referenzen", href: "#acerca" },
-  { name: "FAQ", href: "#contactoM" },
-  { name: "Kontakt", href: "#contacto" },
+  { name: "Home", href: "/" },
+  { name: "Leistungen", href: "/leistungen" },
+  { name: "Über Uns", href: "/uber-uns" },
+  { name: "Referenzen", href: "/referenzen" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Kontakt", href: "/kontakt" },
 ];
 
-export function Navbar() {
+const Navbar=()=> {
   const [scrolled, setScrolled] = useState(false);
   const [enterMouse, setEnterMouse] = useState(false);
   const {
@@ -41,11 +40,17 @@ export function Navbar() {
   const [menuClass, setMenuClass] = useState("");
   const [scrollPositionOnClick, setScrollPositionOnClick] = useState(0);
 
+
+
+  useEffect(() => {
+    setIsLoading(true); // Forzar un estado inicial para evitar desajustes en SSR
+    setTimeout(() => setIsLoading(false), 100); // Simular la carga completa
+  }, [setIsLoading]);
+
   const tabHandler = (
     tab: string,
     event: React.MouseEvent<HTMLAnchorElement>
   ) => {
-    event.preventDefault();
     const sectionId = tab.toLowerCase();
     setSelectedTab(sectionId);
     setCurrentSection(sectionId); // Add this line
@@ -56,13 +61,15 @@ export function Navbar() {
     tab: string,
     event: React.MouseEvent<HTMLAnchorElement>
   ) => {
-    event.preventDefault();
+    // event.preventDefault();
     toggleMenu();
     tabHandler(tab, event);
   };
 
   useLayoutEffect(() => {
-    if (typeof window === 'undefined') return;
+    // if (typeof window !== "undefined") {
+    //   const value = localStorage.getItem("key"); // Esto asegura que solo se ejecute en el cliente.
+    // }
   
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
@@ -131,14 +138,14 @@ export function Navbar() {
             style={{ transitionDuration: "1250ms" }}
           >
             <Image
-              src={scrolled || enterMouse ? logoBlack : logoCafe}
+              src={scrolled || enterMouse ? logoBlack : logoWhite}
               alt="Logo"
               className={"w-8 h-8 md:h-16 md:w-16 aspect-square"}
             />
 
             <div className="hidden md:flex pl-[74px] md:gap-x-[2rem] lg:gap-x-[40px] ">
               {navLinks.map((item) => (
-                <a
+                <Link
                   className={`-tracking-tighter font-extralight hover:text-rilke-red ${
                     !isLoading && item.name.toLowerCase() === currentSection
                       ? "border-b-2 border-rilke-red text-rilke-red"
@@ -149,17 +156,17 @@ export function Navbar() {
                   onClick={(event) => tabHandler(item.name, event)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
         </div>
       </nav>
 
-      <nav className="md:hidden w-full items-center justify-between mt-[-16px] md:container md:mx-0 md:px-0 md:py-0 py-2 relative z-20">
+      <nav className="md:hidden w-full items-center justify-between mt-[-16px] md:container md:mx-0 md:px-0  py-2 relative z-20">
         <div className="fixed z-10 top-0 w-full">
           <div className="bg-[#32304c] text-center text-white font-sans text-xs p-1 font-light">
-            MENÚ DE LUNES A SÁBADOS DE 12pm a 3pm desde S/23.
+            CONTACT CONTACT CONTACT CONCTACT CONTACT
           </div>
           <div
             className={`flex items-center justify-between  z-10 top-0 w-full py-2 px-6 md:px-0 text-white ${
@@ -169,7 +176,7 @@ export function Navbar() {
           >
             <div>
               <Image
-                src={scrolled || clickHamburgerMenu ? logoBlack : logoCafe}
+                src={scrolled || clickHamburgerMenu ? logoBlack : logoWhite}
                 alt="Logo"
                 className="w-24 h-15"
               />
@@ -187,7 +194,7 @@ export function Navbar() {
                 className={`absolute top-[6.3rem] left-0 flex flex-col w-screen border gap-x-[56px] justify-center items-center bg-white text-black ${menuClass}`}
               >
                 {navLinks.map((item) => (
-                  <a
+                  <Link
                     className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] ${
                       !isLoading && item.href.slice(1) === currentSection
                         ? " text-rilke-red"
@@ -198,7 +205,7 @@ export function Navbar() {
                     onClick={(event) => tabAndToggle(item.name, event)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -208,3 +215,5 @@ export function Navbar() {
     </>
   );
 }
+
+export default Navbar
