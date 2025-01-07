@@ -1,5 +1,7 @@
 "use client";
 
+import Subtitle from "./customTags/Subtitle";
+
 const Hero = () => {
   return (
     <div className="h-screen relative">
@@ -14,9 +16,10 @@ const Hero = () => {
           <img
             src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
             alt="White Logo"
-            className="h-auto w-96  mx-auto px-3 animate-fade-title mb-10   "
+            className="h-auto w-96  mx-auto px-3 animate-fade-title"
           />
-          <div className="w-full flex justify-center animate-fade-subtitle" >
+          <Subtitle text="Starten Sie Ihr Unternehmen mit dem perfekten Businessplan" /> 
+          <div className="w-full flex justify-center animate-fade-subtitle pt-8" >
             <button className="text-white mx-auto w-fit border px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">CONTACT US</button>
           </div>
           {/* <img

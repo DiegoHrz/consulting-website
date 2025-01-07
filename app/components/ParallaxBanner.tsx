@@ -6,7 +6,7 @@ const ParallaxBanner = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const position = -window.pageYOffset - 1000;
+      const position = -window.pageYOffset - 500;
       setScrollPosition(position);
     };
 
@@ -16,9 +16,9 @@ const ParallaxBanner = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const parallaxShift = scrollPosition * 0.1;
+  const parallaxShift = scrollPosition * 0.15;
   return (
-    <div className=" relative overflow-hidden  border-red-500 h-[26rem] mx-auto w-full max-w-7xl">
+    <div className="overflow-hidden  border-red-500 h-[26rem]  w-full sm:px-16 px-14 sm:py-16 py-10 max-w-7xl mx-auto relative z-0 ">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white z-50 w-16 ">
         Hola soy Anna
       </div>
