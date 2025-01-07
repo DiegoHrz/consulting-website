@@ -10,6 +10,7 @@ import { IoIosMenu } from "react-icons/io";
 import { useNavStore } from "../store/useNavStore";
 import Link from "next/link";
 
+
 const smoothScroll = (targetId: string) => {
   const target = document.getElementById(targetId);
   if (target) {
@@ -122,7 +123,7 @@ const Navbar=()=> {
     <>
       <nav className="hidden md:flex w-full items-center justify px-[20px] py-[16px] md:container md:mx-0 md:px-0 md:py-0 border">
         <div className="fixed z-10 top-0 w-full">
-          <div className="bg-anna-brown text-anna-4 text-center  font-sans text-xs py-1 font-light w-full">
+          <div className="bg-anna-blue text-anna-4 text-center  font-sans text-xs py-1 font-light w-full">
             CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME
           </div>
           <div

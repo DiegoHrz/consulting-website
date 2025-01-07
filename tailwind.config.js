@@ -10,6 +10,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        vollkorn: ['Vollkorn', 'serif'],
+        vollkornSC: ['Vollkorn SC'],
+        cabin: ['Cabin'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

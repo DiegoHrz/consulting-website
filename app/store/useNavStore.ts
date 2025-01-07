@@ -11,32 +11,18 @@ type NavStore = {
 };
 
 export const useNavStore = create<NavStore>()(
-  typeof window !== "undefined" // Asegura que persist se use solo en el cliente
-    ? persist(
-        (set) => ({
-          selectedTab: "home",
-          setSelectedTab: (tab) => set({ selectedTab: tab.toLowerCase() }),
-          currentSection: "home",
-          setCurrentSection: (section) =>
-            set({
-              currentSection: section.toLowerCase(),
-              selectedTab: section.toLowerCase(),
-            }),
-          isLoading: true,
-          setIsLoading: (loading) => set({ isLoading: loading }),
-        }),
-        { name: "nav-storage" }
-      )
-    : (set) => ({
-        selectedTab: "home",
-        setSelectedTab: (tab) => set({ selectedTab: tab.toLowerCase() }),
-        currentSection: "home",
-        setCurrentSection: (section) =>
-          set({
-            currentSection: section.toLowerCase(),
-            selectedTab: section.toLowerCase(),
-          }),
-        isLoading: true,
-        setIsLoading: (loading) => set({ isLoading: loading }),
-      })
+  persist(
+    (set) => ({
+      selectedTab: "home", // Change to lowercase
+      setSelectedTab: (tab) => set({ selectedTab: tab.toLowerCase() }), // Ensure lowercase
+      currentSection: "home",
+      setCurrentSection: (section) =>
+        set({ currentSection: section.toLowerCase(), selectedTab: section.toLowerCase() }), // Ensure lowercase
+      isLoading: true,
+      setIsLoading: (loading) => set({ isLoading: loading }),
+    }),
+    {
+      name: "nav-storage",
+    }
+  )
 );

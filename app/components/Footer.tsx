@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Logo from "../../public/assets/Logo.svg";
 import Facebook from "../../public/assets/Facebook.svg";
@@ -34,7 +34,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start gap-10 md:gap-40 w-[90%] max-w-7xl mx-auto">
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-2 w-full lg:w-1/3 ">
           <p className="text-[#464646] border-[#464646] font-black ">
-            CONTACTANOS
+            KONTAKTANOS
           </p>
           <div className="flex flex-col gap-1">
             <a
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center w-full  gap-2 lg:w-1/3">
-          <p className="text-[#464646]">CONNECT</p>
+          <p className="text-[#464646]">VERBINDEN</p>
           <div className="flex gap-2">
             <a
               href="https://www.facebook.com/labodeguitadanke/"
@@ -72,7 +72,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://wa.me/913441311?text=Hola%20que%20tal%20vengo%20de%20cafe-rilke.com%20quisiera%20hacer%20un%20pedido"
+              href="https://wa.me/4915123427351?text=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col justify-center lg:justify-end items-center lg:items-end w-full lg:w-1/3 gap-2 text-center">
-          <p className="text-[#464646]">ENCUENTRANOS</p>
+          <p className="text-[#464646]">FINDEN SIE UNS</p>
           <div className=" text-white  transition-all duration-700  hover:scale-110 rounded-full p-1">
             <a
               href="https://www.google.com/maps/place/Caf%C3%A9+Rilke+Per%C3%BA/@-12.1213276,-77.0368608,19.77z/data=!4m6!3m5!1s0x9105c9b327b765cb:0x560f84cb9c54101a!8m2!3d-12.1213366!4d-77.0366567!16s%2Fg%2F11vbxjvk1w?entry=ttu"
@@ -104,7 +104,7 @@ const Footer = () => {
               className="flex items-center hover:text-rilke-red"
             >
               <ImLocation2 className="hover:shadow-rilke-red p-1" size={23} />
-              <p>C. José Gálvez 685, Miraflores 15074, Lima</p>
+              <p>Rahmhügel 1 97478 Oberschwappach Deutschland</p>
             </a>
           </div>
         </div>

@@ -1,10 +1,21 @@
+import HeroSecondary from "@/app/components/HeroSecondary";
 import React from "react";
 
 const Referenzen = () => {
   return (
-    <div className="h-[100vh] w-full m-auto text-black pt-[104px] bg-anna-brown ">
-      <div className="max-w-screen-xl mx-auto w-full ">Referenzen</div>
+    <div>
+    <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
+      <HeroSecondary
+        image="balloons.jpg"
+        header="our customers"
+        title="Referenzen"
+        text="Wir sind eine Beratungsfirma, die Unternehmen mit
+      maßgeschneiderten Lösungen unterstützt. Unser Ziel ist es,
+      gemeinsam Ihre Vision erfolgreich umzusetzen."
+      />
     </div>
+    <div></div>
+  </div>
   );
 };
 
