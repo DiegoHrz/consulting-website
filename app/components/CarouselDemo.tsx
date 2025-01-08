@@ -33,7 +33,7 @@ export function CarouselDemo() {
   const ofertas = ["Recomendacion 1", "Recomendacion 2", "Recomendacion 3", "Recomendacion 4", "Recomendacion 5"];
 
   return (
-    <div className="relative w-full max-w-7xl px-16">
+    <div className="relative w-full max-w-7xl px-16 py-40">
       <Carousel
         setApi={setApi}
         className="w-full"

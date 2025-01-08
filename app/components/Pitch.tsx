@@ -17,8 +17,8 @@ const Pitch = () => {
           maximieren. Sind Sie bereit, mit uns durchzustarten?
         </p>
         <div className="w-full  animate-fade-subtitle pt-8">
-          <button className="rounded-lg text-anna-blue mx-auto w-fit border px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue ">
-            LEARN MORE
+          <button className="font-cabin_sans rounded-lg text-anna-blue mx-auto w-fit border px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue">
+            BUNCHUNG
           </button>
         </div>
       </div>

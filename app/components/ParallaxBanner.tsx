@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Title from "./customTags/Title";
 
-const ParallaxBanner = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+const ParallaxBanner2 = () => {
+  const [scrollPosition, setScrollPosition] = useState(-500);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +20,13 @@ const ParallaxBanner = () => {
   const parallaxShift = scrollPosition * 0.15;
   return (
     <div className="overflow-hidden  border-red-500 h-[26rem]  w-full sm:px-16 px-14 sm:py-16 py-10 max-w-7xl mx-auto relative z-0 ">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white z-50 w-16 ">
-        Hola soy Anna
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white z-50">
+        <img
+          src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
+          alt="White Logo"
+          className="h-auto w-40  mx-auto px-3 animate-fade-title"
+        />
+        <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
       </div>
       <div className="h-full w-full relative">
         <div
@@ -61,4 +67,4 @@ const ParallaxBanner = () => {
   );
 };
 
-export default ParallaxBanner;
+export default ParallaxBanner2;

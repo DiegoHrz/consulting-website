@@ -9,18 +9,67 @@ import { useState } from "react";
 
 const texts = [
   {
-    question: "Is it accessible?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+    question: "Wie läuft das Coaching bei AS Vision Partners ab?",
+    answer:
+      "Unsere Coachings sind flexibel und individuell auf dich zugeschnitten. Wir bieten Online-Coachings an, die sich an deinem Zeitplan orientieren. Gemeinsam erarbeiten wir Lösungen, die zu deinen Zielen passen, und stehen dir bei jedem Schritt zur Seite.",
   },
   {
-    question: "Is it styled?",
+    question: "Kann das Coaching finanziert werden?",
     answer:
-      "Yes. It comes with default styles that matches the other components' aesthetic.",
+      "Ja, in vielen Fällen ist eine Finanzierung möglich. Wenn du Arbeitslosengeld 1 beziehst, kannst du z. B. einen AVGS-Gutschein beantragen, der die Kosten für das Coaching abdeckt. Auch für etablierte Unternehmen gibt es Fördermöglichkeiten durch das Bundesamt für Wirtschaft und Ausfuhrkontrolle (BAFA). Kontaktiere uns, und wir prüfen gemeinsam deine Optionen.",
   },
   {
-    question: "Is it animated?",
+    question: "Wie hoch ist mein Gründungszuschuss?",
     answer:
-      "Yes. It's animated by default, but you can disable it if you prefer.",
+      "Der Gründerzuschuss des Arbeitsamtes beläuft sich auf Dein letztes Arbeitslosengeld I plus eine Pauschale von 300€ zur sozialen Absicherung. Dieser wird  zunächst für 6 Monate zusätzlich zum ALG I gewährt. Danach kann die Fortzahlung um weitere 9 Monate verlängert werden.",
+  },
+  {
+    question: "Welche Unterlagen benötige ich für den Gründungszuschuss?",
+    answer: [
+      "Einen Businessplan",
+      "Eine Kapitalbedarfs- und Finanzierungsübersicht",
+      "Eine fachkundige Stellungnahme",
+      "Deinen Lebenslauf und relevante Nachweise über Qualifikationen",
+      "Das ausgefüllte Antragsdokument",
+    ],
+    additionalInfo:
+      "Wir unterstützen dich bei der  Erstellung aller Unterlagen.",
+  },
+  {
+    question: "Wie lange dauert es, einen Businessplan zu erstellen?",
+    answer:
+      "Die Dauer hängt von der Komplexität deines Vorhabens ab. In der Regel benötigen wir 2–3 Wochen, um einen vollständigen Businessplan inklusive Finanzplanung zu erstellen.",
+  },
+  {
+    question: "Kann ich Lexware Office auch ohne Vorkenntnisse erlernen?",
+    answer:
+      "Absolut! Unsere Schulungen sind so gestaltet, dass sie sich an deinem Kenntnisstand orientieren. Auch ohne Vorkenntnisse wirst du in kurzer Zeit lernen, deine Buchhaltung mit Lexware Office effizient zu führen.",
+  },
+  {
+    question: "Wie lange dauert es, eine Website zu erstellen?",
+    answer:
+      "Das hängt von den Anforderungen ab. Eine einfache Website kann in wenigen Wochen fertig sein, während komplexere Projekte mehr Zeit benötigen. Wir besprechen deine Wünsche im Vorfeld und geben dir einen realistischen Zeitrahmen.",
+  },
+  {
+    question: "Welche Zielgruppe unterstützt ihr?",
+    answer:
+      "Unsere Dienstleistungen richten sich an Gründerinnen, Selbstständige und Unternehmerinnen, die Unterstützung bei der Planung, Strukturierung und Umsetzung ihrer Vorhaben suchen. Egal, ob du am Anfang stehst oder ein bestehendes Unternehmen weiterentwickeln möchtest – wir sind für dich da.",
+  },
+  {
+    question:
+      "Warum brauche ich einen Businessplan, auch wenn ich keinen Gründungszuschuss beantragen möchte?",
+    answer:
+      "Ein Businessplan hilft dir, deine Geschäftsidee klar zu strukturieren, potenzielle Herausforderungen frühzeitig zu erkennen und dein Vorhaben gezielt umzusetzen. Auch für Gespräche mit Banken, Investoren oder Geschäftspartnern ist ein professioneller Businessplan unerlässlich.",
+  },
+  {
+    question: "Kann ich auch nur einzelne Leistungen buchen?",
+    answer:
+      "Ja, unsere Leistungen sind modular aufgebaut. Du kannst gezielt die Unterstützung wählen, die du benötigst – sei es die Erstellung eines Businessplans, eine Schulung in Lexware Office oder die Entwicklung einer Website.",
+  },
+  {
+    question: "Bietet ihr auch langfristige Begleitung an?",
+    answer:
+      "Natürlich. Wir stehen dir nicht nur in der Anfangsphase zur Seite, sondern begleiten dich auch langfristig bei der Weiterentwicklung deines Unternehmens – sei es durch regelmäßige Beratungen oder spezifische Coachings.",
   },
 ];
 
@@ -45,7 +94,7 @@ const AccordionElement = () => {
       {texts.map((item, index) => (
         <AccordionItem
           key={index}
-          value={`item-${index}`} 
+          value={`item-${index}`}
           className={`px-2 rounded-lg duration-700 ${
             accordionSelected === `item-${index}`
               ? "shadow-gray-400 shadow-[0px_1px_3px_0px]"
@@ -61,7 +110,20 @@ const AccordionElement = () => {
           >
             {item.question}
           </AccordionTrigger>
-          <AccordionContent>{item.answer}</AccordionContent>
+          <AccordionContent>
+            {Array.isArray(item.answer) ? (
+              <ul className="list-disc pl-6">
+                {item.answer.map((listItem, listIndex) => (
+                  <li key={listIndex}>{listItem}</li>
+                ))}
+              </ul>
+            ) : (
+              item.answer
+            )}
+            {item.additionalInfo && (
+              <p className="pt-2 ml-2 font-semibold">{item.additionalInfo}</p>
+            )}
+          </AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>

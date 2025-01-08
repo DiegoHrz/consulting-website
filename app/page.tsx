@@ -6,6 +6,7 @@ import ParallaxBanner from "./components/ParallaxBanner";
 import Pitch from "./components/Pitch";
 import PitchSecond from "./components/PitchSecond";
 import Services from "./components/Services";
+import ParallaxBanner2 from "./components/ParallaxBanner2";
 
 export default function Home() {
   return (
@@ -22,7 +23,9 @@ export default function Home() {
       <div className="relative py-10">
         <div className="w-screen h-1/2 bg-anna-gray absolute -z-50 top-1/2 "></div>
         <div className="max-w-7xl  m-auto">
-          <ParallaxBanner />
+          {/* <ParallaxBanner /> */}
+          <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg" height={26} />
+          {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
         </div>
       </div>
       <div className="bg-anna-gray pb-10">

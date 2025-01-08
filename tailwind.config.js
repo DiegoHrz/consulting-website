@@ -21,7 +21,10 @@ module.exports = {
   			],
   			cabin: [
   				'Cabin'
-  			]
+  			],
+			  cabin_sans: [
+				'Cabin', 'sans-serif'
+			]
   		},
   		colors: {
   			background: 'hsl(var(--background))',
