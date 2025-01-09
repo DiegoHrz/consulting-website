@@ -7,7 +7,7 @@ const Reviews = () => {
   return (
     <div className="border rounded-lg shadow-gray-300 shadow-[0px_0px_15px] py-6" >
       <Title text="Reviews" additionalClasses="text-center" />
-      <p className="font-vollkorn text-center pb-8" > What our customers say about me</p>
+      <p className="font-vollkorn text-center pb-8" > What our customers say about us</p>
       <CarouselDemo />
     </div>
   );

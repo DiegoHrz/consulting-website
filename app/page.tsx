@@ -2,7 +2,7 @@ import AccordionElement from "./components/FAQ";
 import BusinessPlans from "./components/BusinessPlans";
 import { CarouselDemo } from "./components/CarouselDemo";
 import Hero from "./components/Hero";
-import ParallaxBanner from "./components/ParallaxBanner";
+
 import Pitch from "./components/Pitch";
 import PitchSecond from "./components/PitchSecond";
 import Services from "./components/Services";
