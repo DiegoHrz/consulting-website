@@ -11,6 +11,11 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { FaRegStar, FaStar } from "react-icons/fa";
+import { AiTwotoneStar } from "react-icons/ai";
+import { SlStar } from "react-icons/sl";
+import CustomStar from "./customIcons/Star";
+import SvgShape from "./SvgShape";
 
 export function CarouselDemo() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -30,10 +35,16 @@ export function CarouselDemo() {
     });
   }, [api]);
 
-  const ofertas = ["Recomendacion 1", "Recomendacion 2", "Recomendacion 3", "Recomendacion 4", "Recomendacion 5"];
+  const ofertas = [
+    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
+    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
+    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
+    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
+    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
+  ];
 
   return (
-    <div className="relative w-full max-w-7xl px-16 py-40">
+    <div className="relative w-full max-w-7xl px-16 pb-6 pt-4">
       <Carousel
         setApi={setApi}
         className="w-full"
@@ -44,11 +55,64 @@ export function CarouselDemo() {
         <CarouselContent>
           {ofertas.map((oferta, index) => (
             <CarouselItem key={index} className="md:basis-1/3">
-              <div className="p-1">
-                <Card className=" mx-10" >
-                  <CardContent className="flex flex-col items-center justify-center p-6 border-none aspect-square">
-                    <div>★★★★★</div>
-                    <div className="text-xl ">{oferta}</div>
+              <div className="p-1 ">
+                <Card className=" mx-4">
+                  <CardContent className="flex flex-col items-center justify-center p-4 border-none rounded-lg aspect-square  shadow-gray-300 shadow-[0px_0px_15px]">
+                    <div className=" w-full h-full px-5">
+                      <div className="flex mx-2 mb-5 gap-5 ">
+                        <div className="">
+                          {/* <SvgShape imageX={1} imageY={25}  /> */}
+                          <img
+                            src="/profile/chino-profesional.png"
+                            alt="f"
+                            className="h-14 "
+                          />
+                        </div>
+
+                        <div className="flex flex-col  mt-1">
+                          <div className="text-sm font-medium  ">
+                            Morris Clarke
+                          </div>
+                          <div className="text-xs  font-light">IBM</div>
+                          <div className="text-xs flex  gap-[0.12rem]">
+                            <CustomStar
+                              fill="#FFDC38"
+                              stroke="#FFAD2C"
+                              strokeWidth={2}
+                              size={15}
+                            />
+                            <CustomStar
+                              fill="#FFDC38"
+                              stroke="#FFAD2C"
+                              strokeWidth={2}
+                              size={15}
+                            />
+                            <CustomStar
+                              fill="#FFDC38"
+                              stroke="#FFAD2C"
+                              strokeWidth={2}
+                              size={15}
+                            />
+                            <CustomStar
+                              fill="#FFDC38"
+                              stroke="#FFAD2C"
+                              strokeWidth={2}
+                              size={15}
+                            />
+                            <CustomStar
+                              fill="#FFDC38"
+                              stroke="#FFAD2C"
+                              strokeWidth={2}
+                              size={15}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className=" font-semibold text-center mb-3 text-anna-brown font-cabin">
+                        Amazing Review
+                      </div>
+                      <div className="text-sm text-anna-brown/70 font-cabin_sans ">{oferta}</div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>

@@ -8,6 +8,10 @@ import PitchSecond from "./components/PitchSecond";
 import Services from "./components/Services";
 import ParallaxBanner2 from "./components/ParallaxBanner2";
 
+import FAQ from "./components/FAQ";
+import Reviews from "./components/Reviews";
+
+
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
@@ -15,16 +19,19 @@ export default function Home() {
       <div className="max-w-7xl mx-auto ">
         <BusinessPlans />
         <Pitch />
-        <PitchSecond/>
+        <PitchSecond />
         <Services />
-        <CarouselDemo/>
-        <AccordionElement />
+        <Reviews/>
+        <FAQ/>
       </div>
       <div className="relative py-10">
         <div className="w-screen h-1/2 bg-anna-gray absolute -z-50 top-1/2 "></div>
-        <div className="max-w-7xl  m-auto">
+        <div className="max-w-7xl  m-auto sm:px-16 px-14 ">
           {/* <ParallaxBanner /> */}
-          <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg" height={26} />
+          <ParallaxBanner2
+            imageUrl="/banner/parallax-image-2.jpg"
+            height={26}
+          />
           {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
         </div>
       </div>
@@ -36,7 +43,7 @@ export default function Home() {
           </p>
         </div>
         <div className="w-full flex justify-center animate-fade-subtitle ">
-          <button className="rounded-lg text-anna-blue mx-auto w-fit border px-10 py-4 font-semibold text-sm hover:text-anna-white hover:bg-anna-blue duration-700 transition border-anna-blue ">
+          <button className="rounded-lg text-white mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-white hover:bg-anna-blue duration-700 transition border-anna-white ">
             LEARN MORE
           </button>
         </div>

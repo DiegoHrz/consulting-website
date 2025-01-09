@@ -20,7 +20,7 @@ const Hero = () => {
           />
           <Subtitle text="Starten Sie Ihr Unternehmen mit dem perfekten Businessplan" /> 
           <div className="w-full flex justify-center animate-fade-subtitle pt-8" >
-            <button className="text-white mx-auto w-fit border px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">CONTACT US</button>
+            <button className="text-white mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">CONTACT US</button>
           </div>
           {/* <img
             src="/assets/logo/logo-no-bg/logo-cafe-bistre-no-bg.png "

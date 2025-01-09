@@ -5,7 +5,7 @@ import Title from "./customTags/Title";
 
 const Pitch = () => {
   return (
-    <div className="flex w-full flex-col  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-0 ">
+    <div className="flex w-full flex-col-reverse  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-0 ">
       <div className="md:w-1/2 ">
         <Title text="Jetzt Unternehmer werden" />
         <p className="sm:pr-20 font-vollkorn text-[#808080] pt-4">
@@ -17,7 +17,7 @@ const Pitch = () => {
           maximieren. Sind Sie bereit, mit uns durchzustarten?
         </p>
         <div className="w-full  animate-fade-subtitle pt-8">
-          <button className="font-cabin_sans rounded-lg text-anna-blue mx-auto w-fit border px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue">
+          <button className="font-cabin_sans rounded-lg text-anna-blue mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue">
             BUNCHUNG
           </button>
         </div>

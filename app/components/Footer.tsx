@@ -10,7 +10,7 @@ import { ImLocation2 } from "react-icons/im";
 
 const Footer = () => {
   return (
-    <div className="pt-32 pb-[40px] bg-black    text-white lg:text-[#d9d9d9] relative w-full ">
+    <div className="pt-32 pb-[40px] bg-[#8B97A5]    text-white lg:text-[#d9d9d9] relative w-full ">
       {/* <div className="flex items-center justify-center gap-x-[12px]">
         <Image src={Logo} alt="Logo" />
         <p className="font-bold text-[#36485C] text-[17px]">Jan Marshal</p>

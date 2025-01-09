@@ -605,3 +605,7 @@ h2{
     @apply bg-background text-foreground;
   }
 }
+
+.clip-path-custom {
+  clip-path: url(#clip-path); /* Hace referencia al clipPath definido en el SVG */
+}

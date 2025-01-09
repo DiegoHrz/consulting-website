@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 
+import { motion } from "framer-motion";
 import { ComponentType } from "react";
 import { staggerContainer } from "../utils/motion";
 
