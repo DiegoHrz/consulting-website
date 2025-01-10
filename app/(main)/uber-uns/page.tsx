@@ -1,3 +1,4 @@
+import Collage from "@/app/components/customIcons/Collage";
 import Header from "@/app/components/customTags/Header";
 import Title from "@/app/components/customTags/Title";
 import HeroSecondary from "@/app/components/HeroSecondary";
@@ -16,7 +17,15 @@ const About = () => {
         gemeinsam Ihre Vision erfolgreich umzusetzen."
         />
       </div>
-      <div></div>
+      <div>
+        <Collage
+          main_image="worker2.jpg"
+          left_top_image="worker1.jpg"
+          right_top_image="worker3.jpg"
+          left_bottom_image="worker4.jpeg"
+          right_bottom_image="worker5.jpeg"
+        />
+      </div>
     </div>
   );
 };
