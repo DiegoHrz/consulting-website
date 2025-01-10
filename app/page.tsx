@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
       <Hero />
-      <div className="max-w-7xl mx-auto ">
+      <div className="">
         <BusinessPlans />
         <Pitch />
         <PitchSecond />
@@ -26,7 +26,7 @@ export default function Home() {
       </div>
       <div className="relative py-10">
         <div className="w-screen h-1/2 bg-anna-gray absolute -z-50 top-1/2 "></div>
-        <div className="max-w-7xl  m-auto sm:px-16 px-14 ">
+        <div className="max-w-7xl  m-auto sm:px-16 px-10 ">
           {/* <ParallaxBanner /> */}
           <ParallaxBanner2
             imageUrl="/banner/parallax-image-2.jpg"
