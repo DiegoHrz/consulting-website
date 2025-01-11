@@ -34,9 +34,7 @@ const Footer = () => {
       </div> */}
       <div className="flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start gap-10 md:gap-40 w-[90%] max-w-7xl mx-auto">
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-2 w-full lg:w-1/3 ">
-          <p className="text-[#464646] border-[#464646]  ">
-            KONTAKTANOS
-          </p>
+          <p className="text-[#464646] border-[#464646]  ">KONTAKTANOS</p>
           <div className="flex flex-col gap-1">
             <a
               href="mailto:info@cafe-rilke.com?subject=Consulta&body=Hola, me encantaría saber más del servicio..."
@@ -109,6 +107,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <div className="border w-full" >
+          hola
+        </div>
       </div>
 
       {/* <div className="flex items-center justify-center gap-x-[35px] pt-[40px]">
@@ -120,11 +121,15 @@ const Footer = () => {
       <div className="w-full text-center text-[14px] font-medium text-[#666666] pt-16">
         <div className="h-[0.1rem] w-full bg-[#DDDDDD] mb-4"></div>
         <div className="flex justify-center items-center gap-3">
-          <p className="text-anna-brown" >© 2024 Alle Rechte vorbehalten</p>
+          <p className="text-anna-brown">© 2024 Alle Rechte vorbehalten</p>
           <p>|</p>
-          <Link href="/impresum" className="text-anna-brown" >Impressum </Link>
+          <Link href="/impresum" className="text-anna-brown">
+            Impressum{" "}
+          </Link>
           <p>|</p>
-          <Link href="/datenschutzerklarung" className="text-anna-brown">Datenschutzerklärung</Link>
+          <Link href="/datenschutzerklarung" className="text-anna-brown">
+            Datenschutzerklärung
+          </Link>
         </div>
       </div>
     </div>

@@ -89,7 +89,7 @@ const Services: React.FC = ({}) => {
               title="Businessplan"
               text="Your financial kick start in independence"
               button="See more"
-              bestSeller={true}
+              special="bestSeller"
             />
 
             <GlassBox
@@ -108,7 +108,7 @@ const Services: React.FC = ({}) => {
               title="Buchhaltung"
               text="Your financial kick start in independence"
               button="See more"
-              exclusive={true}
+              special="exclusive"
             />
             <GlassBox
               title="Websites und Marketing"
