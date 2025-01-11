@@ -17,7 +17,7 @@ const Impresum = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-16 bg-white font-cabin pb-[100px]">
         <div className="bg-[#F8F8F8] p-8">
           <Subtitle text="Impresum" color="black" position="left" size="3xl" />
-          <div className="pt-3 text-[#808080]">
+          <div className="pt-8 text-[#808080]">
             <p>Anna Schenk</p>
             <p>Rahmhügel 1</p>
             <p>97478 Knetzgau</p>

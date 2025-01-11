@@ -61,7 +61,7 @@ const Services: React.FC = ({}) => {
             }}
           >
             {/* <div className="w-40 h-40 bg-red-700 z-0 absolute -left-10" ></div> */}
-            <motion.div
+            {/* <motion.div
               className="absolute left-[60%] -top-0 z-40"
               initial={{ scale: 0, opacity: 0.5 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -70,36 +70,48 @@ const Services: React.FC = ({}) => {
             >
               <img src="/icons/best-seller.png" alt="" className="w-14 h-14" />
             </motion.div>
+            <motion.div
+              className="absolute  -top-0 left-64 z-40"
+              initial={{ scale: 0, opacity: 0.5 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, delay: 2.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              <img src="/icons/exclusive.png" alt="" className="w-14 h-14" />
+            </motion.div> */}
             <GlassBox
-              title="Foundation Grant"
+              title="Gründungszuschuss"
               text="Your financial kick start in independence"
               button="See more"
             />
 
             <GlassBox
-              title="Foundation Grant"
+              title="Businessplan"
+              text="Your financial kick start in independence"
+              button="See more"
+              bestSeller={true}
+            />
+
+            <GlassBox
+              title="Business Consulting"
               text="Your financial kick start in independence"
               button="See more"
             />
 
             <GlassBox
-              title="Foundation Grant"
+              title="Finanzierung"
               text="Your financial kick start in independence"
               button="See more"
-            />
 
-            <GlassBox
-              title="Foundation Grant"
-              text="Your financial kick start in independence"
-              button="See more"
             />
             <GlassBox
-              title="Foundation Grant"
+              title="Buchhaltung"
               text="Your financial kick start in independence"
               button="See more"
+              exclusive={true}
             />
             <GlassBox
-              title="Foundation Grant"
+              title="Websites und Marketing"
               text="Your financial kick start in independence"
               button="See more"
             />

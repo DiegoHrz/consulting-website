@@ -6,9 +6,17 @@ interface GlassBoxProps {
   title: string;
   text: string;
   button: string;
+  bestSeller?: boolean;
+  exclusive?: boolean;
 }
 
-const GlassBox: React.FC<GlassBoxProps> = ({ title, text, button }) => {
+const GlassBox: React.FC<GlassBoxProps> = ({
+  title,
+  text,
+  button,
+  bestSeller,
+  exclusive,
+}) => {
   return (
     <motion.div
       className=" flex flex-col justify-center items-center h-full  rounded-lg relative inset-0  "
@@ -18,7 +26,11 @@ const GlassBox: React.FC<GlassBoxProps> = ({ title, text, button }) => {
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div
-        className="inset-0  absolute flex justify-center items-center backdrop-blur-lg rounded-lg  bg-white/10 shadow-gray-400 shadow-[0px_0px_15px]"
+        className={`inset-0  absolute flex justify-center items-center backdrop-blur-lg rounded-lg  bg-white/10 ${
+          bestSeller && "shadow-[#E44846]"
+        } ${
+          exclusive && "shadow-[#BF9932]"
+        } shadow-gray-400 shadow-[0px_0px_15px]`}
         style={
           {
             // this gives the transparent and the backdrop the blur
@@ -30,6 +42,28 @@ const GlassBox: React.FC<GlassBoxProps> = ({ title, text, button }) => {
         transition={{ duration: 1.2, delay: 1.5, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.1 }}
       ></motion.div>
+      {bestSeller && (
+        <motion.div
+          className="absolute left-[82%] -top-0 z-40"
+          initial={{ scale: 0, opacity: 0.5 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 2.4, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <img src="/icons/best-seller.png" alt="" className="w-14 h-14" />
+        </motion.div>
+      )}
+      {exclusive && (
+        <motion.div
+          className="absolute  -top-0 left-[82%] z-40"
+          initial={{ scale: 0, opacity: 0.5 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 2.4, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <img src="/icons/exclusive.png" alt="" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14" />
+        </motion.div>
+      )}
       <div className="z-20 flex flex-col gap-4">
         <div className=" text-lg lg:text-2xl font-medium  z-10  font-cabin_sans ">
           {/* <BouncingText>40+</BouncingText> */}

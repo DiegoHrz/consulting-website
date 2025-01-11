@@ -136,7 +136,7 @@ const Navbar=()=> {
             }`}
             onMouseEnter={onEnterHandler}
             onMouseLeave={onLeaveHandler}
-            style={{ transitionDuration: "1250ms" }}
+            style={{ transitionDuration: "800ms" }}
           >
             <Image
               src={scrolled || enterMouse ? logoBlack : logoWhite}
