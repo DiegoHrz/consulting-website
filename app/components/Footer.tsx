@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="pt-32 pb-[40px] bg-[#8B97A5]    text-white lg:text-[#d9d9d9] relative w-full ">
+    <div className="pt-32 pb-[20px] bg-[#F8F8F8]    text-white lg:text-[#d9d9d9] relative w-full ">
       {/* <div className="flex items-center justify-center gap-x-[12px]">
         <Image src={Logo} alt="Logo" />
         <p className="font-bold text-[#36485C] text-[17px]">Jan Marshal</p>
@@ -34,13 +34,13 @@ const Footer = () => {
       </div> */}
       <div className="flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start gap-10 md:gap-40 w-[90%] max-w-7xl mx-auto">
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-2 w-full lg:w-1/3 ">
-          <p className="text-[#464646] border-[#464646] font-black ">
+          <p className="text-[#464646] border-[#464646]  ">
             KONTAKTANOS
           </p>
           <div className="flex flex-col gap-1">
             <a
               href="mailto:info@cafe-rilke.com?subject=Consulta&body=Hola, me encantaría saber más del servicio..."
-              className=" transition-all duration-700  hover:text-rilke-red hover:scale-110 rounded-xl p-1"
+              className=" transition-all duration-700  hover:text-rilke-red hover:scale-110 rounded-xl p-1 text-[#808080]"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -59,7 +59,7 @@ const Footer = () => {
             >
               <FaFacebookF
                 size={25}
-                className="text-white  transition-all duration-700  hover:scale-125  rounded-full hover:text-rilke-red p-1"
+                className="text-[#808080]  transition-all duration-700  hover:scale-125  rounded-full hover:text-rilke-red p-1"
               />
             </a>
             <a
@@ -69,7 +69,7 @@ const Footer = () => {
             >
               <IoMailOutline
                 size={28}
-                className="text-white  transition-all duration-700  hover:scale-110 rounded-full hover:text-rilke-red p-1"
+                className="text-[#808080]  transition-all duration-700  hover:scale-110 rounded-full hover:text-rilke-red p-1"
               />
             </a>
             <a
@@ -79,7 +79,7 @@ const Footer = () => {
             >
               <FaWhatsapp
                 size={28}
-                className="text-white  transition-all duration-700 hover:scale-110  rounded-full hover:text-rilke-red p-1"
+                className="text-[#808080]  transition-all duration-700 hover:scale-110  rounded-full hover:text-rilke-red p-1"
               />
             </a>
             <a
@@ -89,7 +89,7 @@ const Footer = () => {
             >
               <FaInstagram
                 size={28}
-                className="text-white  transition-all duration-700  hover:scale-110 rounded-full hover:text-rilke-red p-1"
+                className="text-[#808080]  transition-all duration-700  hover:scale-110 rounded-full hover:text-rilke-red p-1"
               />
             </a>
           </div>
@@ -102,7 +102,7 @@ const Footer = () => {
               href="https://www.google.com/maps/place/Caf%C3%A9+Rilke+Per%C3%BA/@-12.1213276,-77.0368608,19.77z/data=!4m6!3m5!1s0x9105c9b327b765cb:0x560f84cb9c54101a!8m2!3d-12.1213366!4d-77.0366567!16s%2Fg%2F11vbxjvk1w?entry=ttu"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center hover:text-rilke-red"
+              className="flex items-center hover:text-rilke-red text-[#808080]"
             >
               <ImLocation2 className="hover:shadow-rilke-red p-1" size={23} />
               <p>Rahmhügel 1 97478 Oberschwappach Deutschland</p>
@@ -117,14 +117,15 @@ const Footer = () => {
         <FaWhatsapp size={24} className="text-[#666666]" />
         <FaInstagram size={24} className="text-[#666666]" />
       </div> */}
-      <div className=" text-center text-[14px] font-medium text-[#666666] pt-16">
-        <p>© 2024 Alle Rechte vorbehalten</p>
-        <Link href="/impresum">
-          <p>Impressum</p>
-        </Link>
-        <Link href="/datenschutzerklarung">
-          <p>Datenschutzerklärung</p>
-        </Link>
+      <div className="w-full text-center text-[14px] font-medium text-[#666666] pt-16">
+        <div className="h-[0.1rem] w-full bg-[#DDDDDD] mb-4"></div>
+        <div className="flex justify-center items-center gap-3">
+          <p className="text-anna-brown" >© 2024 Alle Rechte vorbehalten</p>
+          <p>|</p>
+          <Link href="/impresum" className="text-anna-brown" >Impressum </Link>
+          <p>|</p>
+          <Link href="/datenschutzerklarung" className="text-anna-brown">Datenschutzerklärung</Link>
+        </div>
       </div>
     </div>
   );

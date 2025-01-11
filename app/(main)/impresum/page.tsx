@@ -65,43 +65,34 @@ const Impresum = () => {
           </p>
           <p className="text-xl pt-10 font-vollkorn">Haftungsausschluss</p>
           <p className="pt-3 text-[#808080]">
-
-          Trotz sorgfältiger inhaltlicher Kontrolle übernimmt der
-          Webseitenbetreiber dieser Webseite keine Haftung für die Inhalte
-          externer Links. Für den Inhalt der verlinkten Seiten sind
-          ausschließlich deren Betreiber verantwortlich. Sollten Sie dennoch auf
-          ausgehende Links aufmerksam werden, welche auf eine Webseite mit
-          rechtswidriger Tätigkeit/Information verweisen, ersuchen wir um
-          dementsprechenden Hinweis, um diese nach § 17 Abs. 2 ECG umgehend zu
-          entfernen. 
+            Trotz sorgfältiger inhaltlicher Kontrolle übernimmt der
+            Webseitenbetreiber dieser Webseite keine Haftung für die Inhalte
+            externer Links. Für den Inhalt der verlinkten Seiten sind
+            ausschließlich deren Betreiber verantwortlich. Sollten Sie dennoch
+            auf ausgehende Links aufmerksam werden, welche auf eine Webseite mit
+            rechtswidriger Tätigkeit/Information verweisen, ersuchen wir um
+            dementsprechenden Hinweis, um diese nach § 17 Abs. 2 ECG umgehend zu
+            entfernen.
           </p>
           <p className="pt-3 text-[#808080]">
-
-          Die Urheberrechte Dritter werden vom Betreiber dieser
-          Webseite mit größter Sorgfalt beachtet. Sollten Sie trotzdem auf eine
-          Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
-          entsprechenden Hinweis. Bei Bekanntwerden derartiger
-          Rechtsverletzungen werden wir den betroffenen Inhalt umgehend
-          entfernen.
+            Die Urheberrechte Dritter werden vom Betreiber dieser Webseite mit
+            größter Sorgfalt beachtet. Sollten Sie trotzdem auf eine
+            Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
+            entsprechenden Hinweis. Bei Bekanntwerden derartiger
+            Rechtsverletzungen werden wir den betroffenen Inhalt umgehend
+            entfernen.
           </p>
           <div className="flex items-center gap-2 pt-3">
-
-          <p className="text-[#808080]">
-            
-          Bild Quellen:
-          </p>
-          <a
+            <p className="text-[#808080]">Bild Quellen:</p>
+            <a
               href="https://unsplash.com/"
               className="text-[#0171E3] hover:underline break-words"
             >
               https://unsplash.com/
             </a>
           </div>
-          
         </div>
       </div>
-
-     
     </>
   );
 };
