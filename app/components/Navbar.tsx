@@ -121,8 +121,8 @@ const Navbar=()=> {
 
   return (
     <>
-      <nav className="hidden md:flex w-full items-center justify px-[20px] py-[16px] md:container md:mx-0 md:px-0 md:py-0 border">
-        <div className="fixed z-10 top-0 w-full">
+      <nav className="hidden md:flex w-full items-center justify px-[20px] py-[16px] md:container md:mx-0 md:px-0 md:py-0 border z-50">
+        <div className="fixed z-50 top-0 w-full">
           <div className="bg-anna-blue text-anna-4 text-center  font-sans text-xs py-1 font-light w-full">
             CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME
           </div>
@@ -164,7 +164,7 @@ const Navbar=()=> {
         </div>
       </nav>
 
-      <nav className="md:hidden w-full items-center justify-between mt-[-16px] md:container md:mx-0 md:px-0  py-2 relative z-20">
+      <nav className="md:hidden w-full items-center justify-between mt-[-16px] md:container md:mx-0 md:px-0  py-2 relative z-50">
         <div className="fixed z-10 top-0 w-full">
           <div className="bg-[#32304c] text-center text-white font-sans text-xs p-1 font-light">
             CONTACT CONTACT CONTACT CONCTACT CONTACT

@@ -20,20 +20,8 @@ export default function Home() {
         <BusinessPlans />
         <Pitch />
         <PitchSecond />
+
         <Services />
-        <Reviews/>
-        <FAQ/>
-      </div>
-      <div className="relative py-10">
-        <div className="w-screen h-1/2 bg-anna-gray absolute -z-50 top-1/2 "></div>
-        <div className="max-w-7xl  m-auto sm:px-16 px-10 ">
-          {/* <ParallaxBanner /> */}
-          <ParallaxBanner2
-            imageUrl="/banner/parallax-image-2.jpg"
-            height={26}
-          />
-          {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
-        </div>
       </div>
       <div className="bg-anna-gray pb-10">
         <div className="max-w-2xl mx-auto py-10">
@@ -48,6 +36,19 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <div className="relative py-10">
+        <div className="w-screen h-1/2 bg-anna-gray absolute -z-50 bottom-1/2 "></div>
+        <div className="max-w-7xl  m-auto sm:px-16 px-10 ">
+          {/* <ParallaxBanner /> */}
+          <ParallaxBanner2
+            imageUrl="/banner/parallax-image-2.jpg"
+            height={26}
+          />
+          {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
+        </div>
+      </div>
+      <Reviews/>
+      <FAQ/>
     </div>
   );
 }
