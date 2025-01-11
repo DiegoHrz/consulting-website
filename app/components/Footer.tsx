@@ -7,6 +7,7 @@ import Feed from "../../public/assets/Feed.svg";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { ImLocation2 } from "react-icons/im";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -118,6 +119,12 @@ const Footer = () => {
       </div> */}
       <div className=" text-center text-[14px] font-medium text-[#666666] pt-16">
         <p>© 2024 Alle Rechte vorbehalten</p>
+        <Link href="/impresum">
+          <p>Impressum</p>
+        </Link>
+        <Link href="/datenschutzerklarung">
+          <p>Datenschutzerklärung</p>
+        </Link>
       </div>
     </div>
   );
