@@ -19,6 +19,7 @@ module.exports = {
   			vollkornSC: [
   				'Vollkorn SC'
   			],
+
   			cabin: [
   				'Cabin'
   			],

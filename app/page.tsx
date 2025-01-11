@@ -23,9 +23,9 @@ export default function Home() {
 
         <Services />
       </div>
-      <div className="bg-anna-gray pb-10">
-        <div className="max-w-2xl mx-auto py-10">
-          <p className="text-center text-anna-brown font-vollkorn font-medium">
+      <div className="bg-anna-gray py-24">
+        <div className="max-w-2xl mx-auto pb-10">
+          <p className="text-center text-anna-brown font-vollkorn font-medium text-xl">
             Our name is inspired by the Japanese concept of mono no aware – the
             profound appreciation of the beauty in fleeting moments.
           </p>
@@ -36,7 +36,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="relative py-10">
+      <div className="relative sm:py-24 py-10">
         <div className="w-screen h-1/2 bg-anna-gray absolute -z-50 bottom-1/2 "></div>
         <div className="max-w-7xl  m-auto sm:px-16 px-10 ">
           {/* <ParallaxBanner /> */}
