@@ -6,7 +6,7 @@ interface ParallaxBannerProps {
   height: string | number; // Altura del contenedor
 }
 
-const ParallaxBanner: React.FC<ParallaxBannerProps> = ({ imageUrl, height }) => {
+const ParallaxBanner: React.FC<ParallaxBannerProps> = ({  height }) => {
   return (
     <div
       className="parallax-container"
