@@ -1,27 +1,36 @@
 "use client";
 import React from "react";
 
-
 interface ParallaxBannerProps {
   imageUrl?: string;
-  height?: string | number;
+  height?: string | number; // Altura del contenedor (por ejemplo, 600px)
 }
 
 const ParallaxBanner3: React.FC<ParallaxBannerProps> = ({
-  imageUrl = "https://cdn.pixabay.com/photo/2024/03/14/08/52/pug-8632718_1280.jpg",
-  height = "30rem",
+  imageUrl,
+  height,
 }) => {
   return (
-    <div
-      className="parallax-banner"
-      style={{
-        height,
-        backgroundImage: `url(${imageUrl})`,
-      }}
-    >
-      <h1 className="relative z-10 text-white">Site with static background</h1>
+    <div className="relative overflow-hidden border-4 h-80">
+
+        <div className="parallax" >
+            <img src="/banner/parallax-image-2.jpg" alt="" className="absolute" />
+        </div>
+
     </div>
   );
 };
 
 export default ParallaxBanner3;
+
+// div
+// style="visibility: visible; z-index: -100; position: fixed; top: 0px; left: 0px; overflow: hidden; transform: translate3d(0px, 715.531px, 0px); height: 603.227px; width: 431px;"
+
+
+// div
+// style="transform: translate3d(0px, 349.531px, 0px); visibility: visible; height: 603.227px; width: 464px;"
+
+
+
+// img
+// style="transform: translate3d(-406px, 167.575px, 0px); position: absolute; height: 851px; width: 1276px; max-width: none;"

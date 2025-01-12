@@ -743,21 +743,24 @@ h2 {
   will-change: transform; 
   z-index: -1;
 } */
-.parallax-banner {
-  position: relative;
+
+.parallax {
+  visibility: visible;
+  z-index: -100;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   overflow: hidden;
-  height: 40rem;
+  width: 800px;
+  height: 320px;
+  transform: translate3d(0px,100px,0px);
+  overflow: hidden;
 }
 
-.parallax-banner::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
+.parallax-image {
+  transform: translate3d(-406px,100px,0px);
+  position: absolute;
+  height: 1000px;
+  width: 2000px;
+  max-width: none;
 }
