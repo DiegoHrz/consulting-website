@@ -23,7 +23,7 @@ const Pitch = () => {
         </div>
       </div>
       <div className="md:w-1/2">
-        <img src="/profile/profile.jpg" className=" rounded-lg shadow-gray-400 shadow-[0px_0px_15px]" />
+        <img src="/profile/profile.jpg" className=" rounded-lg shadow-gray-400 shadow-[0px_0px_15px]"alt="" />
       </div>
     </div>
   );

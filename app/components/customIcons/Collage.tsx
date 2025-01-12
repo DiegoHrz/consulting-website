@@ -1,6 +1,6 @@
 "use client";
 
-import { fadeIn, textVariant } from "@/app/utils/motion";
+
 import { motion } from "framer-motion";
 
 interface CollageProps {

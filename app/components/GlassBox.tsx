@@ -24,18 +24,21 @@ const GlassBox: React.FC<GlassBoxProps> = ({
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div
-        className={`inset-0  absolute flex justify-center items-center backdrop-blur-lg rounded-lg  bg-white/10 ${
-          special === "bestSeller"
-            ? "shadow-[#E44846]"
-            : special === "exclusive"
-            ? "shadow-[#BF9932]"
-            : "shadow-gray-400"
-        }  shadow-[0px_0px_15px]`}
+        className={`inset-0  absolute flex justify-center items-center backdrop-blur-lg rounded-lg  bg-white/10  shadow-gray-400
+
+        shadow-[0px_0px_15px]`}
         style={
           {
             // this gives the transparent and the backdrop the blur
             // backgroundColor: "rgba(142,190,206,0.5)",
           }
+          // ${
+          //   special === "bestSeller"
+          //     ? "shadow-[#E44846]"
+          //     : special === "exclusive"
+          //     ? "shadow-[#BF9932]"
+          //     : "shadow-gray-400"
+          // }  
         }
         initial={{ scale: 0, opacity: 0.1 }} // Estado inicial
         whileInView={{ scale: 1, opacity: 1 }} // Animación mientras está en el viewport

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Title from "./customTags/Title";
+
 
 const ParallaxBanner2 = () => {
   const [scrollPosition, setScrollPosition] = useState(-500);

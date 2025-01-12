@@ -10,6 +10,7 @@ const PitchSecond = () => {
         <img
           src="/banner/professional-office.jpeg"
           className="rounded-lg shadow-gray-400 shadow-[0px_0px_15px]"
+          alt=""
         />
       </div>
       <div className="md:w-1/2 sm:pl-20">

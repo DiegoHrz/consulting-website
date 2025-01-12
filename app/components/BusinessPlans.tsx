@@ -1,8 +1,8 @@
 "use client";
 
-import { FiUserCheck } from "react-icons/fi";
+
 import { GoShieldCheck } from "react-icons/go";
-import { MdFreeCancellation } from "react-icons/md";
+
 import { SlCalender, SlUserFollowing } from "react-icons/sl";
 import Wrapper from "../hoc/Wrapper";
 

@@ -2,14 +2,12 @@
 import Image from "next/image";
 import logoWhite from "../../public/assets/logo/logo-no-bg/logo-white-no-bg.png";
 import logoBlack from "../../public/assets/logo/logo-no-bg/logo-black-no-bg.png";
-import User from "../../public/assets/User.svg";
-import Menu from "../../public/assets/Menu.svg";
+
 import { useEffect, useLayoutEffect, useState } from "react";
 
 import { IoIosMenu } from "react-icons/io";
 import { useNavStore } from "../store/useNavStore";
 import Link from "next/link";
-
 
 const smoothScroll = (targetId: string) => {
   const target = document.getElementById(targetId);
@@ -27,7 +25,7 @@ const navLinks = [
   { name: "Kontakt", href: "/kontakt" },
 ];
 
-const Navbar=()=> {
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [enterMouse, setEnterMouse] = useState(false);
   const {
@@ -41,17 +39,12 @@ const Navbar=()=> {
   const [menuClass, setMenuClass] = useState("");
   const [scrollPositionOnClick, setScrollPositionOnClick] = useState(0);
 
-
-
   useEffect(() => {
     setIsLoading(true); // Forzar un estado inicial para evitar desajustes en SSR
     setTimeout(() => setIsLoading(false), 100); // Simular la carga completa
   }, [setIsLoading]);
 
-  const tabHandler = (
-    tab: string,
-    event: React.MouseEvent<HTMLAnchorElement>
-  ) => {
+  const tabHandler = (tab: string) => {
     const sectionId = tab.toLowerCase();
     setSelectedTab(sectionId);
     setCurrentSection(sectionId); // Add this line
@@ -60,18 +53,17 @@ const Navbar=()=> {
 
   const tabAndToggle = (
     tab: string,
-    event: React.MouseEvent<HTMLAnchorElement>
   ) => {
     // event.preventDefault();
     toggleMenu();
-    tabHandler(tab, event);
+    tabHandler(tab);
   };
 
   useLayoutEffect(() => {
     // if (typeof window !== "undefined") {
     //   const value = localStorage.getItem("key"); // Esto asegura que solo se ejecute en el cliente.
     // }
-  
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
       if (clickHamburgerMenu && window.scrollY !== scrollPositionOnClick) {
@@ -81,14 +73,14 @@ const Navbar=()=> {
         setMenuClass("animate-collapse-out");
       }
     };
-  
+
     handleScroll();
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [clickHamburgerMenu]);
+  }, [clickHamburgerMenu,scrollPositionOnClick]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -124,12 +116,11 @@ const Navbar=()=> {
       <nav className="hidden md:flex w-full items-center justify  md:container md:px-0 md:py-0 border ">
         <div className="fixed z-50 top-0 w-full">
           <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center  font-sans text-xs  font-light w-full">
-            <div className="bg-anna-blue/40 h-full w-full p-1" >
-            <p>
-
-            CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME
-            </p>
-
+            <div className="bg-anna-blue/40 h-full w-full p-1">
+              <p>
+                CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT
+                ME CONTACT ME
+              </p>
             </div>
           </div>
           <div
@@ -160,7 +151,7 @@ const Navbar=()=> {
                   }`}
                   key={item.href}
                   href={item.href}
-                  onClick={(event) => tabHandler(item.name, event)}
+                  onClick={() => tabHandler(item.name, )}
                 >
                   {item.name}
                 </Link>
@@ -192,7 +183,11 @@ const Navbar=()=> {
             <div className="flex gap-x-5 md:hidden">
               <IoIosMenu
                 size={32}
-                className={`md:hidden text-anna-brown ${scrolled || clickHamburgerMenu ? 'text-black' : 'text-anna-gray'} `}
+                className={`md:hidden text-anna-brown ${
+                  scrolled || clickHamburgerMenu
+                    ? "text-black"
+                    : "text-anna-gray"
+                } `}
                 onClick={toggleMenu}
               />
             </div>
@@ -209,7 +204,7 @@ const Navbar=()=> {
                     }`}
                     key={item.href}
                     href={item.href}
-                    onClick={(event) => tabAndToggle(item.name, event)}
+                    onClick={() => tabAndToggle(item.name)}
                   >
                     {item.name}
                   </Link>
@@ -221,6 +216,6 @@ const Navbar=()=> {
       </nav>
     </>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

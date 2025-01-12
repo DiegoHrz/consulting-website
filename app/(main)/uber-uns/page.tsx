@@ -1,7 +1,7 @@
 import Collage from "@/app/components/customIcons/Collage";
-import Header from "@/app/components/customTags/Header";
+
 import Subtitle from "@/app/components/customTags/Subtitle";
-import Title from "@/app/components/customTags/Title";
+
 import HeroSecondary from "@/app/components/HeroSecondary";
 import React from "react";
 

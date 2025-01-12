@@ -1,9 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
-import BouncingText from "./BouncingText";
-import { fadeIn } from "../utils/motion";
-import Wrapper from "../hoc/Wrapper";
-import Link from "next/link";
+
 import GlassBox from "./GlassBox";
 import Title from "./customTags/Title";
 
@@ -92,11 +88,11 @@ const Services: React.FC = ({}) => {
               special="bestSeller"
             />
 
-            <GlassBox
+            {/* <GlassBox
               title="Business Consulting"
               text="Your financial kick start in independence"
               button="See more"
-            />
+            /> */}
 
             <GlassBox
               title="Finanzierung"

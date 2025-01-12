@@ -11,23 +11,21 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import { FaRegStar, FaStar } from "react-icons/fa";
-import { AiTwotoneStar } from "react-icons/ai";
-import { SlStar } from "react-icons/sl";
+
 import CustomStar from "./customIcons/Star";
-import SvgShape from "./SvgShape";
+
 
 export function CarouselDemo() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
+
 
   React.useEffect(() => {
     if (!api) {
       return;
     }
 
-    setCount(api.scrollSnapList().length);
+
     setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => {

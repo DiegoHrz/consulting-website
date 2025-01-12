@@ -1,6 +1,6 @@
-import AccordionElement from "./components/FAQ";
+
 import BusinessPlans from "./components/BusinessPlans";
-import { CarouselDemo } from "./components/CarouselDemo";
+
 import Hero from "./components/Hero";
 
 import Pitch from "./components/Pitch";
