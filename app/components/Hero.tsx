@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="h-full w-full relative">
         <div className="absolute w-full h-full"></div>
         <img
-          src="/giphylentils.gif"
+          src="/gif.gif"
           alt="Full-width GIF"
           className="w-screen h-screen object-cover"
         />
