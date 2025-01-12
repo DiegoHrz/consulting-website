@@ -729,17 +729,35 @@ h2 {
   overflow: hidden; /* Evita que el contenido desborde */
 }
 
-.parallax-container::before {
+/* .parallax-container::before {
   content: '';
-  position: absolute; /* Ahora el fondo está limitado al contenedor */
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/banner/parallax-image-2.jpg'); /* Cambia por tu imagen */
+  background-image: url('/banner/parallax-image-2.jpg'); 
   background-size: cover;
   background-position: center;
-  transform: translateY(0); /* Inicia sin desplazamiento */
-  will-change: transform; /* Optimiza el rendimiento del scroll */
-  z-index: -1; /* Asegura que esté detrás del contenido */
+  transform: translateY(0);
+  will-change: transform; 
+  z-index: -1;
+} */
+.parallax-banner {
+  position: relative;
+  overflow: hidden;
+  height: 40rem;
+}
+
+.parallax-banner::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
 }

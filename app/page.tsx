@@ -10,6 +10,8 @@ import ParallaxBanner2 from "./components/ParallaxBanner2";
 
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
+import ParallaxBanner from "./components/ParallaxBanner";
+import ParallaxBanner3 from "./components/ParallaxBanner3";
 
 
 export default function Home() {
@@ -38,13 +40,14 @@ export default function Home() {
       </div>
       <div className="relative sm:py-24 py-10">
         <div className="w-screen h-1/2 bg-anna-gray absolute -z-50 bottom-1/2 "></div>
-        <div className="max-w-7xl  m-auto sm:px-16 px-10 ">
+        <div className="max-w-7xl  mx-auto sm:px-16 px-10 ">
           {/* <ParallaxBanner /> */}
           <ParallaxBanner2
             imageUrl="https://monos.com/cdn/shop/files/WebsiteBanner_3000x2000-JPG_x2000.jpg?v=1660263331"
             height={26}
           />
           {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
+          <ParallaxBanner3/>
         </div>
       </div>
       <Reviews/>

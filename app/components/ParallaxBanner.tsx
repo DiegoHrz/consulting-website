@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 
-const ParallaxBanner2 = () => {
+const ParallaxBanner = () => {
   const [scrollPosition, setScrollPosition] = useState(-500);
 
   useEffect(() => {
@@ -67,4 +67,4 @@ const ParallaxBanner2 = () => {
   );
 };
 
-export default ParallaxBanner2;
+export default ParallaxBanner;
