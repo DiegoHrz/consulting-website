@@ -10,7 +10,7 @@ import ParallaxBanner2 from "./components/ParallaxBanner2";
 
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
-import ParallaxBanner from "./components/ParallaxBanner";
+// import ParallaxBanner from "./components/ParallaxBanner";
 import ParallaxBanner3 from "./components/ParallaxBanner3";
 
 
