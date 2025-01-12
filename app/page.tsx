@@ -41,7 +41,7 @@ export default function Home() {
         <div className="max-w-7xl  m-auto sm:px-16 px-10 ">
           {/* <ParallaxBanner /> */}
           <ParallaxBanner2
-            // imageUrl="/banner/parallax-image-2.jpg"
+            imageUrl="https://monos.com/cdn/shop/files/WebsiteBanner_3000x2000-JPG_x2000.jpg?v=1660263331"
             height={26}
           />
           {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
