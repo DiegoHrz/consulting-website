@@ -41,7 +41,7 @@ export default function Home() {
         <div className="max-w-7xl  m-auto sm:px-16 px-10 ">
           {/* <ParallaxBanner /> */}
           <ParallaxBanner2
-            imageUrl="/banner/parallax-image-2.jpg"
+            // imageUrl="/banner/parallax-image-2.jpg"
             height={26}
           />
           {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
