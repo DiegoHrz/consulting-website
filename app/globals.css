@@ -744,7 +744,14 @@ h2 {
   z-index: -1;
 } */
 
-.parallax {
+/* .parallax-div-div{
+  position: relative;
+  overflow: hidden;
+  border: 4px solid;
+  height: 320px;
+}
+
+.parallax-div {
   visibility: visible;
   z-index: -100;
   position: fixed;
@@ -763,4 +770,33 @@ h2 {
   height: 1000px;
   width: 2000px;
   max-width: none;
+} */
+
+.parallax {
+  height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  perspective: 1px;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.layer1 {
+  transform: translateZ(0);
+}
+
+.layer2 {
+  transform: translateZ(-1px);
+}
+
+.layer3 {
+  transform: translateZ(-2px);
 }

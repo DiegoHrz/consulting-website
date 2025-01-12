@@ -47,7 +47,7 @@ export default function Home() {
             height={26}
           />
           {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
-          <ParallaxBanner3/>
+          <ParallaxBanner3 />
         </div>
       </div>
       <Reviews/>
