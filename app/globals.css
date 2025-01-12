@@ -610,3 +610,16 @@ h2{
 .clip-path-custom {
   clip-path: url(#clip-path); /* Hace referencia al clipPath definido en el SVG */
 }
+
+
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    .lazy-image {
+      @apply relative;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+  }
+}

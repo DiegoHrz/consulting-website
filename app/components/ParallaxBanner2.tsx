@@ -1,15 +1,31 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface ParallaxBannerProps {
   imageUrl: string;
-  height: string | number; // Altura del contenedor (por ejemplo, 600px)
+  height: string | number;
 }
 
-const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
-  imageUrl,
-  height,
-}) => {
+const ParallaxBanner: React.FC<ParallaxBannerProps> = ({ imageUrl, height }) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isSafari, setIsSafari] = useState(false);
+
+  useEffect(() => {
+    // Detectar si es Safari iOS
+    const isIOSSafari = 
+      /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+      /Safari/i.test(navigator.userAgent) &&
+      !(/Chrome/i.test(navigator.userAgent));
+    setIsSafari(isIOSSafari);
+
+    const handleScroll = () => {
+      setScrollPosition(window.pageYOffset);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
       style={{
@@ -22,7 +38,6 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
       <div
         style={{
           backgroundImage: `url(${imageUrl})`,
-          backgroundAttachment: "fixed", // La clave del efecto parallax
           backgroundPosition: "center",
           backgroundSize: "cover",
           position: "absolute",
@@ -30,7 +45,15 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -1, // Se asegura que quede detrás del contenido
+          zIndex: -1,
+          ...(isSafari
+            ? {
+                transform: `translateY(${scrollPosition * 0.5}px)`,
+                transition: "transform 0.1s linear",
+              }
+            : {
+                backgroundAttachment: "fixed",
+              }),
         }}
       ></div>
 
@@ -38,18 +61,18 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
       <div
         style={{
           position: "relative",
-          zIndex: 1, // Para estar sobre la imagen de fondo
+          zIndex: 1,
         }}
       >
       </div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white ">
-          <img
-            src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
-            alt="White Logo"
-            className="h-auto w-40  mx-auto px-3 animate-fade-title"
-          />
-          <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
-        </div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white">
+        <img
+          src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
+          alt="White Logo"
+          className="h-auto w-40 mx-auto px-3 animate-fade-title"
+        />
+        <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
+      </div>
     </div>
   );
 };
