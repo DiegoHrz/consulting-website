@@ -18,12 +18,12 @@ const Footer = () => {
           <img
             src="/logo/logo_only_letter.png"
             alt=""
-            className="sm:hidden aspect-auto w-32"
+            className="sm:hidden aspect-auto w-28"
           />
           <img
             src="/logo/logo_only_name.png"
             alt=""
-            className="sm:hidden aspect-auto h-24 w-full"
+            className="sm:hidden aspect-auto h-20 w-full"
           />
           <a
             href="https://wa.me/4916091471897?text=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
@@ -80,93 +80,110 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start gap-10 md:gap-40 w-full max-w-7xl mx-auto  sm:px-14 pt-10">
+      {/* Desktop version */}
+      <div className="hidden md:flex w-full max-w-7xl mx-auto sm:px-16 pt-10">
         {/* Company */}
-        <div className=" w-full flex flex-col gap-3">
-          <p className="text-[#464646] text-xl">Company</p>
+        <div className="flex flex-col gap-3">
+          <p className="text-[#070908] text-xl">Company</p>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 ">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Home
             </p>
           </Link>
           <Link href="/uber-uns">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               About us
             </p>
           </Link>
           <Link href="/leistungen">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Leinstugen
             </p>
           </Link>
           <Link href="/referenzen">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Referenzen
             </p>
           </Link>
           <Link href="/faq">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               FAQ
             </p>
           </Link>
         </div>
 
+        {/* espacio x */}
+        <div className="flex-1"></div>
+
         {/* Services */}
-        <div className=" w-full flex flex-col gap-3">
-          <p className="text-[#464646] text-xl">Services</p>
+
+        <div className="flex flex-col gap-3">
+          <p className="text-[#070908] text-xl">Services</p>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Gründungszuschuss
             </p>
           </Link>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Businessplan
             </p>
           </Link>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Business Consulting
             </p>
           </Link>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Finanzierung
             </p>
           </Link>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Buchhaltung
             </p>
           </Link>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <div className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm relative">
               Websites und Marketing
-            </p>
+              <div className="top-1/2 -translate-y-1/2 -right-[48%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-[10px] h-fit absolute text-white">
+                Very Soon
+              </div>
+            </div>
           </Link>
         </div>
+
+        {/* espacio x */}
+        <div className="flex-1 "></div>
+
         {/* Contact */}
-        <div className=" w-full flex flex-col gap-3">
-          <p className="text-[#464646] text-xl">Contact</p>
+
+        <div className=" flex flex-col gap-3">
+          <p className="text-[#070908] text-xl">Contact</p>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Mail
             </p>
           </Link>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Calendly
             </p>
           </Link>
           <Link href="/">
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Whatsapp
             </p>
           </Link>
         </div>
+
+        {/* espacio x */}
+        <div className="flex-1"></div>
+
         {/* Socials */}
-        <div className=" w-full flex flex-col gap-3">
-          <p className="text-[#464646] text-xl">Socials</p>
+        <div className="  flex flex-col gap-3 ">
+          <p className="text-[#070908] text-xl  ">Socials</p>
 
           <a
             href="https://www.instagram.com/"
@@ -178,7 +195,7 @@ const Footer = () => {
               size={18}
               className="text-[#808080]  transition-all duration-700  mr-1 "
             />
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Instagram
             </p>
           </a>
@@ -192,31 +209,168 @@ const Footer = () => {
               size={16}
               className="text-[#808080]  transition-all duration-700 mr-1 "
             />
-            <p className="text-anna-brown/70 hover:text-black transition-all duration-500">
+            <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
               Facebook
             </p>
           </a>
         </div>
       </div>
 
+      {/* Mobile version */}
+      <div className="md:hidden flex flex-col gap-10  w-full max-w-7xl mx-auto sm:px-16 pt-10 px-10">
+        <div className="flex gap-4">
+          {/* Company */}
+          <div className="flex flex-col gap-3 w-full">
+            <p className="text-[#070908] text-xl">Company</p>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Home
+              </p>
+            </Link>
+            <Link href="/uber-uns">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                About us
+              </p>
+            </Link>
+            <Link href="/leistungen">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Leinstugen
+              </p>
+            </Link>
+            <Link href="/referenzen">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Referenzen
+              </p>
+            </Link>
+            <Link href="/faq">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                FAQ
+              </p>
+            </Link>
+          </div>
+
+          {/* Services */}
+
+          <div className="flex flex-col gap-3 w-full">
+            <p className="text-[#070908] text-xl">Services</p>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Gründungszuschuss
+              </p>
+            </Link>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Businessplan
+              </p>
+            </Link>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Business Consulting
+              </p>
+            </Link>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Finanzierung
+              </p>
+            </Link>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Buchhaltung
+              </p>
+            </Link>
+            <Link href="/">
+              <div className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm relative  flex">
+                <span className="relative ">
+                  <p>Websites und</p>
+                  <p>Marketing</p>
+                  <div className="top-1/2 left-[100%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-2  absolute text-white whitespace-nowrap">
+                    Soon
+                  </div>
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex gap-3">
+          {/* Contact */}
+          <div className=" flex flex-col gap-3 w-full">
+            <p className="text-[#070908] text-xl">Contact</p>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Mail
+              </p>
+            </Link>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Calendly
+              </p>
+            </Link>
+            <Link href="/">
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Whatsapp
+              </p>
+            </Link>
+          </div>
+
+          {/* Socials */}
+          <div className="  flex flex-col gap-3 w-full">
+            <p className="text-[#070908] text-xl  ">Socials</p>
+
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center "
+            >
+              <FaInstagram
+                size={18}
+                className="text-[#808080]  transition-all duration-700  mr-1 "
+              />
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Instagram
+              </p>
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <FaFacebookF
+                size={16}
+                className="text-[#808080]  transition-all duration-700 mr-1 "
+              />
+              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                Facebook
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="w-full text-center text-[14px] font-medium text-[#666666] pt-16">
         <div className="h-[0.1rem] w-full bg-[#DDDDDD] mb-4"></div>
-        <div className="flex justify-center items-center gap-3">
-          <p className="text-anna-brown">© 2024 Alle Rechte vorbehalten</p>
-          <p>|</p>
-          <Link
-            href="/impresum"
-            className="text-[#808080] hover:text-black transition-all duration-500"
-          >
-            Impressum{" "}
-          </Link>
-          <p>|</p>
-          <Link
-            href="/datenschutzerklarung"
-            className="text-[#808080] hover:text-black transition-all duration-500"
-          >
-            Datenschutzerklärung
-          </Link>
+        <div className="flex flex-col sm:flex-row justify-center items-center ">
+          <p className="text-anna-brown pr-3">
+            © 2024 Alle Rechte vorbehalten{" "}
+          </p>
+          <p className="hidden sm:flex pr-3">|</p>
+          <div className="flex">
+            <Link
+              href="/impresum"
+              className="text-[#808080] hover:text-black transition-all duration-500 pr-3"
+            >
+              Impressum{" "}
+            </Link>
+            <span className="block sm:hidden pr-3">|</span>
+            <Link
+              href="/datenschutzerklarung"
+              className="text-[#808080] hover:text-black transition-all duration-500 pr-3"
+            >
+              Datenschutzerklärung
+            </Link>
+          </div>
         </div>
       </div>
     </div>

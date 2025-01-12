@@ -50,11 +50,11 @@ const Services: React.FC = ({}) => {
 
         <div className="mt-24 md:flex flex-col md:flex-row gap-5 lg:gap-2 w-full   max-h-[45rem]  md:h-96 px-2 sm:px-5 md:px-0 justify-center">
           <div
-            className=" h-1/2  md:h-full w-full md:w-[80%] sm:py-2 md:py-0 grid text-center items-center relative gap-3 sm:gap-8  lg:mx-5 min-h-[238px] md:min-h-max"
-            style={{
-              gridTemplateColumns: "1fr 1fr 1fr",
-              gridTemplateRows: "1fr 1fr ",
-            }}
+            className=" h-1/2  md:h-full w-full md:w-[80%] sm:py-2 md:py-0 grid text-center items-center relative gap-3 sm:gap-8  lg:mx-5 min-h-[238px] md:min-h-max sm:grid-cols-3 sm:grid-rows-2"
+            // style={{
+            //   gridTemplateColumns: "1fr 1fr 1fr",
+            //   gridTemplateRows: "1fr 1fr ",
+            // }}
           >
             {/* <div className="w-40 h-40 bg-red-700 z-0 absolute -left-10" ></div> */}
             {/* <motion.div

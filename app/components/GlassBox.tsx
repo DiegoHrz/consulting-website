@@ -53,7 +53,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
           transition={{ duration: 1, delay: 2.4, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.1 }}
         >
-          <img src="/icons/best-seller.png" alt="" className="w-14 h-14" />
+          <img src="/icons/best-seller.png" alt="" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14" />
         </motion.div>
       )}
       {special === "exclusive" && (
