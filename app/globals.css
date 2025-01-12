@@ -724,20 +724,22 @@ h2 {
   clip-path: url(#clip-path); /* Hace referencia al clipPath definido en el SVG */
 }
 
-.parallax::before {
-  content: "";
-  position: fixed;
+.parallax-container::before {
+  content: '';
+  position: fixed; /* Fondo fijo */
   top: 0;
   left: 0;
-  width: 100%; /* Sin comillas */
+  width: 100%;
   height: 100%;
-  background-image: url("/banner/parallax-image-2.jpg");
-  background-attachment: fixed; /* Esto aplica el efecto parallax */
-  background-position: center;
+  background-image: url('/banner/parallax-image-2.jpg'); /* Cambia por tu imagen */
   background-size: cover;
-  z-index: -1; /* Para que esté detrás del contenido */
+  background-position: center;
+  z-index: -1; /* Asegura que esté detrás del contenido */
 }
 
-.parallax {
-  padding-bottom: 10px;
+/* Asegurar suficiente scroll dentro del contenedor */
+.parallax-container {
+  position: relative;
+  overflow: hidden; /* Evitar desplazamientos no deseados */
+  padding-bottom: 2000px; /* Simula contenido largo para probar el efecto */
 }
