@@ -1,14 +1,23 @@
 "use client";
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect, useRef, useState } from "react";
 
 const ParallaxBanner = () => {
-  const [scrollPosition, setScrollPosition] = useState(-500);
-
+  const [scrollPosition, setScrollPosition] = useState(3500);
+  const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    if (!containerRef.current) return;
+
+    const rect = containerRef.current.getBoundingClientRect();
+    console.log('rect: ',rect)
     const handleScroll = () => {
-      const position = -window.pageYOffset ;
-      setScrollPosition(position);
+      let position = -window.pageYOffset + scrollPosition;
+      if(position <= -4500){
+        position=-4500
+        setScrollPosition(position);
+      }else{
+        setScrollPosition(position);
+      }
+      console.log('SCROLL POSITION: ', position);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -17,9 +26,9 @@ const ParallaxBanner = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const parallaxShift = scrollPosition * 0.1;
+  const parallaxShift = scrollPosition * 0.8;
   return (
-    <div className="overflow-hidden  border-red-500 h-[26rem]  w-full sm:px-16 px-14 sm:py-16 py-10 max-w-7xl mx-auto relative z-0 ">
+    <div className="overflow-hidden  border-red-500 h-[26rem]  w-full sm:px-16  sm:py-16 py-10 max-w-7xl mx-auto relative z-0 ">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white z-50">
         <img
           src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
@@ -28,7 +37,7 @@ const ParallaxBanner = () => {
         />
         <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
       </div>
-      <div className="h-full w-full relative">
+      <div ref={containerRef} className="h-full w-full relative">
         <div
           className="absolute w-full h-full max-w-7xl "
           style={{
@@ -38,7 +47,7 @@ const ParallaxBanner = () => {
           <img
             src="/banner/parallax-image-2.jpg"
             alt="Parallax Background"
-            className="w-full h-screen object-cover bg-center"
+            className="w-full h-[200vh] object-cover bg-center"
           />
         </div>
         <div className="absolute top-1/2 left-1/2 transform  w-full"></div>

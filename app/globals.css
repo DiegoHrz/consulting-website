@@ -738,7 +738,7 @@ h2 {
 
 .parallax-div {
   visibility: visible;
-  z-index: 100;
+  z-index: -100;
   position: fixed;
   top: 0px;
   left: 0%;
