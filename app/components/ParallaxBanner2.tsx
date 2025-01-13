@@ -10,21 +10,19 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
   imageUrl,
   height,
 }) => {
-  const [isSafari, setIsSafari] = useState(false);
+  const [isBrowserSafari, setBrowserIsSafari] = useState(false);
 
   useEffect(() => {
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (isSafari) {
-      document.documentElement.classList.add("safari");
-    } else {
-      document.documentElement.classList.add("not-safari");
+      setBrowserIsSafari(!isBrowserSafari);
     }
   }, []);
 
   return (
     <div>
       {/* Safari */}
-      {isSafari ? (
+      {isBrowserSafari ? (
         <div className="h-[27rem]">
           <div
             className={`border h-64 w-full bg-transparent parallax  
