@@ -773,6 +773,26 @@ h2 {
 }
 
 
+@supports (-webkit-overflow-scrolling: touch) {
+  .ios-parallax-container {
+    perspective: 1px;
+    perspective-origin: center top;
+    transform-style: preserve-3d;
+  }
+
+  .ios-parallax-container::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+  }
+}
+
+
 
 /* .container {
   height: 100vh;

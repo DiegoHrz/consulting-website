@@ -10,38 +10,48 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
   imageUrl='/banner/parallax-image-2.jpg',
   height,
 }) => {
-  const [isBrowserSafari, setBrowserIsSafari] = useState(false);
+  const [isIOSSafari, setIsIOSSafari] = useState(false);
 
   useEffect(() => {
+    // Detecta específicamente Safari en iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    if (isSafari) {
-      setBrowserIsSafari(true);
-    }
+    setIsIOSSafari(isIOS && isSafari);
   }, []);
 
   return (
     <div>
-      {isBrowserSafari ? (
-        <div className="h-[27rem]">
+      {isIOSSafari ? (
+        <div className="h-[27rem] relative overflow-hidden">
           <div
-            className="border h-64 w-full bg-transparent"
             style={{
-              content: '""',
-              position: 'fixed',
-              bottom: 0,
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: '150vh',
-              height: '100vh',
+              position: 'absolute',
+              top: '-50vh',
+              left: 0,
+              right: 0,
+              height: '200vh', // Extra altura para asegurar cobertura
               backgroundImage: `url(${imageUrl})`,
-              zIndex: -100,
               backgroundSize: 'cover',
-              backgroundPosition: 'center 10%',
-              overflowY: 'hidden',
+              backgroundPosition: 'center',
+              // Uso de perspective para mejorar el efecto 3D
+              transform: 'translateZ(0)',
+              WebkitOverflowScrolling: 'touch', // Mejora el scroll en iOS
+              zIndex: -1,
             }}
-          >
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white">
+          />
+          <div
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              pointerEvents: 'none', // Permite scroll a través
+              zIndex: -1,
+            }}
+            className="ios-parallax-container"
+          />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white z-10">
             <img
               src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
               alt="White Logo"
