@@ -5,10 +5,12 @@ import Hero from "./components/Hero";
 import Pitch from "./components/Pitch";
 import PitchSecond from "./components/PitchSecond";
 import Services from "./components/Services";
-import ParallaxBanner2 from "./components/ParallaxBanner2";
+
 
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
+import ParallaxBanner from "./components/ParallaxBanner";
+// import ParallaxBanner4 from "./components/ParallaxBanner4";
 // import ParallaxBanner3 from "./components/ParallaxBanner3";
 // import ParallaxBanner4 from "./components/ParallaxBanner4";
 // import ParallaxBanner from "./components/ParallaxBanner";
@@ -19,7 +21,7 @@ export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
       <Hero />
-      <div className="bg-white">
+      <div className="">
         <BusinessPlans />
         <Pitch />
         <PitchSecond />
@@ -42,8 +44,8 @@ export default function Home() {
       <div className="relative  sm:pt-24  border-2 border-indigo-600 ">
         <div className="w-screen h-1/2 border-2 border-purple-600  bg-anna-gray absolute -z-50 bottom-1/2 "></div>
         <div className="max-w-7xl  mx-auto sm:px-16 px-10 relative border-4 border-red-500">
-          {/* <ParallaxBanner /> */}
-           <ParallaxBanner2 height={20} />
+          <ParallaxBanner  />
+           {/* <ParallaxBanner2 height={20} /> */}
           {/* <ParallaxBanner4/> */}
 
           {/* <ParallaxBanner3 /> */}

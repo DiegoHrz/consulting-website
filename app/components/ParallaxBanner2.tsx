@@ -6,44 +6,28 @@ interface ParallaxBannerProps {
   height: string | number; // Altura del contenedor (por ejemplo, 600px)
 }
 
-const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
-  imageUrl = "/banner/parallax-image-2.jpg",
+const ParallaxBanner2: React.FC<ParallaxBannerProps> = ({
+  imageUrl='/banner/parallax-image-2.jpg' ,
   height,
 }) => {
   const [isBrowserSafari, setBrowserIsSafari] = useState(false);
-  const [dynamicHeight, setDynamicHeight] = useState<number | string>("100vh");
 
   useEffect(() => {
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    setBrowserIsSafari(isSafari);
-
-    // Ajustar la altura del viewport dinámicamente
-    const updateHeight = () => {
-      const vh = window.innerHeight * 0.01;
-      setDynamicHeight(`${vh * 100}px`);
-    };
-
-    updateHeight();
-    window.addEventListener("resize", updateHeight);
-    return () => window.removeEventListener("resize", updateHeight);
+    if (isSafari) {
+      setBrowserIsSafari(!isBrowserSafari);
+    }
   }, []);
 
   return (
     <div>
       {/* Safari */}
       {isBrowserSafari ? (
-        <div
-          className="relative w-full"
-          style={{
-            height: dynamicHeight, // Usar el alto dinámico para prevenir saltos
-            overflow: "hidden",
-          }}
-        >
+        <div className="h-[27rem]">
           <div
-            className="parallax"
-            style={{
-              backgroundImage: `url(${imageUrl})`,
-            }}
+            className={`border h-64 w-full bg-transparent parallax  
+        
+        `}
           ></div>
         </div>
       ) : (
@@ -82,7 +66,7 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
             <img
               src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
               alt="White Logo"
-              className="h-auto w-40 mx-auto px-3 animate-fade-title"
+              className="h-auto w-40  mx-auto px-3 animate-fade-title"
             />
             <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
           </div>
@@ -92,8 +76,7 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
   );
 };
 
-export default ParallaxBanner;
-
+export default ParallaxBanner2;
 
 // "use client";
 // import React, { useEffect, useState } from "react";

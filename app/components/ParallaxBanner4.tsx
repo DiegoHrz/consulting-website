@@ -1,102 +1,79 @@
-// // @ts-nocheck
 // "use client";
-// import React, { useEffect, useRef, useState } from "react";
+// import React, { useEffect, useRef, useState } from 'react';
 
-// const ParallaxBanner3: React.FC = () => {
+// const ParallaxBanner4 = () => {
 //   const parallaxDivRef = useRef<HTMLDivElement>(null);
 //   const parallaxImageRef = useRef<HTMLImageElement>(null);
-
-
-//   const [initialOffsetDiv, setInitialOffsetDiv] = useState(0);
+//   const containerRef = useRef<HTMLDivElement>(null);
+//   const [initialOffset, setInitialOffset] = useState(0);
 
 //   useEffect(() => {
-//     const calculateInitialOffset = () => {
-//       if (parallaxDivRef.current) {
-//         const offset =
-//           parallaxDivRef.current.getBoundingClientRect().top + window.scrollY; // Distancia total desde el inicio
-//         setInitialOffsetDiv(offset); // Guardamos el valor en un estado
-//         console.log("Initial Offset Div (correcto):", offset);
+//     const calculateOffsets = () => {
+//       if (!containerRef.current) return;
+      
+//       const rect = containerRef.current.getBoundingClientRect();
+//       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//       const offset = rect.top + scrollTop;
+//       setInitialOffset(offset);
+
+//       // Establecer las posiciones iniciales
+//       if (parallaxDivRef.current && parallaxImageRef.current) {
+//         parallaxDivRef.current.style.transform = `translate3d(0px, ${offset}px, 0px)`;
+//         parallaxImageRef.current.style.transform = `translate3d(0px, ${offset * -0.8}px, 0px)`;
+//         console.log('initial translate div : ',parallaxImageRef.current.style.transform  )
+//         console.log('initial translate image : ',parallaxDivRef.current.style.transform)
 //       }
 //     };
 
-//     // Calcula el offset cuando la página esté completamente cargada
-//     calculateInitialOffset();
-
-//     // Si cambian las dimensiones del viewport, recalcular
-//     window.addEventListener("resize", calculateInitialOffset);
-//     calculateInitialOffset();
-//     return () => {
-//       window.removeEventListener("resize", calculateInitialOffset);
-//     };
-//   }, []);
-
-
-
-
-//   useEffect(() => {
 //     const handleScroll = () => {
-//       const scrollY = window.scrollY; //pixel donde se encuentra la pagina
-//       console.log("scrollY: ", scrollY);
-//       const parallaxDiv = parallaxDivRef.current;
-//       const parallaxImage = parallaxImageRef.current;
+//       if (!parallaxDivRef.current || !parallaxImageRef.current || !containerRef.current) return;
+        
+//       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+//       const containerRect = containerRef.current.getBoundingClientRect();
+//       const containerHeight = containerRect.height;
 
-//       if (parallaxDiv && parallaxImage) {
+//       // Calcular la distancia desde el inicio del contenedor
+//       const distanceFromStart = currentScroll - initialOffset;
+//       console.log('currentScroll: ',currentScroll)
+//       console.log('containerRect: ',containerRect)
+//       console.log('distanceFromStart: ',distanceFromStart)
+      
+//       // Solo aplicar el efecto cuando estamos cerca del contenedor
+//       if (currentScroll >= initialOffset - window.innerHeight && 
+//           currentScroll <= initialOffset + containerHeight + window.innerHeight) {
+        
+//         // Calcular las nuevas posiciones
+//         const divTranslate = initialOffset + distanceFromStart;
+//         const imageTranslate = -initialOffset + (distanceFromStart * -0.8);
 
-//         // START
-//         // translate3d(0px, ${parallaxDivOffset}px, 0px) = (0px,4000px,0px)
-//         // translate3d(0px, ${parallaxDivOffset}px, 0px) = (0px,-2000px,0px)
-
-
-
-//         const containerHeight = parallaxDiv.offsetHeight; // Altura del contenedor (320px)
-//         const imageHeight = parallaxImage.offsetHeight; // Altura de la imagen (1122px)
-//         const maxScroll = imageHeight - containerHeight; // Máximo desplazamiento permitido
-
-//         const parallaxDivQuery = document.querySelector(".parallax-div");
-//         const parallaxImageQuery = document.querySelector(".parallax-image");
-
-//         const initialOffsetDiv =
-//         parallaxDivQuery.getBoundingClientRect().top + window.scrollY; // Distancia desde el top
-//         console.log("initialOffsetDiv :", initialOffsetDiv);
-
-//         const initialOffsetImage =
-//           -parallaxImageQuery.getBoundingClientRect().top - window.scrollY; // Distancia desde el top
-//         console.log("initialOffsetImage :", initialOffsetImage);
-
-//         // Evitar que el desplazamiento exceda el rango
-//         const parallaxDivOffset = Math.min(
-//           Math.max(initialOffsetDiv - scrollY * 1, -maxScroll),
-//           -containerHeight //-552
-//         ); // Rango para el contenedor
-//         const imageOffset = Math.min(
-//           Math.max(initialOffsetImage + 300 + scrollY * 0.8, maxScroll),
-//           initialOffsetImage
-//         ); // Rango para la imagen
-//         console.log("PARALLAXOFFSET : ", parallaxDivOffset);
-//         console.log("imageOffset: ", imageOffset);
-
-
-
-//         // Aplicar los valores de desplazamiento
-//         parallaxDiv.style.transform = `translate3d(0px, ${parallaxDivOffset}px, 0px)`;
-//         parallaxImage.style.transform = `translate3d(-45px, ${imageOffset}px, 0px)`;
+//         // Aplicar las transformaciones
+//         parallaxDivRef.current.style.transform = `translate3d(0px, ${distanceFromStart}px, 0px)`;
+//         parallaxImageRef.current.style.transform = `translate3d(0px, ${imageTranslate}px, 0px)`;
 //       }
 //     };
 
-//     window.addEventListener("scroll", handleScroll);
+//     // Calcular posiciones iniciales
+//     calculateOffsets();
+
+//     // Agregar event listeners
+//     window.addEventListener('scroll', handleScroll);
+//     window.addEventListener('resize', calculateOffsets);
+//     window.addEventListener('load', calculateOffsets);
 
 //     return () => {
-//       window.removeEventListener("scroll", handleScroll);
+//       window.removeEventListener('scroll', handleScroll);
+//       window.removeEventListener('resize', calculateOffsets);
+//       window.removeEventListener('load', calculateOffsets);
 //     };
-//   }, []);
+//   }, [initialOffset]);
 
 //   return (
-//     <div className="parallax-div-div mx-auto w-full border-black border-4">
+//     <div ref={containerRef} className="parallax-div-div mx-auto w-full border-black border-4">
 //       <div ref={parallaxDivRef} className="parallax-div mx-auto">
-//         <img
-//           ref={parallaxImageRef}
-//           src="/banner/parallax-image-2.jpg"
-//           alt="Parallax"
+//         <img 
+//           ref={parallaxImageRef} 
+//           src="/banner/parallax-image-2.jpg" 
+//           alt="Parallax" 
 //           className="parallax-image"
 //         />
 //       </div>
@@ -104,4 +81,12 @@
 //   );
 // };
 
-// export default ParallaxBanner3;
+// export default ParallaxBanner4;
+
+//       //parallaxDivOffset = alto de toda la pagina hasta el contenedor
+//         //se reduce en 1px por 1px
+//         //max= parallaxDivOffeet + altura del contenedor
+
+//         //ImageOffset = parallaxDivOffset * -0.8
+//         //se reduce en 0.8px por 1px
+//         //max= max * -0.8
