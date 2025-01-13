@@ -3,80 +3,79 @@ import React, { useEffect, useState } from "react";
 
 interface ParallaxBannerProps {
   imageUrl?: string;
-  height: string | number; // Altura del contenedor (por ejemplo, 600px)
+  height: string | number;
 }
 
-const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
-  imageUrl,
+const ParallaxBanner4: React.FC<ParallaxBannerProps> = ({
+  imageUrl = '/banner/parallax-image-2.jpg',
   height,
 }) => {
-  const [isBrowserSafari, setBrowserIsSafari] = useState(false);
+  const [isSafari, setSafari] = useState(false);
 
   useEffect(() => {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    if (isSafari) {
-      setBrowserIsSafari(!isBrowserSafari);
-    }
+    // Detecta cualquier versión de Safari
+    const isSafariBrowser = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    setSafari(isSafariBrowser);
   }, []);
 
-  return (
-    <div>
-      {/* Safari */}
-      {isBrowserSafari ? (
-        <div className="h-[27rem]">
-          <div
-            className={`border h-64 w-full bg-transparent parallax  
-        
-        `}
-          ></div>
-        </div>
-      ) : (
+  if (isSafari) {
+    return (
+      <div className="relative h-[27rem] overflow-hidden">
         <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
-            position: "relative",
-            height: typeof height === "number" ? `${height}rem` : height,
-            overflow: "hidden",
+            backgroundImage: `url(${imageUrl})`,
+            transform: 'translate3d(0,0,0)',
+            willChange: 'transform'
           }}
-        >
-          {/* Fondo con imagen fija */}
-          <div
-            className=""
-            style={{
-              backgroundImage: `url(${imageUrl})`,
-              backgroundAttachment: "fixed", // La clave del efecto parallax
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              zIndex: -1, // Se asegura que quede detrás del contenido
-            }}
-          ></div>
-
-          {/* Contenido del contenedor */}
-          <div
-            style={{
-              position: "relative",
-              zIndex: 1, // Para estar sobre la imagen de fondo
-            }}
-          ></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white ">
-            <img
-              src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
-              alt="White Logo"
-              className="h-auto w-40  mx-auto px-3 animate-fade-title"
-            />
-            <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
-          </div>
+        />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white">
+          <img
+            src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
+            alt="White Logo"
+            className="h-auto w-40 mx-auto px-3 animate-fade-title"
+          />
+          <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
         </div>
-      )}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      style={{
+        position: "relative",
+        height: typeof height === "number" ? `${height}rem` : height,
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          backgroundImage: `url(${imageUrl})`,
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: -1,
+        }}
+      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white">
+        <img
+          src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
+          alt="White Logo"
+          className="h-auto w-40 mx-auto px-3 animate-fade-title"
+        />
+        <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
+      </div>
     </div>
   );
 };
 
-export default ParallaxBanner;
+export default ParallaxBanner4;
 
 // "use client";
 // import React, { useEffect, useState } from "react";

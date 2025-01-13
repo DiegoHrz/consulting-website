@@ -7,7 +7,7 @@ const ParallaxBanner = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const position = -window.pageYOffset - 500;
+      const position = -window.pageYOffset ;
       setScrollPosition(position);
     };
 

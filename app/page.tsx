@@ -9,6 +9,9 @@ import ParallaxBanner2 from "./components/ParallaxBanner2";
 
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
+// import ParallaxBanner3 from "./components/ParallaxBanner3";
+// import ParallaxBanner4 from "./components/ParallaxBanner4";
+// import ParallaxBanner from "./components/ParallaxBanner";
 // import ParallaxBanner from "./components/ParallaxBanner";
 // import ParallaxBanner3 from "./components/ParallaxBanner3";
 
@@ -40,10 +43,8 @@ export default function Home() {
         <div className="w-screen h-1/2 border-2 border-purple-600  bg-anna-gray absolute -z-50 bottom-1/2 "></div>
         <div className="max-w-7xl  mx-auto sm:px-16 px-10 relative border-4 border-red-500">
           {/* <ParallaxBanner /> */}
-          <ParallaxBanner2
-            imageUrl="https://monos.com/cdn/shop/files/WebsiteBanner_3000x2000-JPG_x2000.jpg?v=1660263331"
-            height={26}
-          />
+           <ParallaxBanner2 height={20} />
+          {/* <ParallaxBanner4/> */}
 
           {/* <ParallaxBanner3 /> */}
         </div>

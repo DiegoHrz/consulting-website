@@ -728,7 +728,7 @@ h2 {
   clip-path: url(#clip-path); /* Hace referencia al clipPath definido en el SVG */
 }
 
-/* 
+
 .parallax-div-div{
   position: relative;
   overflow: hidden;
@@ -741,21 +741,21 @@ h2 {
   z-index: -100;
   position: fixed;
   top: 0px;
-  left: 50%;
+  left: 0%;
   overflow: hidden;
-  width: 800px;
-  height: 320px;
-  transform: translate3d(0px,100px,0px);
+  width: 100vw;
+  height: 800px;
+  /* transform: translate3d(0px,200px,0px); */
 }
 
 .parallax-image {
-  transform: translate3d(-706px,100px,0px);
+  /* transform: translate3d(-45px,-159px,0px); */
   position: absolute;
-  height: 600px;
-  width: 1200px;
-  max-width: none;
+  height: 1000px;
+  width: 4000px;
+  max-width: none;;
 }
- */
+
 
 .parallax {
   content: "";
@@ -771,3 +771,53 @@ h2 {
   background-position: center 10%;
   overflow-y: hidden;
 }
+
+
+
+/* .container {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  perspective: 3px;
+}
+
+section {
+  background-size: cover;
+  color: white;
+  background-color: var(--bg, --color-black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.image {
+    background-position: center center;
+    transform: translateZ(-1px) scale(1.5);
+
+    background-size: cover;
+
+    z-index: -1;
+    height: 100vh;
+  }
+  &.text {
+    height: 50vh;
+  }
+  &.heading {
+    z-index: -1;
+    transform: translateY(-30vh) translateZ(1px) scale(1.5);
+  }
+}
+
+.footer {
+  position: relative;
+  display: block;
+  background-color: black;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h3{
+    font-weight: normal; 
+    color: var(--color-blue);
+  }
+} */
