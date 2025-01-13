@@ -757,7 +757,7 @@ h2 {
 }
 
 
-.parallax {
+.parallax::before {
   content: "";
   position: fixed;
   bottom: 0;
