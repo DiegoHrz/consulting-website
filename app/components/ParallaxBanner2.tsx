@@ -3,62 +3,48 @@ import React, { useEffect, useState } from "react";
 
 interface ParallaxBannerProps {
   imageUrl?: string;
-  height: string | number;
+  height: string | number; // Altura del contenedor (por ejemplo, 600px)
 }
 
 const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
-  imageUrl='/banner/parallax-image-2.jpg',
+  imageUrl = "/banner/parallax-image-2.jpg",
   height,
 }) => {
-  const [isIOSSafari, setIsIOSSafari] = useState(false);
+  const [isBrowserSafari, setBrowserIsSafari] = useState(false);
+  const [dynamicHeight, setDynamicHeight] = useState<number | string>("100vh");
 
   useEffect(() => {
-    // Detecta específicamente Safari en iOS
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    setIsIOSSafari(isIOS && isSafari);
+    setBrowserIsSafari(isSafari);
+
+    // Ajustar la altura del viewport dinámicamente
+    const updateHeight = () => {
+      const vh = window.innerHeight * 0.01;
+      setDynamicHeight(`${vh * 100}px`);
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
   return (
     <div>
-      {isIOSSafari ? (
-        <div className="h-[27rem] relative overflow-hidden">
+      {/* Safari */}
+      {isBrowserSafari ? (
+        <div
+          className="relative w-full"
+          style={{
+            height: dynamicHeight, // Usar el alto dinámico para prevenir saltos
+            overflow: "hidden",
+          }}
+        >
           <div
+            className="parallax"
             style={{
-              position: 'absolute',
-              top: '-50vh',
-              left: 0,
-              right: 0,
-              height: '200vh', // Extra altura para asegurar cobertura
               backgroundImage: `url(${imageUrl})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              // Uso de perspective para mejorar el efecto 3D
-              transform: 'translateZ(0)',
-              WebkitOverflowScrolling: 'touch', // Mejora el scroll en iOS
-              zIndex: -1,
             }}
-          />
-          <div
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              pointerEvents: 'none', // Permite scroll a través
-              zIndex: -1,
-            }}
-            className="ios-parallax-container"
-          />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white z-10">
-            <img
-              src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
-              alt="White Logo"
-              className="h-auto w-40 mx-auto px-3 animate-fade-title"
-            />
-            <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
-          </div>
+          ></div>
         </div>
       ) : (
         <div
@@ -68,10 +54,12 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
             overflow: "hidden",
           }}
         >
+          {/* Fondo con imagen fija */}
           <div
+            className=""
             style={{
               backgroundImage: `url(${imageUrl})`,
-              backgroundAttachment: "fixed",
+              backgroundAttachment: "fixed", // La clave del efecto parallax
               backgroundPosition: "center",
               backgroundSize: "cover",
               position: "absolute",
@@ -79,10 +67,18 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
               left: 0,
               width: "100%",
               height: "100%",
-              zIndex: -1,
+              zIndex: -1, // Se asegura que quede detrás del contenido
             }}
-          />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white">
+          ></div>
+
+          {/* Contenido del contenedor */}
+          <div
+            style={{
+              position: "relative",
+              zIndex: 1, // Para estar sobre la imagen de fondo
+            }}
+          ></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white ">
             <img
               src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
               alt="White Logo"
@@ -97,6 +93,7 @@ const ParallaxBanner: React.FC<ParallaxBannerProps> = ({
 };
 
 export default ParallaxBanner;
+
 
 // "use client";
 // import React, { useEffect, useState } from "react";
