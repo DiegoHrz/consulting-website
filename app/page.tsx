@@ -1,4 +1,3 @@
-
 import BusinessPlans from "./components/BusinessPlans";
 
 import Hero from "./components/Hero";
@@ -11,14 +10,15 @@ import ParallaxBanner2 from "./components/ParallaxBanner2";
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
 // import ParallaxBanner from "./components/ParallaxBanner";
-import ParallaxBanner3 from "./components/ParallaxBanner3";
-
+// import ParallaxBanner3 from "./components/ParallaxBanner3";
 
 export default function Home() {
+
+
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
       <Hero />
-      <div className="">
+      <div className="bg-white">
         <BusinessPlans />
         <Pitch />
         <PitchSecond />
@@ -38,20 +38,22 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="relative sm:py-24 py-10">
-        <div className="w-screen h-1/2 bg-anna-gray absolute -z-50 bottom-1/2 "></div>
-        <div className="max-w-7xl  mx-auto sm:px-16 px-10 ">
+      <div className="relative  sm:pt-24  border-2 border-indigo-600 ">
+        <div className="w-screen h-1/2 border-2 border-purple-600  bg-anna-gray absolute -z-50 bottom-1/2 "></div>
+        <div className="max-w-7xl  mx-auto sm:px-16 px-10 relative border-4 border-red-500">
           {/* <ParallaxBanner /> */}
           <ParallaxBanner2
             imageUrl="https://monos.com/cdn/shop/files/WebsiteBanner_3000x2000-JPG_x2000.jpg?v=1660263331"
             height={26}
           />
-          {/* <ParallaxBanner2 imageUrl="/banner/parallax-image-2.jpg"  /> */}
-          <ParallaxBanner3 />
+
+          {/* <ParallaxBanner3 /> */}
         </div>
       </div>
-      <Reviews/>
-      <FAQ/>
+      <div className="bg-white pt-10 sm:pt-0 border-red-400 border-2">
+        <Reviews />
+        <FAQ />
+      </div>
     </div>
   );
 }

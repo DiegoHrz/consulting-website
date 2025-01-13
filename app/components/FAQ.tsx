@@ -9,7 +9,7 @@ const FAQ = () => {
 
 
   return (
-    <div >
+    <div className="" >
       <Title text="FAQ" additionalClasses="text-center" />
       <p className="font-vollkorn text-center pb-8" > Most questiones asked by our customers</p>
       <AccordionElement/>

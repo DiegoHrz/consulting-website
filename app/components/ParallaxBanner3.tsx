@@ -1,64 +1,29 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const ParallaxSections: React.FC = () => {
-  const sectionsRef = useRef<HTMLDivElement[]>([]); // Ref definido como un array de divs
-
-  useEffect(() => {
-    sectionsRef.current.forEach((section, i) => {
-      // Asegúrate de que el elemento existe
-      if (!section) return;
-
-      // Selecciona el elemento y verifica su tipo
-      const bg = section.querySelector(".bg");
-
-      if (bg instanceof HTMLDivElement) {
-        // Aplica los estilos iniciales al fondo
-        bg.style.backgroundImage = `url(https://picsum.photos/${window.innerWidth}/${window.innerHeight}?random=${i})`;
-
-        if (i > 0) {
-          bg.style.backgroundPosition = `50% ${window.innerHeight / 2}px`;
-
-          gsap.to(bg, {
-            backgroundPosition: `50% ${-window.innerHeight / 2}px`,
-            ease: "none",
-            scrollTrigger: {
-              trigger: section,
-              scrub: true,
-            },
-          });
-        }
-      } else {
-        console.warn(`Elemento con clase "bg" no es un div en la sección ${i}`);
-      }
-    });
-  }, []);
-
+const ParallaxBanner3: React.FC = ({}) => {
   return (
-    <div className="min-h-screen">
-      {[...Array(3)].map((_, i) => (
-        <div
-          key={i}
-          ref={(el) => {
-            if (el) sectionsRef.current[i] = el;
-          }}
-          className="relative flex items-center justify-center h-screen overflow-hidden parallax"
-        >
-          {/* Fondo parallax */}
-          <div className="bg absolute top-0 left-0 w-full h-full z-[-1] bg-cover bg-center bg-fixed"></div>
-
-          {/* Contenido */}
-          <h1 className="text-white text-4xl md:text-6xl font-bold z-10">
-            Section {i + 1}
-          </h1>
-        </div>
-      ))}
-    </div>
+    <div className="border h-64 w-full bg-transparent parallax   "></div>
   );
 };
 
-export default ParallaxSections;
+export default ParallaxBanner3;
+
+// div
+// style="visibility: visible; z-index: -100; position: fixed; top: 0px; left: 0px; overflow: hidden; transform: translate3d(0px, 715.531px, 0px); height: 603.227px; width: 431px;"
+
+// div
+// style="transform: translate3d(0px, 349.531px, 0px); visibility: visible; height: 603.227px; width: 464px;"
+
+// img
+// style="transform: translate3d(-406px, 167.575px, 0px); position: absolute; height: 851px; width: 1276px; max-width: none;"
+
+// <div className="parallax-div-div mx-auto w-full">
+//   <div className="parallax-div mx-auto w-full">
+//     <img
+//       src="/banner/parallax-image-2.jpg"
+//       alt=""
+//       className="parallax-image"
+//     />
+//   </div>
+// </div>

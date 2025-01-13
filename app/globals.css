@@ -724,27 +724,8 @@ h2 {
   clip-path: url(#clip-path); /* Hace referencia al clipPath definido en el SVG */
 }
 
-.parallax-container {
-  position: relative; /* Asegura que el pseudo-elemento ::before sea relativo a este contenedor */
-  overflow: hidden; /* Evita que el contenido desborde */
-}
-
-/* .parallax-container::before {
-  content: '';
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/banner/parallax-image-2.jpg'); 
-  background-size: cover;
-  background-position: center;
-  transform: translateY(0);
-  will-change: transform; 
-  z-index: -1;
-} */
-
-/* .parallax-div-div{
+/* 
+.parallax-div-div{
   position: relative;
   overflow: hidden;
   border: 4px solid;
@@ -756,47 +737,32 @@ h2 {
   z-index: -100;
   position: fixed;
   top: 0px;
-  left: 0px;
+  left: 50%;
   overflow: hidden;
   width: 800px;
   height: 320px;
   transform: translate3d(0px,100px,0px);
-  overflow: hidden;
 }
 
 .parallax-image {
-  transform: translate3d(-406px,100px,0px);
+  transform: translate3d(-706px,100px,0px);
   position: absolute;
-  height: 1000px;
-  width: 2000px;
+  height: 600px;
+  width: 1200px;
   max-width: none;
-} */
+}
+ */
 
 .parallax {
-  height: 100vh;
-
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  perspective: 1px;
-}
-
-.parallax-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
+  content: "";
+  position: fixed;
   bottom: 0;
-  left: 0;
-}
-
-.layer1 {
-  transform: translateZ(0);
-}
-
-.layer2 {
-  transform: translateZ(-1px);
-}
-
-.layer3 {
-  transform: translateZ(-2px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150vh;
+  height: 100vh;
+  background-image: url(/banner/parallax-image-2.jpg);
+  z-index: -100;
+  background-size: cover; 
+  background-position: center 10%;
 }
