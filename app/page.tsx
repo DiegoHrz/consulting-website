@@ -13,8 +13,6 @@ import Reviews from "./components/Reviews";
 // import ParallaxBanner3 from "./components/ParallaxBanner3";
 
 export default function Home() {
-
-
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
       <Hero />
@@ -50,7 +48,7 @@ export default function Home() {
           {/* <ParallaxBanner3 /> */}
         </div>
       </div>
-      <div className="bg-white pt-10 sm:pt-0 border-red-400 border-2">
+      <div className="bg-white sm:pt-0 border-red-400 border-2">
         <Reviews />
         <FAQ />
       </div>

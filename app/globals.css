@@ -769,4 +769,5 @@ h2 {
   z-index: -100;
   background-size: cover; 
   background-position: center 10%;
+  overflow-y: hidden;
 }
