@@ -46,13 +46,13 @@ const ParallaxBannerX = () => {
 
   return (
     <div className="min-h-screen bg-black font-sans">
-      <div className="h-screen overflow-y-auto [perspective:3px]">
+      <div className="h-screen overflow-y-auto [perspective:3px] overflow-x-hidden">
         {sections.map((section, index) => (
           <React.Fragment key={index}>
             {section.type === 'image' && (
               <>
                 <section 
-                  className="relative h-screen bg-center bg-cover -z-10 scale-150 origin-center"
+                  className="relative h-screen bg-center bg-cover -z-10  origin-center"
                   style={{
                     backgroundImage: `url(${section.imageUrl})`,
                     transform: 'translateZ(-1px) scale(1.5)'
