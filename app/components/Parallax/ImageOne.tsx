@@ -1,6 +1,6 @@
 'use client'
 import dynamic from 'next/dynamic';
-import Nasa from "../../../public/img/nasa.jpg";
+
 const Parallax = dynamic(() => import('react-parallax').then((mod) => mod.Parallax), { ssr: false });
 
 const ImageTwo = () => (
