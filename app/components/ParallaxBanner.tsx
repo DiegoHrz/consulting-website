@@ -1,79 +1,75 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
+// 'use client'
+// import React, { useEffect, useRef, useState } from 'react';
 
-const ParallaxBanner = () => {
-  const [scrollPosition, setScrollPosition] = useState(3000);
-  const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!containerRef.current) return;
+// const ParallaxSection = ({ imageUrl = "/banner/parallax-image-2.jpg", height = "600px", speed = 0.3 }) => {
+//   const [offset, setOffset] = useState(0);
+//   const sectionRef = useRef(null);
+//   const [isVisible, setIsVisible] = useState(false);
 
-    const rect = containerRef.current.getBoundingClientRect();
-    console.log('rect: ',rect)
-    const handleScroll = () => {
-      let position = -window.pageYOffset + scrollPosition;
-      if(position <= -4500){
-        position=-4500
-        setScrollPosition(position);
-      }else{
-        setScrollPosition(position);
-      }
-      console.log('SCROLL POSITION: ', position);
-    };
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         setIsVisible(entry.isIntersecting);
+//       },
+//       {
+//         threshold: 0.01,
+//         rootMargin: "50px"
+//       }
+//     );
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+//     if (sectionRef.current) {
+//       observer.observe(sectionRef.current);
+//     }
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  const parallaxShift = scrollPosition * 0.7;
-  return (
-    <div className="overflow-hidden  border-red-500 h-[26rem]   sm:px-16  sm:py-16 py-10  mx-auto relative z-0 ">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white z-50">
-        <img
-          src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
-          alt="White Logo"
-          className="h-auto w-40  mx-auto px-3 animate-fade-title"
-        />
-        <p className="font-cabin text-3xl">Bereit für die Veränderung?</p>
-      </div>
-      <div ref={containerRef} className="h-full w-full relative">
-        <div
-          className="absolute w-full h-full max-w-7xl "
-          style={{
-            transform: `translateY(${parallaxShift}px)`,
-          }}
-        >
-          <img
-            src="/banner/parallax-image-2.jpg"
-            alt="Parallax Background"
-            className="w-screen h-[200vh] object-cover bg-center"
-          />
-        </div>
-        <div className="absolute top-1/2 left-1/2 transform  w-full"></div>
-      </div>
+//     return () => {
+//       if (sectionRef.current) {
+//         observer.unobserve(sectionRef.current);
+//       }
+//     };
+//   }, []);
 
-      {/* <div className="hidden lg:block h-screen" id="home">
-        <div
-          className="relative flex h-full w-full justify-center bg-fixed bg-cover bg-center bg-no-repeat safari-fix"
-          style={{ backgroundImage: "url('/assets/home-cafe-2.jpg')" }}
-        >
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
-            <img
-              src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
-              alt=""
-              className=" h-full w-fit mx-auto px-3 "
-            />
-            <img
-              src="/assets/logo/logo-no-bg/logo-cafe-bistre-no-bg.png"
-              alt=""
-              className=" mx-auto mt-4  "
-            />
-          </div>
-        </div>
-      </div> */}
-    </div>
-  );
-};
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       if (!isVisible || !sectionRef.current) return;
 
-export default ParallaxBanner;
+//       const rect = sectionRef.current.getBoundingClientRect();
+//       const scrolled = window.scrollY;
+      
+//       if (rect.top < window.innerHeight && rect.bottom > 0) {
+//         const distance = (window.innerHeight - rect.top) * speed;
+//         setOffset(distance);
+//       }
+//     };
+
+//     window.addEventListener('scroll', handleScroll);
+//     handleScroll();
+
+//     return () => window.removeEventListener('scroll', handleScroll);
+//   }, [speed, isVisible]);
+
+//   return (
+//     <div 
+//       ref={sectionRef}
+//       className="relative overflow-hidden"
+//       style={{ height }}
+//     >
+//       <div
+//         className="absolute inset-0"
+//         style={{
+//           transform: `translateY(${offset}px)`,
+//           height: `calc(100% + 100px)`,  // Añadimos espacio extra para el efecto
+//           top: '-50px',  // Compensamos el espacio extra
+//           transition: 'transform 0.1s ease-out'
+//         }}
+//       >
+//         <img 
+//           src={imageUrl}
+//           alt="Parallax background"
+//           className="w-full h-full object-cover"
+//         />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ParallaxSection;

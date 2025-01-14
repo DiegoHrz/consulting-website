@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 
 interface ParallaxBannerProps {
   imageUrl?: string;
-  height: string | number; // Altura del contenedor (por ejemplo, 600px)
+  height?: string | number; // Altura del contenedor (por ejemplo, 600px)
 }
 
 const ParallaxBanner2: React.FC<ParallaxBannerProps> = ({
   imageUrl = "/banner/parallax-image-2.jpg",
-  height,
+  height='400px',
 }) => {
   const [isBrowserSafari, setBrowserIsSafari] = useState(false);
 

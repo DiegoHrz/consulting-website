@@ -767,6 +767,7 @@ h2 {
   background-size: cover;
   background-position: center 10%;
   pointer-events: none;
+  background-repeat: no-repeat;
 }
 
 .parallax {
