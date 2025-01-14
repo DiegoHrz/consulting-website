@@ -7,7 +7,7 @@ const ImageTwo = () => (
   <Parallax
     className="image"
     blur={0}
-    bgImage='/banner/parallax-image-3.webp'
+    bgImage='/banner/parallax-image-2.jpg'
     strength={150}
     bgImageStyle={{ minHeight: "100vh", height: "100vh" }}
   >
