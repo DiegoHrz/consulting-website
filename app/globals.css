@@ -755,7 +755,7 @@ h2 {
   max-width: none;
 }
 
-.parallax::before {
+.parallax {
   content: "";
   position: absolute;
   bottom: 0;
@@ -771,9 +771,9 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.parallax {
+/* .parallax {
   padding-bottom: 2000px;
-}
+} */
 
 /* .container {
   height: 100vh;
