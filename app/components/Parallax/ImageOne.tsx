@@ -8,7 +8,7 @@ const ImageTwo = () => (
     className="image"
     blur={0}
     bgImage='/banner/parallax-image-3.webp'
-    strength={100}
+    strength={200}
     bgImageStyle={{ minHeight: "100vh", height: "100vh" }}
   >
     <div className="content">
