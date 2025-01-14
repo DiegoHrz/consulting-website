@@ -18,13 +18,15 @@ import Reviews from "./components/Reviews";
 // import ParallaxBanner from "./components/ParallaxBanner";
 // import ParallaxBanner from "./components/ParallaxBanner";
 import ParallaxBanner2 from "./components/ParallaxBanner2";
-import ParallaxBannerX from "./components/ParallaxBannerX";
+import ImageOne from "./components/Parallax/ImageOne";
+// import ImageOne from "./components/Parallax/ImageOne";
+
 // import ParallaxSection from "./components/ParallaxBanner";
 
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
-      <ParallaxBannerX/>
+      
       <Hero />
       <div className="">
         <BusinessPlans />
@@ -58,6 +60,7 @@ export default function Home() {
           {/* <ParallaxBanner3 /> */}
         </div>
       </div>
+          <ImageOne/>
       <div className="bg-white sm:pt-0 border-red-400 border-2">
         <Reviews />
         <FAQ />
