@@ -17,6 +17,8 @@ import Reviews from "./components/Reviews";
 // import ParallaxBanner from "./components/ParallaxBanner";
 import ParallaxBanner2 from "./components/ParallaxBanner2";
 import ImageOne from "./components/Parallax/ImageOne";
+import ParallaxImage from "./components/Parallax/ParallaxImage";
+import ParallaxBanner from "./components/Parallax/ParallaxBanner";
 // import ImageOne from "./components/Parallax/ImageOne";
 
 // import ParallaxSection from "./components/ParallaxBanner";
@@ -45,18 +47,17 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="relative  sm:pt-40  border-2 border-indigo-600 ">
-        <div className="w-screen h-1/2 border-2 border-purple-600  bg-anna-gray absolute -z-50 bottom-1/2 ">
-        
-        </div>
-        <div className="max-w-7xl  mx-auto sm:px-16 px-10 relative border-4 border-red-500">
-        <ParallaxBanner2 />
-
-        </div>
+      <div className="relative  sm:pt-40   ">
+        <div className="w-screen h-1/2 border-2  bg-anna-gray absolute -z-50 bottom-1/2 "></div>
+        {/* <div className="max-w-7xl  mx-auto sm:px-16 px-10 relative border-4 border-red-500">
+          <ParallaxBanner2 />
+        </div> */}
+        <ParallaxBanner/>
       </div>
-      <div className="py-14 border bg-white">
+      {/* <div className="py-14 border bg-white">
         <ImageOne />
-      </div>
+      </div> */}
+
       <div className="bg-white sm:pt-0 border-red-400 border-2">
         <Reviews />
         <FAQ />
