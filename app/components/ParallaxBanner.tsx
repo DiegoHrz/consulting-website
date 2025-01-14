@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const ParallaxBanner = () => {
-  const [scrollPosition, setScrollPosition] = useState(3500);
+  const [scrollPosition, setScrollPosition] = useState(3000);
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!containerRef.current) return;
@@ -26,9 +26,9 @@ const ParallaxBanner = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const parallaxShift = scrollPosition * 0.8;
+  const parallaxShift = scrollPosition * 0.7;
   return (
-    <div className="overflow-hidden  border-red-500 h-[26rem]  w-full sm:px-16  sm:py-16 py-10 max-w-7xl mx-auto relative z-0 ">
+    <div className="overflow-hidden  border-red-500 h-[26rem]   sm:px-16  sm:py-16 py-10  mx-auto relative z-0 ">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white z-50">
         <img
           src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
@@ -47,7 +47,7 @@ const ParallaxBanner = () => {
           <img
             src="/banner/parallax-image-2.jpg"
             alt="Parallax Background"
-            className="w-full h-[200vh] object-cover bg-center"
+            className="w-screen h-[200vh] object-cover bg-center"
           />
         </div>
         <div className="absolute top-1/2 left-1/2 transform  w-full"></div>
