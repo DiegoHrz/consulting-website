@@ -1,19 +1,20 @@
 "use client";
 import React from "react";
-{/* <div className="border h-64 w-full bg-transparent parallax mx-auto" >
-</div> */}
+
 
 const ParallaxBanner3: React.FC = () => {
   return (
-    <div className="parallax-div-div mx-auto w-full border-black border-4">
-      <div className="parallax-div mx-auto w-full">
-        <img
-          src="/banner/parallax-image-2.jpg"
-          alt=""
-          className="parallax-image"
-        />
-      </div>
-    </div>
+    // <div className="parallax-div-div mx-auto w-full border-black border-4">
+    //   <div className="parallax-div mx-auto w-full">
+    //     <img
+    //       src="/banner/parallax-image-2.jpg"
+    //       alt=""
+    //       className="parallax-image"
+    //     />
+    //   </div>
+    // </div>
+     <div className="border h-64 w-full bg-transparent parallax mx-auto" >
+</div> 
   );
 };
 

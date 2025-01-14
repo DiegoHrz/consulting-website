@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
       <Hero />
-      <div className="">
+      <div className="bg-white">
         <BusinessPlans />
         <Pitch />
         <PitchSecond />
@@ -45,19 +45,18 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="relative  sm:pt-24  border-2 border-indigo-600 ">
-        <div className="w-screen h-1/2 border-2 border-purple-600  bg-anna-gray absolute -z-50 bottom-1/2 "></div>
+      <div className="relative  sm:pt-40  border-2 border-indigo-600 ">
+        <div className="w-screen h-1/2 border-2 border-purple-600  bg-anna-gray absolute -z-50 bottom-1/2 ">
+        
+        </div>
         <div className="max-w-7xl  mx-auto sm:px-16 px-10 relative border-4 border-red-500">
-          {/* <ParallaxBanner  /> */}
-          {/* <ParallaxBanner2 height={20} /> */}
-          {/* <ParallaxBanner4/> */}
-          {/* <ParallaxBanner  /> */}
+        <ParallaxBanner2 />
 
-          <ParallaxBanner2 />
-          {/* <ParallaxBanner3 /> */}
         </div>
       </div>
-      <ImageOne />
+      <div className="py-14 border bg-white">
+        <ImageOne />
+      </div>
       <div className="bg-white sm:pt-0 border-red-400 border-2">
         <Reviews />
         <FAQ />
