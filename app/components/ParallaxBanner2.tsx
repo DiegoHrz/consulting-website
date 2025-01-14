@@ -7,7 +7,7 @@ interface ParallaxBannerProps {
 }
 
 const ParallaxBanner2: React.FC<ParallaxBannerProps> = ({
-  imageUrl='/banner/parallax-image-2.jpg' ,
+  imageUrl = "/banner/parallax-image-2.jpg",
   height,
 }) => {
   const [isBrowserSafari, setBrowserIsSafari] = useState(false);

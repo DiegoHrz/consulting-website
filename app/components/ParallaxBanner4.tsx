@@ -43,7 +43,7 @@ const ParallaxBanner4 = () => {
           currentScroll <= initialOffset + containerHeight + window.innerHeight) {
         
         // Calcular las nuevas posiciones
-        const divTranslate = initialOffset + distanceFromStart;
+        // const divTranslate = initialOffset + distanceFromStart;
         const imageTranslate = -initialOffset + (distanceFromStart * -0.8);
 
         // Aplicar las transformaciones
