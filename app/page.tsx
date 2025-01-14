@@ -15,9 +15,7 @@ import Reviews from "./components/Reviews";
 // import ParallaxBanner4 from "./components/ParallaxBanner4";
 // import ParallaxBanner from "./components/ParallaxBanner";
 // import ParallaxBanner from "./components/ParallaxBanner";
-import ParallaxBanner2 from "./components/ParallaxBanner2";
-import ImageOne from "./components/Parallax/ImageOne";
-import ParallaxImage from "./components/Parallax/ParallaxImage";
+
 import ParallaxBanner from "./components/Parallax/ParallaxBanner";
 // import ImageOne from "./components/Parallax/ImageOne";
 
