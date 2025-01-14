@@ -25,7 +25,7 @@ const ParallaxBanner2: React.FC<ParallaxBannerProps> = ({
       {isBrowserSafari ? (
         <div className="h-screen">
           <div
-            className={`border h-64 w-full bg-transparent parallax  
+            className={`border  w-full bg-transparent parallax  
         
         `}
           ></div>

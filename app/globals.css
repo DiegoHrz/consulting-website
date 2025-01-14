@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   overflow-x: hidden;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -728,7 +729,6 @@ h2 {
   clip-path: url(#clip-path); /* Hace referencia al clipPath definido en el SVG */
 }
 
-
 .parallax-div-div {
   position: relative;
   overflow: hidden;
@@ -754,25 +754,24 @@ h2 {
   max-width: none;
 }
 
-
 .parallax::before {
   content: "";
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
-  width: 150vh;
+  width: 100vh;
   height: 100vh;
   background-image: url(/banner/parallax-image-2.jpg);
   z-index: -100;
-  background-size: cover; 
+  background-size: cover;
   background-position: center 10%;
-  overflow-y: hidden;
+  pointer-events: none;
 }
 
-
-
-
+.parallax {
+  padding-bottom: 2000px;
+}
 
 /* .container {
   height: 100vh;
