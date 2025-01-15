@@ -3,6 +3,7 @@ import Collage from "@/app/components/customIcons/Collage";
 import Subtitle from "@/app/components/customTags/Subtitle";
 
 import HeroSecondary from "@/app/components/HeroSecondary";
+import Placeholder from "@/app/components/Placeholder";
 import React from "react";
 
 const About = () => {
@@ -10,14 +11,16 @@ const About = () => {
     <div>
       <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
         <HeroSecondary
-          image="balloons.jpg"
+          image="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           header="origins"
           title="Über uns"
           text="Wir sind eine Beratungsfirma, die Unternehmen mit
         maßgeschneiderten Lösungen unterstützt. Unser Ziel ist es,
         gemeinsam Ihre Vision erfolgreich umzusetzen."
+        imageStyles=""
         />
       </div>
+      <Placeholder text='Uber uns' />
       <div className="mb-[100px]">
         <Collage
           main_image="worker2.jpg"
@@ -46,11 +49,12 @@ const About = () => {
               Contact us
             </button>
           </div>
-          <div className="absolute right-0 bottom-[0%] " >
+          {/* <div className="absolute right-0 bottom-[0%] " >
             <img src="/profile/colleagues.png" alt="" className="bg-cover "/>
-          </div>
+          </div> */}
         </div>
       </div>
+      
     </div>
   );
 };

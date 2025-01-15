@@ -1,6 +1,6 @@
 "use client";
 
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import Link from "next/link";
 import { MdPhone } from "react-icons/md";
@@ -324,31 +324,17 @@ const Footer = () => {
             <p className="text-[#070908] text-xl  border-b border-black pb-1">Socials</p>
 
             <a
-              href="https://www.instagram.com/"
+              href="https://www.linkedin.com/in/anna-schenk/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center "
             >
-              <FaInstagram
+              <FaLinkedin
                 size={18}
                 className="text-[#808080]  transition-all duration-700  mr-1 "
               />
               <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Instagram
-              </p>
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <FaFacebookF
-                size={16}
-                className="text-[#808080]  transition-all duration-700 mr-1 "
-              />
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Facebook
+                Linkedin
               </p>
             </a>
           </div>

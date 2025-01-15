@@ -6,6 +6,7 @@ interface HeroSecondaryProps {
   header?: string;
   title: string;
   text?: string;
+  imageStyles?:string
 }
 
 const HeroSecondary: React.FC<HeroSecondaryProps> = ({
@@ -13,14 +14,15 @@ const HeroSecondary: React.FC<HeroSecondaryProps> = ({
   header,
   title,
   text,
+  imageStyles
 }) => {
   return (
     <div className="relative h-1/2">
       <div className="h-full w-screen  overflow-hidden">
         <img
-          src={`/banner/${image}`}
+          src={`${image}`}
           alt=""
-          className="w-auto min-w-full object-cover h-full "
+          className={`w-auto min-w-full object-cover h-full ${imageStyles}`}
         />
       </div>
       <div className="border max-w-screen-sm mx-auto   absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-6 sm:p-10 sm:min-w-px min-w-[80%] w-48 sm:w-fit">

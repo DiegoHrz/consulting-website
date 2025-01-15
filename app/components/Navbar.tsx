@@ -8,11 +8,19 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { useNavStore } from "../store/useNavStore";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 const smoothScroll = (targetId: string) => {
   const target = document.getElementById(targetId);
   if (target) {
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    const headerOffset = 100; // Adjust this value based on your header height
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   }
 };
 
@@ -21,7 +29,7 @@ const navLinks = [
   { name: "Leistungen", href: "/leistungen" },
   { name: "Über Uns", href: "/uber-uns" },
   { name: "Referenzen", href: "/referenzen" },
-  { name: "FAQ", href: "/faq" },
+  { name: "FAQ", href: "faq" },
   { name: "Kontakt", href: "/kontakt" },
 ];
 
@@ -44,19 +52,41 @@ const Navbar = () => {
     setTimeout(() => setIsLoading(false), 100); // Simular la carga completa
   }, [setIsLoading]);
 
-  const tabHandler = (tab: string) => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleFAQClick = async (event: React.MouseEvent) => {
+    event.preventDefault();
+
+    // If not on home page, navigate to home first
+    if (pathname !== "/") {
+      await router.push("/");
+      // Wait for navigation to complete
+      setTimeout(() => {
+        smoothScroll("faq");
+      }, 100);
+    } else {
+      smoothScroll("faq");
+    }
+
+    setSelectedTab("faq");
+    setCurrentSection("faq");
+  };
+
+  const tabHandler = (tab: string, href: string, e?: React.MouseEvent) => {
+    if (href === "faq" && e) {
+      handleFAQClick(e);
+      return;
+    }
     const sectionId = tab.toLowerCase();
     setSelectedTab(sectionId);
     setCurrentSection(sectionId); // Add this line
     smoothScroll(sectionId);
   };
 
-  const tabAndToggle = (
-    tab: string,
-  ) => {
-    // event.preventDefault();
+  const tabAndToggle = (tab: string, href:string) => {
     toggleMenu();
-    tabHandler(tab);
+    tabHandler(tab,href);
   };
 
   useLayoutEffect(() => {
@@ -80,7 +110,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [clickHamburgerMenu,scrollPositionOnClick]);
+  }, [clickHamburgerMenu, scrollPositionOnClick]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -117,10 +147,7 @@ const Navbar = () => {
         <div className="fixed z-50 top-0 w-full">
           <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center  font-sans text-xs  font-light w-full">
             <div className="bg-anna-blue/40 h-full w-full p-1">
-              <p>
-                CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT ME CONTACT
-                ME CONTACT ME
-              </p>
+              <p>Wo eine Idee ist, ist auch ein Weg</p>
             </div>
           </div>
           <div
@@ -151,7 +178,7 @@ const Navbar = () => {
                   }`}
                   key={item.href}
                   href={item.href}
-                  onClick={() => tabHandler(item.name, )}
+                  onClick={(e) => item.href === 'faq' ? handleFAQClick(e) : tabHandler(item.name, item.href)}
                 >
                   {item.name}
                 </Link>
@@ -164,7 +191,7 @@ const Navbar = () => {
       <nav className="md:hidden w-full items-center justify-between mt-[-16px] md:container md:mx-0 md:px-0  py-2 relative z-50">
         <div className="fixed z-50 top-0 w-full">
           <div className="bg-[#32304c] text-center text-white font-sans text-xs p-1 font-light">
-            CONTACT CONTACT CONTACT CONCTACT CONTACT
+            Wo eine Idee ist, ist auch ein Weg
           </div>
           <div
             className={`flex items-center justify-between  z-10 top-0 w-full py-2 px-6 md:px-0 text-white ${
@@ -199,12 +226,12 @@ const Navbar = () => {
                   <Link
                     className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] ${
                       !isLoading && item.href.slice(1) === currentSection
-                        ? " text-rilke-red"
+                        ? " text-anna-brown"
                         : ""
                     }`}
                     key={item.href}
                     href={item.href}
-                    onClick={() => tabAndToggle(item.name)}
+                    onClick={(e) => item.href === 'faq' ? handleFAQClick(e) : tabAndToggle(item.name, item.href)}
                   >
                     {item.name}
                   </Link>

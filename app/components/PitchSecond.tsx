@@ -8,7 +8,7 @@ const PitchSecond = () => {
     <div className="flex w-full flex-col  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-0">
       <div className="md:w-1/2">
         <img
-          src="/banner/professional-office.jpeg"
+          src="/workers/worker6.avif"
           className="rounded-lg shadow-gray-400 shadow-[0px_0px_15px]"
           alt=""
         />

@@ -1,4 +1,5 @@
 import HeroSecondary from "@/app/components/HeroSecondary";
+import Placeholder from "@/app/components/Placeholder";
 import React from "react";
 
 const Services = () => {
@@ -6,7 +7,7 @@ const Services = () => {
     <div>
       <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
         <HeroSecondary
-          image="balloons.jpg"
+          image="/pages-imgs/leistungen.avif"
           header="services"
           title="leistungen"
           text="Wir sind eine Beratungsfirma, die Unternehmen mit
@@ -14,7 +15,9 @@ const Services = () => {
       gemeinsam Ihre Vision erfolgreich umzusetzen."
         />
       </div>
-      <div></div>
+      <div>
+      <Placeholder text='Leistungen' />
+      </div>
     </div>
   );
 };

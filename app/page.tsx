@@ -18,6 +18,8 @@ import Reviews from "./components/Reviews";
 
 import ParallaxBanner from "./components/Parallax/ParallaxBanner";
 import Quote from "./components/Quote";
+import Workflow from "./components/Workflow";
+
 // import ImageOne from "./components/Parallax/ImageOne";
 
 // import ParallaxSection from "./components/ParallaxBanner";
@@ -26,7 +28,7 @@ export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
       <Hero />
-      <div className="bg-white">
+      <div className="bg-white h-full">
         <BusinessPlans />
         <Pitch />
         <PitchSecond />
@@ -41,9 +43,7 @@ export default function Home() {
         </div> */}
         <ParallaxBanner />
       </div>
-      {/* <div className="py-14 border bg-white">
-        <ImageOne />
-      </div> */}
+      <Workflow/>
 
       <div className="bg-white sm:pt-0 ">
         <Reviews />

@@ -8,7 +8,7 @@ const Impresum = () => {
         <HeroSecondary
           image="balloons.jpg"
           header="privacy policy"
-          title="Datenschutzerklärung"
+          title="Impresum"
           text="Wir sind eine Beratungsfirma, die Unternehmen mit
       maßgeschneiderten Lösungen unterstützt. Unser Ziel ist es,
       gemeinsam Ihre Vision erfolgreich umzusetzen."

@@ -1,20 +1,19 @@
-'use client'
+"use client";
 import Wrapper from "../hoc/Wrapper";
 import AccordionElement from "./AccordionElement";
 import Title from "./customTags/Title";
 
-
-
 const FAQ = () => {
-
-
   return (
-    <div className="" >
+    <div className="" id="faq">
       <Title text="FAQ" additionalClasses="text-center" />
-      <p className="font-vollkorn text-center pb-8" > Most questiones asked by our customers</p>
-      <AccordionElement/>
+      <p className="font-vollkorn text-center pb-8">
+        {" "}
+        Most questiones asked by our customers
+      </p>
+      <AccordionElement />
     </div>
-  )
-}
+  );
+};
 
-export default Wrapper(FAQ,'faq') 
+export default Wrapper(FAQ, "faq");

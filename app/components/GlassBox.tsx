@@ -71,7 +71,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
           />
         </motion.div>
       )}
-      <div className="z-20 flex flex-col gap-4 p-10 sm:p-0">
+      <div className="z-20 flex flex-col gap-4 p-10 sm:p-9">
         <div className=" text-lg lg:text-2xl font-medium  z-10  font-cabin_sans ">
           {/* <BouncingText>40+</BouncingText> */}
           {title}
