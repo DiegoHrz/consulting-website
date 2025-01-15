@@ -14,17 +14,14 @@ import { Button } from "@/components/ui/button";
 
 import CustomStar from "./customIcons/Star";
 
-
 export function CarouselDemo() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-
 
   React.useEffect(() => {
     if (!api) {
       return;
     }
-
 
     setCurrent(api.selectedScrollSnap() + 1);
 
@@ -42,7 +39,7 @@ export function CarouselDemo() {
   ];
 
   return (
-    <div className="relative w-full max-w-7xl px-16 pb-6 pt-4">
+    <div className="relative w-full max-w-7xl  pb-6 pt-4">
       <Carousel
         setApi={setApi}
         className="w-full"
@@ -106,10 +103,12 @@ export function CarouselDemo() {
                           </div>
                         </div>
                       </div>
-                      <div className=" font-semibold text-center mb-3 text-anna-brown font-cabin">
+                      {/* <div className=" font-semibold text-center mb-3 text-anna-brown font-cabin">
                         Amazing Review
+                      </div> */}
+                      <div className="text-sm text-anna-brown/70 font-cabin_sans ">
+                        {oferta}
                       </div>
-                      <div className="text-sm text-anna-brown/70 font-cabin_sans ">{oferta}</div>
                     </div>
                   </CardContent>
                 </Card>
