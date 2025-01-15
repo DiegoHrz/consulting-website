@@ -23,7 +23,7 @@ const Footer = () => {
           <img
             src="/logo/logo_only_name.png"
             alt=""
-            className="sm:hidden aspect-auto h-20 w-full"
+            className="sm:hidden aspect-auto h-20 "
           />
           <a
             href="https://wa.me/4916091471897?text=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
@@ -63,18 +63,18 @@ const Footer = () => {
             <p>info@as-vision-partners.com</p>
           </a>
         </div>
-        <div className="text-[#464646] flex flex-col  gap-3 mt-10 sm:items-end">
+        <div className="text-[#464646] flex flex-col  gap-3 mt-10 items-center sm:items-end">
           <p>Make an appointment</p>
           <a
             href="https://calendly.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className=""
+            className="border-2 "
           >
             <img
               src="/banner/calendly.png"
               alt=""
-              className="rounded-lg aspect-auto h-14 w-fit"
+              className="rounded-lg aspect-auto h-14 "
             />
           </a>
         </div>
@@ -217,105 +217,111 @@ const Footer = () => {
       </div>
 
       {/* Mobile version */}
-      <div className="md:hidden flex flex-col gap-10  w-full max-w-7xl mx-auto sm:px-16 pt-10 px-10">
-        <div className="flex gap-4">
+      <div className="md:hidden justify-center flex flex-col gap-10  w-full max-w-7xl mx-auto sm:px-16 pt-10 px-10">
+        <div className="flex w-full gap-4">
           {/* Company */}
-          <div className="flex flex-col gap-3 w-full">
-            <p className="text-[#070908] text-xl">Company</p>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Home
-              </p>
-            </Link>
-            <Link href="/uber-uns">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                About us
-              </p>
-            </Link>
-            <Link href="/leistungen">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Leinstugen
-              </p>
-            </Link>
-            <Link href="/referenzen">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Referenzen
-              </p>
-            </Link>
-            <Link href="/faq">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                FAQ
-              </p>
-            </Link>
+          <div className="flex flex-col gap-3 w-1/2 ">
+            <div className="flex flex-col text-left gap-3">
+              <p className="text-[#070908] text-xl border-b border-black pb-1">Company</p>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Home
+                </p>
+              </Link>
+              <Link href="/uber-uns">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  About us
+                </p>
+              </Link>
+              <Link href="/leistungen">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Leinstugen
+                </p>
+              </Link>
+              <Link href="/referenzen">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Referenzen
+                </p>
+              </Link>
+              <Link href="/faq">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  FAQ
+                </p>
+              </Link>
+            </div>
           </div>
 
           {/* Services */}
 
-          <div className="flex flex-col gap-3 w-full">
-            <p className="text-[#070908] text-xl">Services</p>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Gründungszuschuss
-              </p>
-            </Link>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Businessplan
-              </p>
-            </Link>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Business Consulting
-              </p>
-            </Link>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Finanzierung
-              </p>
-            </Link>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Buchhaltung
-              </p>
-            </Link>
-            <Link href="/">
-              <div className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm relative  flex">
-                <span className="relative ">
-                  <p>Websites und</p>
-                  <p>Marketing</p>
-                  <div className="top-1/2 left-[100%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-2  absolute text-white whitespace-nowrap">
-                    Soon
-                  </div>
-                </span>
-              </div>
-            </Link>
+          <div className="flex flex-col  w-1/2">
+            <div className="flex flex-col text-left gap-3">
+              <p className="text-[#070908] text-xl border-b border-black pb-1">Services</p>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Gründungszuschuss
+                </p>
+              </Link>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Businessplan
+                </p>
+              </Link>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Business Consulting
+                </p>
+              </Link>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Finanzierung
+                </p>
+              </Link>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Buchhaltung
+                </p>
+              </Link>
+              <Link href="/">
+                <div className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm relative  flex">
+                  <span className="relative ">
+                    <p>Websites und</p>
+                    <p>Marketing</p>
+                    <div className="top-1/2 left-[100%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-2  absolute text-white whitespace-nowrap">
+                      Soon
+                    </div>
+                  </span>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex w-full gap-4">
           {/* Contact */}
-          <div className=" flex flex-col gap-3 w-full">
-            <p className="text-[#070908] text-xl">Contact</p>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Mail
-              </p>
-            </Link>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Calendly
-              </p>
-            </Link>
-            <Link href="/">
-              <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
-                Whatsapp
-              </p>
-            </Link>
+          <div className=" flex flex-col gap-3 w-1/2">
+            <div className="flex flex-col text-left gap-3">
+              <p className="text-[#070908] text-xl border-b border-black pb-1">Contact</p>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Mail
+                </p>
+              </Link>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Calendly
+                </p>
+              </Link>
+              <Link href="/">
+                <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
+                  Whatsapp
+                </p>
+              </Link>
+            </div>
           </div>
 
           {/* Socials */}
-          <div className="  flex flex-col gap-3 w-full">
-            <p className="text-[#070908] text-xl  ">Socials</p>
+          <div className=" flex flex-col gap-3 w-1/2">
+            <p className="text-[#070908] text-xl  border-b border-black pb-1">Socials</p>
 
             <a
               href="https://www.instagram.com/"

@@ -56,7 +56,7 @@ export default function Home() {
         <ImageOne />
       </div> */}
 
-      <div className="bg-white sm:pt-0 border-red-400 border-2">
+      <div className="bg-white sm:pt-0 ">
         <Reviews />
         <FAQ />
       </div>
