@@ -8,7 +8,7 @@ import { MdPhone } from "react-icons/md";
 const Footer = () => {
   return (
     <div className="pt-10 pb-[20px] bg-[#F8F8F8] text-white lg:text-[#d9d9d9] relative w-full">
-      <div className="text-black max-w-7xl mx-auto  sm:px-16 pb-1 flex  flex-col sm:flex-row items-center sm:justify-between">
+      <div className="text-black max-w-7xl mx-auto  sm:px-16 flex  flex-col sm:flex-row items-center sm:justify-between">
         <div className="text-black max-w-7xl  flex flex-col justify-center items-center sm:items-start">
           <img
             src="/logo/logo_horizontal.png"
@@ -63,13 +63,13 @@ const Footer = () => {
             <p>info@as-vision-partners.com</p>
           </a>
         </div>
-        <div className="text-[#464646] flex flex-col  gap-3 mt-10 items-center sm:items-end">
+        <div className="text-[#464646] flex flex-col  gap-3 my-10 items-center sm:items-end">
           <p>Make an appointment</p>
           <a
             href="https://calendly.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 "
+            className=""
           >
             <img
               src="/banner/calendly.png"
@@ -81,7 +81,7 @@ const Footer = () => {
       </div>
 
       {/* Desktop version */}
-      <div className="hidden md:flex w-full max-w-7xl mx-auto sm:px-16 pt-10">
+      <div className="hidden md:flex w-full max-w-7xl mx-auto sm:px-16">
         {/* Company */}
         <div className="flex flex-col gap-3">
           <p className="text-[#070908] text-xl">Company</p>
