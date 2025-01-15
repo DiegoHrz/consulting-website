@@ -81,7 +81,7 @@ const Footer = () => {
       </div>
 
       {/* Desktop version */}
-      <div className="hidden md:flex w-full max-w-7xl mx-auto sm:px-16">
+      <div className="hidden md:flex w-full max-w-7xl mx-auto sm:px-16 sm:pt-10">
         {/* Company */}
         <div className="flex flex-col gap-3">
           <p className="text-[#070908] text-xl">Company</p>

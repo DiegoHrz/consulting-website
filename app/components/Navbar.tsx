@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import logoWhite from "../../public/assets/logo/logo-no-bg/logo-white-no-bg.png";
-import logoBlack from "../../public/assets/logo/logo-no-bg/logo-black-no-bg.png";
+import logoWhite from "../../public/logo/logo-no-bg/logo-white-no-bg.png";
+import logoBlack from "../../public/logo/logo-no-bg/logo-black-no-bg.png";
 
 import { useEffect, useLayoutEffect, useState } from "react";
 

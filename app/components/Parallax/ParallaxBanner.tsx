@@ -41,7 +41,7 @@ const ParallaxBanner = () => {
       </div> */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-anna-white w-full">
         <img
-          src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
+          src="/logo/logo-no-bg/logo-white-no-bg.png"
           alt="White Logo"
           className="h-auto w-40  mx-auto px-3 animate-fade-title"
         />

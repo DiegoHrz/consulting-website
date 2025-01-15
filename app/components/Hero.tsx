@@ -14,7 +14,7 @@ const Hero = () => {
         />
         <div className="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full ">
           <img
-            src="/assets/logo/logo-no-bg/logo-white-no-bg.png"
+            src="/logo/logo-no-bg/logo-white-no-bg.png"
             alt="White Logo"
             className="h-auto w-96  mx-auto px-3 animate-fade-title"
           />
