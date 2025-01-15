@@ -49,7 +49,7 @@ export function CarouselDemo() {
       >
         <CarouselContent>
           {ofertas.map((oferta, index) => (
-            <CarouselItem key={index} className="md:basis-1/3">
+            <CarouselItem key={index} className="sm:basis-[70%] md:basis-1/2  lg:basis-1/3">
               <div className="p-1 ">
                 <Card className=" mx-4">
                   <CardContent className="flex flex-col items-center justify-center p-4 border-none rounded-lg aspect-square  shadow-gray-300 shadow-[0px_0px_15px]">
@@ -106,7 +106,7 @@ export function CarouselDemo() {
                       {/* <div className=" font-semibold text-center mb-3 text-anna-brown font-cabin">
                         Amazing Review
                       </div> */}
-                      <div className="text-sm text-anna-brown/70 font-cabin_sans ">
+                      <div className="text-sm text-anna-brown/70 font-cabin_sans">
                         {oferta}
                       </div>
                     </div>
