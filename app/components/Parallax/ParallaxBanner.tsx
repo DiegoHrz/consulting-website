@@ -46,7 +46,7 @@ const ParallaxBanner = () => {
           className="h-auto w-40  mx-auto px-3 animate-fade-title"
         />
         <p className="w-full font-cabin text-center text-xl sm:text-3xl">
-          Font de our name is inspired… mas grande
+        Bereit für die Veränderung ?
         </p>
       </div>
     </section>

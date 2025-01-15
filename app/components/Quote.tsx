@@ -7,10 +7,12 @@ const Quote = () => {
     <div className=" pt-10 rounded-lg ">
       <div className="max-w-2xl mx-auto pb-10">
         <p className="text-center  font-vollkorn font-medium text-lg sm:text-xl">
-          <span className="mr-2 text-3xl" >Our name</span>
+          <span className="mr-2 text-3xl">Our name is inspired</span>
+          <span>by the German concept of</span>
+          <span className="text-3xl mx-2" >ASS</span>
           <span>
-            is inspired by the German concept of mono no aware – the profound
-            appreciation of the beauty in fleeting moments.
+            no aware – the profound appreciation of the beauty in fleeting
+            moments.
           </span>
         </p>
       </div>
