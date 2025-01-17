@@ -61,7 +61,7 @@ const Recommendation2: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="hidden lg:w-1/3 z-[1]   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-4 lg:flex items-center overflow-hidden">
+      <div className="hidden lg:w-1/3 z-[1]   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-2 lg:flex items-center overflow-hidden">
         <img
           src="/brands/brand4.png"
           className="  h-fit object-cover hidden lg:block"

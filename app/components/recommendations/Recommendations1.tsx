@@ -7,7 +7,7 @@ import Title from "../customTags/Title";
 const Recommendation1: React.FC = () => {
   return (
     <div className="flex w-full flex-col-reverse  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-6 p-0 md:p-10 lg:p-0">
-      <div className="lg:w-2/3 ">
+      <div className="lg:w-2/3">
         <div className="lg:hidden z-[1] rounded-lg shadow-gray-400 shadow-[0px_0px_15px]  flex items-center overflow-hidden mb-4">
           <img
             src="/brands/brand2.webp"
@@ -49,18 +49,18 @@ const Recommendation1: React.FC = () => {
           war für mich eine große Bereicherung, und ich bin ihr dafür sehr
           dankbar. Ich kann sie uneingeschränkt weiterempfehlen!
         </p>
-        <div className="w-full  animate-fade-subtitle pt-8 lg:pl-20 lg:text-right">
+        <div className="w-full  animate-fade-subtitle pt-4  lg:text-right ">
           <a
             href="https://www.schnaider-consulting.de/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-4 font-cabin_sans rounded-lg text-anna-blue  w-fit border-2  font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue "
+            className="px-10 py-4 font-cabin_sans rounded-lg text-anna-blue  w-fit border-2  font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue block "
           >
             KONTAK
           </a>
         </div>
       </div>
-      <div className="hidden lg:w-1/3 z-[1]   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-4 lg:flex items-center overflow-hidden">
+      <div className="hidden lg:w-1/3 z-[1]   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-2 lg:flex items-center overflow-hidden">
         <img
           src="/brands/brand2.webp"
           className="  h-fit object-cover hidden lg:block"

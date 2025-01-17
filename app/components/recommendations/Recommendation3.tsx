@@ -53,18 +53,18 @@ const Recommendation1: React.FC = () => {
           Zusammenarbeit sehr hilfsbereit, geduldig und empathisch. Vielen Dank
           nochmal!
         </p>
-        <div className="w-full  animate-fade-subtitle pt-8 lg:pl-20 lg:text-right">
+        <div className="w-full  animate-fade-subtitle pt-4 lg:text-right">
           <a
             href="https://www.meingedankengarten.de/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-4 font-cabin_sans rounded-lg text-anna-blue  w-fit border-2  font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue "
+            className="px-10 py-4 font-cabin_sans rounded-lg text-anna-blue  w-fit border-2  font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue block"
           >
             KONTAK
           </a>
         </div>
       </div>
-      <div className="hidden lg:w-1/3 z-[1]   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-4 lg:flex items-center overflow-hidden">
+      <div className="hidden lg:w-1/3 z-[1]   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-2 lg:flex items-center overflow-hidden">
         <img
           src="/brands/brand3.png"
           className="  h-fit object-cover hidden lg:block"
