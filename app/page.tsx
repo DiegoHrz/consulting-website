@@ -32,8 +32,26 @@ export default function Home() {
       <Hero />
       <div className="bg-white h-full">
         <BusinessPlans />
-        <Pitch image='/profile/profile.jpg' />
-        <PitchSecond />
+        <Pitch
+          image="/profile/profile.jpg"
+          title="Jetzt Unternehmer werden"
+          text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
+          erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
+          schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
+          inspiriert? Die Experten von AS Vision Partners unterstützen Sie
+          dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
+          maximieren. Sind Sie bereit, mit uns durchzustarten?"
+        />
+        <PitchSecond
+          image='/workers/worker6.avif'
+          title="Verbessern Sie Ihr Geschäft"
+          text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
+          erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
+          schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
+          inspiriert? Die Experten von AS Vision Partners unterstützen Sie
+          dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
+          maximieren. Sind Sie bereit, mit uns durchzustarten?"
+        />
 
         <Services />
       </div>
@@ -44,10 +62,10 @@ export default function Home() {
           <ParallaxBanner2 />
         </div> */}
         <ParallaxBanner />
-      <CurvedRoadmap/>
+        <CurvedRoadmap />
       </div>
-      <Workflow/>
-      <Calendly/>
+      <Workflow />
+      <Calendly />
       <div className="bg-white sm:pt-0 ">
         <Reviews />
         <FAQ />

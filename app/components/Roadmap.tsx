@@ -1,30 +1,38 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CheckCircle } from "lucide-react";
 
 const CurvedRoadmap = () => {
   const steps = [
     {
-      title: "Planning",
+      title: "1. Erstgespräch",
       description: "Define project scope and requirements",
       position: "bottom",
     },
     {
-      title: "Design",
+      title: "2. Organisatorisches – Kickoff",
       description: "Create wireframes and visual designs",
       position: "top",
     },
     {
-      title: "Development",
+      title: "3. Projektstart",
       description: "Build and implement features",
       position: "bottom",
     },
     {
-      title: "Launch",
+      title: "4. Nachbetreuung",
       description: "Deploy and monitor performance",
       position: "top",
     },
   ];
+
+  const [animationOn, setAnimationOn] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimationOn(true);
+    }, 5000);
+  }, []);
 
   const getLeftPosition = (index: number) => {
     const positions = ["20%", "40%", "60%", "80%"];
@@ -53,7 +61,7 @@ const CurvedRoadmap = () => {
             strokeWidth="4"
             strokeDasharray="1200"
             strokeDashoffset="1200"
-            className="animate-draw"
+            className={`${animationOn && "animate-draw"} `}
           />
         </svg>
 
@@ -80,8 +88,7 @@ const CurvedRoadmap = () => {
             <div
               className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mx-auto"
               style={{
-                background:
-                  "linear-gradient(to right, green 30%,# 100%)",
+                background: "linear-gradient(to right, green 30%,# 100%)",
               }}
             >
               <CheckCircle className="w-6 h-6 text-white" />
