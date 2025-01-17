@@ -4,7 +4,6 @@ import { GiLaurelCrown } from "react-icons/gi";
 import Wrapper from "../../hoc/Wrapper";
 import Title from "../customTags/Title";
 
-
 const Recommendation1: React.FC = () => {
   return (
     <div className="flex w-full flex-col-reverse  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-6 p-0 md:p-10 lg:p-0">
@@ -28,9 +27,9 @@ const Recommendation1: React.FC = () => {
           </div>
         </div>
         <div className="flex gap-3 my-2">
-          <div className="flex items-center gap-1 rounded-2xl bg-[#DCE5F0] text-[#0B66C2] font-semibold py-1 px-3 w-fit ">
+          <div className="flex items-center gap-1 rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit ">
             <GiLaurelCrown size={20} />
-            <p className="text-xs">Top Business </p>
+            <p className="text-xs">Top Partner </p>
           </div>
           {/* <p className=" rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit text-xs">
             Top Business{" "}
@@ -43,18 +42,26 @@ const Recommendation1: React.FC = () => {
           jeder Phase meines Antrags unterstützt, sei es fachlich als auch
           emotional/psychisch. Da die Antragsphase sehr nervenaufreibend ist,
           hat mich gerade das Zwischenmenschliche bei Frau Schenk überzeugt. Am
-          Ende haben wir Erfolg gehabt, sodass ich den Gründungszuschuss, nach
-          gemeinsamer harter Arbeit, auch bewilligt und ausgezahlt bekommen
-          habe. Ich würde Frau Schenk jeder Zeit wieder empfehlen. Wie bereits
+          Ende haben wir Erfolg gehabt,
+          <span className="text-xl text-[#A3DED1] font-cabin_sans ">
+            {" "}
+            sodass ich den Gründungszuschuss, nach gemeinsamer harter Arbeit,
+            auch bewilligt und ausgezahlt bekommen habe.{" "}
+          </span>
+          Ich würde Frau Schenk jeder Zeit wieder empfehlen. Wie bereits
           erwähnt, ist sie nicht nur fachlich kompetent, sondern auch in der
           Zusammenarbeit sehr hilfsbereit, geduldig und empathisch. Vielen Dank
           nochmal!
-          <span className="text-xl text-[#C2A964] font-cabin_sans "></span>
         </p>
-        <div className="w-full  animate-fade-subtitle pt-8">
-          <button className="font-cabin_sans rounded-lg text-anna-blue mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue">
-            BUNCHUNG
-          </button>
+        <div className="w-full  animate-fade-subtitle pt-8 lg:pl-20 lg:text-right">
+          <a
+            href="https://www.meingedankengarten.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-10 py-4 font-cabin_sans rounded-lg text-anna-blue  w-fit border-2  font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue "
+          >
+            KONTAK
+          </a>
         </div>
       </div>
       <div className="hidden lg:w-1/3 z-[1]   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-4 lg:flex items-center overflow-hidden">
