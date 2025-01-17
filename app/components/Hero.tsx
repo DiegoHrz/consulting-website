@@ -7,20 +7,30 @@ const Hero = () => {
     <div className="h-screen relative">
       <div className="h-full w-full relative">
         <div className="absolute w-full h-full"></div>
-        <img
+        {/* <img
           src="/giphylentils.gif"
           alt="Full-width GIF"
           className="w-screen h-screen object-cover"
-        />
+        /> */}
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/video/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full ">
           <img
             src="/logo/logo-no-bg/logo-white-no-bg.png"
             alt="White Logo"
             className="h-auto w-96  mx-auto px-3 animate-fade-title"
           />
-          <Subtitle text="Starten Sie Ihr Unternehmen mit dem perfekten Businessplan" /> 
-          <div className="w-full flex justify-center animate-fade-subtitle pt-8" >
-            <button className="text-white mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">CONTACT US</button>
+          <Subtitle text="Starten Sie Ihr Unternehmen mit dem perfekten Businessplan" />
+          <div className="w-full flex justify-center animate-fade-subtitle pt-8">
+            <button className="text-white mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">
+              CONTACT US
+            </button>
           </div>
           {/* <img
             src="/assets/logo/logo-no-bg/logo-cafe-bistre-no-bg.png "

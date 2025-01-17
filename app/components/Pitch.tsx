@@ -3,7 +3,11 @@
 import Wrapper from "../hoc/Wrapper";
 import Title from "./customTags/Title";
 
-const Pitch = () => {
+interface PitchProps{
+  image:string
+}
+
+const Pitch:React.FC<PitchProps> = ({image}) => {
   return (
     <div className="flex w-full flex-col-reverse  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-0 ">
       <div className="md:w-1/2 ">
@@ -23,7 +27,7 @@ const Pitch = () => {
         </div>
       </div>
       <div className="md:w-1/2">
-        <img src="/profile/profile.jpg" className=" rounded-lg shadow-gray-400 shadow-[0px_0px_15px]"alt="" />
+        <img src={image} className=" rounded-lg shadow-gray-400 shadow-[0px_0px_15px]"alt="" />
       </div>
     </div>
   );

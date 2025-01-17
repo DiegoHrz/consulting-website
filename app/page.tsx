@@ -19,6 +19,8 @@ import Reviews from "./components/Reviews";
 import ParallaxBanner from "./components/Parallax/ParallaxBanner";
 import Quote from "./components/Quote";
 import Workflow from "./components/Workflow";
+import Calendly from "./components/calendly/Calendly";
+import CurvedRoadmap from "./components/Roadmap";
 
 // import ImageOne from "./components/Parallax/ImageOne";
 
@@ -30,7 +32,7 @@ export default function Home() {
       <Hero />
       <div className="bg-white h-full">
         <BusinessPlans />
-        <Pitch />
+        <Pitch image='/profile/profile.jpg' />
         <PitchSecond />
 
         <Services />
@@ -42,9 +44,10 @@ export default function Home() {
           <ParallaxBanner2 />
         </div> */}
         <ParallaxBanner />
+      <CurvedRoadmap/>
       </div>
       <Workflow/>
-
+      <Calendly/>
       <div className="bg-white sm:pt-0 ">
         <Reviews />
         <FAQ />

@@ -1,4 +1,5 @@
 import HeroSecondary from "@/app/components/HeroSecondary";
+import Pitch from "@/app/components/Pitch";
 import Placeholder from "@/app/components/Placeholder";
 import React from "react";
 
@@ -18,6 +19,7 @@ const Referenzen = () => {
     <div>
     <Placeholder text='Referenzen' />
     </div>
+    <Pitch image=""/>
   </div>
   );
 };
