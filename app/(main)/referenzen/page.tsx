@@ -1,5 +1,5 @@
 import HeroSecondary from "@/app/components/HeroSecondary";
-import Placeholder from "@/app/components/Placeholder";
+
 import Recommendation2 from "@/app/components/recommendations/Recommendation2";
 import Recommendation3 from "@/app/components/recommendations/Recommendation3";
 import Recommendation4 from "@/app/components/recommendations/Recommendation4";
@@ -19,9 +19,9 @@ const Referenzen = () => {
       gemeinsam Ihre Vision erfolgreich umzusetzen."
         />
       </div>
-      <div>
+      {/* <div>
         <Placeholder text="Referenzen" />
-      </div>
+      </div> */}
       <Recommendations1 />
       <Recommendation2 />
       <Recommendation3 />
