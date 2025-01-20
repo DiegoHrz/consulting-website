@@ -24,7 +24,7 @@ module.exports = {
   				'Cabin'
   			],
 			  cabin_sans: [
-				'Cabin', 'sans-serif'
+				'Cabin', 'ui-sans-serif'
 			]
   		},
   		colors: {

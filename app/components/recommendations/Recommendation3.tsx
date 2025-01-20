@@ -57,8 +57,9 @@ const Recommendation1: React.FC = () => {
             rel="noopener noreferrer"
             className="py-2 font-cabin_sans rounded-lg text-[#0066cc]  w-fit   font-semibold text-sm hover:underline  duration-700 transition flex items-center gap-1 "
           >
+            <IoIosArrowForward color="[#0066CC]" className="block lg:hidden" />
             WEBSITE
-            <IoIosArrowForward color="[#0066CC]" />
+            <IoIosArrowForward color="[#0066CC]" className="hidden lg:block" />
           </a>
         </div>
       </div>

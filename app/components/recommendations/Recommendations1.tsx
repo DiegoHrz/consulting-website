@@ -10,11 +10,7 @@ const Recommendation1: React.FC = () => {
     <div className="flex w-full flex-col-reverse  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-6 p-0 md:p-10 lg:p-0">
       <div className="lg:w-2/3">
         <div className="lg:hidden z-[1] rounded-lg shadow-gray-400 shadow-[0px_0px_15px]  flex items-center overflow-hidden mb-4 justify-center ">
-          <img
-            src="/brands/brand2.webp"
-            className="object-cover"
-            alt=""
-          />
+          <img src="/brands/brand2.webp" className="object-cover" alt="" />
         </div>
         <div className="flex flex-col pt-1 sm:pt-0">
           <div>
@@ -57,9 +53,9 @@ const Recommendation1: React.FC = () => {
             rel="noopener noreferrer"
             className="py-2 font-cabin_sans rounded-lg text-[#0B66C2]  w-fit   font-semibold text-sm hover:underline  duration-700 transition flex items-center gap-1 "
           >
+            <IoIosArrowForward color="[#0066CC]" className="block lg:hidden" />
             WEBSITE
-            <IoIosArrowForward color="[#0066CC]" />
-
+            <IoIosArrowForward color="[#0066CC]" className="hidden lg:block" />
           </a>
         </div>
       </div>
