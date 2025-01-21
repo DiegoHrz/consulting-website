@@ -27,7 +27,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
     >
       {/* Outer container for glass effect */}
       <motion.div
-        className="absolute inset-0 backdrop-blur-lg rounded-lg bg-[#0F0F10] shadow-[0px_0px_15px] shadow-gray-400"
+        className="absolute inset-0 backdrop-blur-lg rounded-lg bg-[#0F0F10] shadow-[0px_0px_15px] shadow-gray-400 border-2 border-[rgba(255, 255, 255, .1)]"
         initial={{ scale: 0, opacity: 0.1 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}

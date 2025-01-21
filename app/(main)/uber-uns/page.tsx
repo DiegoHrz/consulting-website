@@ -1,12 +1,13 @@
 "use client";
 
-
 import Subtitle from "@/app/components/customTags/Subtitle";
 import Title from "@/app/components/customTags/Title";
 
 import HeroSecondary from "@/app/components/HeroSecondary";
 
 import React, { useState } from "react";
+import { IoMdContact } from "react-icons/io";
+import { IconBase } from "react-icons/lib";
 
 const About = () => {
   const [hoverIn, setHoverIn] = useState(false);
@@ -52,7 +53,10 @@ const About = () => {
                 right: 0,
               }}
             >
-              <img src="/brands/brand1.avif" alt="" style={{
+              <img
+                src="/brands/brand1.avif"
+                alt=""
+                style={{
                   position: "absolute",
                   top: 0,
                   left: 0,
@@ -70,7 +74,8 @@ const About = () => {
                   minHeight: "100%",
                   maxHeight: "100%",
                   objectFit: "contain",
-              }} />
+                }}
+              />
             </span>
           </a>
           <a
@@ -96,7 +101,10 @@ const About = () => {
                 right: 0,
               }}
             >
-              <img src="/brands/brand2.webp" alt="" style={{
+              <img
+                src="/brands/brand2.webp"
+                alt=""
+                style={{
                   position: "absolute",
                   top: 0,
                   left: 0,
@@ -114,7 +122,8 @@ const About = () => {
                   minHeight: "100%",
                   maxHeight: "100%",
                   objectFit: "contain",
-              }} />
+                }}
+              />
             </span>
           </a>
           <a
@@ -140,7 +149,10 @@ const About = () => {
                 right: 0,
               }}
             >
-              <img src="/brands/brand5.jpeg" alt="" style={{
+              <img
+                src="/brands/brand5.jpeg"
+                alt=""
+                style={{
                   position: "absolute",
                   top: 0,
                   left: 0,
@@ -158,7 +170,8 @@ const About = () => {
                   minHeight: "100%",
                   maxHeight: "100%",
                   objectFit: "contain",
-              }} />
+                }}
+              />
             </span>
           </a>
           <a
@@ -184,7 +197,10 @@ const About = () => {
                 right: 0,
               }}
             >
-              <img src="/brands/brand4.png" alt="" style={{
+              <img
+                src="/brands/brand4.png"
+                alt=""
+                style={{
                   position: "absolute",
                   top: 0,
                   left: 0,
@@ -202,7 +218,8 @@ const About = () => {
                   minHeight: "100%",
                   maxHeight: "100%",
                   objectFit: "contain",
-              }} />
+                }}
+              />
             </span>
           </a>
           <a
@@ -228,7 +245,10 @@ const About = () => {
                 right: 0,
               }}
             >
-              <img src="/brands/brand3.png" alt="" style={{
+              <img
+                src="/brands/brand3.png"
+                alt=""
+                style={{
                   position: "absolute",
                   top: 0,
                   left: 0,
@@ -246,17 +266,13 @@ const About = () => {
                   minHeight: "100%",
                   maxHeight: "100%",
                   objectFit: "contain",
-              }} />
+                }}
+              />
             </span>
           </a>
         </div>
-        
       </div>
-      {/* why we do it? -hacemos esto porque no deberias empezar tu negocio tu solo
-      sin soporte -se de primera mano lo dificil que es empezar tu empresa tu
-      solo why you are the best? -una historia de ti de como eres la mejor para
-      el trabajo haciendolo lucir lo mas humano posible how do you help your
-      clients? -como yo lo haces? como lo entregas y como haras sus vidas mejor */}
+
       {/* <div className="mb-[100px]">
         <Collage
           main_image="worker2.jpg"
@@ -269,8 +285,8 @@ const About = () => {
       <div className="mt-[70px] w-full  mb-[70px] max-w-7xl sm:px-16 px-10 mx-auto">
         <div>
           <div className="bg-[#e5d4b1]/40 rounded-xl p-10">
-            <div className="">
-              <Title text="why we do it?" />
+            <div className="mb-40">
+              {/* <Title text="why we do it?" /> */}
               {/* <div className="rounded-ss-[5rem] rounded-br-[5rem] overflow-hidden w-full h-80 flex items-center">
                 <img
                   src="/about/hand.jpg"
@@ -278,22 +294,67 @@ const About = () => {
                   className="object-cover bg-center"
                 />
               </div> */}
+              <div className="w-1/2">
+                <h1
+                  className={`font-cabin text-3xl sm:text-[2rem] text-yellow-500 `}
+                >
+                  Why we do it?
+                </h1>
+                <div className="font-cabin text-3xl sm:text-[2rem] mb-10">
+                  <span>Because we shouldnt </span>
+                  <span className="text-cyan-800">start a business with</span>
+                  <span>out </span>
+                  <span className="text-cyan-800">a formidable guide</span>
+                </div>
+              </div>
+              <div className="h-[1px] bg-white my-12"></div>
+              <div className="flex w-full">
+                <div className="w-1/3 ">
+                  <img
+                    src="/logo/logo-no-bg/logo-black-no-bg.png"
+                    alt=""
+                    className="w-32 aspect-auto mx-auto"
+                  />
+                </div>
+                <div className="w-1/3 p-4">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil quidem aspernatur repudiandae maiores laboriosam
+                    repudiandae 
+                  </p>
+                </div>
+                <div className="w-1/3 p-4">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Iste itaque nesciunt quis quia nisi amet minus doloribus
+                    repudiandae maiores 
+                  </p>
+                </div>
+              </div>
+              {/* <p>
+                why we do it? -hacemos esto porque no deberias empezar tu
+                negocio tu solo sin soporte -se de primera mano lo dificil que
+                es empezar tu empresa tu solo why you are the best? -una
+                historia de ti de como eres la mejor para el trabajo haciendolo
+                lucir lo mas humano posible how do you help your clients? -como
+                yo lo haces? como lo entregas y como haras sus vidas mejor
+              </p> */}
             </div>
 
-            <div className="border-2 border-black flex lg:flex-row flex-col">
+            <div className="flex lg:flex-row flex-col mb-32">
               <div className="w-1/2 flex flex-col  ">
-                <Title text="why are you the best?" additionalClasses="" />
-                <span className="font-vollkorn   tracking-[1px] italic pt-10 pb-4">
+                <span className="font-vollkorn   tracking-[1px] italic">
                   Our story
                 </span>
-                <div className="font-cabin text-lg">
+                <Title text="why are you the best?" additionalClasses="" />
+                <div className="font-cabin text-lg pt-12">
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
                     placeat dolorem est, harum dolorum impedit eum eos nisi,
                     autem sit, minus eius libero in possimus accusantium ipsam
                     mollitia doloremque pariatur!
                   </p>
-                  <p className="mt-4">
+                  <p className="mt-6">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
                     placeat dolorem est, harum dolorum impedit eum eos nisi,
                     autem sit, minus eius libero in possimus accusantium ipsam
@@ -325,22 +386,17 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div></div>
+
             <div>
-              <div className="border-2 border-black flex">
-                <div className="flex flex-col  ">
+              <div className="flex">
+                <div className="flex flex-col  justify-center items-center border-4 w-full">
                   <span className="font-vollkorn text-center  tracking-[1px] italic">
                     Our team
                   </span>
                   <Title text="who are we?" additionalClasses="text-center" />
-                  <div className="font-cabin text-lg">
+                  <div className="font-cabin text-lg pt-10">
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Et placeat dolorem est, harum dolorum impedit eum eos
-                      nisi, autem sit, minus eius libero in possimus accusantium
-                      ipsam mollitia doloremque pariatur! Lorem, ipsum dolor sit
-                      amet consectetur adipisicing elit. Et placeat dolorem est,
-                      harum dolorum impedit eum eos nisi, autem sit
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati ipsum debitis animi ex
                     </p>
                   </div>
                 </div>
