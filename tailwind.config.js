@@ -12,6 +12,8 @@ module.exports = {
   theme: {
   	extend: {
   		fontFamily: {
+			original_title:["Instrument Sans", "Instrument Sans Placeholder", 'sans-serif'],
+			original_text:["Inter Tight", "Inter Tight Placeholder", 'sans-serif'],
   			vollkorn: [
   				'Vollkorn',
   				'serif'

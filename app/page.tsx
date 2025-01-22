@@ -21,6 +21,7 @@ import Quote from "./components/Quote";
 import Workflow from "./components/Workflow";
 import Calendly from "./components/calendly/Calendly";
 import CurvedRoadmap from "./components/Roadmap";
+import CarouselContainer from "./components/carousel/CarouselContainer";
 
 // import ImageOne from "./components/Parallax/ImageOne";
 
@@ -30,7 +31,10 @@ export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black ">
       <Hero />
-      <div className="bg-white h-full">
+      <div className=" w-full  border-[#3A3A3A] h-24 rounded-lg mt-6 lg:mt-14">
+        <CarouselContainer />
+      </div>
+      <div className=" h-full">
         <BusinessPlans />
         <Pitch
           image="/profile/profile.jpg"
