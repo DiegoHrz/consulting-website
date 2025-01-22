@@ -51,7 +51,7 @@
 }
 
 #inpLock:checked + label {
-  background: #9f9494;
+  background: #505960;
 }
 
 #inpLock:checked + label svg {

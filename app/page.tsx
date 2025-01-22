@@ -18,10 +18,10 @@ import Reviews from "./components/Reviews";
 
 import ParallaxBanner from "./components/Parallax/ParallaxBanner";
 import Quote from "./components/Quote";
-import Workflow from "./components/Workflow";
-import Calendly from "./components/calendly/Calendly";
+
 import CurvedRoadmap from "./components/Roadmap";
 import CarouselContainer from "./components/carousel/CarouselContainer";
+import CalendlyContainer from "./components/calendly/CalendlyContainer";
 
 // import ImageOne from "./components/Parallax/ImageOne";
 
@@ -68,8 +68,8 @@ export default function Home() {
         <ParallaxBanner />
         <CurvedRoadmap />
       </div>
-      <Workflow />
-      <Calendly />
+      {/* <Workflow /> */}
+      <CalendlyContainer/>
       <div className="bg-white sm:pt-0 ">
         <Reviews />
         <FAQ />

@@ -2,11 +2,11 @@ const CalendlyIframe = () => {
   return (
     <iframe
       src="https://calendly.com/asvisionpartners"
-      width="100%"
+      width={600}
       height={600}
       frameBorder="0"
       scrolling="no"
-      className=" w-fit"
+      // className=" w-fit"
     />
   );
 };

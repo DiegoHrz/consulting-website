@@ -16,7 +16,7 @@ const LockButton: React.FC<LockButtonProps> = ({ isChecked }) => {
   return (
     <div
       style={{ position: "absolute", height: "100%" }}
-      className="top-1/2 left-1/2 -translate-x-1/2"
+      className="top-1/2 left-1/2 -translate-x-1/2 pointer-events-none"
     >
       <input
         id="inpLock"

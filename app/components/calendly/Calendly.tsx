@@ -8,7 +8,11 @@ const CalendlyIframe = dynamic(() => import("./CalendlyIframe"), {
   ssr: false,
 });
 
-const Calendly = () => {
+interface CalendlyProps {
+  accepted: boolean;
+}
+
+const Calendly: React.FC<CalendlyProps> = ({ accepted }) => {
   const [consentGiven, setConsentGiven] = useState(false);
   const [animationSvg, setAnimationSvg] = useState(false);
 
@@ -21,32 +25,36 @@ const Calendly = () => {
     }
   }, []);
 
-  const handleConsent = () => {
-    localStorage.setItem("calendlyConsent", "accepted");
-    setAnimationSvg(true);
-    setTimeout(() => {
-      setConsentGiven(!consentGiven);
-    }, 2000);
-  };
+  useEffect(() => {
+    if (accepted) {
+      localStorage.setItem("calendlyConsent", "accepted");
+      setAnimationSvg(true);
+      setTimeout(() => {
+        setConsentGiven(!consentGiven);
+      }, 2000);
+    }
+  }, [accepted]);
+
+
 
   return (
-    <div className="w-full h-[600px] border">
+    <div className="w-full h-[600px] relative ">
       {consentGiven ? (
-        <div className="  w-fit mx-auto border">
+        <div className="  w-fit">
           <CalendlyIframe />
         </div>
       ) : (
-        <div className="w-fit  mx-auto">
-          <div className="relative  ">
-            <img src="/calendly-preview.png" alt="" className="h-96 blur-sm" />
+        <div className="">
+          <div className="absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2  h-full w-full inset-0 p-20">
+            <img src="/calendly-preview.png" alt="" className="w-full h-full blur-sm object-cover " />
             <LockSvg isChecked={animationSvg} />
           </div>
-          <button
+          {/* <button
             onClick={handleConsent}
             className="border bg-blue-600 rounded-lg p-4 mt-10 text-white"
           >
             aceptas que soy tu papi y los terminos y condiciones?
-          </button>
+          </button> */}
         </div>
       )}
     </div>

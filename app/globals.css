@@ -773,6 +773,21 @@ h2 {
   background-repeat: no-repeat;
 }
 
+@keyframes pulseCustom {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+
+  }
+}
+
+.pulseCustom {
+  animation: pulseCustom 2s infinite;
+}
+
 /* .parallax {
   padding-bottom: 2000px;
 } */
