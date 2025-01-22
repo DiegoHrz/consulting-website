@@ -6,8 +6,27 @@ import Title from "@/app/components/customTags/Title";
 import HeroSecondary from "@/app/components/HeroSecondary";
 
 import React, { useState } from "react";
-import { IoMdContact } from "react-icons/io";
-import { IconBase } from "react-icons/lib";
+
+const founders = [
+  {
+    name: "Patrick Rösner",
+    position: "Berater",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    imgSource: "founders/pat-no-bg.png",
+  },
+  {
+    name: "Anna Schenk",
+    position: "Founder",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    imgSource: "founders/anna.avif",
+  },
+  {
+    name: "Jennifer Weisheit",
+    position: "Beraterin",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+    imgSource: "founders/jen-no-bg.png",
+  },
+];
 
 const About = () => {
   const [hoverIn, setHoverIn] = useState(false);
@@ -307,8 +326,8 @@ const About = () => {
                   <span className="text-cyan-800">a formidable guide</span>
                 </div>
               </div>
-              <div className="h-[1px] bg-white my-12"></div>
-              <div className="flex w-full">
+
+              <div className="flex w-full mt-12">
                 <div className="w-1/3 ">
                   <img
                     src="/logo/logo-no-bg/logo-black-no-bg.png"
@@ -320,17 +339,18 @@ const About = () => {
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Nihil quidem aspernatur repudiandae maiores laboriosam
-                    repudiandae 
+                    repudiandae
                   </p>
                 </div>
                 <div className="w-1/3 p-4">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Iste itaque nesciunt quis quia nisi amet minus doloribus
-                    repudiandae maiores 
+                    repudiandae maiores
                   </p>
                 </div>
               </div>
+              <div className="h-[1px] bg-white mt-12"></div>
               {/* <p>
                 why we do it? -hacemos esto porque no deberias empezar tu
                 negocio tu solo sin soporte -se de primera mano lo dificil que
@@ -346,7 +366,7 @@ const About = () => {
                 <span className="font-vollkorn   tracking-[1px] italic">
                   Our story
                 </span>
-                <Title text="why are you the best?" additionalClasses="" />
+                <Title text="Our passionate Team" additionalClasses="" />
                 <div className="font-cabin text-lg pt-12">
                   <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
@@ -389,15 +409,104 @@ const About = () => {
 
             <div>
               <div className="flex">
-                <div className="flex flex-col  justify-center items-center border-4 w-full">
+                <div className="flex flex-col  justify-center items-center  w-full">
                   <span className="font-vollkorn text-center  tracking-[1px] italic">
                     Our team
                   </span>
                   <Title text="who are we?" additionalClasses="text-center" />
                   <div className="font-cabin text-lg pt-10">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati ipsum debitis animi ex
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsam obcaecati ipsum debitis animi ex
                     </p>
+                  </div>
+
+                  <div
+                    style={{
+                      display: "grid",
+
+                      flex: "0 0 auto",
+                      gap: "40px",
+                      gridAutoRows: "minmax(0px, 1fr)",
+                      gridTemplateColumns: "repeat(3, minmax(200px, 1fr))",
+                      height: "min-content",
+                      justifyContent: "center",
+                      padding: "0px",
+                      position: "relative",
+                      width: "100%",
+                      zIndex: 1,
+                    }}
+                  >
+                    {founders.map((item, index) => {
+                      return (
+                        <div
+                          style={{
+                            placeSelf: "start",
+                            flex: "0 0 auto",
+                            height: "auto",
+                            position: "relative",
+                            width: "100%",
+                          }}
+                          key={index}
+                        >
+                          <div
+                            style={{
+                              width: "100%",
+                              opacity: 1,
+                              transform: "none",
+                              alignContent: "center",
+                              alignItems: "center",
+                              cursor: "pointer",
+                              display: "flex",
+                              flexDirection: "column",
+                              flexWrap: "wrap",
+                              gap: "12px",
+                              height: "auto",
+                              justifyContent: "flex-start",
+                              padding: 0,
+                              position: "relative",
+                            }}
+                          >
+                            <div
+                              className="flex flex-none flex-nowrap gap-2 h-80 justify-center overflow-hidden p-0 relative w-60 items-center"
+                              style={{
+                                borderBottomLeftRadius: "480px",
+                                borderBottomRightRadius: "480px",
+                              }}
+                            >
+                              <div
+                                className="aspect-square bottom-0 flex-none h-60 left-0 overflow-hidden absolute right-0 z-[1] opacity-100 border-4"
+                                style={{
+                                  background: "rgb(230, 230, 230)",
+                                  borderRadius: "480px",
+                                }}
+                              ></div>
+
+                              <div
+                                className="aspect-[0.75/1] -bottom-1 flex-none h-80 left-0 absolute right-0 z-[1] transform-none opacity-100"
+                                style={{ transformOrigin: "50% 50% 0px" }}
+                              >
+                                <div
+                                  className="absolute inset-0"
+                                  style={{ borderRadius: "inherit" }}
+                                >
+                                  <img
+                                    src={item.imgSource}
+                                    alt=""
+                                    className="block w-full h-full object-center object-cover"
+                                    style={{ borderRadius: "inherit" }}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div>{item.position}</div>
+                            <div className="font-semibold font-vollkornSC">
+                              {item.name}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -436,8 +545,8 @@ const About = () => {
               <p>Contact us</p>
               <div
                 className={`absolute left-1/2 -translate-x-1/2 transition-all duration-500 ${
-                  hoverIn && "-bottom-5"
-                }   -bottom-8 h-11 w-11 aspect-square `}
+                  hoverIn ? "-bottom-3" :'-bottom-8'
+                }    h-11 w-11 aspect-square `}
                 style={{
                   backgroundColor: "rgb(234, 168, 121)",
                   filter: "blur(10px)",
