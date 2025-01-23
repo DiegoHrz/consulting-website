@@ -9,7 +9,7 @@ const BusinessPlans = () => {
   return (
     <div className="mt-32">
       <div className="mb-20">
-        <div className="w-fit rounded-full mx-auto relative overflow-hidden mb-4">
+        <div className="w-fit rounded-full mx-auto relative overflow-hidden mb-6">
           <img
             src="/logo/logo_only_letter.png"
             alt=""
@@ -19,7 +19,7 @@ const BusinessPlans = () => {
 
         </div>
 
-        <p className="font-original_title text-2xl sm:text-5xl text-center font-semibold max-w-[950px] mx-auto">
+        <p className="font-original_title text-2xl sm:text-4xl text-center font-semibold max-w-[950px] mx-auto">
           Empowering authentic connections for a vibrant social experience.
         </p>
       </div>

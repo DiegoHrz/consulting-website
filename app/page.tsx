@@ -19,10 +19,10 @@ import Reviews from "./components/Reviews";
 import ParallaxBanner from "./components/Parallax/ParallaxBanner";
 import Quote from "./components/Quote";
 
-import CurvedRoadmap from "./components/Roadmap";
+
 import CarouselContainer from "./components/carousel/CarouselContainer";
 import CalendlyContainer from "./components/calendly/CalendlyContainer";
-import RoadmapPath from "./components/RoadmapPath";
+import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";
 
 // import ImageOne from "./components/Parallax/ImageOne";
 
@@ -48,7 +48,7 @@ export default function Home() {
           maximieren. Sind Sie bereit, mit uns durchzustarten?"
         />
         <PitchSecond
-          image='/workers/worker6.avif'
+          image="/workers/worker6.avif"
           title="Verbessern Sie Ihr Geschäft"
           text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
           erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
@@ -62,16 +62,26 @@ export default function Home() {
       </div>
       <Quote />
       <div className="relative     ">
-        <div className="w-screen h-1/2   bg-anna-gray absolute -z-50 bottom-1/2 "></div>
+        <div className="w-screen h-fit   bg-anna-gray absolute -z-50 bottom-1/2 "></div>
         {/* <div className="max-w-7xl  mx-auto sm:px-16 px-10 relative border-4 border-red-500">
           <ParallaxBanner2 />
         </div> */}
         <ParallaxBanner />
-        <CurvedRoadmap />
-        <RoadmapPath/>
+        {/* <CurvedRoadmap /> */}
+      </div>
+      <div
+        className=" "
+        style={{
+          background:
+            "linear-gradient(to bottom, white 3%, #D5E0E2 30%, #D5E0E2 90%,white 100%)",
+        }}
+      >
+        <RoadmapContainer />
       </div>
       {/* <Workflow /> */}
-      <CalendlyContainer/>
+
+      <CalendlyContainer />
+
       <div className="bg-white sm:pt-0 ">
         <Reviews />
         <FAQ />

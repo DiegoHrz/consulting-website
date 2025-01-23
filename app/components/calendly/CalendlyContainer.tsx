@@ -60,8 +60,8 @@ const CalendlyContainer = () => {
           <b>you need to accept the terms and conditions of Calendly</b>
         </p>
       </div>
-      <div className="border-b border-x  flex flex-col lg:flex-row rounded-b-xl  overflow-hidden shadow-gray-400 shadow-[0px_0px_15px]">
-        <div className="p-6 sm:p-12 border-r border-4">
+      <div className=" flex flex-col lg:flex-row rounded-b-xl  overflow-hidden shadow-gray-400 shadow-[0px_0px_15px]">
+        <div className="p-6 sm:p-12 border-r ">
           <div className="rounded-full w-24 h-24 overflow-hidden bg-[#D3CFC7] mx-auto lg:mx-0">
             <img
               src="/founders/anna.avif"
@@ -123,7 +123,7 @@ const CalendlyContainer = () => {
               </div>
               <div  className="mx-auto w-fit sm:w-full " >
                 <button
-                  className="border bg-blue-600 rounded-lg p-4 mt-4 text-white pulseCustom"
+                  className=" bg-blue-600 rounded-lg p-4 mt-4 text-white pulseCustom"
                   onClick={handleAccept}
                 >
                   Book your Meeting

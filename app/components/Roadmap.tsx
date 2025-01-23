@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { CheckCircle } from "lucide-react";
+
 import { ImLocation } from "react-icons/im";
 
 
