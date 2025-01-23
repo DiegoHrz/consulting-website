@@ -22,6 +22,7 @@ import Quote from "./components/Quote";
 import CurvedRoadmap from "./components/Roadmap";
 import CarouselContainer from "./components/carousel/CarouselContainer";
 import CalendlyContainer from "./components/calendly/CalendlyContainer";
+import RoadmapPath from "./components/RoadmapPath";
 
 // import ImageOne from "./components/Parallax/ImageOne";
 
@@ -67,6 +68,7 @@ export default function Home() {
         </div> */}
         <ParallaxBanner />
         <CurvedRoadmap />
+        <RoadmapPath/>
       </div>
       {/* <Workflow /> */}
       <CalendlyContainer/>

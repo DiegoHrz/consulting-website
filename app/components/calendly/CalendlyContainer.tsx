@@ -60,27 +60,27 @@ const CalendlyContainer = () => {
           <b>you need to accept the terms and conditions of Calendly</b>
         </p>
       </div>
-      <div className="border-b border-x  flex rounded-b-xl  overflow-hidden shadow-gray-400 shadow-[0px_0px_15px]">
-        <div className="p-12 border-r border-4">
-          <div className="rounded-full w-24 h-24 overflow-hidden bg-[#D3CFC7]">
+      <div className="border-b border-x  flex flex-col lg:flex-row rounded-b-xl  overflow-hidden shadow-gray-400 shadow-[0px_0px_15px]">
+        <div className="p-6 sm:p-12 border-r border-4">
+          <div className="rounded-full w-24 h-24 overflow-hidden bg-[#D3CFC7] mx-auto lg:mx-0">
             <img
               src="/founders/anna.avif"
               alt=""
               className="w-24 object-contain brightness-110"
             />
           </div>
-          <div className="font-original_text font-semibold text-anna-black/70 mt-4 ">
+          <div className="font-original_text font-semibold text-anna-black/70 mt-4 text-center lg:text-left">
             Anna S. Schenk
           </div>
-          <div className="font-cabin font-semibold text-anna-black text-3xl mt-1">
+          <div className="font-cabin font-semibold text-anna-black text-3xl mt-1 text-center lg:text-left">
             Sales Demo
           </div>
           <div className="mt-10 flex flex-col gap-3">
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center  ">
               <div>
                 <MdOutlineWatchLater size={23} />{" "}
               </div>
-              <div className="font-original_text font-semibold text-anna-black/70 italic">
+              <div className="font-original_text font-semibold text-anna-black/70 italic ">
                 30 min
               </div>
             </div>
@@ -88,7 +88,7 @@ const CalendlyContainer = () => {
               <div>
                 <MdOutlineLocationOn size={25} />
               </div>
-              <div className="max-w-72 font-original_text font-semibold text-anna-black/70 italic">
+              <div className="lg:max-w-72 font-original_text font-semibold text-anna-black/70 italic">
                 Web conferencing details provided upon confirmation
               </div>
             </div>
@@ -121,7 +121,7 @@ const CalendlyContainer = () => {
                   <span className="text-lg text-red-600">*</span>
                 </p>
               </div>
-              <div>
+              <div  className="mx-auto w-fit sm:w-full " >
                 <button
                   className="border bg-blue-600 rounded-lg p-4 mt-4 text-white pulseCustom"
                   onClick={handleAccept}

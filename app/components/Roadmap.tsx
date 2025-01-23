@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { CheckCircle } from "lucide-react";
+import { ImLocation } from "react-icons/im";
+
 
 const CurvedRoadmap = () => {
   const steps = [
@@ -91,7 +93,8 @@ const CurvedRoadmap = () => {
                 background: "linear-gradient(to right, green 30%,# 100%)",
               }}
             >
-              <CheckCircle className="w-6 h-6 text-white" />
+              {/* <CheckCircle className="w-6 h-6 text-white" /> */}
+              <ImLocation size={34} />
             </div>
 
             {/* Content for bottom position */}

@@ -45,7 +45,7 @@ const Calendly: React.FC<CalendlyProps> = ({ accepted }) => {
         </div>
       ) : (
         <div className="">
-          <div className="absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2  h-full w-full inset-0 p-20">
+          <div className="absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2  h-full w-full inset-0 p-8 lg:p-20">
             <img src="/calendly-preview.png" alt="" className="w-full h-full blur-sm object-cover " />
             <LockSvg isChecked={animationSvg} />
           </div>
