@@ -46,7 +46,7 @@ const RoadmapPath: React.FC = () => {
       id: 3,
       x: 550,
       y: 150,
-      text: "projektstart",
+      text: "projektphase",
       description: "Offizielle Projektinitiierung",
       pinDirection: "down",
       color: "#A1755D",

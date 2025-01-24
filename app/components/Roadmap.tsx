@@ -17,7 +17,7 @@ const CurvedRoadmap = () => {
       position: "top",
     },
     {
-      title: "3. Projektstart",
+      title: "Projektstart",
       description: "Build and implement features",
       position: "bottom",
     },

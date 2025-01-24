@@ -20,7 +20,7 @@ const RoadmapContainer = () => {
     },
     {
       id: "3",
-      title: "projektstart",
+      title: "projektphase",
       description: "Offizielle Projektinitiierung",
       color: "#A1755D",
     },
