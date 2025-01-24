@@ -36,13 +36,13 @@ const RoadmapContainer = () => {
     <div className="py-52" >
       <div className="w-full max-w-7xl mx-auto ">
         <div className="">
-          <p className="font-cabin text-2xl sm:text-4xl text-center font-semibold max-w-[950px] mx-auto">
+          <p className="font-cabin text-2xl sm:text-4xl text-center font-semibold max-w-[950px] mx-auto mb-16">
             Unser Workflow – Schritt für Schritt zu deinem Erfolg
           </p>
         </div>
         <RoadmapPath />
       </div>
-      <div className="sm:px-16 px-10 sm:py-10 py-10 max-w-7xl mx-auto relative z-0">
+      <div className="sm:px-16 px-10 sm:py-12 py-10 max-w-7xl mx-auto relative z-0">
         <div className="flex gap-8 w-full justify-evenly">
           {plans.map((plan, index) => {
             return (

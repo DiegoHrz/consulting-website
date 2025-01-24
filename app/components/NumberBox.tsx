@@ -23,7 +23,7 @@ const NumberBox: React.FC<NumberBoxProps> = ({
       >
         {number}
       </div>
-      <div className="font-vollkornSC mt-8" style={{ color: color }}>
+      <div className="font-vollkornSC mt-8 text-lg" style={{ color: color }}>
         {title}
       </div>
       <div className="mt-3 text-[#6e6868] text-sm">{description}</div>
