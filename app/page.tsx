@@ -19,7 +19,6 @@ import Reviews from "./components/Reviews";
 import ParallaxBanner from "./components/Parallax/ParallaxBanner";
 import Quote from "./components/Quote";
 
-
 import CarouselContainer from "./components/carousel/CarouselContainer";
 import CalendlyContainer from "./components/calendly/CalendlyContainer";
 import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";

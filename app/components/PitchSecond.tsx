@@ -22,13 +22,13 @@ const PitchSecond: React.FC<PitchProps2> = ({ image, title, text }) => {
       <div className="md:w-1/2 sm:pl-20">
         <Title
           text={title}
-          additionalClasses="text-right"
+          additionalClasses="sm:text-right"
         />
-        <p className=" font-vollkorn text-[#808080] pt-4 text-right">
+        <p className=" font-vollkorn text-[#808080] pt-4 sm:text-right">
         {text}
         </p>
-        <div className="w-full  animate-fade-subtitle pt-8 text-right ">
-          <button className="font-cabin_sans rounded-lg text-anna-blue mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue text-right">
+        <div className="w-full  animate-fade-subtitle pt-8 sm:text-right ">
+          <button className="font-cabin_sans rounded-lg text-anna-blue mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue">
             KONTAKT
           </button>
         </div>

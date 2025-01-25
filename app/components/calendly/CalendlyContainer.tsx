@@ -145,7 +145,7 @@ const CalendlyContainer = () => {
             </div>
           )}
         </div>
-        <div className="flex-1 w-full h-full">
+        <div className="flex-1 w-full h-full ">
           <Calendly accepted={accepted} />
         </div>
       </div>

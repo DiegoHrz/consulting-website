@@ -13,7 +13,7 @@ const BusinessPlans = () => {
           <img
             src="/logo/logo_only_letter.png"
             alt=""
-            className="sm:w-28 mx-auto z-[10] object-cover relative"
+            className="w-32 sm:w-28 mx-auto z-[10] object-cover relative"
           />
           <div className="absolute bg-[linear-gradient(180deg,_#D0D5DB_0%,_#f7f7f7_25%,_#fff_80%)] blur-md inset-0 z-[0]"></div>
 
