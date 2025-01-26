@@ -8,7 +8,7 @@ import React from "react";
 
 const Referenzen = () => {
   return (
-    <div className="pb-10 sm:pb-24" >
+    <div className="pb-10 sm:pb-24">
       <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
         <HeroSecondary
           image="/pages-imgs/referenzen.avif"
@@ -22,10 +22,13 @@ const Referenzen = () => {
       {/* <div>
         <Placeholder text="Referenzen" />
       </div> */}
+      <div className="flex flex-col sm:gap-24 gap-10 " >
+
       <Recommendations1 />
       <Recommendation2 />
       <Recommendation3 />
       <Recommendation4 />
+      </div>
     </div>
   );
 };

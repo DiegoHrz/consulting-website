@@ -1,13 +1,18 @@
 "use client";
 
-import { FaFacebookF, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import Link from "next/link";
 import { MdPhone } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="pt-10 pb-[20px] bg-[#F8F8F8] text-white lg:text-[#d9d9d9] relative w-full">
+    <div className="sm:mt-10 mt-24 pt-10 pb-[20px] bg-[#F8F8F8] text-white lg:text-[#d9d9d9] relative w-full">
       <div className="text-black max-w-7xl mx-auto  sm:px-16 flex  flex-col sm:flex-row items-center sm:justify-between">
         <div className="text-black max-w-7xl  flex flex-col justify-center items-center sm:items-start">
           <img
@@ -222,7 +227,9 @@ const Footer = () => {
           {/* Company */}
           <div className="flex flex-col gap-3 w-1/2 ">
             <div className="flex flex-col text-left gap-3">
-              <p className="text-[#070908] text-xl border-b border-black pb-1">Company</p>
+              <p className="text-[#070908] text-xl border-b border-black pb-1">
+                Company
+              </p>
               <Link href="/">
                 <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
                   Home
@@ -255,7 +262,9 @@ const Footer = () => {
 
           <div className="flex flex-col  w-1/2">
             <div className="flex flex-col text-left gap-3">
-              <p className="text-[#070908] text-xl border-b border-black pb-1">Services</p>
+              <p className="text-[#070908] text-xl border-b border-black pb-1">
+                Services
+              </p>
               <Link href="/">
                 <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
                   Gründungszuschuss
@@ -300,7 +309,9 @@ const Footer = () => {
           {/* Contact */}
           <div className=" flex flex-col gap-3 w-1/2">
             <div className="flex flex-col text-left gap-3">
-              <p className="text-[#070908] text-xl border-b border-black pb-1">Contact</p>
+              <p className="text-[#070908] text-xl border-b border-black pb-1">
+                Contact
+              </p>
               <Link href="/">
                 <p className="text-anna-brown/70 hover:text-black transition-all duration-500 text-sm">
                   Mail
@@ -321,7 +332,9 @@ const Footer = () => {
 
           {/* Socials */}
           <div className=" flex flex-col gap-3 w-1/2">
-            <p className="text-[#070908] text-xl  border-b border-black pb-1">Socials</p>
+            <p className="text-[#070908] text-xl  border-b border-black pb-1">
+              Socials
+            </p>
 
             <a
               href="https://www.linkedin.com/in/anna-schenk/"

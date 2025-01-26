@@ -6,7 +6,7 @@ import Wrapper from "../hoc/Wrapper";
 
 const BusinessPlans = () => {
   return (
-    <div className="mt-24">
+    <div className="">
       <div className="mb-20">
         <div className="w-fit rounded-full mx-auto relative overflow-hidden mb-6">
           <img
@@ -25,7 +25,9 @@ const BusinessPlans = () => {
       <div className="text-black flex flex-col md:flex-row w-full justify-between gap-8  md:gap-2 lg:gap-10 max-w-96 sm:max-w-max mx-auto">
         <div className="flex flex-col justify-start items-center gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white shadow-gray-300 shadow-[0px_4px_2px_0px]">
           <GoShieldCheck size={40} color="#125369" />
-          <h6 className="font-cabin text-2xl md:text-xl lg:text-2xl text-center">100% success rate</h6>
+          <h6 className="font-cabin text-2xl md:text-xl lg:text-2xl text-center">
+            100% success rate
+          </h6>
           <p className="font-original_text text-base lg:text-lg text-anna-gray text-center max-w-80 py-2">
             Every one of our suitcases comes with a limited lifetime warranty.
           </p>
@@ -34,7 +36,9 @@ const BusinessPlans = () => {
         {/* shadow-gray-300 shadow-[0px_4px_2px_0px] */}
         <div className="flex flex-col justify-start items-center gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white shadow-[#125369] shadow-[0px_3px_10px_0px]">
           <SlCalender size={40} color="#125369" />
-          <h6 className="font-cabin text-2xl md:text-xl lg:text-2xl text-center">Free Consultation</h6>
+          <h6 className="font-cabin text-2xl md:text-xl lg:text-2xl text-center">
+            Free Consultation
+          </h6>
           <p className="font-original_text text-base lg:text-lg text-center max-w-80 py-2">
             Try it out for 100 days. If you don’t love it, send it back. Learn
             more.
