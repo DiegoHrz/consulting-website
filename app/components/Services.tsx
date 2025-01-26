@@ -6,7 +6,7 @@ import Title from "./customTags/Title";
 const Services: React.FC = ({}) => {
   return (
     <div
-      className="bg-[#8B97A5] py-24 h-full"
+      className="bg-[#8B97A5]  h-full"
       style={{
         background: "linear-gradient(to bottom, white 30%,#DFDFDF 100%)",
       }}
