@@ -15,6 +15,8 @@ const Services: React.FC = ({}) => {
         <Title
           text="Unsere Angebote – Deine Möglichkeiten"
           additionalClasses="text-center"
+          sans={true}
+          additionalTitle='workshops'
         />
         {/* <motion.div variants={fadeIn("up", "spring", 1 * 0.5, 0.75)}>
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">

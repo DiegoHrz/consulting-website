@@ -33,7 +33,7 @@ h1 {
   h1 {
   letter-spacing: -0.05em;
   font-weight: 600;
-
+  font-size: 58px;
   line-height: 1.07143;
   }
 }
@@ -42,7 +42,7 @@ h1 {
 
 h2 {
   font-family: Vollkorn SC;
-  color: #070707;
+  font-weight: 600;
 }
 
 p {

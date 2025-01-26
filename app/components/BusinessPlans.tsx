@@ -14,7 +14,7 @@ const BusinessPlans = () => {
             alt=""
             className="w-32 sm:w-28 mx-auto z-[10] object-cover relative"
           />
-          <div className="absolute bg-[linear-gradient(180deg,_#125369_0%,_#f7f7f7_25%,_#fff_80%)] blur-md inset-0 z-[0]"></div>
+          <div className="absolute bg-[linear-gradient(180deg,_#125369_0%,_#f7f7f7_25%,_#fff_80%)] blur-sm inset-0 z-[0]"></div>
         </div>
 
         <h1 className="  text-center  max-w-[950px] mx-auto ">
