@@ -545,7 +545,7 @@ const About = () => {
               <p>Contact us</p>
               <div
                 className={`absolute left-1/2 -translate-x-1/2 transition-all duration-500 ${
-                  hoverIn ? "-bottom-3" :'-bottom-8'
+                  hoverIn ? "-bottom-3" : "-bottom-8"
                 }    h-11 w-11 aspect-square `}
                 style={{
                   backgroundColor: "rgb(234, 168, 121)",

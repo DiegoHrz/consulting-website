@@ -54,8 +54,8 @@ const CalendlyContainer = () => {
 
   return (
     <>
-      <div className=" bg-[#505960] w-full rounded-t-xl shadow-gray-400 shadow-[0px_0px_15px]">
-        <p className="py-2 px-4  text-anna-white">
+      <div className=" bg-anna-blue w-full rounded-t-xl shadow-gray-400 shadow-[0px_0px_15px]">
+        <p className="p-4  text-anna-white text-center sm:text-left">
           To book a meeting first{" "}
           <b>you need to accept the terms and conditions of Calendly</b>
         </p>

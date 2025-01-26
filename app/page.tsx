@@ -19,7 +19,6 @@ import Reviews from "./components/Reviews";
 import ParallaxBanner from "./components/Parallax/ParallaxBanner";
 import Quote from "./components/Quote";
 
-import CarouselContainer from "./components/carousel/CarouselContainer";
 import CalendlyContainer from "./components/calendly/CalendlyContainer";
 import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";
 
@@ -29,25 +28,36 @@ import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)] text-black ">
+    <div className="font-[family-name:var(--font-geist-sans)] text-black flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[200px] ">
       <Hero />
-      <div className=" w-full  border-[#3A3A3A] h-24 rounded-lg mt-6 lg:mt-14">
-        <CarouselContainer />
-      </div>
-      <div className=" h-full">
-        <BusinessPlans />
-        <Pitch
-          image="/profile/profile.jpg"
-          title="Jetzt Unternehmer werden"
-          text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
+
+
+      <BusinessPlans />
+      <Pitch
+        image="/profile/profile.jpg"
+        title="Jetzt Unternehmer werden"
+        text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
           erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
           schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
           inspiriert? Die Experten von AS Vision Partners unterstützen Sie
           dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
           maximieren. Sind Sie bereit, mit uns durchzustarten?"
-        />
-        <PitchSecond
-          image="/workers/worker6.avif"
+        button="Bunchung"
+      />
+      <Pitch
+        image="/profile/professional.avif"
+        title="Verbessern Sie Ihr Geschäft"
+        text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
+          erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
+          schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
+          inspiriert? Die Experten von AS Vision Partners unterstützen Sie
+          dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
+          maximieren. Sind Sie bereit, mit uns durchzustarten?"
+        button="Bunchung"
+        right={true}
+      />
+      {/* <PitchSecond
+          image="/profile/professional.avif"
           title="Verbessern Sie Ihr Geschäft"
           text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
           erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
@@ -55,10 +65,10 @@ export default function Home() {
           inspiriert? Die Experten von AS Vision Partners unterstützen Sie
           dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
           maximieren. Sind Sie bereit, mit uns durchzustarten?"
-        />
+        /> */}
 
-        <Services />
-      </div>
+      <Services />
+
       <Quote />
       <div className="relative     ">
         <div className="w-screen h-fit   bg-anna-gray absolute -z-50 bottom-1/2 "></div>
@@ -81,10 +91,8 @@ export default function Home() {
 
       <CalendlyContainer />
 
-      <div className="bg-white sm:pt-0 ">
-        <Reviews />
-        <FAQ />
-      </div>
+      <Reviews />
+      <FAQ />
     </div>
   );
 }

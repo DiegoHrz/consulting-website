@@ -95,16 +95,28 @@ const AccordionElement = () => {
         <AccordionItem
           key={index}
           value={`item-${index}`}
-          className={`px-2 rounded-lg duration-700 ${
+          className={`px-3 rounded-lg duration-700  relative border-[#afdae8]   ${
             accordionSelected === `item-${index}`
-              ? "shadow-gray-400 shadow-[0px_1px_3px_0px]"
-              : "hover:shadow-gray-400 hover:shadow-[0px_1px_3px_0px]"
+              ? "shadow-anna-blue shadow-[0px_1px_3px_0px]"
+              : "hover:shadow-anna-blue hover:shadow-[0px_1px_3px_0px]"
           }`}
+          
         >
+          {/* <div
+            className={`absolute left-1/2 -translate-x-1/2 transition-all duration-700 hover:-bottom-1  -bottom-8
+            h-11 w-11 aspect-square `}
+            style={{
+              backgroundColor: "rgb(234, 168, 121)",
+              filter: "blur(10px)",
+              borderRadius: "100px",
+              opacity: 0.3,
+            }}
+          ></div> */}
+          {/* bg-[#ebe9e9] */}
           <AccordionTrigger
             className={`no-underline ${
               accordionSelected === `item-${index}`
-                ? "text-[#0171E3] font-semibold"
+                ? "text-anna-blue font-semibold"
                 : "hover:no-underline"
             } hover:no-underline no-underline`}
           >
@@ -121,7 +133,7 @@ const AccordionElement = () => {
               item.answer
             )}
             {item.additionalInfo && (
-              <p className="pt-2 ml-2 font-semibold">{item.additionalInfo}</p>
+              <p className="pt-2 ml-2 font-semibold ">{item.additionalInfo}</p>
             )}
           </AccordionContent>
         </AccordionItem>
@@ -131,3 +143,24 @@ const AccordionElement = () => {
 };
 
 export default AccordionElement;
+
+{/* <Link
+  href="/"
+  className="z-10 w-fit mx-auto relative overflow-hidden rounded-3xl font-cabin px-5 py-2"
+  style={{
+    background: "rgba(255, 255, 255, 0.02)",
+    boxShadow: "rgba(255, 255, 255, 0.05) 0px 1px 10px 0px inset",
+  }}
+>
+  <p className="text-anna-white">{button}</p>
+  <div
+    className={`absolute left-1/2 -translate-x-1/2 transition-all duration-700 hover:-bottom-1  -bottom-8
+      h-11 w-11 aspect-square `}
+    style={{
+      backgroundColor: "rgb(234, 168, 121)",
+      filter: "blur(10px)",
+      borderRadius: "100px",
+      opacity: 0.3,
+    }}
+  ></div>
+</Link>; */}

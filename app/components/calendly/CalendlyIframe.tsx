@@ -5,7 +5,7 @@ const CalendlyIframe = () => {
       style={{ width: "100%", height: "600px" }} // Ajusta el height según tus necesidades
       frameBorder="0"
       scrolling="no"
-      className="border-2"
+      // className="border-2"
     />
   );
 };

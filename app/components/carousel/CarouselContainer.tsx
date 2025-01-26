@@ -1,13 +1,24 @@
-import React from 'react'
-import Carousel from './Carousel'
+import React from "react";
+import Carousel from "./Carousel";
 
 const CarouselContainer = () => {
   return (
-    <div className='w-full' >
-        <p className='mx-auto w-fit font-original_text text-[18px] mb-6' > Trusted by 1000+ businesses across the world</p>
-        <Carousel/>
+    <div className=" w-full  h-24 rounded-lg mt-6 lg:mt-28">
+      <div className="w-full">
+        <p
+          className="text-center mx-auto w-fit text-xl mb-6 text-transparent  font-medium"
+          style={{
+            background: "linear-gradient(to right,#125369,#0000008F)",
+            backgroundClip: "text",
+          }}
+        >
+          {" "}
+          Trusted by 1000+ businesses across the world
+        </p>
+        <Carousel />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default CarouselContainer
+export default CarouselContainer;

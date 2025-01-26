@@ -47,12 +47,12 @@ export function CarouselDemo() {
           loop: true,
         }}
       >
-        <CarouselContent>
+        <CarouselContent className="py-2" >
           {ofertas.map((oferta, index) => (
             <CarouselItem key={index} className="sm:basis-[70%] md:basis-1/2  lg:basis-1/3">
               <div className="p-1 ">
                 <Card className=" mx-4">
-                  <CardContent className="flex flex-col items-center justify-center p-4 border-none rounded-lg aspect-square  shadow-gray-300 shadow-[0px_0px_15px]">
+                  <CardContent className="flex flex-col items-center justify-center p-4 border-none rounded-lg aspect-square  shadow-anna-blue shadow-[0px_1px_7px_0px]">
                     <div className=" w-full h-full px-5">
                       <div className="flex mx-2 mb-5 gap-5 ">
                         <div className="">
