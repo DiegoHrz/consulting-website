@@ -28,7 +28,7 @@ const Title: React.FC<TitleProps> = ({
       <div>
         {additionalTitle && (
           <h2
-            className=" text-center text-2xl mb-2 text-anna-black tracking-wide"
+            className=" text-center text-lg mb-2 text-anna-black tracking-wide"
           >
             {additionalTitle}
           </h2>

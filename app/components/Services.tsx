@@ -6,9 +6,10 @@ import Title from "./customTags/Title";
 const Services: React.FC = ({}) => {
   return (
     <div
-      className="bg-[#8B97A5]  h-full"
+      className="  h-full bg-[#F5F6F9] "
       style={{
-        background: "linear-gradient(to bottom, white 30%,#DFDFDF 100%)",
+        background:
+          "linear-gradient(to bottom, white 1%,#F5F6F9 5%,#F5F6F9 100%)",
       }}
     >
       <div className="max-w-7xl mx-auto">
@@ -16,8 +17,12 @@ const Services: React.FC = ({}) => {
           text="Unsere Angebote – Deine Möglichkeiten"
           additionalClasses="text-center"
           sans={true}
-          additionalTitle='workshops'
+          additionalTitle="workshops"
         />
+        <p className="pt-10 text-anna-gray max-w-[560px] mx-auto text-center">
+          Choose a plan that fits your needs, with flexible options and
+          transparent pricing.
+        </p>
         {/* <motion.div variants={fadeIn("up", "spring", 1 * 0.5, 0.75)}>
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
           Stack
@@ -50,14 +55,8 @@ const Services: React.FC = ({}) => {
         </motion.div>
       </div> */}
 
-        <div className="mt-24 md:flex flex-col md:flex-row gap-5 lg:gap-2 w-full     md:h-full px-2 sm:px-5 md:px-0 justify-center ">
-          <div
-            className=" h-1/2  md:h-full w-full md:w-[80%] sm:py-2 md:py-0 grid text-center items-center relative gap-10 sm:gap-8  lg:mx-5 min-h-[238px] md:min-h-max sm:grid-cols-3 sm:grid-rows-2 px-10 sm:px-0 "
-            // style={{
-            //   gridTemplateColumns: "1fr 1fr 1fr",
-            //   gridTemplateRows: "1fr 1fr ",
-            // }}
-          >
+        <div className="mt-24 md:flex flex-col md:flex-row gap-5 lg:gap-2 w-full md:h-full px-2 sm:px-5 md:px-0 justify-center">
+          <div className="h-1/2 md:h-full w-full md:w-[80%] pb-20 grid place-items-center text-center gap-10 sm:gap-8 lg:mx-5 min-h-[238px] md:min-h-max grid-cols-3 grid-rows-2 px-10 sm:px-0">
             {/* <div className="w-40 h-40 bg-red-700 z-0 absolute -left-10" ></div> */}
             {/* <motion.div
               className="absolute left-[60%] -top-0 z-40"
@@ -79,13 +78,13 @@ const Services: React.FC = ({}) => {
             </motion.div> */}
             <GlassBox
               title="Gründungszuschuss"
-              text="Your financial kick start in independence"
+              text="Your financial kick start in independence Your financial kick start in independence"
               button="See more"
             />
 
             <GlassBox
               title="Businessplan"
-              text="Your financial kick start in independence"
+              text="Your financial kick start in independence Your financial kick start in independence"
               button="See more"
               special="bestSeller"
             />
@@ -98,19 +97,18 @@ const Services: React.FC = ({}) => {
 
             <GlassBox
               title="Finanzierung"
-              text="Your financial kick start in independence"
+              text="Your financial kick start in independence Your financial kick start in independence"
               button="See more"
-
             />
             <GlassBox
               title="Buchhaltung"
-              text="Your financial kick start in independence"
+              text="Your financial kick start in independence Your financial kick start in independence"
               button="See more"
               special="exclusive"
             />
             <GlassBox
               title="Websites und Marketing"
-              text="Your financial kick start in independence"
+              text="Your financial kick start in independence Your financial kick start in independence"
               button="See more"
             />
 

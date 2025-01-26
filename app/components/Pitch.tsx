@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Wrapper from "../hoc/Wrapper";
-import Title from "./customTags/Title";
 
 interface PitchProps {
   image: string;

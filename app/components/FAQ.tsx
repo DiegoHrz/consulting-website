@@ -1,7 +1,7 @@
 "use client";
 import Wrapper from "../hoc/Wrapper";
 import AccordionElement from "./AccordionElement";
-import Title from "./customTags/Title";
+
 
 const FAQ = () => {
   return (

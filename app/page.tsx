@@ -3,7 +3,7 @@ import BusinessPlans from "./components/BusinessPlans";
 import Hero from "./components/Hero";
 
 import Pitch from "./components/Pitch";
-import PitchSecond from "./components/PitchSecond";
+
 import Services from "./components/Services";
 
 import FAQ from "./components/FAQ";

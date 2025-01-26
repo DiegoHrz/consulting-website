@@ -1,5 +1,5 @@
 "use client";
-import Title from "./customTags/Title";
+
 import { CarouselDemo } from "./CarouselDemo";
 import Wrapper from "../hoc/Wrapper";
 
