@@ -33,7 +33,7 @@ const Pitch: React.FC<PitchProps> = ({ image, title, text, button, right }) => {
         >
           {title}
         </h1>
-        <p className={`${!right && "sm:pr-20"} text-anna-gray  `}>{text}</p>
+        <p className={`${!right && "sm:pr-20"} text-anna-gray text-justify `}>{text}</p>
         <div className="w-fit  animate-fade-subtitle bg-anna-blue overflow-hidden rounded-3xl">
           <Link href="/" className="">
             <button

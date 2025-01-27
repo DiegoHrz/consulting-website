@@ -83,6 +83,7 @@ export default function Home() {
             "linear-gradient(to bottom, white 3%, #D5E0E2 30%, #D5E0E2 90%,white 100%)",
         }}
       >
+        {/* sin hoc */}
         <RoadmapContainer />
       </div>
       {/* <Workflow /> */}

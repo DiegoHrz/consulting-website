@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Quote = () => {
   return (
-    <div className=" rounded-lg max-w-[500px]">
+    <div className=" rounded-lg max-w-[500px] mx-auto">
       <div className=" relative z-0 flex flex-col gap-16">
         <div className="relative z-0 flex flex-col gap-[24px]">
           <div className="reltive">

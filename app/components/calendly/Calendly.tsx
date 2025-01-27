@@ -41,9 +41,9 @@ const Calendly: React.FC<CalendlyProps> = ({ accepted }) => {
         </div>
       ) : (
         <div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full inset-0 p-8 lg:p-20">
+          <div className="w-full pt-6 sm:pt-0 sm:mx-auto">
             <img
-              src="/calendly-preview.png"
+              src="/calendly.png"
               alt=""
               className="w-full h-full blur-sm object-cover"
             />

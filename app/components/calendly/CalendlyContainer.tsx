@@ -52,116 +52,127 @@ const CalendlyContainer = () => {
     );
   }
 
+  {
+    /* <div className=" bg-anna-blue w-full rounded-t-xl shadow-gray-400 shadow-[0px_0px_15px]">
+    <p className="p-4  text-anna-white text-center sm:text-left">
+      To book a meeting first{" "}
+      <b>you need to accept the terms and conditions of Calendly</b>
+    </p>
+  </div> */
+  }
   return (
-    <>
-      {/* <div className=" bg-anna-blue w-full rounded-t-xl shadow-gray-400 shadow-[0px_0px_15px]">
-        <p className="p-4  text-anna-white text-center sm:text-left">
-          To book a meeting first{" "}
-          <b>you need to accept the terms and conditions of Calendly</b>
+    <div className=" flex flex-col lg:flex-row overflow-hidden  w-full">
+      <div className=" lg:border-r lg:w-1/2 flex flex-col">
+        <div className="flex gap-2 items-center mb-[10px] mx-auto lg:mx-0">
+          <div className="rounded-full w-8 h-8 overflow-hidden bg-[#D3CFC7]  lg:mx-0">
+            <img
+              src="/founders/anna.avif"
+              alt=""
+              className="w-8 object-contain brightness-110"
+            />
+          </div>
+          <div className="font-vollkornSC font-semibold   text-center lg:text-left">
+            Anna Schenk
+          </div>
+        </div>
+        <div className="block lg:hidden" >
+        <Title
+          text="Ask whatever you have in your mind"
+          sans={true}
+          textPosition="center"
+          rainbow={true}
+        />
+        </div>
+        <div className="lg:block hidden" >
+        <Title
+          text="Ask whatever you have in your mind"
+          sans={true}
+          textPosition="left"
+          rainbow={true}
+        />
+        </div>
+        
+        <p className="text-center lg:text-left text-anna-black/95  mt-[10px] font-medium lg:text-lg max-w-[523px]">
+          Whether you have questions or are ready to discuss your business,
+          we’re here to help. Reach out today.
         </p>
-      </div> */}
-      <div className=" flex flex-col lg:flex-row overflow-hidden">
-        <div className=" border-r lg:w-1/2 flex flex-col sm:gap-4">
-          <Title
-            text="Ask whatever you have in your mind"
-            sans={true}
-            textPosition="left"
-          />
-          <p className=" text-anna-gray max-w-[560px] mx-auto ">
-            Whether you have questions or are ready to discuss your business,
-            we’re here to help. Reach out today.
-          </p>
-          <div>
-            <div className="flex gap-2" >
-              <div className="rounded-full w-12 h-12 overflow-hidden bg-[#D3CFC7] mx-auto lg:mx-0">
-                <img
-                  src="/founders/anna.avif"
-                  alt=""
-                  className="w-12 object-contain brightness-110"
-                />
+        <div>
+          <div className="mt-[35px] flex flex-col gap-3">
+            <div className="flex gap-2 items-center  ">
+              <div>
+                <MdOutlineWatchLater size={23} className=" text-anna-black/85"  />{" "}
               </div>
-              <div className="font-original_text font-semibold text-anna-black/70 mt-4 text-center lg:text-left">
-                Anna S. Schenk
+              <p className=" text-anna-black/85  ">
+                30 min
+              </p>
+            </div>
+            <div className="flex gap-2 ">
+              <div>
+                <MdOutlineLocationOn size={25} className=" text-anna-black/85" />
+              </div>
+              <div className="lg:max-w-72 text-anna-black/85 ">
+                Web conferencing details provided upon confirmation
               </div>
             </div>
+          </div>
 
-            <div className="mt-4 flex flex-col gap-3">
-              <div className="flex gap-2 items-center  ">
+          {!acceptedLocalStorage ? (
+            <div className="mt-8 ml-2">
+              <div className="flex gap-3">
                 <div>
-                  <MdOutlineWatchLater size={23} />{" "}
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    checked={checkboxInput}
+                    onChange={(e) => HandleCheckbox(e)}
+                    className={`${
+                      highlightCheckbox
+                        ? "outline outline-2 outline-offset-2 outline-red-600"
+                        : ""
+                    }`}
+                  />
                 </div>
-                <div className="font-original_text font-semibold text-anna-black/70 italic ">
-                  30 min
-                </div>
-              </div>
-              <div className="flex gap-2 ">
-                <div>
-                  <MdOutlineLocationOn size={25} />
-                </div>
-                <div className="lg:max-w-72 font-original_text font-semibold text-anna-black/70 italic">
-                  Web conferencing details provided upon confirmation
-                </div>
-              </div>
-            </div>
-
-            {!acceptedLocalStorage ? (
-              <div className="mt-12">
-                <div className="flex gap-3">
-                  <div>
-                    <input
-                      type="checkbox"
-                      name=""
-                      id=""
-                      checked={checkboxInput}
-                      onChange={(e) => HandleCheckbox(e)}
-                      className={`${
-                        highlightCheckbox
-                          ? "outline outline-2 outline-offset-2 outline-red-600"
-                          : ""
-                      }`}
-                    />
-                  </div>
-                  <p>
-                    I agree with the term and conditions of{" "}
-                    <a
-                      href="https://calendly.com"
-                      className="text-[#016BFF] hover:underline"
-                    >
-                      Calendly{" "}
-                    </a>{" "}
-                    <span className="text-lg text-red-600">*</span>
-                  </p>
-                </div>
-                <div className="mx-auto w-fit sm:w-full ">
-                  <button
-                    className=" bg-blue-600 rounded-lg p-4 mt-4 text-white pulseCustom"
-                    onClick={handleAccept}
-                  >
-                    Book your Meeting
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="mt-12 flex gap-3 items-center">
-                <FaCheckCircle color="green" />
-                <p>
-                  You&apos;ve agreed with the term and conditions of{" "}
+                <p className="text-anna-black" >
+                  I agree with the term and conditions of{" "}
                   <a
                     href="https://calendly.com"
-                    className="text-[#016BFF] underline"
+                    className="text-[#016BFF] hover:underline"
                   >
                     Calendly{" "}
                   </a>{" "}
+                  <span className="text-lg text-red-600">*</span>
                 </p>
               </div>
-            )}
-          </div>
-        </div>
-        <div className="flex-1 w-full h-full ">
-          <Calendly accepted={accepted} />
+              <div className="mx-auto w-fit sm:w-full ">
+                <button
+                  className=" bg-blue-600 font-medium rounded-lg p-4 mt-4 text-white pulseCustom"
+                  onClick={handleAccept}
+                >
+                  Book your Meeting
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="mt-8 flex gap-3 items-center">
+              <FaCheckCircle color="green" size={23} />
+              <p>
+                You&apos;ve agreed with the term and conditions of{" "}
+                <a
+                  href="https://calendly.com"
+                  className="text-[#016BFF] underline"
+                >
+                  Calendly{" "}
+                </a>{" "}
+              </p>
+            </div>
+          )}
         </div>
       </div>
-    </>
+      <div className="flex-1 w-full h-full ">
+        <Calendly accepted={accepted} />
+      </div>
+    </div>
   );
 };
 
