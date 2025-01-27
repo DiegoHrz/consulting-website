@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 import CustomStar from "./customIcons/Star";
+import BlurBgImage from "./BlurBgImage";
 
 export function CarouselDemo() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -39,7 +40,8 @@ export function CarouselDemo() {
   ];
 
   return (
-    <div className="relative w-full max-w-7xl sm:px-16 px-10 pb-6 pt-4">
+    <div className="relative w-full max-w-7xl sm:px-16 px-10 pb-6 pt-4 ">
+      <BlurBgImage />
       <Carousel
         setApi={setApi}
         className="w-full"
@@ -47,12 +49,12 @@ export function CarouselDemo() {
           loop: true,
         }}
       >
-        <CarouselContent className="py-2" >
+        <CarouselContent className="py-2 z-0" >
           {ofertas.map((oferta, index) => (
             <CarouselItem key={index} className="sm:basis-[70%] md:basis-1/2  lg:basis-1/3">
               <div className="p-1 ">
-                <Card className=" mx-4">
-                  <CardContent className="flex flex-col items-center justify-center p-4 border-none rounded-lg aspect-square  shadow-anna-blue shadow-[0px_1px_7px_0px]">
+                <Card className=" mx-4 ">
+                  <CardContent className="flex flex-col items-center justify-center p-4 border-none rounded-lg aspect-square  shadow-anna-blue shadow-[0px_1px_7px_0px] ">
                     <div className=" w-full h-full px-5">
                       <div className="flex mx-2 mb-5 gap-5 ">
                         <div className="">

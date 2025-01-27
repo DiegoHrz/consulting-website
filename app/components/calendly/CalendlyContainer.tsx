@@ -61,8 +61,15 @@ const CalendlyContainer = () => {
   </div> */
   }
   return (
-    <div className=" flex flex-col lg:flex-row overflow-hidden  w-full">
-      <div className=" lg:border-r lg:w-1/2 flex flex-col">
+    <div className=" flex flex-col lg:flex-row overflow-hidden  w-full relative">
+{/* <div className="rounded-full w-8 h-8 overflow-hidden bg-[#D3CFC7]  lg:mx-0">
+            <img
+              src="/founders/anna.avif"
+              alt=""
+              className="w-8 object-contain brightness-110"
+            />
+          </div> */}
+      <div className=" lg:border-r lg:w-1/2 flex flex-col z-0">
         <div className="flex gap-2 items-center mb-[10px] mx-auto lg:mx-0">
           <div className="rounded-full w-8 h-8 overflow-hidden bg-[#D3CFC7]  lg:mx-0">
             <img
@@ -75,23 +82,23 @@ const CalendlyContainer = () => {
             Anna Schenk
           </div>
         </div>
-        <div className="block lg:hidden" >
-        <Title
-          text="Ask whatever you have in your mind"
-          sans={true}
-          textPosition="center"
-          rainbow={true}
-        />
+        <div className="block lg:hidden">
+          <Title
+            text="Ask whatever you have in your mind"
+            sans={true}
+            textPosition="center"
+            rainbow={true}
+          />
         </div>
-        <div className="lg:block hidden" >
-        <Title
-          text="Ask whatever you have in your mind"
-          sans={true}
-          textPosition="left"
-          rainbow={true}
-        />
+        <div className="lg:block hidden">
+          <Title
+            text="Ask whatever you have in your mind"
+            sans={true}
+            textPosition="left"
+            rainbow={true}
+          />
         </div>
-        
+
         <p className="text-center lg:text-left text-anna-black/95  mt-[10px] font-medium lg:text-lg max-w-[523px]">
           Whether you have questions or are ready to discuss your business,
           we’re here to help. Reach out today.
@@ -100,15 +107,19 @@ const CalendlyContainer = () => {
           <div className="mt-[35px] flex flex-col gap-3">
             <div className="flex gap-2 items-center  ">
               <div>
-                <MdOutlineWatchLater size={23} className=" text-anna-black/85"  />{" "}
+                <MdOutlineWatchLater
+                  size={23}
+                  className=" text-anna-black/85"
+                />{" "}
               </div>
-              <p className=" text-anna-black/85  ">
-                30 min
-              </p>
+              <p className=" text-anna-black/85  ">30 min</p>
             </div>
             <div className="flex gap-2 ">
               <div>
-                <MdOutlineLocationOn size={25} className=" text-anna-black/85" />
+                <MdOutlineLocationOn
+                  size={25}
+                  className=" text-anna-black/85"
+                />
               </div>
               <div className="lg:max-w-72 text-anna-black/85 ">
                 Web conferencing details provided upon confirmation
@@ -133,7 +144,7 @@ const CalendlyContainer = () => {
                     }`}
                   />
                 </div>
-                <p className="text-anna-black" >
+                <p className="text-anna-black">
                   I agree with the term and conditions of{" "}
                   <a
                     href="https://calendly.com"

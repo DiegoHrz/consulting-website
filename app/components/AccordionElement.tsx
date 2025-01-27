@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useState } from "react";
+import BlurBgImage from "./BlurBgImage";
 
 const texts = [
   {
@@ -87,20 +88,20 @@ const AccordionElement = () => {
     <Accordion
       type="single"
       collapsible
-      className="w-full no-underline text-anna-brown "
+      className="w-full no-underline text-anna-brown relative"
       value={accordionSelected}
       onValueChange={handler}
     >
+      <BlurBgImage />
       {texts.map((item, index) => (
         <AccordionItem
           key={index}
           value={`item-${index}`}
-          className={`px-3 rounded-lg duration-700  relative border-[#afdae8]   ${
+          className={`px-3 rounded-lg duration-700 relative border-[#afdae8] bg-white/10   ${
             accordionSelected === `item-${index}`
               ? "shadow-anna-blue shadow-[0px_1px_3px_0px]"
               : "hover:shadow-anna-blue hover:shadow-[0px_1px_3px_0px]"
           }`}
-          
         >
           {/* <div
             className={`absolute left-1/2 -translate-x-1/2 transition-all duration-700 hover:-bottom-1  -bottom-8
@@ -144,7 +145,8 @@ const AccordionElement = () => {
 
 export default AccordionElement;
 
-{/* <Link
+{
+  /* <Link
   href="/"
   className="z-10 w-fit mx-auto relative overflow-hidden rounded-3xl font-cabin px-5 py-2"
   style={{
@@ -163,4 +165,5 @@ export default AccordionElement;
       opacity: 0.3,
     }}
   ></div>
-</Link>; */}
+</Link>; */
+}
