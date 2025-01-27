@@ -45,9 +45,9 @@ const ParallaxBanner = () => {
           alt="White Logo"
           className="h-auto w-40  mx-auto px-3 animate-fade-title"
         />
-        <p className="w-full font-cabin text-center text-xl sm:text-3xl">
+        <h1 className="w-full text-4xl text-center font-medium  text-anna-white">
         Bereit für die Veränderung ?
-        </p>
+        </h1>
       </div>
     </section>
   );

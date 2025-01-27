@@ -6,6 +6,7 @@ interface TitleProps {
   additionalClasses?: string;
   sans?: boolean;
   additionalTitle?: string;
+  textPosition?: string;
 }
 
 const Title: React.FC<TitleProps> = ({
@@ -13,6 +14,7 @@ const Title: React.FC<TitleProps> = ({
   additionalClasses,
   sans,
   additionalTitle,
+  textPosition = "center",
 }) => {
   const [textLengthMax, setTextLengthMax] = useState(false);
 
@@ -25,18 +27,18 @@ const Title: React.FC<TitleProps> = ({
 
   if (sans) {
     return (
-      <div>
+      <div className="">
         {additionalTitle && (
-          <h2
-            className=" text-center text-lg mb-2 text-anna-black tracking-wide"
-          >
+          <h2 className=" text-center text-lg mb-2 text-anna-black tracking-wide">
             {additionalTitle}
           </h2>
         )}
         <h1
-          className={` ${
-            textLengthMax ? "text-[48px]" : "text-[58px]"
-          } text-center  max-w-[950px] mx-auto text-transparent `}
+          className={` ${textLengthMax ? "lg:text-[48px]" : "lg:text-[58px]"} ${
+            textPosition === "center" && "text-center"
+          } ${textPosition === "left" && "text-left"} ${
+            textPosition === "right" && "text-right"
+          } max-w-[600px] lg:max-w-[900px] mx-auto text-transparent `}
           style={{
             background: "linear-gradient(to right,#125369,#3CA3B5)",
             backgroundClip: "text",

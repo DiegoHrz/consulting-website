@@ -39,7 +39,7 @@ export function CarouselDemo() {
   ];
 
   return (
-    <div className="relative w-full max-w-7xl  pb-6 pt-4">
+    <div className="relative w-full max-w-7xl sm:px-16 px-10 pb-6 pt-4">
       <Carousel
         setApi={setApi}
         className="w-full"

@@ -34,7 +34,7 @@ const Calendly: React.FC<CalendlyProps> = ({ accepted }) => {
   }, [accepted]);
 
   return (
-    <div className="w-full h-[620px] relative">
+    <div className="w-full h-[500px] relative">
       {consentGiven ? (
         <div className="w-full pt-6 sm:pt-0 sm:mx-auto">
           <CalendlyIframe />

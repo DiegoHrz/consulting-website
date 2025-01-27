@@ -2,12 +2,13 @@
 
 import { GoShieldCheck } from "react-icons/go";
 import { SlCalender, SlUserFollowing } from "react-icons/sl";
-import Wrapper from "../hoc/Wrapper";
+
+import Title from "./customTags/Title";
 
 const BusinessPlans = () => {
   return (
-    <div className="">
-      <div className="mb-20">
+    <div className="px-10 sm:px-16  sm:max-w-7xl mx-auto relative  ">
+      <div className="mb-16">
         <div className="w-fit rounded-full mx-auto relative overflow-hidden mb-6">
           <img
             src="/logo/logo_only_letter.png"
@@ -16,10 +17,10 @@ const BusinessPlans = () => {
           />
           <div className="absolute bg-[linear-gradient(180deg,_#125369_0%,_#f7f7f7_25%,_#fff_80%)] blur-sm inset-0 z-[0]"></div>
         </div>
-
-        <h1 className="  text-center  max-w-[950px] mx-auto ">
-          Empowering authentic connections for a vibrant experience.
-        </h1>
+        <Title
+          text="Empowering authentic connections for a vibrant experience."
+          sans={true}
+        />
       </div>
 
       <div className="text-black flex flex-col md:flex-row w-full justify-between gap-8  md:gap-2 lg:gap-10 max-w-96 sm:max-w-max mx-auto  ">
@@ -59,4 +60,4 @@ const BusinessPlans = () => {
   );
 };
 
-export default Wrapper(BusinessPlans, "business plans");
+export default BusinessPlans;

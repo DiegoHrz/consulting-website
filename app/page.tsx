@@ -28,7 +28,7 @@ import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)] text-black flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[200px] ">
+    <div className="font-[family-name:var(--font-geist-sans)] text-black flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[180px] ">
       <Hero />
       <BusinessPlans />
       <Pitch
@@ -64,7 +64,7 @@ export default function Home() {
           dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
           maximieren. Sind Sie bereit, mit uns durchzustarten?"
         /> */}
-
+      {/* sin hoc */}
       <Services />
 
       <Quote />

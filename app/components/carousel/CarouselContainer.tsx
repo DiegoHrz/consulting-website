@@ -3,8 +3,8 @@ import Carousel from "./Carousel";
 
 const CarouselContainer = () => {
   return (
-    <div className=" w-full  h-24 rounded-lg mt-6 lg:mt-28">
-      <div className="w-full">
+    <div className=" w-full  h-24 rounded-lg my-14 lg:mt-28">
+      <div className="w-full sm:px-16 px-8">
         <p
           className="text-center mx-auto w-fit text-xl mb-6 text-transparent  font-medium"
           style={{
