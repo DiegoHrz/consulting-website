@@ -7,6 +7,7 @@ interface TitleProps {
   sans?: boolean;
   additionalTitle?: string;
   textPosition?: string;
+  rainbow?: boolean;
 }
 
 const Title: React.FC<TitleProps> = ({
@@ -15,6 +16,7 @@ const Title: React.FC<TitleProps> = ({
   sans,
   additionalTitle,
   textPosition = "center",
+  rainbow,
 }) => {
   const [textLengthMax, setTextLengthMax] = useState(false);
 
@@ -39,10 +41,21 @@ const Title: React.FC<TitleProps> = ({
           } ${textPosition === "left" && "text-left"} ${
             textPosition === "right" && "text-right"
           } max-w-[600px] lg:max-w-[900px] mx-auto text-transparent `}
-          style={{
-            background: "linear-gradient(to right,#125369,#3CA3B5)",
-            backgroundClip: "text",
-          }}
+          style={
+            rainbow
+              ? {
+                  background: "linear-gradient(to right, #125369, #3CA3B5)",
+                  backgroundClip: "text",
+                }
+              : {
+                background: "#333336",
+                backgroundClip: "text",
+              }
+          }
+          // {
+          //   background: "linear-gradient(to right, #125369 0%, #3CA3B5 50%, #6DD5D8 75%, #A8E6CF 100%)",
+          //   backgroundClip: "text",
+          // }
         >
           {text}
         </h1>

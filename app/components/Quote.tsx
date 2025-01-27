@@ -25,6 +25,7 @@ const Quote = () => {
             text="Let’s talk about your next big move"
             additionalClasses="text-center"
             sans={true}
+            rainbow={true}
           />
           <p className="text-center max-w-[450px] mx-auto text-lg text-balance">
             Hop on a call with us to see how our services can accelerate your
