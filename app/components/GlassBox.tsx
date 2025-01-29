@@ -151,8 +151,8 @@ const GlassBox: React.FC<GlassBoxProps> = ({
               {title}
             </h1>
             <h3
-              className={` text-xs lg:text-[16px] leading-5 z-10 transition-all duration-1000 ${
-                hoverIn ? "text-gray-200" : "text-anna-gray"
+              className={` text-xs lg:text-[15px] leading-5 z-10 transition-all duration-1000 ${
+                hoverIn ? "text-gray-300" : "text-anna-gray"
               }`}
             >
               {text}

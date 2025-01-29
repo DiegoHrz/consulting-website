@@ -19,7 +19,7 @@ const Services: React.FC = ({}) => {
             "linear-gradient(to bottom, white 1%,#F5F6F9 5%,#F5F6F9 100%)",
         }}
       >
-        <div className="  max-w-7xl mx-auto relative z-0 flex flex-col gap-16">
+        <div className="  max-w-[1200px] mx-auto relative z-0 flex flex-col gap-16">
           <div className="   relative z-0 flex flex-col gap-[24px]">
             <Title
               text="Unsere Angebote – Deine Möglichkeiten"
@@ -63,7 +63,7 @@ const Services: React.FC = ({}) => {
         </motion.div>
       </div> */}
           <div className=" md:h-full flex justify-center px-10 md:px-0 ">
-            <div className="h-1/2 md:h-full w-full  pb-20 md:pb-36 lg:pb-44  text-center gap-10 sm:gap-8 lg:mx-5 min-h-[238px] md:min-h-max grid grid-cols-6 ">
+            <div className="h-1/2 md:h-full w-full  pb-20 md:pb-36 lg:pb-44  text-center gap-10 sm:gap-8 min-h-[238px] md:min-h-max grid grid-cols-6 ">
               {/* <div className="w-40 h-40 bg-red-700 z-0 absolute -left-10" ></div> */}
               {/* <motion.div
               className="absolute left-[60%] -top-0 z-40"
