@@ -2,7 +2,6 @@
 import React from "react";
 import Wrapper from "../hoc/Wrapper";
 import Title from "./customTags/Title";
-import Link from "next/link";
 import ButtonAnna from "./customTags/ButtonAnna";
 
 const Quote = () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+
 import Wrapper from "../hoc/Wrapper";
 import ButtonAnna from "./customTags/ButtonAnna";
 
@@ -58,7 +58,7 @@ const Pitch: React.FC<PitchProps> = ({ image, title, text, button, right }) => {
             </button>
           </Link>
         </div> */}
-        <ButtonAnna text="Bunchung"  />
+        <ButtonAnna text={button}  />
       </div>
       <div className="lg:w-1/2">
         <img

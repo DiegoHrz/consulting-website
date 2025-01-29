@@ -10,7 +10,6 @@ const Reviews = () => {
         <Title
           text="What our users say"
           additionalClasses="text-center"
-          sans={true}
           additionalTitle="reviews"
         />
       </div>

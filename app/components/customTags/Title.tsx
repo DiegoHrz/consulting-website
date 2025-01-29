@@ -12,7 +12,6 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({
   text,
-  additionalClasses,
   title = true,
   additionalTitle,
   textPosition = "center",

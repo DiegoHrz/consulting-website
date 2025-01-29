@@ -85,7 +85,7 @@ const CalendlyContainer = () => {
         <div className="block lg:hidden">
           <Title
             text="Ask whatever you have in your mind"
-            sans={true}
+
             textPosition="center"
             rainbow={true}
           />
@@ -93,7 +93,7 @@ const CalendlyContainer = () => {
         <div className="lg:block hidden">
           <Title
             text="Ask whatever you have in your mind"
-            sans={true}
+
             textPosition="left"
             rainbow={true}
           />

@@ -2,7 +2,6 @@
 import Wrapper from "../hoc/Wrapper";
 import AccordionElement from "./AccordionElement";
 import Title from "./customTags/Title";
-import Quote from "./Quote";
 
 const FAQ = () => {
   return (

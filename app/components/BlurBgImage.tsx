@@ -1,6 +1,6 @@
 import React from "react";
 
-type Props = {};
+
 
 const BlurBgImage: React.FC = () => {
   return (

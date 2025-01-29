@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+import { useState } from "react";
 
 import { GiReactor } from "react-icons/gi";
 
@@ -15,17 +15,16 @@ const GlassBox: React.FC<GlassBoxProps> = ({
   title,
   text,
   button,
-  special
-
+  special,
 }) => {
-  const but = button
-  console.log(but)
-  const spec = special
-  console.log(spec)
-  // const [hoverIn, setHoverIn] = useState(false);
+  const but = button;
+  console.log(but);
+  const spec = special;
+  console.log(spec);
+  const [hoverIn, setHoverIn] = useState(false);
   return (
     <motion.div
-      className="relative rounded-3xl w-full"
+      className="relative rounded-3xl w-full bg-white/5  border-[rgba(255,25,255,0.1)] border-2"
       initial={{ scale: 0, opacity: 0.5 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
@@ -33,7 +32,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
     >
       {/* Outer container for glass effect */}
       <motion.div
-        className="absolute inset-0 backdrop-blur-lg rounded-xl bg-white border"
+        className="absolute inset-0 backdrop-blur-lg rounded-xl  "
         // shadow-anna-blue shadow-[0px_1px_7px_0px]
         initial={{ scale: 0, opacity: 0.1 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -42,17 +41,33 @@ const GlassBox: React.FC<GlassBoxProps> = ({
       />
 
       {/* Main content container with overflow control */}
-      <div className="relative flex flex-col h-full rounded-xl overflow-hidden w-full">
+      <div
+        className="relative flex flex-col h-full rounded-3xl overflow-hidden w-full"
+        onMouseEnter={() => setHoverIn(true)}
+        onMouseLeave={() => setHoverIn(false)}
+      >
         {/* Gradient circle */}
         <div
-          className="absolute h-24 w-24 -right-10 -top-3"
-          style={{
-            background: "rgb(22, 100, 126)",
-            filter: "blur(50px)",
-            borderRadius: "231px",
-            opacity: 1,
-            zIndex: 1,
-          }}
+          className={`absolute transition-all duration-1000  ${
+            hoverIn ? "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96" : "h-24 w-24 -right-10 -top-3 "
+          } `}
+          style={
+            hoverIn
+              ? {
+                  backgroundColor: "#125369",
+                  filter: "blur(50px)",
+                  // borderRadius: "231px",
+                  // opacity: 1,
+                  zIndex: 1,
+                }
+              : {
+                  backgroundColor: "#125369",
+                  filter: "blur(10px)",
+                  borderRadius: "231px",
+                  // opacity: 1,
+                  zIndex: 1,
+                }
+          }
         />
 
         {/* Badges */}
@@ -89,15 +104,40 @@ const GlassBox: React.FC<GlassBoxProps> = ({
         )} */}
 
         {/* Content */}
-        <div className="z-20 flex flex-col gap-[10px] p-10 sm:px-[30px] py-[20px] text-left w-full">
-          <div className="bg-[#6a6780] w-fit p-1 rounded-md">
-            <GiReactor color="white" />
+        <div
+          className="z-20 flex flex-col gap-[10px] p-10 sm:px-[30px] py-[20px] text-left w-full transition-all duration-1000 "
+          style={
+            hoverIn
+              ? {
+                  background: "rgba(255, 255, 255, 0.02)",
+                  boxShadow: "rgba(255, 255, 255, 0.05) 0px 1px 10px 0px inset",
+                }
+              : {
+                  background: "rgba(255, 255, 255, 0.02)",
+                  boxShadow: "rgba(255, 255, 255, 0.5) 0px 1px 10px 0px inset",
+                }
+          }
+        >
+          <div className={`${hoverIn?'bg-white':"bg-[#6a6780]"}  w-fit p-1 rounded-md transition-all duration-1000`}>
+            <GiReactor color={hoverIn?'#125369':"white"} />
           </div>
           <div className="flex flex-col gap-[10px]">
-            <h1 className="text-lg lg:text-[22px] font-medium z-10 text-anna-black">
+            <h1
+              className={`text-lg lg:text-[22px] font-medium z-10 transition-all duration-1000 ${
+                hoverIn?'text-white': "text-transparent"
+              }`}
+              style={
+                hoverIn
+                  ? {}
+                  : {
+                      background: "linear-gradient(to right, #125369, #3CA3B5)",
+                      backgroundClip: "text",
+                    }
+              }
+            >
               {title}
             </h1>
-            <p className="font-cabin_sans text-xs lg:text-[16px] leading-5 z-10 text-anna-gray">
+            <p className={`font-cabin_sans text-xs lg:text-[16px] leading-5 z-10 transition-all duration-1000 ${hoverIn?'text-[#c1c1c3]':'text-anna-gray'}`}>
               {text}
             </p>
           </div>

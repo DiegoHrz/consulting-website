@@ -39,7 +39,6 @@ const RoadmapContainer = () => {
           <Title
             text="Unser Workflow – Schritt für Schritt zu deinem Erfolg"
             additionalClasses="text-center"
-            sans={true}
             additionalTitle="workshops"
           />
         </div>

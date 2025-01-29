@@ -16,7 +16,7 @@ import Reviews from "./components/Reviews";
 // import ParallaxBanner from "./components/ParallaxBanner";
 // import ParallaxBanner from "./components/ParallaxBanner";
 
-import ParallaxBanner from "./components/Parallax/ParallaxBanner";
+
 import Quote from "./components/Quote";
 
 import CalendlyContainer from "./components/calendly/CalendlyContainer";
