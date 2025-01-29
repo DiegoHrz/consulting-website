@@ -45,6 +45,18 @@ h2 {
   font-weight: 600;
 }
 
+h3{
+
+  font-weight: 400;
+
+  letter-spacing: -.02em;
+  line-height: 1.4em;
+  text-spacing-trim: 20px;
+  color:#0000008F
+}
+
+
+
 p {
   color:#0000008F
 }
