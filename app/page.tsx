@@ -67,15 +67,7 @@ export default function Home() {
       {/* sin hoc */}
       <Services />
 
-      <Quote />
-      <div className="relative     ">
-        <div className="w-screen h-fit   bg-anna-gray absolute -z-50 bottom-1/2 "></div>
-        {/* <div className="max-w-7xl  mx-auto sm:px-16 px-10 relative border-4 border-red-500">
-          <ParallaxBanner2 />
-        </div> */}
-        <ParallaxBanner />
-        {/* <CurvedRoadmap /> */}
-      </div>
+      
       <div
         className=" "
         style={{

@@ -7,19 +7,19 @@ import Title from "./customTags/Title";
 
 const BusinessPlans = () => {
   return (
-    <div className="px-10 sm:px-16  sm:max-w-7xl mx-auto relative  ">
-      <div className="mb-16">
-        <div className="w-fit rounded-full mx-auto relative overflow-hidden mb-6">
+    <div className="px-10 sm:px-16  sm:max-w-7xl mx-auto relative pt-10 ">
+      <div className="mb-12 sm:mb-[3.8rem] lg:mb-20">
+        <div className="w-28 aspect-square rounded-full mx-auto relative overflow-hidden ">
           <img
             src="/logo/logo_only_letter.png"
             alt=""
-            className="w-32 sm:w-28 mx-auto z-[10] object-cover relative"
+            className="w-24 sm:w-28 mx-auto z-[10] object-cover relative"
           />
           <div className="absolute bg-[linear-gradient(180deg,_#125369_0%,_#f7f7f7_25%,_#fff_80%)] blur-sm inset-0 z-[0]"></div>
         </div>
         <Title
           text="Empowering authentic connections for a vibrant experience."
-          sans={true}
+          title={false}
         />
       </div>
 

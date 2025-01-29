@@ -66,7 +66,7 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({ src, alt }) => {
     targetTranslateY.current = relativeScroll * 0.2;
   });
   // return <img ref={imageRef} src={src} alt={alt} className="absolute w-full h-full object-cover will-change-transform" />;
-  return <img ref={imageRef} src={src} alt={alt} className="absolute w-full h-screen object-cover will-change-transform" />;
+  return <img ref={imageRef} src={src} alt={alt} className="absolute w-full h-screen object-cover will-change-transform brightness-105" />;
 };
 
 export default ParallaxImage;

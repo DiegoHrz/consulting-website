@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 interface TitleProps {
   text: string;
   additionalClasses?: string;
-  sans?: boolean;
+  title?: boolean;
   additionalTitle?: string;
   textPosition?: string;
   rainbow?: boolean;
@@ -13,7 +13,7 @@ interface TitleProps {
 const Title: React.FC<TitleProps> = ({
   text,
   additionalClasses,
-  sans,
+  title = true,
   additionalTitle,
   textPosition = "center",
   rainbow,
@@ -21,13 +21,13 @@ const Title: React.FC<TitleProps> = ({
   const [textLengthMax, setTextLengthMax] = useState(false);
 
   useEffect(() => {
-    if (sans) {
+    if (title) {
       const inputText = text.length;
       setTextLengthMax(inputText > 30);
     }
-  }, [text, sans]);
+  }, [text, title]);
 
-  if (sans) {
+  if (title) {
     return (
       <div className="">
         {additionalTitle && (
@@ -48,9 +48,9 @@ const Title: React.FC<TitleProps> = ({
                   backgroundClip: "text",
                 }
               : {
-                background: "#333336",
-                backgroundClip: "text",
-              }
+                  background: "#333336",
+                  backgroundClip: "text",
+                }
           }
           // {
           //   background: "linear-gradient(to right, #125369 0%, #3CA3B5 50%, #6DD5D8 75%, #A8E6CF 100%)",
@@ -64,13 +64,37 @@ const Title: React.FC<TitleProps> = ({
   }
 
   return (
-    <h1
-      className={`font-cabin ${
-        additionalClasses && additionalClasses
-      } text-3xl sm:text-[2.5rem]`}
-    >
-      {text}
-    </h1>
+    <div className="">
+      {additionalTitle && (
+        <h2 className=" text-center text-lg mb-2 text-anna-black tracking-wide">
+          {additionalTitle}
+        </h2>
+      )}
+      <h1
+        className={` text-[24px] md:text-[48px] ${
+          textPosition === "center" && "text-center"
+        } ${textPosition === "left" && "text-left"} ${
+          textPosition === "right" && "text-right"
+        } max-w-[600px] lg:max-w-[900px] mx-auto text-transparent `}
+        style={
+          rainbow
+            ? {
+                background: "linear-gradient(to right, #125369, #3CA3B5)",
+                backgroundClip: "text",
+              }
+            : {
+                background: "#333336",
+                backgroundClip: "text",
+              }
+        }
+        // {
+        //   background: "linear-gradient(to right, #125369 0%, #3CA3B5 50%, #6DD5D8 75%, #A8E6CF 100%)",
+        //   backgroundClip: "text",
+        // }
+      >
+        {text}
+      </h1>
+    </div>
   );
 };
 

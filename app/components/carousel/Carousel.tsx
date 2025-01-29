@@ -6,7 +6,7 @@ const Carousel: React.FC = () => {
   return (
     <div >
       <div
-        className="slider h-[5rem] pt-5  mx-auto"
+        className="slider h-[5rem] pt-10  mx-auto"
         style={
           {
             "--width": "160px",

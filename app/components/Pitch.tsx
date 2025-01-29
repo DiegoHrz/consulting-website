@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Wrapper from "../hoc/Wrapper";
+import ButtonAnna from "./customTags/ButtonAnna";
 
 interface PitchProps {
   image: string;
@@ -34,7 +35,7 @@ const Pitch: React.FC<PitchProps> = ({ image, title, text, button, right }) => {
           {title}
         </h1>
         <p className={`${!right && "sm:pr-20"} text-anna-gray text-justify `}>{text}</p>
-        <div className="w-fit  animate-fade-subtitle bg-anna-blue overflow-hidden rounded-3xl">
+        {/* <div className="w-fit  animate-fade-subtitle bg-anna-blue overflow-hidden rounded-3xl">
           <Link href="/" className="">
             <button
               className="relative rounded-3xl   text-anna-white font-medium font-cabin px-[21px] py-[11px]  overflow-hidden"
@@ -44,7 +45,6 @@ const Pitch: React.FC<PitchProps> = ({ image, title, text, button, right }) => {
               }}
             >
               <p className="text-white relative z-10">{button}</p>{" "}
-              {/* Añade z-10 aquí */}
               <div
                 className={`absolute left-1/2 -translate-x-1/2 transition-all duration-700 
                 hover:-bottom-1 -bottom-8 h-12 w-32 aspect-square `}
@@ -57,7 +57,8 @@ const Pitch: React.FC<PitchProps> = ({ image, title, text, button, right }) => {
               ></div>
             </button>
           </Link>
-        </div>
+        </div> */}
+        <ButtonAnna text="Bunchung"  />
       </div>
       <div className="lg:w-1/2">
         <img

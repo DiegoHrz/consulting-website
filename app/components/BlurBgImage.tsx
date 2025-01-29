@@ -4,7 +4,7 @@ type Props = {};
 
 const BlurBgImage: React.FC = () => {
   return (
-    <div className="absolute inset-0 w-full h-full blur-[40px] opacity-30">
+    <div className="absolute inset-0 w-full h-full blur-[40px] opacity-50">
       <img
         src="/bg-image.png"
         alt="Background"

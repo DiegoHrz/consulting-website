@@ -4,10 +4,12 @@ import Wrapper from "../hoc/Wrapper";
 import Title from "./customTags/Title";
 import Link from "next/link";
 
+
 const Quote = () => {
   return (
-    <div className=" rounded-lg max-w-[500px] mx-auto">
-      <div className=" relative z-0 flex flex-col gap-16">
+    <div className=" rounded-lg my-[80px]">
+      {/* <BlurBgImage/> */}
+      <div className=" relative z-0 flex flex-col gap-16 max-w-[500px] mx-auto">
         <div className="relative z-0 flex flex-col gap-[24px]">
           <div className="reltive">
             <img
@@ -22,9 +24,8 @@ const Quote = () => {
             />
           </div>
           <Title
-            text="Let’s talk about your next big move"
+            text="Lets talk about your next big move"
             additionalClasses="text-center"
-            sans={true}
             rainbow={true}
           />
           <p className="text-center max-w-[450px] mx-auto text-lg text-balance">
@@ -57,8 +58,8 @@ const Quote = () => {
                 </button>
               </Link>
             </div>
-            <p className="w-fit mx-auto mt-1">
-              It&apos;s <span className="text-anna-black font-medium">Free</span>
+            <p className="w-fit mx-auto mt-1 font-vollkornSC">
+              it&apos;s <span className="text-anna-black font-medium">free</span>
             </p>
           </div>
         </div>

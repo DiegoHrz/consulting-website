@@ -1,10 +1,11 @@
 import React from "react";
 import ParallaxImage from "./ParallaxImage";
+import ButtonAnnaTransparent from "../customTags/ButtonTransparent";
 
 const ParallaxBanner = () => {
   return (
-    <section className="relative w-screen h-[30vh] sm:h-[60vh]  overflow-hidden flex justify-center items-center">
-      <div className=" absolute top-0 left-0 w-full h-full overflow-hidden">
+    <section className="relative w-screen h-[30vh] sm:h-[60vh]  overflow-hidden flex justify-center items-center max-w-7xl mx-auto max-h-[26rem] ">
+      <div className=" absolute top-0 left-0 w-full h-full overflow-hidden ">
         <ParallaxImage src="/banner/parallax-image-5.avif" alt="" />
       </div>
       {/* <div className=" relative text-center">
@@ -45,9 +46,12 @@ const ParallaxBanner = () => {
           alt="White Logo"
           className="h-auto w-40  mx-auto px-3 animate-fade-title"
         />
-        <h1 className="w-full text-4xl text-center font-medium  text-anna-white">
-        Bereit für die Veränderung ?
+        <h1 className=" w-full text-[28px] text-center font-medium  text-anna-white">
+          Bereit für die Veränderung ?
         </h1>
+        <div className="hidden md:block mx-auto w-fit  rounded-3xl mt-7" >
+          <ButtonAnnaTransparent text="Contact us"  colorText='text-anna-black' />
+        </div>
       </div>
     </section>
   );
