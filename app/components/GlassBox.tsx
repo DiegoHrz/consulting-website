@@ -42,7 +42,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
 
       {/* Main content container with overflow control */}
       <div
-        className={`relative flex flex-col h-full rounded-3xl overflow-hidden w-full z-10 transition-all duration-1000 ${
+        className={`relative flex flex-col h-full rounded-3xl overflow-hidden w-full z-10 transition-all duration-700 ${
           hoverIn ? "bg-[#125369]" : ""
         }`}
         onMouseEnter={() => setHoverIn(true)}
@@ -114,7 +114,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
 
         {/* Content */}
         <div
-          className="z-20 flex flex-col gap-5 p-10 sm:px-[30px] sm:py-[20px] text-left w-full transition-all duration-500 rounded-3xl"
+          className="z-20 flex flex-col gap-5 p-10 sm:px-[30px] sm:py-[20px] text-left w-full transition-all duration-300 rounded-3xl"
           style={
             hoverIn
               ? {
@@ -136,7 +136,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
           </div>
           <div className="flex flex-col gap-[10px]">
             <h1
-              className={`text-lg lg:text-[22px] font-medium z-10 transition-all duration-1000 ${
+              className={`text-lg lg:text-[22px] font-medium z-10 transition-all duration-100 ${
                 hoverIn ? "text-white" : "text-transparent"
               }`}
               style={
@@ -151,7 +151,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
               {title}
             </h1>
             <h3
-              className={` text-xs lg:text-[15px] leading-5 z-10 transition-all duration-1000 ${
+              className={` text-xs lg:text-[15px] leading-5 z-10 transition-all duration-100 ${
                 hoverIn ? "text-anna-gray-light" : "text-anna-gray"
               }`}
             >

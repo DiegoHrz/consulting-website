@@ -10,7 +10,7 @@ const Footer = () => {
     <div
       className="sm:mt-0 mt-4 pt-20 pb-[20px] bg-anna-blue text-white lg:text-[#d9d9d9] relative w-full  border-anna-black"
       style={{
-        background: "linear-gradient(to bottom,white 1%,#F8F8F8 2%,#d0e8f3 3%,#8FB9D0 4%,#3C6D82 6%,#125369 7%,#125369 100%)"
+        background: "linear-gradient(to bottom,white 1%,#F8F8F8 2%,#d0e8f3 3%,#8FB9D0 4%,#3C6D82 5%,#125369 6%,#125369 100%)"
       }}
     >
       <div className="text-black max-w-7xl mx-auto  sm:px-16 flex  flex-col sm:flex-row items-center sm:justify-between">
