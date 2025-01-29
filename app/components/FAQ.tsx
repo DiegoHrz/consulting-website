@@ -22,7 +22,6 @@ const FAQ = () => {
       <div>
 
       <AccordionElement />
-      <Quote />
       </div>
     </div>
   );

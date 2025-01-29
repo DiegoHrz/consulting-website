@@ -3,11 +3,17 @@ import React from "react";
 import Wrapper from "../hoc/Wrapper";
 import Title from "./customTags/Title";
 import Link from "next/link";
-
+import ButtonAnna from "./customTags/ButtonAnna";
 
 const Quote = () => {
   return (
-    <div className=" rounded-lg my-[80px]">
+    <div
+      className=" rounded-lg my-[80px]"
+      style={{
+        background:
+          "radial-gradient(21% 42% at 50% 50%, rgba(27, 119, 150,0.2) 0%, rgba(56, 54, 61, 0) 100%)",
+      }}
+    >
       {/* <BlurBgImage/> */}
       <div className=" relative z-0 flex flex-col gap-16 max-w-[500px] mx-auto">
         <div className="relative z-0 flex flex-col gap-[24px]">
@@ -33,8 +39,8 @@ const Quote = () => {
             growth.
           </p>
           <div>
-            <div className="w-fit  animate-fade-subtitle bg-anna-blue overflow-hidden rounded-3xl mx-auto">
-              <Link href="/" className="">
+            <div className="w-fit  animate-fade-subtitle  overflow-hidden rounded-3xl mx-auto">
+              {/* <Link href="/" className="">
                 <button
                   className="relative rounded-3xl   text-anna-white font-medium font-cabin px-[21px] py-[9px]  overflow-hidden"
                   style={{
@@ -44,7 +50,7 @@ const Quote = () => {
                   }}
                 >
                   <p className="text-white relative z-10">Bunchung</p>{" "}
-                  {/* Añade z-10 aquí */}
+
                   <div
                     className={`absolute left-1/2 -translate-x-1/2 transition-all duration-700 
                     hover:-bottom-1 -bottom-8 h-12 w-32 aspect-square `}
@@ -56,10 +62,12 @@ const Quote = () => {
                     }}
                   ></div>
                 </button>
-              </Link>
+              </Link> */}
+              <ButtonAnna text="Bunchung" />
             </div>
             <p className="w-fit mx-auto mt-1 font-vollkornSC">
-              it&apos;s <span className="text-anna-black font-medium">free</span>
+              it&apos;s{" "}
+              <span className="text-anna-black font-medium">free</span>
             </p>
           </div>
         </div>

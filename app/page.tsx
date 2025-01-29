@@ -67,7 +67,6 @@ export default function Home() {
       {/* sin hoc */}
       <Services />
 
-      
       <div
         className=" "
         style={{
@@ -83,7 +82,10 @@ export default function Home() {
       <CalendlyContainer />
 
       <Reviews />
-      <FAQ />
+      <div>
+        <FAQ />
+        <Quote />
+      </div>
     </div>
   );
 }
