@@ -34,6 +34,7 @@ module.exports = {
   			foreground: 'hsl(var(--foreground))',
   			'anna-turquoise': '#D7E2DC',
   			'anna-gray': '#0000008F',
+			'anna-gray-light': '#b7bcc5',
   			'anna-brown': '#4D4D4D',
   			// 'anna-blue': '#8B97A5',
 			'anna-blue': '#125369',
