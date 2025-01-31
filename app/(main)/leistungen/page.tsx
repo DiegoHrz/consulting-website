@@ -12,17 +12,6 @@ import { fadeIn, zoomIn } from "@/app/utils/motion";
 const ServicesPage = () => {
   return (
     <div>
-      {/* <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
-        <HeroSecondary
-          image="/pages-imgs/leistungen.avif"
-          header="services"
-          title="leistungen"
-          text="Wir sind eine Beratungsfirma, die Unternehmen mit
-      maßgeschneiderten Lösungen unterstützt. Unser Ziel ist es,
-      gemeinsam Ihre Vision erfolgreich umzusetzen."
-        />
-      </div> */}
-
       <div className="relative h-screen w-full overflow-hidden">
         <GradientBackground />
         <div className="z-10 max-w-7xl mx-auto sm:mt-40 flex  gap-16 h-full">
@@ -56,7 +45,7 @@ const ServicesPage = () => {
                 <li>Paypal</li>
               </ul> */}
               <ButtonAnnaBurgundy text="Get started today" />
-              <ButtonAnnaTransparent text="get start" />
+              <ButtonAnnaTransparent text="Kontakt" />
             </div>
             {/* <button className="rounded-3xl bg-anna-burgundy  text-anna-white font-medium font-cabin px-5 py-2 w-fit">
               Get started today
@@ -78,16 +67,16 @@ const ServicesPage = () => {
               </p>
               <div className="absolute top-2 left-1/2 -translate-x-1/2 z-[3]">
                 <motion.div
-                  variants={zoomIn(0.2, 1)}
+                  variants={zoomIn(0.2, 1.25)}
                   initial="hidden" // Estado inicial
                   animate="show"
                   className=" z-[3] w-[27.2rem] "
                 >
                   {/* w-30rem h-96 */}
                   <img
-                    src="/leistungen/10.png"
+                    src="/leistungen/6.png"
                     alt=""
-                    className="w-full h-[21.8rem] "
+                    className="w-full h-[21.8rem] rounded-2xl opacity-95"
                     style={{
                       transform: "skew(-30deg) rotate(25deg)",
                     }}
@@ -97,14 +86,14 @@ const ServicesPage = () => {
               <div className=" absolute top-20 left-1/2 -translate-x-1/2 z-[2]">
                 <motion.div
                   className="z-[2] w-[27.2rem]"
-                  variants={fadeIn("up", "tween", 1, 1)}
+                  variants={fadeIn("up", "tween", 1, 1.25)}
                   initial="hidden" // Estado inicial
                   animate="show"
                 >
                   <img
                     src="/leistungen/12.png"
                     alt=""
-                    className="w-full h-[21.8rem] "
+                    className="w-full h-[21.8rem] rounded-2xl"
                     style={{
                       transform: "skew(-30deg) rotate(25deg)",
                     }}
@@ -117,14 +106,14 @@ const ServicesPage = () => {
               >
                 <motion.div
                   className="z-[1] w-[27.2rem]"
-                  variants={fadeIn("up", "tween", 2, 1)}
+                  variants={fadeIn("up", "tween", 1.75, 1.25)}
                   initial="hidden" // Estado inicial
                   animate="show"
                 >
                   <img
                     src="/leistungen/11.png"
                     alt=""
-                    className="w-full h-[21.8rem] "
+                    className="w-full h-[21.8rem] rounded-2xl"
                     style={{
                       transform: "skew(-30deg) rotate(25deg)",
                     }}

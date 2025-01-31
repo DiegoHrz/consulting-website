@@ -48,15 +48,15 @@ const ButtonAnnaBurgundy: React.FC<ButtonAnnaMaroonProps> = ({
           ></div> */}
 
             <div
-              className={`absolute left-1/2 -translate-x-1/2 transition-all duration-700 -z-10
+              className={`absolute left-1/2 text-[#58b2d0] -translate-x-1/2 transition-all duration-700 -z-10
               ${
-                hoverIn ? "-bottom-1 h-14 w-32" : "-bottom-10 h-14 w-14"
+                hoverIn ? "-bottom-3 h-20 w-48" : "-bottom-12 h-14 w-14"
               }  aspect-square`}
               style={{
-                backgroundColor: "orange",
+                backgroundColor: "#125369",
                 filter: "blur(10px)",
                 borderRadius: "100px",
-                opacity: 0.8,
+
               }}
             ></div>
 

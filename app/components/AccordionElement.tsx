@@ -6,7 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useState } from "react";
-import BlurBgImage from "./BlurBgImage";
+import BlurBgImage from "./BlurBg/BlurBgImage";
+import BlurBgImageRed from "./BlurBg/BlurBgImageRed";
 
 const texts = [
   {
@@ -92,7 +93,8 @@ const AccordionElement = () => {
       value={accordionSelected}
       onValueChange={handler}
     >
-      <BlurBgImage />
+      {/* <BlurBgImage /> */}
+      <BlurBgImageRed />
       {texts.map((item, index) => (
         <AccordionItem
           key={index}

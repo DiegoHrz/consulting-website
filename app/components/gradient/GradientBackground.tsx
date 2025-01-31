@@ -11,7 +11,7 @@ const GradientBackground = () => {
       }}
     >
       {/* Grid overlay */}
-      <div
+      {/* <div
         className="absolute inset-0"
         style={{
           backgroundImage: `
@@ -20,7 +20,7 @@ const GradientBackground = () => {
             `,
           backgroundSize: "10rem 10rem",
         }}
-      />
+      /> */}
 
       {/* Blur spots */}
       {/* <div className="absolute top-20 left-[20%] w-72 h-72 bg-white/30 rounded-full blur-3xl" /> */}
