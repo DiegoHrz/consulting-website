@@ -39,7 +39,11 @@ module.exports = {
   			// 'anna-blue': '#8B97A5',
 			'anna-blue': '#125369',
   			'anna-white': '#F7F7F7',
+			'anna-white-dark': '#DFE3E7',
 			'anna-black':'#333336',
+			'anna-green':'#D4F770',
+			'anna-burgundy':'#5B1C31',
+			'anna-maroon':'#581D1D',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'

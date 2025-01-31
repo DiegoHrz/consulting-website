@@ -8,6 +8,8 @@ interface TitleProps {
   additionalTitle?: string;
   textPosition?: string;
   rainbow?: boolean;
+  additionalClass?: string;
+  noLengthMax?: boolean;
 }
 
 const Title: React.FC<TitleProps> = ({
@@ -16,21 +18,23 @@ const Title: React.FC<TitleProps> = ({
   additionalTitle,
   textPosition = "center",
   rainbow,
+  additionalClass,
+  noLengthMax = false,
 }) => {
   const [textLengthMax, setTextLengthMax] = useState(false);
 
   useEffect(() => {
-    if (title) {
+    if (title && !noLengthMax) {
       const inputText = text.length;
       setTextLengthMax(inputText > 30);
     }
-  }, [text, title]);
+  }, [text, title, noLengthMax]);
 
   if (title) {
     return (
       <div className="">
         {additionalTitle && (
-          <h2 className=" text-center text-lg mb-2 text-anna-black tracking-wide">
+          <h2 className=" text-center text-lg mb-2 text-anna-maroon tracking-wide">
             {additionalTitle}
           </h2>
         )}
@@ -39,7 +43,9 @@ const Title: React.FC<TitleProps> = ({
             textPosition === "center" && "text-center"
           } ${textPosition === "left" && "text-left"} ${
             textPosition === "right" && "text-right"
-          } max-w-[600px] lg:max-w-[900px] mx-auto text-transparent `}
+          } max-w-[600px] lg:max-w-[900px] mx-auto text-transparent ${
+            additionalClass && additionalClass
+          }`}
           style={
             rainbow
               ? {

@@ -8,7 +8,7 @@ const CarouselContainer = () => {
         <p
           className="text-center mx-auto w-fit text-xl mb-6 text-transparent  font-medium"
           style={{
-            background: "linear-gradient(to right,#125369,#0000008F)",
+            background: "linear-gradient(to right,#581D1D,#0000008F)",
             backgroundClip: "text",
           }}
         >

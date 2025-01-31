@@ -145,9 +145,9 @@ const Navbar = () => {
     <>
       <nav className="hidden md:flex w-full items-center justify  md:container md:px-0 md:py-0 border ">
         <div className="fixed z-50 top-0 w-full">
-          <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center  font-sans text-xs  font-light w-full">
-            <div className="bg-anna-blue/40 h-full w-full p-1">
-              <p>Wo eine Idee ist, ist auch ein Weg</p>
+          <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center   text-xs  font-light w-full">
+            <div className="bg-anna-blue/40 h-full w-full p-1 text-anna-burgundy">
+              <p className="text-white" >Wo eine Idee ist, ist auch ein Weg</p>
             </div>
           </div>
           <div
@@ -168,12 +168,12 @@ const Navbar = () => {
               className={"w-8 h-8 md:h-16 md:w-16 aspect-square"}
             />
 
-            <div className="hidden md:flex pl-[74px] md:gap-x-[2rem] lg:gap-x-[40px] ">
+            <div className="hidden md:flex pl-[74px] md:gap-x-[2rem] lg:gap-x-[40px]  ">
               {navLinks.map((item) => (
                 <Link
-                  className={`-tracking-tighter font-extralight hover:text-rilke-red ${
+                  className={` hover:text-anna-burgundy ${
                     !isLoading && item.name.toLowerCase() === currentSection
-                      ? "border-b-2 border-rilke-red text-rilke-red"
+                      ? "border-b-2   font-semibold"
                       : ""
                   }`}
                   key={item.href}
@@ -190,7 +190,7 @@ const Navbar = () => {
 
       <nav className="md:hidden w-full items-center justify-between mt-[-16px] md:container md:mx-0 md:px-0  py-2 relative z-50">
         <div className="fixed z-50 top-0 w-full">
-          <div className="bg-[#32304c] text-center text-white font-sans text-xs p-1 font-light">
+          <div className="bg-[#32304c] text-center text-white  text-xs p-1 font-light">
             Wo eine Idee ist, ist auch ein Weg
           </div>
           <div

@@ -78,7 +78,7 @@ const CalendlyContainer = () => {
               className="w-8 object-contain brightness-110"
             />
           </div>
-          <div className="font-vollkornSC font-semibold   text-center lg:text-left">
+          <div className="font-vollkornSC font-semibold text-anna-maroon  text-center lg:text-left">
             Anna Schenk
           </div>
         </div>

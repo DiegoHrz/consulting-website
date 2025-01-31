@@ -129,10 +129,10 @@ const GlassBox: React.FC<GlassBoxProps> = ({
         >
           <div
             className={`${
-              hoverIn ? "bg-white" : "bg-[#6a6780]"
+              hoverIn ? "bg-white" : "bg-[#581D1D]"
             }  w-fit p-1 rounded-md transition-all duration-500`}
           >
-            <GiReactor color={hoverIn ? "#125369" : "white"} />
+            <GiReactor color={hoverIn ? "#5B1C31" : "white"} />
           </div>
           <div className="flex flex-col gap-[10px]">
             <h1
