@@ -35,7 +35,7 @@ const BusinessPlans = () => {
         </div>
         {/* <div className="w-[0.07rem] bg-black "></div> */}
         {/* shadow-gray-300 shadow-[0px_4px_2px_0px] */}
-        <div className="flex flex-col  items-center gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white shadow-[#5B1C31] shadow-[0px_3px_10px_0px] min-h-56 lg:min-h-64 justify-center">
+        <div className="flex flex-col  items-center gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white shadow-[#125369] shadow-[0px_3px_10px_0px] min-h-56 lg:min-h-64 justify-center">
           <SlCalender size={40} color="#581D1D" />
           <h6 className="font-cabin text-2xl md:text-xl lg:text-2xl text-center">
             Free Consultation
