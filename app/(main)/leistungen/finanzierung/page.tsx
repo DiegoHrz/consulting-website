@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-const Finanzierung = (props: Props) => {
+
+const Finanzierung = () => {
   return (
     <div>Finanzierung</div>
   )

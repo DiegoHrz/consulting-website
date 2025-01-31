@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import ButtonAnnaBurgundy from "@/app/components/customTags/ButtonAnnaMaroon";
 import ButtonAnnaTransparent from "@/app/components/customTags/ButtonTransparent";
 import Title from "@/app/components/customTags/Title";
-import GradientBackground from "@/app/components/gradient/GradientBackground";
 
 import React from "react";
 import { IoShieldCheckmark } from "react-icons/io5";
@@ -12,7 +11,6 @@ import { fadeIn, zoomIn } from "@/app/utils/motion";
 const Hero = () => {
   return (
     <div>
-      <GradientBackground />
       <div className="z-10 max-w-7xl mx-auto sm:mt-40 flex flex-col lg:flex-row gap-16 h-full ">
         <div className="flex flex-col w-1/2 gap-[24px] ">
           <div className="max-w-[28rem]">
