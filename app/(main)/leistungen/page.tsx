@@ -12,11 +12,11 @@ import { fadeIn, zoomIn } from "@/app/utils/motion";
 const ServicesPage = () => {
   return (
     <div>
-      <div className="relative h-screen w-full overflow-hidden">
+      <div className="relative h-screen w-full overflow-hidden sm:px-16 px-8">
         <GradientBackground />
-        <div className="z-10 max-w-7xl mx-auto sm:mt-40 flex  gap-16 h-full">
+        <div className="z-10 max-w-7xl mx-auto sm:mt-40 flex flex-col lg:flex-row gap-16 h-full ">
           <div className="flex flex-col w-1/2 gap-[24px] ">
-            <div className="max-w-[26rem]">
+            <div className="max-w-[28rem]">
               <Title
                 text="Empower Your Financial Journey with AS"
                 textPosition="left"
@@ -47,9 +47,59 @@ const ServicesPage = () => {
               <ButtonAnnaBurgundy text="Get started today" />
               <ButtonAnnaTransparent text="Kontakt" />
             </div>
-            {/* <button className="rounded-3xl bg-anna-burgundy  text-anna-white font-medium font-cabin px-5 py-2 w-fit">
-              Get started today
-            </button> */}
+            <div className="sm:mt-20">
+              <div className=" flex gap-4">
+                <div>
+                  <p className="font-vollkornSC text-anna-black">memory</p>
+                  <p className="font-semibold text-xl text-anna-black ">
+                    2GB RAM
+                  </p>
+                </div>
+                <div className="w-[0.05rem] h-auto bg-anna-gray"></div>
+                <div className="">
+                  <p className="font-vollkornSC text-anna-black">screen</p>
+                  <p className="font-semibold text-xl text-anna-black ">
+                    HD 4K
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex gap-[-10px] items-center mt-6">
+                <div className="w-10 h-10 rounded-full border-2 border-anna-blue">
+                  <img
+                    src="/people/girl1.svg"
+                    alt=""
+                    className="object-contain h-full w-full"
+                  />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-anna-blue -ml-3 overflow-hidden">
+                  <img
+                    src="/people/sam.png"
+                    alt=""
+                    className="object-contain h-full w-full"
+                  />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-anna-blue -ml-3">
+                  <img
+                    src="/people/guy1.svg"
+                    alt=""
+                    className="object-contain h-full w-full"
+                  />
+                </div>
+                <div className="ml-3 flex items-center">
+                  <span className="font-vollkornSC font-bold text-anna-blue text-[1.5rem]">
+                    60
+                  </span>
+                  <span className="text-sm font-bold text-anna-blue mr-1">
+                    +
+                  </span>
+                  <span className="font-vollkornSC text-anna-blue font-semibold">
+                    satisfied clients
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="w-1/2 flex flex-col gap-3 relative ">
