@@ -46,7 +46,7 @@ const Hero = () => {
             <ButtonAnnaBurgundy text="Get started today" />
             <ButtonAnnaTransparent text="Kontakt" />
           </div>
-          <div className="sm:mt-20">
+          <div className="sm:mt-10">
             <div className=" flex gap-4  w-fit p-8 rounded-lg backdrop-blur-3xl">
               <div>
                 <p className="font-vollkornSC text-anna-black">memory</p>
