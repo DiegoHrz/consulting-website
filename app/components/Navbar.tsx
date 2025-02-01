@@ -56,23 +56,75 @@ const Navbar = () => {
   const [menuClass, setMenuClass] = useState("");
   const [scrollPositionOnClick, setScrollPositionOnClick] = useState(0);
 
-  const [currentHref, setCurrentHref] = useState("");
-
-  const pathname2 = usePathname();
+  const [isFAQVisible, setIsFAQVisible] = useState(false);
 
   useEffect(() => {
-    if (pathname2) {
-      const currentPath = pathname2;
-      if(currentPath?.startsWith('/leistungen')){
-        setCurrentHref('leistungen');  
-        console.log('currentPath :', currentPath)
-        return
+    const checkFAQVisibility = () => {
+      const faqSection = document.getElementById('faq');
+      if (faqSection) {
+        const rect = faqSection.getBoundingClientRect();
+        const isVisible = 
+          rect.top >= 0 &&
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) / 2;
+        setIsFAQVisible(isVisible);
       }
-      setCurrentHref(currentPath);
-      console.log("currentpath2: ", currentPath);
+    };
 
+    window.addEventListener('scroll', checkFAQVisibility);
+    return () => window.removeEventListener('scroll', checkFAQVisibility);
+  }, []);
+
+
+  //GUARDAR LA URL PRESENTE
+  const [currentUrl, setCurrentUrl] = useState("");
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname) {
+      const currentUrl = pathname;
+      if (currentUrl?.startsWith("/leistungen")) {
+        setCurrentUrl("leistungen");
+        return;
+      }
+      setCurrentUrl(currentUrl);
+      console.log("currentUrl: ", currentUrl);
     }
-  }, [pathname2]);
+  }, [pathname]);
+
+  //AÑADIR LOS ESTILOS AL TEXTO EN EL NAV
+  const getDynamicStyles = (
+    currentUrl: string,
+    itemHref: string,
+    scrolled: boolean,
+    name: string
+  ) => {
+    if (name === "faq" && isFAQVisible) {
+      if (scrolled || enterMenu) {
+        return "border-b border-anna-burgundy text-anna-burgundy font-semibold";
+      }
+      return "border-b text-white font-semibold";
+    }
+    if (
+      currentUrl === itemHref ||
+      (currentUrl === "leistungen" && name === "leistungen")
+    ) {
+      if (scrolled || enterMenu) {
+        return "border-b border-anna-burgundy text-anna-burgundy font-semibold";
+      }
+      return "border-b text-white font-semibold";
+    } else {
+      if (scrolled || enterMenu) return "text-black hover:text-anna-burgundy";
+      return "text-white";
+    }
+  };
+
+  const [enterMenu, setEnterMenu] = useState(false);
+  const handleOpenMenu = () => {
+    setEnterMenu(true);
+  };
+  const handleCloseMenu = () => {
+    setEnterMenu(false);
+  };
 
   useEffect(() => {
     setIsLoading(true); // Forzar un estado inicial para evitar desajustes en SSR
@@ -81,7 +133,6 @@ const Navbar = () => {
   }, [setIsLoading]);
 
   const router = useRouter();
-  const pathname = usePathname();
 
   const handleFAQClick = async (event?: React.MouseEvent) => {
     if (event) {
@@ -90,12 +141,13 @@ const Navbar = () => {
 
     // If not on home page, navigate to home first
     if (pathname !== "/") {
-      await router.push("/");
+      await router.push("/"); // Navigate to home without hash
       // Wait for navigation to complete
       setTimeout(() => {
         smoothScroll("faq");
       }, 100);
     } else {
+      // If already on home page, just scroll
       smoothScroll("faq");
     }
 
@@ -104,7 +156,7 @@ const Navbar = () => {
   };
 
   const tabHandler = (tab: string, href: string, e?: React.MouseEvent) => {
-    if (href === "faq" && e) {
+    if (!href && tab.toLowerCase() === "faq" && e) {
       handleFAQClick(e);
       return;
     }
@@ -113,7 +165,6 @@ const Navbar = () => {
     setCurrentSection(sectionId);
     smoothScroll(sectionId);
   };
-
   const tabAndToggle = (tab: string, href: string) => {
     toggleMenu();
     tabHandler(tab, href);
@@ -179,16 +230,19 @@ const Navbar = () => {
   return (
     <>
       <nav className="hidden md:flex w-full items-center justify  md:container md:px-0 md:py-0 border ">
-        <div className="fixed z-50 top-0 w-full">
+        <div
+          className="fixed z-50 top-0 w-full"
+          onMouseEnter={handleOpenMenu}
+          onMouseLeave={handleCloseMenu}
+        >
           <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center   text-xs  font-light w-full">
             <div className="bg-anna-blue/40 h-full w-full p-1 text-anna-burgundy">
               <p className="text-white">Wo eine Idee ist, ist auch ein Weg</p>
-              <p className="text-white">currenthref= {currentHref}</p>
             </div>
           </div>
           <div
             className={`md:flex items-center justify-between  w-full md:py-0 md:px-10 lg:px-20 md lg:gap-4 md:gap-2 md:text-sm lg:text-base   h-16 ${
-              enterMouse && "hover:bg-white "
+              scrolled || enterMenu ? "bg-white " : ""
             } ${
               scrolled
                 ? "bg-white text-black shadow-border-b"
@@ -212,52 +266,54 @@ const Navbar = () => {
                   onMouseEnter={() => item.hasSubmenu && setOpenSubmenu(true)}
                   onMouseLeave={() => item.hasSubmenu && setOpenSubmenu(false)}
                 >
-                  <Link href={item.href}>
-                    <div
-                      className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
-                      onClick={() => {
-                        if (item.hasSubmenu) {
-                          toggleSubmenu();
-                        } else if (item.href === "faq") {
-                          handleFAQClick();
-                        } else {
-                          tabHandler(item.name, item.href);
-                        }
-                      }}
-                    >
-                      {/* {item.name.toLowerCase()} */}
-                      <span
-                        className={`  ${
-                          !isLoading && item.href === currentHref || item.name ===currentHref 
-                            ? "border-b-2 font-semibold  "
-                            : ""
-                        }
-                         ${
-                           scrolled &&
-                           !isLoading &&
-                           item.name.toLowerCase() === currentSection &&
-                           "text-anna-burgundy border-anna-burgundy"
-                         }
-                         ${
-                           enterMouse &&
-                           !isLoading &&
-                           item.name.toLowerCase() === currentSection &&
-                           "text-anna-burgundy border-anna-burgundy"
-                         }
-
-                        `}
-                      >
-                        {item.name}
-                      </span>
-                      {item.hasSubmenu && (
-                        <IoIosArrowDown
-                          className={`ml-1 transition-transform ${
-                            openSubmenu ? "rotate-180" : ""
-                          }`}
-                        />
+              {item.name === "faq" ? (
+                <div
+                  className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
+                  onClick={handleFAQClick}
+                >
+                  <span
+                    className={getDynamicStyles(
+                      currentUrl,
+                      item.href,
+                      scrolled,
+                      item.name
+                    )}
+                  >
+                    {item.name}
+                  </span>
+                </div>
+              ) : (
+                <Link href={item.href}>
+                  <div
+                    className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
+                    onClick={() => {
+                      if (item.hasSubmenu) {
+                        toggleSubmenu();
+                      } else {
+                        tabHandler(item.name, item.href);
+                      }
+                    }}
+                  >
+                    <span
+                      className={getDynamicStyles(
+                        currentUrl,
+                        item.href,
+                        scrolled,
+                        item.name
                       )}
-                    </div>
-                  </Link>
+                    >
+                      {item.name}
+                    </span>
+                    {item.hasSubmenu && (
+                      <IoIosArrowDown
+                        className={`ml-1 transition-transform ${
+                          openSubmenu ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
+                  </div>
+                </Link>
+              )}
 
                   {item.hasSubmenu && openSubmenu && (
                     <div className="absolute top-12 left-1/2 -translate-x-1/2 mt-4 bg-[#F7F7F7] shadow-lg h-auto min-w-[200px] -z-10">
@@ -265,7 +321,15 @@ const Navbar = () => {
                         <Link
                           key={subLink.href}
                           href={subLink.href}
-                          className="block px-4 py-2 text-black text-sm hover:text-anna-burgundy hover:bg-gray-200/40"
+                          onClick={() => {
+                            item.hasSubmenu && setOpenSubmenu(false),
+                              handleCloseMenu();
+                          }}
+                          className={`block px-4 py-2  text-sm hover:text-anna-burgundy hover:bg-gray-200/40 ${
+                            subLink.href === pathname
+                              ? "text-anna-burgundy font-semibold"
+                              : "text-black"
+                          }`}
                         >
                           {subLink.name}
                         </Link>
