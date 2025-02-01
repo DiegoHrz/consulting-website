@@ -5,7 +5,7 @@ import logoBlack from "../../public/logo/logo-no-bg/logo-black-no-bg.png";
 
 import { useEffect, useLayoutEffect, useState } from "react";
 
-import { IoIosMenu } from "react-icons/io";
+import { IoIosArrowDown, IoIosMenu } from "react-icons/io";
 import { useNavStore } from "../store/useNavStore";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
@@ -24,18 +24,27 @@ const smoothScroll = (targetId: string) => {
   }
 };
 
+const leistungenSubLinks = [
+  { name: "Gründungszuschuss", href: "/leistungen/grundungszuschuss" },
+  { name: "Businessplan", href: "/leistungen/businessplan" },
+  { name: "Finanzierung", href: "/leistungen/finanzierung" },
+  { name: "Buchhaltung", href: "/leistungen/buchhaltung" },
+  { name: "Websites & Marketing", href: "/leistungen/websites-marketing" },
+];
+
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Leistungen", href: "/leistungen" },
-  { name: "Über Uns", href: "/uber-uns" },
-  { name: "Referenzen", href: "/referenzen" },
-  { name: "FAQ", href: "faq" },
-  { name: "Kontakt", href: "/kontakt" },
+  { name: "home", href: "/" },
+  { name: "leistungen", href: "", hasSubmenu: true }, // Empty href
+  { name: "über uns", href: "/uber-uns" },
+  { name: "referenzen", href: "/referenzen" },
+  { name: "faq", href: "", isAnId: true }, // Missing leading slash
+  { name: "kontakt", href: "/kontakt" },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [enterMouse, setEnterMouse] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(false);
   const {
     currentSection,
     setSelectedTab,
@@ -47,16 +56,37 @@ const Navbar = () => {
   const [menuClass, setMenuClass] = useState("");
   const [scrollPositionOnClick, setScrollPositionOnClick] = useState(0);
 
+  const [currentHref, setCurrentHref] = useState("");
+
+  const pathname2 = usePathname();
+
+  useEffect(() => {
+    if (pathname2) {
+      const currentPath = pathname2;
+      if(currentPath?.startsWith('/leistungen')){
+        setCurrentHref('leistungen');  
+        console.log('currentPath :', currentPath)
+        return
+      }
+      setCurrentHref(currentPath);
+      console.log("currentpath2: ", currentPath);
+
+    }
+  }, [pathname2]);
+
   useEffect(() => {
     setIsLoading(true); // Forzar un estado inicial para evitar desajustes en SSR
     setTimeout(() => setIsLoading(false), 100); // Simular la carga completa
+    console.log("pathname: ", pathname);
   }, [setIsLoading]);
 
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleFAQClick = async (event: React.MouseEvent) => {
-    event.preventDefault();
+  const handleFAQClick = async (event?: React.MouseEvent) => {
+    if (event) {
+      event.preventDefault();
+    }
 
     // If not on home page, navigate to home first
     if (pathname !== "/") {
@@ -80,13 +110,13 @@ const Navbar = () => {
     }
     const sectionId = tab.toLowerCase();
     setSelectedTab(sectionId);
-    setCurrentSection(sectionId); // Add this line
+    setCurrentSection(sectionId);
     smoothScroll(sectionId);
   };
 
-  const tabAndToggle = (tab: string, href:string) => {
+  const tabAndToggle = (tab: string, href: string) => {
     toggleMenu();
-    tabHandler(tab,href);
+    tabHandler(tab, href);
   };
 
   useLayoutEffect(() => {
@@ -103,6 +133,7 @@ const Navbar = () => {
         setMenuClass("animate-collapse-out");
       }
     };
+    console.log("Router: ", router);
 
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -141,17 +172,22 @@ const Navbar = () => {
     }
   };
 
+  const toggleSubmenu = () => {
+    setOpenSubmenu(!openSubmenu);
+  };
+
   return (
     <>
       <nav className="hidden md:flex w-full items-center justify  md:container md:px-0 md:py-0 border ">
         <div className="fixed z-50 top-0 w-full">
           <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center   text-xs  font-light w-full">
             <div className="bg-anna-blue/40 h-full w-full p-1 text-anna-burgundy">
-              <p className="text-white" >Wo eine Idee ist, ist auch ein Weg</p>
+              <p className="text-white">Wo eine Idee ist, ist auch ein Weg</p>
+              <p className="text-white">currenthref= {currentHref}</p>
             </div>
           </div>
           <div
-            className={`md:flex items-center justify-between  w-full md:py-2 md:px-10 lg:px-20 md lg:gap-4 md:gap-2 md:text-sm lg:text-base transition-colors duration-1000 ease-in-out ${
+            className={`md:flex items-center justify-between  w-full md:py-0 md:px-10 lg:px-20 md lg:gap-4 md:gap-2 md:text-sm lg:text-base   h-16 ${
               enterMouse && "hover:bg-white "
             } ${
               scrolled
@@ -160,28 +196,83 @@ const Navbar = () => {
             }`}
             onMouseEnter={onEnterHandler}
             onMouseLeave={onLeaveHandler}
-            style={{ transitionDuration: "800ms" }}
+            style={{ transitionDuration: "500ms" }}
           >
             <Image
               src={scrolled || enterMouse ? logoBlack : logoWhite}
               alt="Logo"
-              className={"w-8 h-8 md:h-16 md:w-16 aspect-square"}
+              className={"w-8 h-8 md:h-16 md:w-16 aspect-square "}
             />
 
-            <div className="hidden md:flex pl-[74px] md:gap-x-[2rem] lg:gap-x-[40px]  ">
+            <div className="hidden md:flex pl-[74px] md:gap-x-[2rem] lg:gap-x-[40px] font-vollkornSC">
               {navLinks.map((item) => (
-                <Link
-                  className={` hover:text-anna-burgundy ${
-                    !isLoading && item.name.toLowerCase() === currentSection
-                      ? "border-b-2   font-semibold"
-                      : ""
-                  }`}
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => item.href === 'faq' ? handleFAQClick(e) : tabHandler(item.name, item.href)}
+                <div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => item.hasSubmenu && setOpenSubmenu(true)}
+                  onMouseLeave={() => item.hasSubmenu && setOpenSubmenu(false)}
                 >
-                  {item.name}
-                </Link>
+                  <Link href={item.href}>
+                    <div
+                      className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
+                      onClick={() => {
+                        if (item.hasSubmenu) {
+                          toggleSubmenu();
+                        } else if (item.href === "faq") {
+                          handleFAQClick();
+                        } else {
+                          tabHandler(item.name, item.href);
+                        }
+                      }}
+                    >
+                      {/* {item.name.toLowerCase()} */}
+                      <span
+                        className={`  ${
+                          !isLoading && item.href === currentHref || item.name ===currentHref 
+                            ? "border-b-2 font-semibold  "
+                            : ""
+                        }
+                         ${
+                           scrolled &&
+                           !isLoading &&
+                           item.name.toLowerCase() === currentSection &&
+                           "text-anna-burgundy border-anna-burgundy"
+                         }
+                         ${
+                           enterMouse &&
+                           !isLoading &&
+                           item.name.toLowerCase() === currentSection &&
+                           "text-anna-burgundy border-anna-burgundy"
+                         }
+
+                        `}
+                      >
+                        {item.name}
+                      </span>
+                      {item.hasSubmenu && (
+                        <IoIosArrowDown
+                          className={`ml-1 transition-transform ${
+                            openSubmenu ? "rotate-180" : ""
+                          }`}
+                        />
+                      )}
+                    </div>
+                  </Link>
+
+                  {item.hasSubmenu && openSubmenu && (
+                    <div className="absolute top-12 left-1/2 -translate-x-1/2 mt-4 bg-[#F7F7F7] shadow-lg h-auto min-w-[200px] -z-10">
+                      {leistungenSubLinks.map((subLink) => (
+                        <Link
+                          key={subLink.href}
+                          href={subLink.href}
+                          className="block px-4 py-2 text-black text-sm hover:text-anna-burgundy hover:bg-gray-200/40"
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
@@ -190,8 +281,10 @@ const Navbar = () => {
 
       <nav className="md:hidden w-full items-center justify-between mt-[-16px] md:container md:mx-0 md:px-0  py-2 relative z-50">
         <div className="fixed z-50 top-0 w-full">
-          <div className="bg-[#32304c] text-center text-white  text-xs p-1 font-light">
-            Wo eine Idee ist, ist auch ein Weg
+          <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center   text-xs  font-light w-full">
+            <div className="bg-anna-blue/40 h-full w-full p-1 text-anna-burgundy">
+              <p className="text-white">Wo eine Idee ist, ist auch ein Weg</p>
+            </div>
           </div>
           <div
             className={`flex items-center justify-between  z-10 top-0 w-full py-2 px-6 md:px-0 text-white ${
@@ -210,7 +303,7 @@ const Navbar = () => {
             <div className="flex gap-x-5 md:hidden">
               <IoIosMenu
                 size={32}
-                className={`md:hidden text-anna-brown ${
+                className={`md:hidden text-anna-burgundy ${
                   scrolled || clickHamburgerMenu
                     ? "text-black"
                     : "text-anna-gray"
@@ -223,18 +316,56 @@ const Navbar = () => {
                 className={`absolute top-[6.3rem] left-0 flex flex-col w-screen border gap-x-[56px] justify-center items-center bg-white text-black ${menuClass}`}
               >
                 {navLinks.map((item) => (
-                  <Link
-                    className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] ${
-                      !isLoading && item.href.slice(1) === currentSection
-                        ? " text-anna-brown"
-                        : ""
-                    }`}
-                    key={item.href}
-                    href={item.href}
-                    onClick={(e) => item.href === 'faq' ? handleFAQClick(e) : tabAndToggle(item.name, item.href)}
-                  >
-                    {item.name}
-                  </Link>
+                  <div key={item.name} className="w-full text-center">
+                    <div
+                      className="flex justify-center items-center"
+                      onClick={() => item.hasSubmenu && toggleSubmenu()}
+                    >
+                      <Link href={item.href}>
+                        <div
+                          className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] cursor-pointer flex items-center ${
+                            !isLoading &&
+                            item.name.toLowerCase() === currentSection
+                              ? " text-anna-brown"
+                              : ""
+                          }`}
+                          onClick={() => {
+                            if (item.hasSubmenu) {
+                              // Do nothing, submenu will toggle
+                            } else if (item.href === "faq") {
+                              handleFAQClick(); // Call without argument
+                              toggleMenu();
+                            } else {
+                              tabAndToggle(item.name, item.href);
+                            }
+                          }}
+                        >
+                          {item.name}
+                          {item.hasSubmenu && (
+                            <IoIosArrowDown
+                              className={`ml-1 inline-block transition-transform  ${
+                                openSubmenu ? "rotate-180" : ""
+                              }`}
+                            />
+                          )}
+                        </div>
+                      </Link>
+                    </div>
+
+                    {item.hasSubmenu && openSubmenu && (
+                      <div className="flex flex-col bg-anna-gray-light transition-all duration-700">
+                        {leistungenSubLinks.map((subLink) => (
+                          <Link
+                            key={subLink.href}
+                            href={subLink.href}
+                            className="py-4 hover:bg-gray-100 text-sm"
+                          >
+                            {subLink.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             )}
