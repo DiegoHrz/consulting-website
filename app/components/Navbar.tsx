@@ -98,7 +98,7 @@ const Navbar = () => {
     scrolled: boolean,
     name: string
   ) => {
-    if (name === "faq" && isFAQVisible) {
+    if (name === "faq" && isFAQVisible && currentUrl==='/') {
       if (scrolled || enterMenu) {
         return "border-b border-anna-burgundy text-anna-burgundy font-semibold";
       }
