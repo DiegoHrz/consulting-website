@@ -130,7 +130,7 @@ const Navbar = () => {
     setIsLoading(true); // Forzar un estado inicial para evitar desajustes en SSR
     setTimeout(() => setIsLoading(false), 100); // Simular la carga completa
     console.log("pathname: ", pathname);
-  }, [setIsLoading]);
+  },[setIsLoading, pathname]);
 
   const router = useRouter();
 
@@ -322,8 +322,10 @@ const Navbar = () => {
                           key={subLink.href}
                           href={subLink.href}
                           onClick={() => {
-                            item.hasSubmenu && setOpenSubmenu(false),
-                              handleCloseMenu();
+                            if (item.hasSubmenu) {
+                              setOpenSubmenu(false); // Close the submenu
+                            }
+                            handleCloseMenu(); // Close the main menu
                           }}
                           className={`block px-4 py-2  text-sm hover:text-anna-burgundy hover:bg-gray-200/40 ${
                             subLink.href === pathname

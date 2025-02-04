@@ -1,5 +1,5 @@
 import GradientBackground from "@/app/components/gradient/GradientBackground";
-import Hero from "./components/Hero";
+
 
 export default function MainLayout({
   children,

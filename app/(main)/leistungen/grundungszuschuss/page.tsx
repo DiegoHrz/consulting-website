@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-const Grundungszuschuss = (props: Props) => {
+
+const Grundungszuschuss = () => {
   return (
     <div>Grundungszuschuss</div>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-const Businessplan = (props: Props) => {
+
+const Businessplan = () => {
   return (
     <div>businessplan</div>
   )

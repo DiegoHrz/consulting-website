@@ -31,35 +31,27 @@ const Navbar2 = () => {
     setOpenLinks(false);
   };
 
-
-
-
   const [scrolled, setScrolled] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
-      setScrollPosition(window.scrollY);
     };
-    
+
     // Verificar la posición del scroll al montar el componente
     handleScroll();
-    
+
     // Agregar el event listener para el scroll
     window.addEventListener("scroll", handleScroll);
-    
+
     // Limpiar el event listener al desmontar el componente
     return () => {
-        window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-}, []);
+  }, []);
 
-
-
-
-const [currentUrl, setCurrentUrl] = useState("");
-const pathname = usePathname();
+  const [currentUrl, setCurrentUrl] = useState("");
+  const pathname = usePathname();
 
   useEffect(() => {
     if (pathname) {
@@ -73,26 +65,28 @@ const pathname = usePathname();
     }
   }, [pathname]);
 
-
-
-  const getDynamicStyles = (currentUrl:string, itemHref:string, scrolled:boolean,name:string) => {
-
-    if (currentUrl === itemHref || currentUrl === 'leistungen' &&name==='leistungen'  ) {
-        if(scrolled || enterMenu){
-            return 'border-b border-anna-burgundy text-anna-burgundy font-semibold'
-        }
-        return 'border-b text-white font-semibold'
-    }
-    else{
-        if(scrolled || enterMenu)return 'text-black'
-        return 'text-white'
+  const getDynamicStyles = (
+    currentUrl: string,
+    itemHref: string,
+    scrolled: boolean,
+    name: string
+  ) => {
+    if (
+      currentUrl === itemHref ||
+      (currentUrl === "leistungen" && name === "leistungen")
+    ) {
+      if (scrolled || enterMenu) {
+        return "border-b border-anna-burgundy text-anna-burgundy font-semibold";
+      }
+      return "border-b text-white font-semibold";
+    } else {
+      if (scrolled || enterMenu) return "text-black";
+      return "text-white";
     }
   };
 
-
-
-const [enterMenu,setEnterMenu] = useState(false)
-const handleOpenMenu = () => {
+  const [enterMenu, setEnterMenu] = useState(false);
+  const handleOpenMenu = () => {
     setEnterMenu(true);
   };
   const handleCloseMenu = () => {
@@ -101,7 +95,11 @@ const handleOpenMenu = () => {
 
   return (
     <div>
-      <div className={`w-screen  fixed z-50 top-0 `} onPointerEnter={handleOpenMenu} onPointerLeave={handleCloseMenu}  >
+      <div
+        className={`w-screen  fixed z-50 top-0 `}
+        onPointerEnter={handleOpenMenu}
+        onPointerLeave={handleCloseMenu}
+      >
         <div
           className={`flex justify-between w-full transition-all duration-1000 ${
             scrolled || enterMenu ? "bg-white" : ""
@@ -120,7 +118,12 @@ const handleOpenMenu = () => {
             >
               <Link href={item.href}>
                 <span
-                  className={getDynamicStyles(currentUrl, item.href, scrolled,item.name)}
+                  className={getDynamicStyles(
+                    currentUrl,
+                    item.href,
+                    scrolled,
+                    item.name
+                  )}
                 >
                   {item.name}
                 </span>
@@ -129,7 +132,13 @@ const handleOpenMenu = () => {
                 <div className="absolute -translate-x-1/2 left-1/2 top-4 bg-red-500 flex flex-col z-50">
                   {leistungenSubLinks.map((item, index) => (
                     <div key={index} className=" border-2 flex-col z-50">
-                      <Link href={item.href} onClick={()=>{handleCloseLinks() ,handleCloseMenu() }} >
+                      <Link
+                        href={item.href}
+                        onClick={() => {
+                          handleCloseLinks();
+                          handleCloseMenu();
+                        }}
+                      >
                         <p>{item.name}</p>
                       </Link>
                     </div>

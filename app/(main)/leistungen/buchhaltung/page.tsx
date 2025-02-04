@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-const Buchhaltung = (props: Props) => {
+
+const Buchhaltung = () => {
   return (
     <div>buchhaltung</div>
   )
