@@ -22,9 +22,7 @@ import Quote from "./components/Quote";
 import CalendlyContainer from "./components/calendly/CalendlyContainer";
 import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";
 
-// import ImageOne from "./components/Parallax/ImageOne";
 
-// import ParallaxSection from "./components/ParallaxBanner";
 
 export default function Home() {
   return (
@@ -54,16 +52,7 @@ export default function Home() {
         button="Bunchung"
         right={true}
       />
-      {/* <PitchSecond
-          image="/profile/professional.avif"
-          title="Verbessern Sie Ihr Geschäft"
-          text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
-          erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
-          schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
-          inspiriert? Die Experten von AS Vision Partners unterstützen Sie
-          dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
-          maximieren. Sind Sie bereit, mit uns durchzustarten?"
-        /> */}
+
       {/* sin hoc */}
       <Services />
 
@@ -77,7 +66,7 @@ export default function Home() {
         {/* sin hoc */}
         <RoadmapContainer />
       </div>
-      {/* <Workflow /> */}
+
 
       <CalendlyContainer />
 
