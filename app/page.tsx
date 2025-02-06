@@ -8,13 +8,7 @@ import Services from "./components/Services";
 
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
-// import ParallaxBanner from "./components/ParallaxBanner";
 
-// import ParallaxBanner4 from "./components/ParallaxBanner4";
-// import ParallaxBanner3 from "./components/ParallaxBanner3";
-// import ParallaxBanner4 from "./components/ParallaxBanner4";
-// import ParallaxBanner from "./components/ParallaxBanner";
-// import ParallaxBanner from "./components/ParallaxBanner";
 
 
 import Quote from "./components/Quote";
