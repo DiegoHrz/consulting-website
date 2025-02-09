@@ -5,10 +5,8 @@ import Hero from "./components/Hero";
 import Pitch from "./components/Pitch";
 
 import Services from "./components/Services";
-
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
-
 import Quote from "./components/Quote";
 
 import CalendlyContainer from "./components/calendly/CalendlyContainer";
