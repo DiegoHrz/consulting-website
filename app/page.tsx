@@ -1,5 +1,4 @@
 import BusinessPlans from "./components/BusinessPlans";
-
 import Hero from "./components/Hero";
 import Pitch from "./components/Pitch";
 import Services from "./components/Services";
