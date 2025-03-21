@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
-import { IoCall, IoLocationSharp, IoLogoWhatsapp } from "react-icons/io5";
+import { IoCall, IoLogoWhatsapp } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+
 
 interface FormData {
   nombre: string; // Nombre y apellido

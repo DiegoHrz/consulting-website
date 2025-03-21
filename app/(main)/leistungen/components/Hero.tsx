@@ -44,7 +44,7 @@ const Hero = () => {
             <ButtonAnnaBurgundy text="Get started today" />
             <ButtonAnnaTransparent text="Kontakt" />
           </div>
-          <div className="sm:mt-10">
+          {/* <div className="sm:mt-10">
             <div className=" flex gap-4  w-fit p-8 rounded-lg backdrop-blur-3xl">
               <div>
                 <p className="font-vollkornSC text-anna-black">memory</p>
@@ -58,9 +58,9 @@ const Hero = () => {
                 <p className="font-semibold text-xl text-anna-black ">HD 4K</p>
               </div>
             </div>
-          </div>
+          </div> */}
           <div>
-            <div className="flex gap-[-10px] items-center mt-6">
+            <div className="flex gap-[-10px] items-center mt-40">
               <div className="w-10 h-10 rounded-full border-2 border-anna-blue">
                 <img
                   src="/people/girl1.svg"
