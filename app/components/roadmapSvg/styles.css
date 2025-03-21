@@ -1,0 +1,7 @@
+.moveUp {
+    transform: translateY(-60px);
+  }
+  
+  .moveDown {
+    transform: translateY(60px);
+  }

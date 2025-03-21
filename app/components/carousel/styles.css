@@ -1,0 +1,70 @@
+/* INFINITE CAROUSEL */
+
+.slider {
+    width: 100%;
+    max-width: 1020px;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 10% 90%,
+      transparent
+    );
+  }
+  
+  .slider .list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+  }
+  
+  .slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 20s linear infinite;
+    transition: filter 0.5s, transform 1s; /* Asegúrate de que la transición se aplique a ambos estados */
+    animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1) - 20s)!important;
+  }
+  
+  .slider .list .item img {
+    width: 100%;
+  }
+  
+  @keyframes autoRun {
+    from {
+      left: 100%;
+    }
+    to {
+      left: calc(var(--width) * -1);
+    }
+  }
+  
+  /* .slider:hover .item {
+    animation-play-state: paused!important;
+    filter: grayscale(0.4);
+  }
+  
+  .slider .item:hover {
+    filter: grayscale(0);
+    transform: scale(1.25); Usa "transform" en lugar de "scale" para mejor compatibilidad
+    transition: filter 1s, transform 1s; Asegúrate de que la transición se aplique aquí también
+  }
+   */
+  .slider[reverse="true"] .item {
+    animation: reversePlay 20s linear infinite;
+  }
+  
+  @keyframes reversePlay {
+    from {
+      left: calc(var(--width) * -1);
+    }
+    to {
+      left: 100%;
+    }
+  }
+  
