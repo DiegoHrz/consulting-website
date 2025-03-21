@@ -1,0 +1,161 @@
+.btn-lock {
+  position: absolute;
+
+  left: calc(50% - 32px);
+  display: inline-block;
+  background: #20cca5;
+  width: 64px;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 12px 0 0 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-lock svg {
+  fill: none;
+  transform: translate3d(0, 0, 0);
+}
+
+.btn-lock svg .bling {
+  stroke: #fff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 3;
+  stroke-dashoffset: 15;
+  transition: all 0.3s ease;
+}
+
+.btn-lock svg .lock {
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 36;
+  transition: all 0.5s ease;
+  transition-delay: 0.7s;
+}
+
+.btn-lock svg .lockb {
+  fill: #fff;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  transform: rotate(8deg);
+  transform-origin: 14px 20px;
+  transition: all 0.2s ease;
+}
+
+#inpLock {
+  display: none;
+}
+
+#inpLock:checked + label {
+  background: #505960;
+}
+
+#inpLock:checked + label svg {
+  opacity: 1;
+}
+
+#inpLock:not(:checked) + label svg .bling {
+  animation: bling6132 0.3s linear forwards;
+  animation-delay: 0.8s;
+}
+
+#inpLock:checked + label svg .lock {
+  stroke-dasharray: 48;
+  animation: locked 0.7s linear forwards;
+}
+
+/* #inpLock:not(checked) + label svg .lock {
+    animation: locked 0.7s linear forwards;
+  } */
+
+#inpLock:checked + label svg .lockb {
+  transform: rotate(0);
+  transform-origin: 14px 22px;
+}
+
+@keyframes bling6132 {
+  50% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 12;
+  }
+
+  100% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 9;
+  }
+}
+
+@keyframes locked {
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.lockmovement {
+  animation: lockOscillation 1.5s ease forwards;
+}
+
+.arkmovement {
+  animation: arkOscillation 0.6s ease forwards,
+    /* Primera animación */ arkOscillation2 1s ease 0.6s forwards; /* Segunda animación con retraso */
+}
+
+@keyframes lockOscillation {
+  0% {
+    transform: rotate(15deg); /* Inicio: mayor amplitud */
+  }
+  10% {
+    transform: rotate(-15deg); /* Gira hacia la izquierda con mayor amplitud */
+  }
+  25% {
+    transform: rotate(10deg); /* Regresa hacia la derecha con menor amplitud */
+  }
+  40% {
+    transform: rotate(-10deg); /* Gira hacia la izquierda con menor amplitud */
+  }
+  55% {
+    transform: rotate(
+      5deg
+    ); /* Regresa hacia la derecha con aún menor amplitud */
+  }
+  70% {
+    transform: rotate(
+      -5deg
+    ); /* Gira hacia la izquierda con aún menor amplitud */
+  }
+  85% {
+    transform: rotate(2.5deg); /* Oscilación más pequeña hacia la derecha */
+  }
+  100% {
+    transform: rotate(0deg); /* Detiene en la posición final */
+  }
+}
+
+@keyframes arkOscillation {
+  0% {
+    transform: translateY(0); /* Comienza desde abajo */
+  }
+
+  55% {
+    transform: translateY(5px); /* Baja con menor amplitud */
+  }
+
+  100% {
+    transform: translateY(0); /* Regresa a la posición original */
+  }
+}
+
+@keyframes arkOscillation2 {
+  0% {
+    transform-origin: 50% 100%; /* La base del elemento (centro horizontal, borde inferior) */
+    transform: rotate(0deg) translateX(0); /* Sin rotación al inicio */
+  }
+  100% {
+    transform-origin: 50% 100%; /* Asegurarse de que el origen sea consistente */
+    transform: rotate(-9deg) translate(4, -2); /* Rotación hacia la izquierda basada en la base */
+  }
+}
