@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
@@ -12,7 +13,6 @@ interface FormData {
   asunto: string; // Asunto del mensaje
   mensaje: string; // Contenido del mensaje
 }
-
 
 const ContactForm = () => {
   const {
@@ -41,8 +41,9 @@ const ContactForm = () => {
 
   return (
     //  GRADIENTE  bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500
+    // from-[#f4e7d2] via-[#ebe1d2] to-[#FFFBF5]
     <div
-      className="w-full bg-gradient-to-br from-[#f4e7d2] via-[#ebe1d2] to-[#FFFBF5]  px-8
+      className="w-full bg-gradient-to-br   px-8
       lg:px-16 text-center lg:my-[0px]  pt-14 pb-60  lg:pb-52 "
     >
       {/* <h1 className=" text-4xl font-medium lg:text-[35px] leading-[64px] font-rilke-monecias text-[#534547]">
@@ -54,14 +55,43 @@ const ContactForm = () => {
       <div className="text-[#03b418] py-3 ">
         {successMessage && <p>{successMessage}</p>}
       </div>
-      <div className="w-full  lg:py-8 lg:pr-44 mt-2 rounded-2xl  sm:px-10 md:px-24 lg:px-0 ">
+      <div className="w-full  lg:py-8 lg:pr-44 mt-2 rounded-2xl  sm:px-10 md:px-24 lg:px-0">
         <form
           action=""
           id="form"
           onSubmit={handleSubmit(onSubmit)}
           autoComplete=""
-          className="max-w-[61rem] w-full  lg:max-w-[800px]  flex flex-col gap-4 mx-auto relative py-[4.5rem] pr-4 pl-4 lg:pr-64 lg:pl-16  rounded-xl bg-white"
+          className="max-w-[61rem] w-full  lg:max-w-[800px]  flex flex-col gap-4 mx-auto relative py-[4.5rem] pr-4 pl-4 lg:pr-64 lg:pl-16  rounded-xl backdrop-blur-lg  bg-white/5 z-10"
+          style={
+            
+              
+               {
+                  background: "rgba(255, 255, 255, 0.02)",
+                  boxShadow: "rgba(140, 184, 213) 0px 1px 10px 0px inset",
+                }
+          }
         >
+          <motion.div
+            className="absolute inset-0 -z-10 backdrop-blur-lg rounded-3xl "
+            // shadow-anna-blue shadow-[0px_1px_7px_0px]
+            initial={{ scale: 0, opacity: 0.1 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.1 }}
+          />
+          {/* <div
+            className={`absolute -z-10 transition-all duration-700   h-24 w-24 right-0 top-0 
+            
+          `}
+            style={{
+              backgroundColor: "rgba(27, 119, 150)",
+              filter: "blur(50px)",
+              borderRadius: "20px",
+              // opacity: 1,
+              zIndex: 1,
+            }}
+          /> */}
+
           <header className=" text-3xl pb-4   lg:text-left font-rilke-monecias">
             Contacto
           </header>
@@ -208,7 +238,7 @@ const ContactForm = () => {
             />
           </div>
           {/* bg-[#524747] */}
-          <div className="hidden lg:block  lg:absolute   top-20 h-[34rem] right-0 translate-x-1/2 w-1/2 max-w-[28rem] px-14 py-20 rounded-xl bg-black overflow-hidden">
+          <div className="hidden lg:block  lg:absolute   top-20 h-[34rem] right-0 translate-x-1/2 w-1/2 max-w-[28rem] px-14 py-20 rounded-xl bg-[#e5d4b1]/40 overflow-hidden z-50">
             <div className="text-left relative text-[#D5CACA]">
               <img
                 src="/assets/rose/rosa-blanca.jpg"
@@ -219,7 +249,7 @@ const ContactForm = () => {
                 src="/assets/rose/rosa-banner.png"
                 className="hidden lg:block w-12 lg:w-10 z-10 absolute -bottom-1 lg:-bottom-14  lg:-right-[6.5rem] -translate-x-1/2 "
               /> */}
-              <p className="text-3xl pb-8 font-rilke-monecias text-white">
+              <p className="text-3xl pb-8 font-rilke-monecias text-black">
                 Te esperamos{" "}
               </p>
               <p className="pb-8 ">
@@ -316,7 +346,7 @@ const ContactForm = () => {
           </div>
         </form>
 
-        <div className="block lg:hidden mt-10  bg-black min-h-[37rem]   px-10 sm:px-14 py-24 rounded-xl mx-auto relative overflow-hidden">
+        <div className="block lg:hidden mt-10   min-h-[37rem]   px-10 sm:px-14 py-24 rounded-xl mx-auto relative overflow-hidden bg-[#e5d4b1]/40">
           <div className="text-left relative text-[#D5CACA]">
             <img
               src="/assets/rose/rosa-blanca.jpg"
@@ -332,7 +362,7 @@ const ContactForm = () => {
                 src="/assets/rose/rosa-banner.png"
                 className="hidden lg:block w-12 lg:w-10 z-10 absolute -bottom-1 lg:-bottom-14  lg:-right-[6.5rem] -translate-x-1/2 "
               /> */}
-            <p className="text-3xl pb-8 font-rilke-monecias text-white text-center">
+            <p className="text-3xl pb-8 font-rilke-monecias text-black text-center">
               Te esperamos{" "}
             </p>
             <p className="pb-8 ">
@@ -368,7 +398,9 @@ const ContactForm = () => {
                     <IoMdMail color="#FF7776" size={18} />
                   </div>
                   <div>
-                    <p className="text-sm pb-1 leading-5">info@cafe-rilke.com</p>
+                    <p className="text-sm pb-1 leading-5">
+                      info@cafe-rilke.com
+                    </p>
                   </div>
                 </div>
               </a>
