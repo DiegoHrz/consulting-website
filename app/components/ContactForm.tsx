@@ -61,15 +61,11 @@ const ContactForm = () => {
           id="form"
           onSubmit={handleSubmit(onSubmit)}
           autoComplete=""
-          className="max-w-[61rem] w-full  lg:max-w-[800px]  flex flex-col gap-4 mx-auto relative py-[4.5rem] pr-4 pl-4 lg:pr-64 lg:pl-16  rounded-xl backdrop-blur-lg  bg-white/5 z-10"
-          style={
-            
-              
-               {
-                  background: "rgba(255, 255, 255, 0.02)",
-                  boxShadow: "rgba(140, 184, 213) 0px 1px 10px 0px inset",
-                }
-          }
+          className="max-w-[61rem] w-full  lg:max-w-[800px]  flex flex-col gap-4 mx-auto relative py-[4.5rem] pr-4 pl-4 lg:pr-64 lg:pl-16  rounded-xl backdrop-blur-lg  bg-white/5 "
+          style={{
+            background: "rgba(255, 255, 255, 0.02)",
+            boxShadow: "rgba(140, 184, 213) 0px 1px 10px 0px inset",
+          }}
         >
           <motion.div
             className="absolute inset-0 -z-10 backdrop-blur-lg rounded-3xl "
@@ -230,15 +226,15 @@ const ContactForm = () => {
             <input
               type="submit"
               value="Enviar"
-              className="cursor-pointer border rounded-md w-1/2 lg:w-auto text-white bg-rilke-red px-12 py-2 italic "
+              className="cursor-pointer border rounded-md w-1/2 lg:w-auto text-white bg-red-700 px-12 py-2 italic "
               style={{
                 boxShadow:
                   "10px 10px 2px -1px rgb(233, 41, 51, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
               }}
             />
           </div>
-          {/* bg-[#524747] */}
-          <div className="hidden lg:block  lg:absolute   top-20 h-[34rem] right-0 translate-x-1/2 w-1/2 max-w-[28rem] px-14 py-20 rounded-xl bg-[#e5d4b1]/40 overflow-hidden z-50">
+          {/* bg-[#524747] te esperamos form desktop */}
+          <div className="hidden lg:block  lg:absolute   top-20 h-[34rem] right-0 translate-x-1/2 w-1/2 max-w-[28rem] px-14 py-20 rounded-xl bg-[#F4EEE0] overflow-hidden z-50">
             <div className="text-left relative text-[#D5CACA]">
               <img
                 src="/assets/rose/rosa-blanca.jpg"
@@ -257,7 +253,7 @@ const ContactForm = () => {
                 cultura internacional de todo el Perú
               </p>
               <div className="">
-                <a
+                {/* <a
                   href="https://www.google.com/maps/place/Caf%C3%A9+Rilke+Per%C3%BA/@-12.1213276,-77.0368608,19.77z/data=!4m6!3m5!1s0x9105c9b327b765cb:0x560f84cb9c54101a!8m2!3d-12.1213366!4d-77.0366567!16s%2Fg%2F11vbxjvk1w?entry=ttu"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -276,35 +272,46 @@ const ContactForm = () => {
                       </p>
                     </div>
                   </div>
-                </a>
+                </a> */}
                 <a
-                  href="mailto:info@cafe-rilke.com?subject=Consulta&body=Hola, me encantaría saber más del servicio..."
+                  href="mailto:info@as-vision-partners.com?subject=Consulta&body=Hola, me encantaría saber más del servicio..."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="flex gap-4 pb-3 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-lg">
+                  <div className="flex gap-4 p-2 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-2xl">
                     <div>
                       <IoMdMail color="#FF7776" size={18} />
                     </div>
                     <div>
                       <p className="text-sm pb-1 leading-5">
-                        info@cafe-rilke.com
+                        info@as-vision-partners.com
                       </p>
                     </div>
                   </div>
                 </a>
-                <a href="tel:+51913441311">
-                  <div className="flex gap-4 pb-4 mb-6 hover:scale-110 transform duration-500 hover:shadow-2xl">
+                <a href="tel:+4915679314176">
+                  <div className="flex gap-4 p-2 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-2xl">
                     <div>
                       <IoCall color="#FF7776" size={20} />
                     </div>
                     <div>
-                      <p className="text-sm">+51 913 441 311</p>
+                      <p className="text-sm">+49 15679 314176</p>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="tel:+4916091471897">
+                  <div className="flex gap-4 p-2 mb-6 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-2xl">
+                    <div>
+                      <IoLogoWhatsapp color="#FF7776" size={22} />
+                    </div>
+                    <div className="">
+                      <p className="text-sm">+49 160 91471897</p>
                     </div>
                   </div>
                 </a>
               </div>
-              <div className="flex gap-10 pl-10 ">
+              {/* <div className="flex gap-10 pl-10 ">
                 <p>
                   <a
                     href="https://www.instagram.com/caferilkeperu/"
@@ -341,7 +348,7 @@ const ContactForm = () => {
                     />
                   </a>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </form>
@@ -349,8 +356,8 @@ const ContactForm = () => {
         <div className="block lg:hidden mt-10   min-h-[37rem]   px-10 sm:px-14 py-24 rounded-xl mx-auto relative overflow-hidden bg-[#e5d4b1]/40">
           <div className="text-left relative text-[#D5CACA]">
             <img
-              src="/assets/rose/rosa-blanca.jpg"
-              className="lg:hidden w-12 sm:w-14  z-10 absolute -translate-x-1/2 -bottom-[5.1rem] -right-12"
+              src="/logo/logo_only_letter.png"
+              className="lg:hidden w-20 sm:w-28  z-10 absolute -translate-x-1/2 -bottom-[5.1rem] -right-12"
               alt=""
             />
             <img
@@ -370,7 +377,7 @@ const ContactForm = () => {
               cultura internacional de todo el Perú
             </p>
             <div className="flex justify-center flex-col">
-              <a
+              {/* <a
                 href="https://www.google.com/maps/place/Caf%C3%A9+Rilke+Per%C3%BA/@-12.1213276,-77.0368608,19.77z/data=!4m6!3m5!1s0x9105c9b327b765cb:0x560f84cb9c54101a!8m2!3d-12.1213366!4d-77.0366567!16s%2Fg%2F11vbxjvk1w?entry=ttu"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -387,35 +394,45 @@ const ContactForm = () => {
                     <p className="text-sm leading-4">Miraflores, Lima, Perú</p>
                   </div>
                 </div>
-              </a>
+              </a> */}
               <a
-                href="mailto:info@cafe-rilke.com?subject=Consulta&body=Hola, me encantaría saber más del servicio..."
+                href="mailto:info@as-vision-partners.com?subject=Consulta&body=Hola, me encantaría saber más del servicio..."
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="flex gap-4 pb-3 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-lg">
+                <div className="flex gap-4 p-2 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-lg">
                   <div>
                     <IoMdMail color="#FF7776" size={18} />
                   </div>
                   <div>
                     <p className="text-sm pb-1 leading-5">
-                      info@cafe-rilke.com
+                    info@as-vision-partners.com
                     </p>
                   </div>
                 </div>
               </a>
-              <a href="tel:+51913441311">
-                <div className="flex gap-4 pb-4 mb-6 hover:scale-110 transform duration-500 hover:shadow-2xl">
+              <a href="tel:+4915679314176">
+                <div className="flex gap-4 p-2 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl">
                   <div>
                     <IoCall color="#FF7776" size={20} />
                   </div>
                   <div>
-                    <p className="text-sm">+51 913 441 311</p>
+                    <p className="text-sm">+49 15679 314176</p>
+                  </div>
+                </div>
+              </a>
+              <a href="tel:+4916091471897">
+                <div className="flex gap-4 p-2 mb-6 hover:scale-110 transform duration-500 hover:shadow-2xl">
+                  <div>
+                    <IoLogoWhatsapp color="#FF7776" size={22} />
+                  </div>
+                  <div>
+                    <p className="text-sm">+49 160 91471897</p>
                   </div>
                 </div>
               </a>
             </div>
-            <div className="flex gap-10 justify-center pt-10">
+            {/* <div className="flex gap-10 justify-center pt-10">
               <p>
                 <a
                   href="https://www.instagram.com/caferilkeperu/"
@@ -452,7 +469,7 @@ const ContactForm = () => {
                   />
                 </a>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
