@@ -63,11 +63,11 @@ const GlassBox: React.FC<GlassBoxProps> = ({
             // }
             hoverIn
               ? {
-                backgroundColor: "#00FFFF",
-                filter: "blur(60px)",
-                borderRadius: "20px",
-                // opacity: 1,
-                zIndex: 1,
+                  backgroundColor: "#00FFFF",
+                  filter: "blur(60px)",
+                  borderRadius: "20px",
+                  // opacity: 1,
+                  zIndex: 1,
                 }
               : {
                   backgroundColor: "rgba(27, 119, 150)",

@@ -19,7 +19,7 @@ const Contact = () => {
       <div>
         <Placeholder text="Kontakt" />
       </div>
-      <ContactForm/>
+      <ContactForm />
     </div>
   );
 };
