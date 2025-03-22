@@ -4,7 +4,7 @@ import React from "react";
 const GradientBackground = () => {
   return (
     <div
-      className="absolute inset-0 text-[#1c4654] -z-10"
+      className="absolute inset-0 text-[#1c4654] -z-10 h-screen"
       style={{
         background:
           "linear-gradient(to bottom, #163641 1%,#163641 20%,#1c4654 30%,#3a6f81 45%, #5b828f 55% ,#909da1 75% , white 100%)",
