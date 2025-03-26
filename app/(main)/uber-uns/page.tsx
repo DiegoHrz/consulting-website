@@ -303,7 +303,7 @@ const About = () => {
       </div> */}
       <div className="mt-[70px] w-full  mb-[70px] max-w-7xl sm:px-16 px-10 mx-auto">
         <div>
-          <div className="bg-[#e5d4b1]/40 rounded-xl p-10">
+          <div className="bg-anna-cream rounded-xl p-10">
             <div className="mb-40">
               {/* <Title text="why we do it?" /> */}
               {/* <div className="rounded-ss-[5rem] rounded-br-[5rem] overflow-hidden w-full h-80 flex items-center">

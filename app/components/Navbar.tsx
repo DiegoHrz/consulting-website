@@ -185,7 +185,7 @@ const Navbar = () => {
         setMenuClass("animate-collapse-out");
       }
     };
-    console.log("Router: ", router);
+    // console.log("Router: ", router);
 
     handleScroll();
     window.addEventListener("scroll", handleScroll);
