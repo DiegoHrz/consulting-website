@@ -84,6 +84,7 @@ const Navbar = () => {
       const currentUrl = pathname;
       if (currentUrl?.startsWith("/leistungen")) {
         setCurrentUrl("leistungen");
+        
         return;
       }
       setCurrentUrl(currentUrl);
