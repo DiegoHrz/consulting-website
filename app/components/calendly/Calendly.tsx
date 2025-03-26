@@ -31,7 +31,7 @@ const Calendly: React.FC<CalendlyProps> = ({ accepted }) => {
         setConsentGiven(!consentGiven);
       }, 2000);
     }
-  }, [accepted]);
+  }, [accepted, consentGiven]);
 
   return (
     <div className="w-full h-[500px] relative">

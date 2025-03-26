@@ -1,4 +1,4 @@
-import GradientBackground from "@/app/components/gradient/GradientBackground";
+
 import GradientNormalBackground from "@/app/components/gradient/GradientNormalBacground";
 
 export default function MainLayout({
