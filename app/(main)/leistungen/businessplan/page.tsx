@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import Hero from "./components/Hero";
 import Product from "./components/Product";
@@ -6,14 +6,11 @@ import Intro from "./components/Intro";
 import { Table } from "./components/Table";
 import Pitch from "@/app/components/Pitch";
 
-
 import { ContactBanner } from "@/app/components/ContactBanner";
 
 const Businessplan = () => {
-
-
   return (
-    <div className="z-10 max-w-7xl mx-auto   h-full flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[180px] ">
+    <div className="  h-full flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[180px] ">
       <Hero />
       <Intro />
 
@@ -30,8 +27,7 @@ const Businessplan = () => {
         button="Bunchung"
       />
       <Product />
-      <ContactBanner/>
-      
+      <ContactBanner />
     </div>
   );
 };

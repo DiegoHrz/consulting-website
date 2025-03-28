@@ -11,7 +11,7 @@ interface GlassBoxProps {
   special?: string;
 }
 
-const GlassCircle: React.FC<GlassBoxProps> = ({
+const GlassBoxReverse: React.FC<GlassBoxProps> = ({
   title,
   text,
   button,
@@ -24,7 +24,7 @@ const GlassCircle: React.FC<GlassBoxProps> = ({
   const [hoverIn, setHoverIn] = useState(false);
   return (
     <motion.div
-      className="relative rounded-full w-full bg-white/5"
+      className="relative rounded-3xl w-full bg-white/5"
       initial={{ scale: 0, opacity: 0.5 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
@@ -32,7 +32,7 @@ const GlassCircle: React.FC<GlassBoxProps> = ({
     >
       {/* Outer container for glass effect */}
       <motion.div
-        className="absolute inset-0 -z-10 backdrop-blur-lg rounded-full"
+        className="absolute inset-0 -z-10 backdrop-blur-lg rounded-3xl"
         // shadow-anna-blue shadow-[0px_1px_7px_0px]
         initial={{ scale: 0, opacity: 0.1 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -42,16 +42,16 @@ const GlassCircle: React.FC<GlassBoxProps> = ({
 
       {/* Main content container with overflow control */}
       <div
-        className={`relative flex flex-col h-full rounded-full overflow-hidden w-full z-10 transition-all duration-700 aspect-square ${
-          hoverIn ? "bg-[#125369]" : ""
+        className={`relative flex flex-col h-full rounded-3xl overflow-hidden w-full z-10 transition-all duration-700 ${
+          !hoverIn ? "bg-[#125369]" : ""
         }`}
         onMouseEnter={() => setHoverIn(true)}
         onMouseLeave={() => setHoverIn(false)}
       >
         {/* Gradient circle */}
         <div
-          className={`absolute -z-10 transition-all duration-700   h-24 w-24 -right-10 -top-3 rounded-full
-            aspect-square
+          className={`absolute -z-10 transition-all duration-700   h-24 w-24 -right-10 -top-3 
+            
           `}
           style={
             // {
@@ -61,7 +61,7 @@ const GlassCircle: React.FC<GlassBoxProps> = ({
             //   // opacity: 1,
             //   zIndex: 1,
             // }
-            hoverIn
+            !hoverIn
               ? {
                   backgroundColor: "#00FFFF",
                   filter: "blur(60px)",
@@ -114,9 +114,9 @@ const GlassCircle: React.FC<GlassBoxProps> = ({
 
         {/* Content */}
         <div
-          className="z-20 flex flex-col gap-5 p-10  text-left w-full transition-all duration-300 rounded-full aspect-square"
+          className="z-20 flex flex-col gap-5 p-10 sm:px-[30px] sm:py-[20px] text-left w-full transition-all duration-300 rounded-3xl"
           style={
-            hoverIn
+            !hoverIn
               ? {
                   background: "rgba(255, 255, 255, 0.02)",
                   boxShadow: "rgba(255, 255, 255,0.5) 0px 1px 10px 0px inset",
@@ -129,18 +129,18 @@ const GlassCircle: React.FC<GlassBoxProps> = ({
         >
           <div
             className={`${
-              hoverIn ? "bg-white" : "bg-[#581D1D]"
-            }  w-fit p-1 rounded-md transition-all duration-500 aspect-square`}
+              !hoverIn ? "bg-white" : "bg-[#581D1D]"
+            }  w-fit p-1 rounded-md transition-all duration-500`}
           >
-            <GiReactor color={hoverIn ? "#5B1C31" : "white"} />
+            <GiReactor color={!hoverIn ? "#5B1C31" : "white"} />
           </div>
-          <div className="flex flex-col gap-[10px] ">
+          <div className="flex flex-col gap-[10px]">
             <h1
               className={`text-lg lg:text-[22px] font-medium z-10 transition-all duration-100 ${
-                hoverIn ? "text-white" : "text-transparent"
+                !hoverIn ? "text-white" : "text-transparent"
               }`}
               style={
-                hoverIn
+                !hoverIn
                   ? {}
                   : {
                       background: "linear-gradient(to right, #125369, #3CA3B5)",
@@ -152,7 +152,7 @@ const GlassCircle: React.FC<GlassBoxProps> = ({
             </h1>
             <h3
               className={` text-xs lg:text-[15px] leading-5 z-10 transition-all duration-100 ${
-                hoverIn ? "text-anna-gray-light" : "text-anna-gray"
+                !hoverIn ? "text-anna-gray-light" : "text-anna-gray"
               }`}
             >
               {text}
@@ -188,7 +188,7 @@ const GlassCircle: React.FC<GlassBoxProps> = ({
   );
 };
 
-export default GlassCircle;
+export default GlassBoxReverse;
 
 //Modo negro
 // <motion.div
