@@ -1,7 +1,7 @@
-import GlassBox from "@/app/components/GlassBox";
 import { zoomIn } from "@/app/utils/motion";
 import { motion } from "framer-motion";
-import GlassCircle from "./GlassCircle";
+import GlassBoxReverse from "./GlassBoxReverse";
+
 const Product = () => {
   return (
     <div>
@@ -11,7 +11,7 @@ const Product = () => {
             variants={zoomIn(0.2, 1.25)}
             initial="hidden" // Estado inicial
             animate="show"
-            className=" z-[3] w-full relative border-red-500 border-2"
+            className=" z-[3] w-full relative "
           >
             {/* w-30rem h-96 */}
             <img
@@ -20,35 +20,35 @@ const Product = () => {
               className="w-auto h-[30rem] shadow-gray-400 shadow-[0px_0px_15px] "
             />
             <div className="absolute top-20 -right-72">
-              <GlassCircle
-                title="Great"
+              <GlassBoxReverse
+                title="Gründungszuschuss"
                 text=""
                 button=""
               />
             </div>
             <div className="absolute top-10 -left-72">
-              <GlassBox
+              <GlassBoxReverse
                 title="Gründungszuschuss"
                 text="Your financial kick "
                 button="See more"
               />
             </div>
             <div className="absolute top-80 -left-72">
-              <GlassBox
+              <GlassBoxReverse
                 title="Gründungszuschuss"
                 text="Your financial kick "
                 button="See more"
               />
             </div>
             <div className="absolute left-1/2 -top-44 -translate-x-1/2">
-              <GlassBox
+              <GlassBoxReverse
                 title="Gründungszuschuss"
                 text="Your financial kick "
                 button="See more"
               />
             </div>
             <div className="absolute left-96 -bottom-10">
-              <GlassBox
+              <GlassBoxReverse
                 title="Gründungszuschuss"
                 text="Your financial kick "
                 button="See more"

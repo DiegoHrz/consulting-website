@@ -11,7 +11,7 @@ import { fadeIn, zoomIn } from "@/app/utils/motion";
 const Hero = () => {
   return (
     <div>
-      <div className="z-10 max-w-7xl mx-auto sm:mt-40 flex flex-col md:flex-row gap-16 h-full ">
+      <div className="z-10 max-w-7xl mx-auto mt-40 sm:mt-40 flex flex-col md:flex-row gap-16 h-full ">
         <div className="flex flex-col lg:w-1/2 gap-[24px] ">
           <div className="max-w-[28rem]">
             <Title

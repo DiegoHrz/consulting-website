@@ -8,10 +8,10 @@ import ButtonAnna from "@/app/components/customTags/ButtonAnna";
 
 export const Table: React.FC = () => {
   return (
-    <div>
-      <div className="w-[50rem]">
+    <div className="sm:px-16 px-8" >
+      <div className="max-w-[50rem] border">
         <h1
-          className="lg:text-[40px] text-transparent "
+          className="text-xl sm:text-2xl lg:text-[40px] text-transparent "
           style={{
             background: "linear-gradient(to right,#125369,#3CA3B5)",
             backgroundClip: "text",
@@ -21,7 +21,7 @@ export const Table: React.FC = () => {
           your success and convenience.
         </h1>
       </div>
-      <div className="mt-10 md:flex flex-col md:flex-row gap-5 lg:gap-8 w-full   max-h-[45rem]  md:h-96 px-2 sm:px-5 md:px-0">
+      <div className="mt-10 md:flex flex-col md:flex-row gap-5 lg:gap-8 w-full   max-h-[45rem]  md:h-96 ">
         <div
           className=" h-1/2  md:h-full w-full md:w-1/2 sm:py-2 md:py-0     grid text-center items-center relative gap-3 sm:gap-4  lg:mx-5 min-h-[238px] md:min-h-max "
           style={{

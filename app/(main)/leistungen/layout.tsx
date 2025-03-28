@@ -7,7 +7,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative h-full w-full overflow-hidden sm:px-16 px-8">
+    <div className="relative h-full w-full overflow-hidden">
       {/* <GradientBackground /> */}
       <GradientNormalBackground/>
       {children}
