@@ -115,7 +115,17 @@ const GlassBox: React.FC<GlassBoxProps> = ({
         {/* Content */}
         <div
           className="z-20 flex flex-col gap-5 p-10 sm:px-[30px] sm:py-[20px] text-left w-full transition-all duration-300 rounded-3xl"
-
+          style={
+            hoverIn
+              ? {
+                  background: "rgba(255, 255, 255, 0.02)",
+                  boxShadow: "rgba(255, 255, 255,0.5) 0px 1px 10px 0px inset",
+                }
+              : {
+                  background: "rgba(255, 255, 255, 0.02)",
+                  boxShadow: "rgba(140, 184, 213) 0px 1px 10px 0px inset",
+                }
+          }
         >
           <div
             className={`${
