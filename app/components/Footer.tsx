@@ -18,18 +18,18 @@ const Footer = () => {
           <img
             src="/logo/logo_horizontal.png"
             alt=""
-            className="hidden sm:block aspect-auto h-16 invert"
+            className="block aspect-auto h-16 invert"
           />
-          <img
+          {/* <img
             src="/logo/logo_only_letter.png"
             alt=""
             className="sm:hidden aspect-auto w-28"
-          />
-          <img
+          /> */}
+          {/* <img
             src="/logo/logo_only_name.png"
             alt=""
             className="sm:hidden aspect-auto h-20 "
-          />
+          /> */}
           <a
             href="https://wa.me/4916091471897?text=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
             target="_blank"
