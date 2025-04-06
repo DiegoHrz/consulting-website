@@ -8,8 +8,6 @@ import Quote from "./components/Quote";
 import CalendlyContainer from "./components/calendly/CalendlyContainer";
 import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";
 
-
-
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[180px] ">
@@ -52,7 +50,6 @@ export default function Home() {
         {/* sin hoc */}
         <RoadmapContainer />
       </div>
-
 
       <CalendlyContainer />
 
