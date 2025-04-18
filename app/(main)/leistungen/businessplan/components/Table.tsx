@@ -8,7 +8,7 @@ import ButtonAnna from "@/app/components/customTags/ButtonAnna";
 
 export const Table: React.FC = () => {
   return (
-    <div className="sm:px-16 px-8" >
+    <div className="" >
       <div className="max-w-[50rem] border">
         <h1
           className="text-xl sm:text-2xl lg:text-[40px] text-transparent "

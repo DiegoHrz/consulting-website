@@ -4,9 +4,10 @@ import Hero from "./components/Hero";
 import Product from "./components/Product";
 import Intro from "./components/Intro";
 import { Table } from "./components/Table";
-import Pitch from "@/app/components/Pitch";
 
-import { ContactBanner } from "@/app/components/ContactBanner";
+
+
+import PitchBusinessplan from "./components/PitchBusinessplan";
 
 const Businessplan = () => {
   return (
@@ -15,7 +16,7 @@ const Businessplan = () => {
       <Intro />
 
       <Table />
-      <Pitch
+      <PitchBusinessplan
         image="/profile/profile.jpg"
         title="Jetzt Unternehmer werden"
         text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
@@ -27,7 +28,7 @@ const Businessplan = () => {
         button="Bunchung"
       />
       <Product />
-      <ContactBanner />
+      {/* <ContactBanner /> */}
     </div>
   );
 };

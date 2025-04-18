@@ -114,7 +114,7 @@ const GlassBoxReverse: React.FC<GlassBoxProps> = ({
 
         {/* Content */}
         <div
-          className="z-20 flex flex-col gap-5 p-10 sm:px-[30px] sm:py-[20px] text-left w-full transition-all duration-300 rounded-3xl"
+          className="z-20 flex  gap-5 p-1 sm:px-[30px] sm:py-[20px] text-left w-full transition-all duration-300 rounded-3xl"
           style={
             !hoverIn
               ? {
@@ -130,7 +130,7 @@ const GlassBoxReverse: React.FC<GlassBoxProps> = ({
           <div
             className={`${
               !hoverIn ? "bg-white" : "bg-[#581D1D]"
-            }  w-fit p-1 rounded-md transition-all duration-500`}
+            }  w-fit h-fit p-1 rounded-md transition-all duration-500`}
           >
             <GiReactor color={!hoverIn ? "#5B1C31" : "white"} />
           </div>
