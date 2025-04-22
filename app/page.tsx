@@ -13,7 +13,6 @@ export default function Home() {
     <div className="font-[family-name:var(--font-geist-sans)] text-black flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[180px] ">
       <Hero />
       <BusinessPlans />
-      
       <Pitch
         image="/profile/profile.jpg"
         title="Jetzt Unternehmer werden"
