@@ -21,7 +21,7 @@ const BusinessPlans = () => {
           text="Verlässlichkeit, Erfahrung und echtes Engagement – wir begleiten dich auf deinem Weg"
           title={false}
         />
-        
+
       </div>
       <div className="text-black flex flex-col md:flex-row w-full justify-between gap-8  md:gap-2 lg:gap-10 max-w-96 sm:max-w-max mx-auto  ">
         <div className="flex flex-col  items-center gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white md:shadow-gray-300 md:shadow-[0px_4px_2px_0px] min-h-56 lg:min-h-64 justify-center">
@@ -34,6 +34,7 @@ const BusinessPlans = () => {
           </p>
         </div>
         {/* <div className="w-[0.07rem] bg-black "></div> */}
+        
         {/* shadow-gray-300 shadow-[0px_4px_2px_0px] */}
         <div className="flex flex-col  items-center gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white shadow-[#125369] shadow-[0px_3px_10px_0px] min-h-56 lg:min-h-64 justify-center">
           <SlCalender size={40} color="#581D1D" />
