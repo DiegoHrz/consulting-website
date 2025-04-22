@@ -27,7 +27,7 @@ const BusinessPlans = () => {
         <div className="flex flex-col  items-center gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white md:shadow-gray-300 md:shadow-[0px_4px_2px_0px] min-h-56 lg:min-h-64 justify-center">
           <GoShieldCheck size={40} color="#581D1D" />
           <h6 className="font-cabin text-2xl md:text-xl lg:text-2xl text-center">
-            100% success rate
+          100% Erfolgsrate
           </h6>
           <p className="font-original_text text-base lg:text-lg text-anna-gray text-center max-w-80 py-2">
             Every one of our suitcases comes with a limited lifetime warranty.
