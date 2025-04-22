@@ -22,7 +22,6 @@ const BusinessPlans = () => {
           title={false}
         />
       </div>
-
       <div className="text-black flex flex-col md:flex-row w-full justify-between gap-8  md:gap-2 lg:gap-10 max-w-96 sm:max-w-max mx-auto  ">
         <div className="flex flex-col  items-center gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white md:shadow-gray-300 md:shadow-[0px_4px_2px_0px] min-h-56 lg:min-h-64 justify-center">
           <GoShieldCheck size={40} color="#581D1D" />
