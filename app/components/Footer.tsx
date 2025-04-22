@@ -10,7 +10,8 @@ const Footer = () => {
     <div
       className="sm:mt-0 mt-4 pt-20 pb-[20px] bg-anna-blue text-white lg:text-[#d9d9d9] relative w-full  border-anna-black"
       style={{
-        background: "linear-gradient(to bottom,white 1%,#F8F8F8 2%,#d0e8f3 3%,#8FB9D0 4%,#3C6D82 5%,#125369 6%,#125369 100%)"
+        background:
+          "linear-gradient(to bottom,white 1%,#F8F8F8 2%,#d0e8f3 3%,#8FB9D0 4%,#3C6D82 5%,#125369 6%,#125369 100%)",
       }}
     >
       <div className="text-black max-w-7xl mx-auto  sm:px-16 flex  flex-col sm:flex-row items-center sm:justify-between">
@@ -165,7 +166,7 @@ const Footer = () => {
         {/* Contact */}
 
         <div className=" flex flex-col gap-3">
-          <p className="text-white text-xl">Contact</p>
+          <p className="text-white text-xl">Kontakt</p>
           <Link href="/">
             <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
               Mail
@@ -279,8 +280,8 @@ const Footer = () => {
               <Link href="/">
                 <div className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm relative  flex">
                   <span className="relative ">
-                    <p className="text-anna-gray-light" >Websites und</p>
-                    <p className="text-anna-gray-light" >Marketing</p>
+                    <p className="text-anna-gray-light">Websites und</p>
+                    <p className="text-anna-gray-light">Marketing</p>
                     <div className="top-1/2 left-[110%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-2  absolute text-white whitespace-nowrap">
                       Soon
                     </div>
@@ -296,7 +297,7 @@ const Footer = () => {
           <div className=" flex flex-col gap-3 w-1/2">
             <div className="flex flex-col text-left gap-3">
               <p className="text-white text-xl border-b border-gray-200 pb-1">
-                Contact
+                Kontakt
               </p>
               <Link href="/">
                 <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">

@@ -22,8 +22,16 @@ const Hero = () => {
             controls={false} // 👈 Oculta controles (opcional)
             className="absolute inset-0 h-full w-full object-cover"
           >
-            <source src="/video/hero-video-desktop.mov" type="video/mp4" className="hidden md:block" />
-            <source src="/video/hero-video-mobile.mov" type="video/mp4" className="md:hidden block" />
+            <source
+              src="/video/hero-video-desktop.mov"
+              type="video/mp4"
+              className="hidden md:block"
+            />
+            <source
+              src="/video/hero-video-mobile.mov"
+              type="video/mp4"
+              className="md:hidden block"
+            />
           </video>
           <div className="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full ">
             <img
@@ -31,10 +39,12 @@ const Hero = () => {
               alt="White Logo"
               className="h-auto w-96  mx-auto px-3 animate-fade-title"
             />
-            <Subtitle text="Starten Sie Ihr Unternehmen mit dem perfekten Businessplan" />
+            <Subtitle
+              text="Starte dein Unternehmen mit dem perfekten Businessplan"
+            />
             <div className="w-full flex justify-center animate-fade-subtitle pt-8">
               <button className="text-white mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">
-                CONTACT US
+                KONTAKT
               </button>
             </div>
             {/* <img

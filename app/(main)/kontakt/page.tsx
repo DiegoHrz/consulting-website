@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
         <HeroSecondary
           image="/pages-imgs/kontakt.avif"
-          header="contact"
+          header="kontakt"
           title="Kontakt"
           text="Wir sind eine Beratungsfirma, die Unternehmen mit
       maßgeschneiderten Lösungen unterstützt. Unser Ziel ist es,

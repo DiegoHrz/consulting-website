@@ -22,7 +22,7 @@ export default function Home() {
           inspiriert? Die Experten von AS Vision Partners unterstützen Sie
           dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
           maximieren. Sind Sie bereit, mit uns durchzustarten?"
-        button="Bunchung"
+        button="Buchung"
       />
       <Pitch
         image="/profile/professional.avif"
@@ -33,7 +33,7 @@ export default function Home() {
           inspiriert? Die Experten von AS Vision Partners unterstützen Sie
           dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
           maximieren. Sind Sie bereit, mit uns durchzustarten?"
-        button="Bunchung"
+        button="Buchung"
         right={true}
       />
 

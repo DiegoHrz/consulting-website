@@ -5,8 +5,6 @@ import Product from "./components/Product";
 import Intro from "./components/Intro";
 import { Table } from "./components/Table";
 
-
-
 import PitchBusinessplan from "./components/PitchBusinessplan";
 
 const Businessplan = () => {
@@ -25,7 +23,7 @@ const Businessplan = () => {
                 inspiriert? Die Experten von AS Vision Partners unterstützen Sie
                 dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
                 maximieren. Sind Sie bereit, mit uns durchzustarten?"
-        button="Bunchung"
+        button="Buchung"
       />
       <Product />
       {/* <ContactBanner /> */}

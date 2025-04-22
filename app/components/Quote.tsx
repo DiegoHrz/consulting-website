@@ -48,7 +48,7 @@ const Quote = () => {
                       "rgba(255, 255, 255, 0.05) 0px 1px 10px 0px inset",
                   }}
                 >
-                  <p className="text-white relative z-10">Bunchung</p>{" "}
+                  <p className="text-white relative z-10">Buchung</p>{" "}
 
                   <div
                     className={`absolute left-1/2 -translate-x-1/2 transition-all duration-700 
@@ -62,7 +62,7 @@ const Quote = () => {
                   ></div>
                 </button>
               </Link> */}
-              <ButtonAnna text="Bunchung" />
+              <ButtonAnna text="Buchung" />
             </div>
             <p className="w-fit mx-auto mt-1 font-vollkornSC">
               it&apos;s{" "}

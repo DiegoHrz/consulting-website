@@ -13,7 +13,7 @@ const CarouselContainer = () => {
           }}
         >
           {" "}
-          Trusted by 1000+ businesses across the world
+          Mehr als 100 Unternehmen vertrauen bereits auf unsere Expertise
         </p>
         <Carousel />
       </div>

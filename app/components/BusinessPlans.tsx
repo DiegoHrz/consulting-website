@@ -18,7 +18,7 @@ const BusinessPlans = () => {
           <div className="absolute bg-[linear-gradient(180deg,_#125369_0%,_#f7f7f7_25%,_#fff_80%)] blur-sm inset-0 z-[0]"></div>
         </div>
         <Title
-          text="Empowering authentic connections for a vibrant experience."
+          text="Verlässlichkeit, Erfahrung und echtes Engagement – wir begleiten dich auf deinem Weg"
           title={false}
         />
       </div>

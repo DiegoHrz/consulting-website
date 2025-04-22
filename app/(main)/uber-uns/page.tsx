@@ -542,7 +542,7 @@ const About = () => {
                 boxShadow: "rgba(255, 255, 255, 0.05) 0px 1px 10px 0px inset",
               }}
             >
-              <p className="text-anna-white" >Contact us</p>
+              <p className="text-anna-white" >Kontakt</p>
               <div
                 className={`absolute left-1/2 -translate-x-1/2 transition-all duration-500 ${
                   hoverIn ? "-bottom-3" : "-bottom-8"
