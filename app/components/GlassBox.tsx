@@ -27,7 +27,7 @@ const GlassBox: React.FC<GlassBoxProps> = ({
       className="relative rounded-3xl w-full bg-white/5"
       initial={{ scale: 0, opacity: 0.5 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+      transition={{ duration: 1, delay: 0, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.1 }}
     >
       {/* Outer container for glass effect */}

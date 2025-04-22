@@ -29,13 +29,14 @@ const Quote = () => {
             />
           </div>
           <Title
-            text="Lets talk about your next big move"
+            text="Bereit für deinen nächsten großen Schritt?
+"
             additionalClasses="text-center"
             rainbow={true}
           />
           <p className="text-center max-w-[450px] mx-auto text-lg text-balance">
-            Hop on a call with us to see how our services can accelerate your
-            growth.
+            Buche dir jetzt ein kostenloses Gespräch und finde heraus, wie wir
+            dich unterstützen können.
           </p>
           <div>
             <div className="w-fit  animate-fade-subtitle  overflow-hidden rounded-3xl mx-auto">
@@ -64,10 +65,10 @@ const Quote = () => {
               </Link> */}
               <ButtonAnna text="Buchung" />
             </div>
-            <p className="w-fit mx-auto mt-1 font-vollkornSC">
+            {/* <p className="w-fit mx-auto mt-1 font-vollkornSC">
               it&apos;s{" "}
               <span className="text-anna-black font-medium">free</span>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

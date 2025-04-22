@@ -24,11 +24,11 @@ const Services: React.FC = ({}) => {
             <Title
               text="Unsere Angebote – Deine Möglichkeiten"
               additionalClasses="text-center"
-              additionalTitle="workshops"
+              additionalTitle="bis zu 100% kostenfrei für dich"
             />
             <p className=" text-anna-gray max-w-[523px] mx-auto text-center">
-              Choose a plan that fits your needs, with flexible options and
-              transparent pricing.
+              Stelle dir dein individuelles Leistungspaket zusammen – ganz nach
+              deinem Bedarf.
             </p>
           </div>
           {/* <motion.div variants={fadeIn("up", "spring", 1 * 0.5, 0.75)}>
@@ -86,7 +86,7 @@ const Services: React.FC = ({}) => {
               <div className=" col-span-6 md:col-span-3 lg:col-span-2">
                 <GlassBox
                   title="Gründungszuschuss"
-                  text="Your financial kick start in independence Your financial kick start in independence"
+                  text="Wir unterstützen dich bei der Beantragung deines Gründungszuschusses – Schritt für Schritt bis zur Förderung."
                   button="See more"
                 />
               </div>
@@ -94,7 +94,7 @@ const Services: React.FC = ({}) => {
               <div className=" col-span-6 md:col-span-3 lg:col-span-2">
                 <GlassBox
                   title="Businessplan"
-                  text="Your financial kick start in independence Your financial kick start in independence"
+                  text="Individuell und professionell – wir erstellen gemeinsam deinen Businessplan für Förderungen, Banken und Investoren."
                   button="See more"
                   special="bestSeller"
                 />
@@ -108,7 +108,7 @@ const Services: React.FC = ({}) => {
               <div className=" col-span-6 md:col-span-3 lg:col-span-2">
                 <GlassBox
                   title="Finanzierung"
-                  text="Your financial kick start in independence Your financial kick start in independence"
+                  text="Ob Gründungsdarlehen, Bankkredite oder alternative Finanzierungen – wir finden die passende Lösung für dein Vorhaben."
                   button="See more"
                 />
               </div>
@@ -116,7 +116,7 @@ const Services: React.FC = ({}) => {
               <div className="col-span-6 md:col-span-3 lg:col-span-2 lg:col-start-2">
                 <GlassBox
                   title="Buchhaltung"
-                  text="Your financial kick start in independence Your financial kick start in independence"
+                  text="Einfach, verständlich und effizient – wir zeigen dir, wie du deine Buchhaltung sicher im Griff hast."
                   button="See more"
                   special="exclusive"
                 />
@@ -124,7 +124,7 @@ const Services: React.FC = ({}) => {
               <div className=" col-span-6 md:col-span-4 md:col-start-2 lg:col-span-2 lg:col-start-4">
                 <GlassBox
                   title="Websites und Marketing"
-                  text="Your financial kick start in independence Your financial kick start in independence"
+                  text="Online sichtbar werden – mit einer klaren Website und gezielten Marketingstrategien für deinen Erfolg."
                   button="See more"
                 />
               </div>

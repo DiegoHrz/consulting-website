@@ -8,9 +8,9 @@ const Reviews = () => {
     <div className=" rounded-lg  flex flex-col gap-16">
       <div className="flex flex-col gap-[24px]">
         <Title
-          text="What our users say"
+          text="Was unsere Kunden berichten"
           additionalClasses="text-center"
-          additionalTitle="reviews"
+          additionalTitle="referenzen"
         />
       </div>
       {/* <p className="font-vollkornSC text-center text-xl pb-6" > reviews</p> */}

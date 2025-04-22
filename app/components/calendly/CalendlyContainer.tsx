@@ -62,7 +62,7 @@ const CalendlyContainer = () => {
   }
   return (
     <div className=" flex flex-col lg:flex-row overflow-hidden  w-full relative">
-{/* <div className="rounded-full w-8 h-8 overflow-hidden bg-[#D3CFC7]  lg:mx-0">
+      {/* <div className="rounded-full w-8 h-8 overflow-hidden bg-[#D3CFC7]  lg:mx-0">
             <img
               src="/founders/anna.avif"
               alt=""
@@ -73,7 +73,7 @@ const CalendlyContainer = () => {
         <div className="flex gap-2 items-center mb-[10px] mx-auto lg:mx-0">
           <div className="rounded-full w-8 h-8 overflow-hidden bg-[#D3CFC7]  lg:mx-0">
             <img
-              src="/founders/anna.avif"
+              src="/founders/anna.webp"
               alt=""
               className="w-8 object-contain brightness-110"
             />
@@ -84,24 +84,22 @@ const CalendlyContainer = () => {
         </div>
         <div className="block lg:hidden">
           <Title
-            text="Ask whatever you have in your mind"
-
+            text="Stell alle Fragen, die dir auf dem Herzen liegen"
             textPosition="center"
             rainbow={true}
           />
         </div>
         <div className="lg:block hidden">
           <Title
-            text="Ask whatever you have in your mind"
-
+            text="Stell alle Fragen, die dir auf dem Herzen liegen"
             textPosition="left"
             rainbow={true}
           />
         </div>
 
         <p className="text-center lg:text-left text-anna-black/95  mt-[10px] font-medium lg:text-lg max-w-[523px]">
-          Whether you have questions or are ready to discuss your business,
-          we’re here to help. Reach out today.
+          Ganz egal, ob du einfach nur eine Frage hast oder dein Vorhaben
+          besprechen möchtest – wir sind für dich da. Melde dich gerne bei uns!
         </p>
         <div>
           <div className="mt-[35px] flex flex-col gap-3">
@@ -112,7 +110,7 @@ const CalendlyContainer = () => {
                   className=" text-anna-black/85"
                 />{" "}
               </div>
-              <p className=" text-anna-black/85  ">30 min</p>
+              <p className=" text-anna-black/85  ">30 Minuten</p>
             </div>
             <div className="flex gap-2 ">
               <div>
@@ -122,7 +120,8 @@ const CalendlyContainer = () => {
                 />
               </div>
               <div className="lg:max-w-72 text-anna-black/85 ">
-                Web conferencing details provided upon confirmation
+                Die Zugangsdaten zur Videokonferenz erhältst du nach der
+                Bestätigung.
               </div>
             </div>
           </div>
@@ -145,12 +144,12 @@ const CalendlyContainer = () => {
                   />
                 </div>
                 <p className="text-anna-black">
-                  I agree with the term and conditions of{" "}
+                  Du hast den Nutzungsbedingungen von {" "}
                   <a
                     href="https://calendly.com"
                     className="text-[#016BFF] hover:underline"
                   >
-                    Calendly{" "}
+                    Calendly zugestimmt.{" "}
                   </a>{" "}
                   <span className="text-lg text-red-600">*</span>
                 </p>

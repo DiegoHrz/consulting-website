@@ -15,24 +15,15 @@ export default function Home() {
       <BusinessPlans />
       <Pitch
         image="/profile/profile.jpg"
-        title="Jetzt Unternehmer werden"
-        text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
-          erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
-          schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
-          inspiriert? Die Experten von AS Vision Partners unterstützen Sie
-          dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
-          maximieren. Sind Sie bereit, mit uns durchzustarten?"
+        title="Dein Business. Deine Vision. Unsere Unterstützung"
+        text="Du willst dich selbstständig machen oder dein bestehendes Business aufs nächste Level bringen? Bei AS Vision Partners bekommst du die Unterstützung, die du wirklich brauchst – individuell, praxisnah und auf Augenhöhe. Wir helfen dir, deine Ideen zu strukturieren, deine Marke klar zu positionieren und den Grundstein für nachhaltigen Erfolg zu legen – egal ob du ganz am Anfang stehst oder schon mittendrin bist.
+"
         button="Buchung"
       />
       <Pitch
         image="/profile/professional.avif"
-        title="Verbessern Sie Ihr Geschäft"
-        text="Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
-          erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
-          schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
-          inspiriert? Die Experten von AS Vision Partners unterstützen Sie
-          dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
-          maximieren. Sind Sie bereit, mit uns durchzustarten?"
+        title="Alles, was du für deine Gründung brauchst – an einem Ort."
+        text="Von der Beantragung des Gründungszuschusses über einen professionellen Businessplan bis hin zur passenden Finanzierung – wir begleiten dich durch alle Schritte deiner Gründung. Und auch danach sind wir für dich da: mit Lösungen für Buchhaltung, Website, Marketing und strategisches Wachstum. Du wählst flexibel die Leistungen aus, die du brauchst – und wir liefern dir Klarheit, Struktur und echte Umsetzungspower."
         button="Buchung"
         right={true}
       />

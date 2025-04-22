@@ -70,7 +70,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="text-[#464646] flex flex-col  gap-3 my-10 items-center sm:items-end">
-          <p className="text-white">Make an appointment</p>
+          <p className="text-white">Vereinbare einen Termin</p>
           <a
             href="https://calendly.com/"
             target="_blank"
@@ -90,7 +90,7 @@ const Footer = () => {
       <div className="hidden md:flex w-full max-w-7xl mx-auto sm:px-16 sm:pt-10">
         {/* Company */}
         <div className="flex flex-col gap-3">
-          <p className="text-white text-xl">Company</p>
+          <p className="text-white text-xl">Unternehmen</p>
           <Link href="/">
             <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
               Home
@@ -98,7 +98,7 @@ const Footer = () => {
           </Link>
           <Link href="/uber-uns">
             <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-              About us
+              Über uns
             </p>
           </Link>
           <Link href="/leistungen">
@@ -189,7 +189,7 @@ const Footer = () => {
 
         {/* Socials */}
         <div className="  flex flex-col gap-3 ">
-          <p className="text-white text-xl  ">Socials</p>
+          <p className="text-white text-xl  ">Social Media</p>
 
           <a
             href="https://www.linkedin.com/"
@@ -215,7 +215,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3 w-1/2 ">
             <div className="flex flex-col text-left gap-3">
               <p className="text-white text-xl border-b border-gray-200 pb-1">
-                Company
+                Unternehmen
               </p>
               <Link href="/">
                 <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
@@ -224,7 +224,7 @@ const Footer = () => {
               </Link>
               <Link href="/uber-uns">
                 <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                  About us
+                  Über uns
                 </p>
               </Link>
               <Link href="/leistungen">
@@ -320,7 +320,7 @@ const Footer = () => {
           {/* Socials */}
           <div className=" flex flex-col gap-3 w-1/2">
             <p className="text-white text-xl  border-b border-gray-200 pb-1">
-              Socials
+              Social Media
             </p>
 
             <a
