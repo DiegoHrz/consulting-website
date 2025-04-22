@@ -30,10 +30,10 @@ const BusinessPlans = () => {
           100% Erfolgsrate
           </h6>
           <p className="font-original_text text-base lg:text-lg text-anna-gray text-center max-w-80 py-2">
-            Every one of our suitcases comes with a limited lifetime warranty.
+          Jeder einzelne Antrag auf Gründerzuschuss unserer Kunden wurde genehmigt.
           </p>
         </div>
-        
+
         {/* <div className="w-[0.07rem] bg-black "></div> */}
 
         {/* shadow-gray-300 shadow-[0px_4px_2px_0px] */}
