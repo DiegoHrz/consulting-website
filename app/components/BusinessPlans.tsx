@@ -34,6 +34,7 @@ const BusinessPlans = () => {
           </p>
         </div>
 
+
         {/* <div className="w-[0.07rem] bg-black "></div> */}
 
         {/* shadow-gray-300 shadow-[0px_4px_2px_0px] */}
