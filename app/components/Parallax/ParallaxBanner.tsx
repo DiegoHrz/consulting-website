@@ -50,7 +50,7 @@ const ParallaxBanner = () => {
           Bereit für die Veränderung ?
         </h1>
         <div className="hidden md:block mx-auto w-fit  rounded-3xl mt-7" >
-          <ButtonAnnaTransparent text="Contact us"  colorText='text-anna-black' />
+          <ButtonAnnaTransparent text="Kontakt"  colorText='text-anna-black' />
         </div>
       </div>
     </section>

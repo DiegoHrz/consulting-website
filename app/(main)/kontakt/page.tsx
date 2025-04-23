@@ -1,6 +1,6 @@
 import ContactForm from "@/app/components/ContactForm";
 import HeroSecondary from "@/app/components/HeroSecondary";
-import Placeholder from "@/app/components/Placeholder";
+
 import React from "react";
 
 const Contact = () => {
@@ -16,9 +16,9 @@ const Contact = () => {
       gemeinsam Ihre Vision erfolgreich umzusetzen."
         />
       </div>
-      <div>
+      {/* <div>
         <Placeholder text="Kontakt" />
-      </div>
+      </div> */}
       <ContactForm />
     </div>
   );

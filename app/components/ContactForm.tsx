@@ -6,7 +6,6 @@ import axios from "axios";
 import { IoCall, IoLogoWhatsapp } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 
-
 interface FormData {
   nombre: string; // Nombre y apellido
   correo: string; // Correo electrónico
@@ -28,8 +27,9 @@ const ContactForm = () => {
     try {
       const response = await axios.post("/api/nodemailer", data);
       if (response.data.message === "Email sent successfully!") {
+        // ¡Recibimos tu mensaje! Pronto te daremos respuesta. Muchas Gracias!
         setSuccessMessage(
-          "¡Recibimos tu mensaje! Pronto te daremos respuesta. Muchas Gracias!"
+          "Wir haben Ihre Nachricht erhalten! Wir melden uns in Kürze bei Ihnen. Vielen Dank!"
         );
         reset();
       }
@@ -49,8 +49,9 @@ const ContactForm = () => {
       {/* <h1 className=" text-4xl font-medium lg:text-[35px] leading-[64px] font-rilke-monecias text-[#534547]">
         Contacto
       </h1> */}
-      <p className="font-medium text-xl pt-6 lg:pt-[40px] lg:text-[20px] italic">
-        Cualquier sugerencia, escríbanos
+      <p className="font-medium text-xl pt-6 lg:pt-[40px] lg:text-[20px] font-vollkornSC">
+        Wir sind hier, um alle Ihre Fragen anzuhören und den Kurs Ihres
+        Unternehmens zu ändern.
       </p>
       <div className="text-[#03b418] py-3 ">
         {successMessage && <p>{successMessage}</p>}
@@ -68,7 +69,7 @@ const ContactForm = () => {
           }}
         >
           <motion.div
-            className="absolute inset-0 -z-10 backdrop-blur-lg rounded-3xl "
+            className="absolute inset-0 -z-10 backdrop-blur-lg  "
             // shadow-anna-blue shadow-[0px_1px_7px_0px]
             initial={{ scale: 0, opacity: 0.1 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -88,8 +89,8 @@ const ContactForm = () => {
             }}
           /> */}
 
-          <header className=" text-3xl pb-4   lg:text-left font-rilke-monecias">
-            Contacto
+          <header className=" text-3xl pb-4   lg:text-left font-rilke-monecias ">
+            Kontakt
           </header>
           <img
             src="/assets/rose/rosa-negra.png"
@@ -100,7 +101,7 @@ const ContactForm = () => {
             <input
               type="text"
               id="name"
-              placeholder="Nombre"
+              placeholder="Name"
               {...register("nombre", {
                 required: true,
                 pattern: /^[a-zA-Z]+(?: [a-zA-Z]+)*$/,
@@ -114,12 +115,14 @@ const ContactForm = () => {
               <span className="w-full flex justify-end items-center">
                 {errors.nombre?.type === "required" && (
                   <span className="text-red-600 text-[12px] ">
-                    Nombre es requerido
+                    {/* //Nombre es requerido */}
+                    Name ist erforderlich
                   </span>
                 )}
                 {errors.nombre?.type === "pattern" && (
                   <p className="text-red-600 text-[12px]">
-                    Ingrese tu Nombre y Apellido
+                    {/* // Ingresa tu Nombre y Apellido */}
+                    Geben Sie Ihren Vor- und Nachnamen ein
                   </p>
                 )}
               </span>
@@ -130,7 +133,7 @@ const ContactForm = () => {
             <input
               type="email"
               id="email"
-              placeholder="Email"
+              placeholder="Nachname"
               {...register("correo", {
                 required: true,
                 pattern: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
@@ -142,12 +145,14 @@ const ContactForm = () => {
               <span className="w-full flex justify-end items-center">
                 {errors.correo?.type === "pattern" && (
                   <span className="text-red-600 text-[12px]">
-                    El Email es incorrecto
+                    {/* // El Email es incorrecto */}
+                    Die E-Mail ist falsch
                   </span>
                 )}
                 {errors.correo?.type === "required" && (
                   <span className="text-red-600 text-[12px]">
-                    Email es requerido{" "}
+                    {/* Email es requerido{" "} */}
+                    E-Mail ist erforderlich
                   </span>
                 )}
               </span>
@@ -181,7 +186,7 @@ const ContactForm = () => {
             <input
               type="text"
               id="asunto"
-              placeholder="Asunto"
+              placeholder="Affäre"
               {...register("asunto", {
                 required: true,
               })}
@@ -192,7 +197,8 @@ const ContactForm = () => {
               <span className="w-full flex justify-end">
                 {errors.asunto?.type === "required" && (
                   <span className="text-red-600 text-[12px]">
-                    Asunto es requerido{" "}
+                    {/* Asunto es requerido{" "} */}
+                    Betreff ist erforderlich
                   </span>
                 )}
               </span>
@@ -204,7 +210,7 @@ const ContactForm = () => {
               id="mensaje"
               cols={1}
               rows={4}
-              placeholder="Mensaje"
+              placeholder="Nachricht"
               {...register("mensaje", {
                 required: true,
               })}
@@ -215,7 +221,8 @@ const ContactForm = () => {
               <span className="w-full flex justify-end items-center">
                 {errors.mensaje?.type === "required" && (
                   <span className="text-red-600 text-[12px]">
-                    El Mensaje es requerido{" "}
+                    {/* El Mensaje es requerido{" "} */}
+                    Die Nachricht ist erforderlich
                   </span>
                 )}
               </span>
@@ -225,32 +232,33 @@ const ContactForm = () => {
           <div className="w-full lg:flex lg:justify-end">
             <input
               type="submit"
-              value="Enviar"
-              className="cursor-pointer border rounded-md w-1/2 lg:w-auto text-white bg-red-700 px-12 py-2 italic "
+              value="Senden"
+              className="cursor-pointer border rounded-md w-1/2 lg:w-auto text-white bg-[#8CB8D5] px-12 py-2 italic "
               style={{
                 boxShadow:
-                  "10px 10px 2px -1px rgb(233, 41, 51, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  "10px 10px 2px -1px rgb(33, 41, 51, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
               }}
             />
           </div>
           {/* bg-[#524747] te esperamos form desktop */}
-          <div className="hidden lg:block  lg:absolute   top-20 h-[34rem] right-0 translate-x-1/2 w-1/2 max-w-[28rem] px-14 py-20 rounded-xl bg-[#F4EEE0] overflow-hidden z-50">
+          <div className="hidden lg:block  lg:absolute   top-20 h-[34rem] right-0 translate-x-1/2 w-1/2 max-w-[28rem] px-14 py-20 rounded-xl bg-[#8CB8D5] overflow-hidden z-50">
             <div className="text-left relative text-[#D5CACA]">
               <img
+                src="/logo/logo-no-bg/logo-white-no-bg.png"
+                className="hidden lg:block w-12 lg:w-16 z-10 absolute -bottom-1 lg:-top-[15%]  lg:-right-[27%] -translate-x-1/2 "
+              />
+              {/* <img
                 src="/assets/rose/rosa-blanca.jpg"
                 className="hidden lg:block w-12 lg:w-[4.5rem]  z-10 absolute -bottom-1 lg:-top-[4rem]  lg:-right-[3rem] brightness-150  overflow-hidden"
                 alt=""
-              />
-              {/* <img
-                src="/assets/rose/rosa-banner.png"
-                className="hidden lg:block w-12 lg:w-10 z-10 absolute -bottom-1 lg:-bottom-14  lg:-right-[6.5rem] -translate-x-1/2 "
               /> */}
-              <p className="text-3xl pb-8 font-rilke-monecias text-black">
-                Te esperamos{" "}
+              <p className="text-3xl pb-8 font-rilke-monecias text-anna-white font-bold">
+                Wir warten auf Sie
               </p>
-              <p className="pb-8 ">
-                En nuestro café ubicado en el distrito más bohemio y rico de
-                cultura internacional de todo el Perú
+              <p className="pb-8 text-anna-white">
+                Wir sind stets bereit, Ihrem Unternehmen mit unseren
+                Geschäftsplänen zum Durchbruch zu verhelfen und sein Wachstum
+                fortzusetzen.
               </p>
               <div className="">
                 {/* <a
@@ -280,10 +288,10 @@ const ContactForm = () => {
                 >
                   <div className="flex gap-4 p-2 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-2xl">
                     <div>
-                      <IoMdMail color="#FF7776" size={18} />
+                      <IoMdMail color="#012F4B" size={20} />
                     </div>
                     <div>
-                      <p className="text-sm pb-1 leading-5">
+                      <p className="text-base pb-1 leading-5 text-anna-gray font-semibold font-cabin_sans">
                         info@as-vision-partners.com
                       </p>
                     </div>
@@ -292,21 +300,29 @@ const ContactForm = () => {
                 <a href="tel:+4915679314176">
                   <div className="flex gap-4 p-2 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-2xl">
                     <div>
-                      <IoCall color="#FF7776" size={20} />
+                      <IoCall color="#132351" size={20} />
                     </div>
                     <div>
-                      <p className="text-sm">+49 15679 314176</p>
+                      <p className="text-base text-anna-gray font-semibold font-cabin_sans">
+                        +49 15679 314176
+                      </p>
                     </div>
                   </div>
                 </a>
 
-                <a href="tel:+4916091471897">
+                <a
+                  href="https://wa.me/4916091471897?text=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="flex gap-4 p-2 mb-6 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-2xl">
                     <div>
-                      <IoLogoWhatsapp color="#FF7776" size={22} />
+                      <IoLogoWhatsapp color="#132351" size={22} />
                     </div>
                     <div className="">
-                      <p className="text-sm">+49 160 91471897</p>
+                      <p className="text-base text-anna-gray font-semibold font-cabin_sans">
+                        +49 160 91471897
+                      </p>
                     </div>
                   </div>
                 </a>
@@ -353,28 +369,29 @@ const ContactForm = () => {
           </div>
         </form>
 
-        <div className="block lg:hidden mt-10   min-h-[37rem]   px-10 sm:px-14 py-24 rounded-xl mx-auto relative overflow-hidden bg-[#e5d4b1]/40">
+        <div className="block lg:hidden mt-10   min-h-[37rem]   px-10 sm:px-14 py-24 rounded-xl mx-auto relative overflow-hidden bg-[#8CB8D5]">
           <div className="text-left relative text-[#D5CACA]">
             <img
-              src="/logo/logo_only_letter.png"
+              src="/logo/logo-no-bg/logo-white-no-bg.png"
               className="lg:hidden w-20 sm:w-28  z-10 absolute -translate-x-1/2 -bottom-[5.1rem] -right-12"
               alt=""
             />
-            <img
+            {/* <img
               src="/assets/rose/rosa-blanca.jpg"
               className="lg:hidden w-12 sm:w-14  z-1 absolute -translate-x-1/2 -top-[5.5rem] left-0 "
               alt=""
-            />
+            /> */}
             {/* <img
                 src="/assets/rose/rosa-banner.png"
                 className="hidden lg:block w-12 lg:w-10 z-10 absolute -bottom-1 lg:-bottom-14  lg:-right-[6.5rem] -translate-x-1/2 "
               /> */}
-            <p className="text-3xl pb-8 font-rilke-monecias text-black text-center">
-              Te esperamos{" "}
+            <p className="text-3xl pb-8 font-cabin text-anna-white text-center">
+              Wir warten auf Sie
             </p>
-            <p className="pb-8 ">
-              En nuestro café ubicado en el distrito más bohemio y rico de
-              cultura internacional de todo el Perú
+            <p className="pb-8 text-justify">
+              Wir sind stets bereit, Ihrem Unternehmen mit unseren
+              Geschäftsplänen zum Durchbruch zu verhelfen und sein Wachstum
+              fortzusetzen.
             </p>
             <div className="flex justify-center flex-col">
               {/* <a
@@ -396,17 +413,17 @@ const ContactForm = () => {
                 </div>
               </a> */}
               <a
-                href="mailto:info@as-vision-partners.com?subject=Consulta&body=Hola, me encantaría saber más del servicio..."
+                href="mailto:info@as-vision-partners.com?subject=Kontaktinformationen&body=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className="flex gap-4 p-2 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl rounded-lg">
                   <div>
-                    <IoMdMail color="#FF7776" size={18} />
+                    <IoMdMail color="#132351" size={18} />
                   </div>
                   <div>
-                    <p className="text-sm pb-1 leading-5">
-                    info@as-vision-partners.com
+                    <p className="text-[0.93rem] pb-1 leading-5 font-cabin_sans">
+                      info@as-vision-partners.com
                     </p>
                   </div>
                 </div>
@@ -414,20 +431,24 @@ const ContactForm = () => {
               <a href="tel:+4915679314176">
                 <div className="flex gap-4 p-2 mb-3 hover:scale-110 transform duration-500 hover:shadow-2xl">
                   <div>
-                    <IoCall color="#FF7776" size={20} />
+                    <IoCall color="#132351" size={20} />
                   </div>
                   <div>
-                    <p className="text-sm">+49 15679 314176</p>
+                    <p className=" font-cabin_sans">+49 15679 314176</p>
                   </div>
                 </div>
               </a>
-              <a href="tel:+4916091471897">
+              <a
+                href="https://wa.me/4916091471897?text=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="flex gap-4 p-2 mb-6 hover:scale-110 transform duration-500 hover:shadow-2xl">
                   <div>
-                    <IoLogoWhatsapp color="#FF7776" size={22} />
+                    <IoLogoWhatsapp color="#132351" size={22} />
                   </div>
                   <div>
-                    <p className="text-sm">+49 160 91471897</p>
+                    <p className=" font-cabin_sans">+49 160 91471897</p>
                   </div>
                 </div>
               </a>
