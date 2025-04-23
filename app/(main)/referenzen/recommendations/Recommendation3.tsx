@@ -1,8 +1,10 @@
 "use client";
+import Title from "@/app/components/customTags/Title";
+import Wrapper from "@/app/hoc/Wrapper";
 import { GiLaurelCrown } from "react-icons/gi";
 
-import Wrapper from "../../hoc/Wrapper";
-import Title from "../customTags/Title";
+
+
 import { IoIosArrowForward } from "react-icons/io";
 
 const Recommendation1: React.FC = () => {

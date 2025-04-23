@@ -1,11 +1,11 @@
 "use client";
+import Title from "@/app/components/customTags/Title";
+import Wrapper from "@/app/hoc/Wrapper";
 import { GiLaurelCrown } from "react-icons/gi";
 
-import Wrapper from "../../hoc/Wrapper";
-import Title from "../customTags/Title";
-import { IoIosArrowForward } from "react-icons/io";
 
-const Recommendation1: React.FC = () => {
+
+const Recommendation7: React.FC = () => {
   return (
     <div className="flex w-full flex-col-reverse  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-6 p-0 md:p-10 lg:p-0">
       <div className="lg:w-2/3">
@@ -14,10 +14,11 @@ const Recommendation1: React.FC = () => {
         </div>
         <div className="flex flex-col pt-1 sm:pt-0">
           <div>
-            <span className="font-vollkornSC  tracking-[3px]">
-              Sylvia Schnaider -{" "}
+            <span className="font-vollkornSC  tracking-[3px]">Nico E. - </span>
+            <span className="text-sm font-vollkorn">
+              {" "}
+              Ergotherapeut - Gründerin
             </span>
-            <span className="text-sm font-vollkorn">Gründerin</span>
           </div>
           <div className="hidden">
             <Title text="Unternehmensberaterin und Coach" />
@@ -33,20 +34,17 @@ const Recommendation1: React.FC = () => {
           </p> */}
         </div>
         <p className="lg:pr-20 font-vollkorn text-[#808080] pt-4 text-justify">
-          Anna Schenk hat mich mit unglaublich viel Engagement und Herzblut bei
-          der Gründung meines Unternehmens unterstützt.
-          <span className="text-xl text-[#C2A964] font-cabin_sans ">
+          <span className="md:text-xl text-anna-burgundy font-cabin_sans ">
             {" "}
-            Dank ihrer Expertise{" "}
+            “Anna war mir eine große Stütze bei der Erstellung des Business- und
+            des Finanzplans und hat mir darüber hinaus ein sehr hilfreiches
+            Buchhaltungs-Coaching gegeben.
           </span>
-          und Zuverlässigkeit konnte ich einen fundierten und professionellen
-          Businessplan sowie eine solide Finanzplanung erstellen. Anna war
-          jederzeit verfügbar, hat schnell und effizient gearbeitet und war
-          dabei stets offen für meine Fragen und Anliegen. Ihre Unterstützung
-          war für mich eine große Bereicherung, und ich bin ihr dafür sehr
-          dankbar. Ich kann sie uneingeschränkt weiterempfehlen!
+          Ich bin sehr dankbar und glücklich, dass sie mir auch weiterhin für
+          Fragen zur Verfügung steht und sie mir die Schritte in die
+          Selbstständigkeit derart erleichtert hat.”
         </p>
-        <div className="w-full  animate-fade-subtitle pt-6  lg:text-right text-[#0066CC]">
+        {/* <div className="w-full  animate-fade-subtitle pt-6  lg:text-right text-[#0066CC]">
           <a
             href="https://www.schnaider-consulting.de/"
             target="_blank"
@@ -57,17 +55,33 @@ const Recommendation1: React.FC = () => {
             WEBSITE
             <IoIosArrowForward color="[#0066CC]" className="hidden lg:block" />
           </a>
-        </div>
+        </div> */}
       </div>
-      <div className="hidden lg:w-1/3 z-[1]   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-2 lg:flex items-center overflow-hidden max-h-[282.5px]">
-        <img
+      <div className="hidden lg:w-1/3 z-[1] min-h-64   rounded-full shadow-gray-400 shadow-[0px_0px_15px] border-2 lg:flex items-center overflow-hidden max-h-[282.5px]">
+        {/* <img
           src="/brands/brand2.webp"
           className=" object-cover hidden lg:block"
           alt=""
-        />
+        /> */}
+         <div className="w-full h-full bg-gradient-to-br from-white to-gray-200 flex items-center justify-center text-gray-500">
+          <svg
+            className="w-20 h-20"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1}
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Wrapper(Recommendation1, "recommendation1");
+export default Wrapper(Recommendation7, "recommendation1");
