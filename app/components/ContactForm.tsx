@@ -65,17 +65,17 @@ const ContactForm = () => {
           className="max-w-[61rem] w-full  lg:max-w-[800px]  flex flex-col gap-4 mx-auto relative py-[4.5rem] pr-4 pl-4 lg:pr-64 lg:pl-16  rounded-xl backdrop-blur-lg  bg-white/5 "
           style={{
             background: "rgba(255, 255, 255, 0.02)",
-            boxShadow: "rgba(140, 184, 213) 0px 1px 10px 0px inset",
+            boxShadow: "rgba(140, 184, 213) 0px 1px 20px 0px inset",
           }}
         >
-          <motion.div
-            className="absolute inset-0 -z-10 backdrop-blur-lg  "
+          {/* <motion.div
+            className="absolute inset-0 -z-10 backdrop-blur-lg"
             // shadow-anna-blue shadow-[0px_1px_7px_0px]
             initial={{ scale: 0, opacity: 0.1 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.1 }}
-          />
+          /> */}
           {/* <div
             className={`absolute -z-10 transition-all duration-700   h-24 w-24 right-0 top-0 
             
@@ -106,7 +106,7 @@ const ContactForm = () => {
                 required: true,
                 pattern: /^[a-zA-Z]+(?: [a-zA-Z]+)*$/,
               })}
-              className="border p-3 text-sm h-10 placeholder:text-[#757575]/70 placeholder:italic placeholder:font-[100] placeholder:text-sm rounded-md"
+              className=" p-3 text-sm h-10 placeholder:text-[#757575]/70 placeholder:italic placeholder:font-[100] placeholder:text-sm rounded-md shadow-[inset_0_0px_3px_0_rgba(140,184,213,1)]"
             />
 
             <label htmlFor="name" className=" flex text-sm">
@@ -138,7 +138,7 @@ const ContactForm = () => {
                 required: true,
                 pattern: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
               })}
-              className="border p-3 text-sm h-10 placeholder:text-[#757575]/70 placeholder:italic placeholder:font-[100] placeholder:text-sm rounded-md"
+              className="border p-3 text-sm h-10 placeholder:text-[#757575]/70 placeholder:italic placeholder:font-[100] placeholder:text-sm rounded-md shadow-[inset_0_0px_3px_0_rgba(140,184,213,1)]"
             />
 
             <label htmlFor="email" className="flex text-sm text-slate-600">
@@ -190,7 +190,7 @@ const ContactForm = () => {
               {...register("asunto", {
                 required: true,
               })}
-              className="border p-3 text-sm h-10 placeholder:text-[#757575]/70 placeholder:italic placeholder:font-[100] placeholder:text-sm rounded-md"
+              className="border p-3 text-sm h-10 placeholder:text-[#757575]/70 placeholder:italic placeholder:font-[100] placeholder:text-sm rounded-md shadow-[inset_0_0px_3px_0_rgba(140,184,213,1)]"
             />
 
             <label htmlFor="asunto" className="flex  text-sm text-slate-600">
@@ -214,7 +214,7 @@ const ContactForm = () => {
               {...register("mensaje", {
                 required: true,
               })}
-              className="border p-3 text-sm placeholder:text-[#757575]/70 placeholder:italic placeholder:font-[100] placeholder:text-sm rounded-md"
+              className="border p-3 text-sm placeholder:text-[#757575]/70 placeholder:italic placeholder:font-[100] placeholder:text-sm rounded-md shadow-[inset_0_0px_3px_0_rgba(140,184,213,1)]"
             ></textarea>
 
             <label htmlFor="mensaje" className="flex text-sm text-slate-600">
@@ -229,11 +229,11 @@ const ContactForm = () => {
             </label>
           </div>
 
-          <div className="w-full lg:flex lg:justify-end">
+          <div className="w-full  lg:flex lg:justify-end">
             <input
               type="submit"
               value="Senden"
-              className="cursor-pointer border rounded-md w-1/2 lg:w-auto text-white bg-[#8CB8D5] px-12 py-2 italic "
+              className="cursor-pointer border rounded-md w-1/2 lg:w-auto text-white bg-[#8CB8D5] sm:px-12 py-2 italic "
               style={{
                 boxShadow:
                   "10px 10px 2px -1px rgb(33, 41, 51, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
@@ -282,7 +282,7 @@ const ContactForm = () => {
                   </div>
                 </a> */}
                 <a
-                  href="mailto:info@as-vision-partners.com?subject=Consulta&body=Hola, me encantaría saber más del servicio..."
+                  href="mailto:info@as-vision-partners.com?subject=Kontaktinformationen&body=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

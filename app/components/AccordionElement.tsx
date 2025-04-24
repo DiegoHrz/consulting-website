@@ -97,7 +97,7 @@ const AccordionElement = () => {
         <AccordionItem
           key={index}
           value={`item-${index}`}
-          className={`px-3 rounded-lg duration-700 relative border-[#afdae8] bg-white/10   ${
+          className={`px-3 rounded-lg duration-700 relative border-[#afdae8] bg-white/30 shadow-anna-blue shadow-[0px_0px_0.5px_0px] my-2 ${
             accordionSelected === `item-${index}`
               ? "shadow-anna-blue shadow-[0px_1px_3px_0px]"
               : "hover:shadow-anna-blue hover:shadow-[0px_1px_3px_0px]"

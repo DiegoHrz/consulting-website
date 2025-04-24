@@ -19,7 +19,7 @@ const FAQ = () => {
       </h1> */}
         {/* any text */}
       </div>
-      <div>
+      <div className="rounded-lg " >
         <AccordionElement />
       </div>
     </div>
