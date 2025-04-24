@@ -4,11 +4,9 @@ import * as React from "react";
 import BouncingText from "./BouncingText";
 import ButtonAnna from "@/app/components/customTags/ButtonAnna";
 
-
-
 export const Table: React.FC = () => {
   return (
-    <div className="" >
+    <div className="">
       <div className="max-w-[50rem] border">
         <h1
           className="text-xl sm:text-2xl lg:text-[40px] text-transparent "
@@ -34,11 +32,11 @@ export const Table: React.FC = () => {
             style={{ gridColumn: "1/2" }}
           >
             <h3 className="text-3xl lg:text-5xl font-medium text-anna-black">
-              <BouncingText>40+</BouncingText>
+              <BouncingText>100+</BouncingText>
             </h3>
             <p className="text-[#A5A5A5] text-xs lg:text-base ">
               {/* Completed Projects */}
-              Repositorios Subidos
+              zufriedene Kunden
             </p>
           </div>
           <div
@@ -46,8 +44,8 @@ export const Table: React.FC = () => {
             style={{ gridColumn: "2/3" }}
           >
             <BouncingText>
-              <h3 className="text-anna-black">React</h3>
-              <h3 className="text-anna-black">Progamador</h3>
+              <h3 className="text-anna-black">Vollständiger</h3>
+              <h3 className="text-anna-black text-xs lg:text-base">Business- und Finanzplan</h3>
             </BouncingText>
           </div>
 

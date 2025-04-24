@@ -76,9 +76,9 @@ const FooterMobile: React.FC = () => {
                 <span className="relative ">
                   <p className="text-anna-gray-light">Websites und</p>
                   <p className="text-anna-gray-light">Marketing</p>
-                  <div className="top-1/2 left-[110%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-2  absolute text-white whitespace-nowrap">
+                  {/* <div className="top-1/2 left-[110%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-2  absolute text-white whitespace-nowrap">
                     Soon
-                  </div>
+                  </div> */}
                 </span>
               </div>
             </Link>

@@ -14,8 +14,9 @@ const Hero = () => {
       <div className="z-10 max-w-7xl mx-auto  flex flex-col md:flex-row gap-16 h-full ">
         <div className="flex flex-col lg:w-1/2 gap-[24px] ">
           <div className="max-w-[28rem]">
+            leistungen
             <Title
-              text="Empower Your Financial Journey with AS"
+              text="Empower Your Financial Businessplan with AS"
               textPosition="left"
               additionalClass="text-white font-normal"
               noLengthMax={true}

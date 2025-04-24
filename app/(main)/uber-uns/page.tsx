@@ -2,7 +2,6 @@
 
 import AppointmentBanner from "@/app/components/AppointmentBanner";
 
-
 import HeroSecondary from "@/app/components/HeroSecondary";
 
 import React from "react";
@@ -29,8 +28,6 @@ import React from "react";
 // ];
 
 const About = () => {
-
-
   return (
     <div>
       <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
@@ -45,8 +42,7 @@ const About = () => {
       {/* <Placeholder text="Uber uns" /> */}
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm uppercase text-gray-500 tracking-wide">
-          Dabei werden wir von den besten Organisationen und Institutionen in
-          ganz Deutschland unterstützt.
+        Tagtäglich unterstützen wir zahlreiche Unternehmer deutschlandweit
         </p>
         <div className="mt-6 flex flex-row flex-wrap justify-center">
           <div className="col-span-1 flex justify-center relative w-36 h-28 mx-5 ">
@@ -556,7 +552,7 @@ const About = () => {
                 Wir begleiten Menschen auf ihrem Weg in die Selbstständigkeit
                 und helfen ihnen, ihre beruflichen Visionen in die Realität
                 umzusetzen. Mit persönlicher Beratung, fachlicher Expertise und
-                individuellen Lösungen bieten wir unseren Kund*innen die
+                individuellen Lösungen bieten wir unseren Kunden die
                 Unterstützung, die sie für eine erfolgreiche Zukunft brauchen.
               </blockquote>
             </div>
@@ -569,7 +565,7 @@ const About = () => {
                 Wir möchten eine zentrale Anlaufstelle für Gründerinnen und
                 Unternehmerinnen sein, die nach klarer Orientierung, praxisnaher
                 Unterstützung und langfristigem Erfolg streben. Unsere Vision
-                ist es, ein Netzwerk zu schaffen, in dem jede*r die Möglichkeit
+                ist es, ein Netzwerk zu schaffen, in dem jede/r die Möglichkeit
                 hat, mit einer klaren Strategie und nachhaltigen Lösungen seine
                 oder ihre beruflichen Träume zu verwirklichen.
               </blockquote>
@@ -765,7 +761,7 @@ const About = () => {
                           <div className="font-vollkornSC font-semibold text-xl  tracking-[3px]">
                             anna schenk
                           </div>
-                          <div className="font-vollkorn">Founder</div>
+                          <div className="font-vollkorn">Gründerin</div>
                         </div>
                       </div>
                     </div>
@@ -1046,12 +1042,12 @@ const About = () => {
                       und der Analyse von Marktchancen.
                     </p>
                     <p className="text-gray-600 mb-4">
-                      Patrick hat zahlreiche Gründer*innen und Unternehmen auf
-                      ihrem Weg begleitet und ihnen geholfen, fundierte
-                      Entscheidungen zu treffen sowie ihre Ziele sicher und
-                      effizient zu erreichen. Seine strategische
-                      Herangehensweise und sein Blick fürs Wesentliche machen
-                      ihn zu einem unverzichtbaren Bestandteil unseres Teams.
+                      Patrick hat zahlreiche Gründer und Unternehmen auf ihrem
+                      Weg begleitet und ihnen geholfen, fundierte Entscheidungen
+                      zu treffen sowie ihre Ziele sicher und effizient zu
+                      erreichen. Seine strategische Herangehensweise und sein
+                      Blick fürs Wesentliche machen ihn zu einem unverzichtbaren
+                      Bestandteil unseres Teams.
                     </p>
                     <a
                       href="https://www.linkedin.com/in/patrick-r%C3%B6sner-8763031bb/"
@@ -1230,7 +1226,7 @@ const About = () => {
               Kooperationspartner
             </h3>
             <p className="text-justify md:text-center my-10 max-w-4xl mx-auto">
-              Wir freuen uns, Ihnen die mit AS Vision Partners verbundenen
+              Wir freuen uns, dir die mit AS Vision Partners verbundenen
               Genossenschaften vorzustellen. Durch diese langjährige,
               professionelle Zusammenarbeit werden optimale Voraussetzungen für
               die jungen Unternehmer von morgen geschaffen.

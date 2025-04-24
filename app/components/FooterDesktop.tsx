@@ -70,9 +70,9 @@ const FooterDesktop: React.FC = () => {
         <Link href="/leistungen/websites-marketing">
           <div className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm relative">
             Websites und Marketing
-            <div className="top-1/2 -translate-y-1/2 -right-[48%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-[10px] h-fit absolute text-white">
+            {/* <div className="top-1/2 -translate-y-1/2 -right-[48%] text-[0.6rem] bg-gradient-to-r from-red-600 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-blue-300 to-blue-600 rounded-xl px-[10px] h-fit absolute text-white">
               Very Soon
-            </div>
+            </div> */}
           </div>
         </Link>
       </div>
