@@ -20,7 +20,7 @@ const FooterDesktop: React.FC = () => {
         </Link>
         {/* <Link href="/leistungen">
       <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-        Leinstugen
+        
       </p>
     </Link> */}
         <Link href="/referenzen">
@@ -41,7 +41,7 @@ const FooterDesktop: React.FC = () => {
       {/* Services */}
 
       <div className="flex flex-col gap-3">
-        <p className="text-white text-xl">Leinstugen</p>
+        <p className="text-white text-xl">Leistungen</p>
         <Link href="/leistungen/grundungszuschuss">
           <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
             Gründungszuschuss

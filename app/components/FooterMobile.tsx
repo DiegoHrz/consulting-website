@@ -23,7 +23,7 @@ const FooterMobile: React.FC = () => {
             </Link>
             {/* <Link href="/leistungen">
                 <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                  Leinstugen
+                  
                 </p>
               </Link> */}
             <Link href="/referenzen">
@@ -44,7 +44,7 @@ const FooterMobile: React.FC = () => {
         <div className="flex flex-col  w-1/2">
           <div className="flex flex-col text-left gap-3">
             <p className="text-white text-xl border-b border-gray-200 pb-1">
-              Leinstugen
+              Leistungen
             </p>
             <Link href="/leistungen/grundungszuschuss">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
