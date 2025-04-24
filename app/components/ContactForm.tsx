@@ -133,7 +133,7 @@ const ContactForm = () => {
             <input
               type="email"
               id="email"
-              placeholder="Nachname"
+              placeholder="E-Mail"
               {...register("correo", {
                 required: true,
                 pattern: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,

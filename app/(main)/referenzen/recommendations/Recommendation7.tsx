@@ -29,7 +29,7 @@ const Recommendation7: React.FC = () => {
           <div>
             <span className="font-vollkornSC  tracking-[3px]">nico e.</span>
             <span className="mx-1"> - </span>
-            <span className="text-sm font-vollkorn">Gründerin</span>
+            <span className="text-sm font-vollkorn">Gründer</span>
             <span className="mx-1"> - </span>
             <span className="text-sm font-vollkorn">Ergotherapeut</span>
           </div>
