@@ -28,7 +28,7 @@ const Referenzen = () => {
       {/* <div>
         <Placeholder text="Referenzen" />
       </div> */}
-      <div className="flex flex-col sm:gap-24 gap-10 " >
+      <div className="flex flex-col sm:gap-24 gap-12 " >
 
       <Recommendations1 />
       <Recommendation2 />

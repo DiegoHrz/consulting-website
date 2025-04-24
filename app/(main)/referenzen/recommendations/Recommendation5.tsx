@@ -7,21 +7,21 @@ const Recommendation5: React.FC = () => {
   return (
     <div className="flex w-full flex-col-reverse  md:justify-center  md:flex-row  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-6 p-0 md:p-10 lg:p-0">
       <div className="lg:w-2/3">
-        <div className="lg:hidden z-[1] rounded-lg shadow-gray-400 shadow-[0px_0px_15px]  flex items-center overflow-hidden mb-4 justify-center ">
-          {/* <img src="/brands/brand2.webp" className="object-cover" alt="" /> */}
-
+        {/* <div className="lg:hidden z-[1] rounded-lg shadow-gray-400 shadow-[0px_0px_15px]  flex items-center overflow-hidden mb-4 justify-center bg-[#FBFAF8]">
+          <img src="/brands/brand1.avif" className=" object-cover" alt="" />
+        </div> */}
+        <div className="lg:hidden w-full py-[15%] relative bg-gradient-to-br from-white to-gray-100 mb-8">
           <svg
-            className="w-8 h-8 text-blue-600"
+            className="absolute top-0 left-0 w-full h-full p-4 sm:p-6 md:p-10  text-gray-400 rounded-lg shadow-gray-400 shadow-[0px_0px_15px] overflow-hidden"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              strokeWidth={1}
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
             />
           </svg>
         </div>
@@ -75,7 +75,7 @@ const Recommendation5: React.FC = () => {
           className=" object-cover hidden lg:block"
           alt=""
         /> */}
-        <div className="w-full h-full bg-gradient-to-br from-white to-gray-200 flex items-center justify-center text-gray-500">
+        <div className="w-full h-full bg-gradient-to-br from-white to-gray-100 flex items-center justify-center text-gray-500">
           <svg
             className="w-20 h-20"
             fill="none"
