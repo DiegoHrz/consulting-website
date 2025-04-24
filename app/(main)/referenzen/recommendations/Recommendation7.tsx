@@ -30,8 +30,6 @@ const Recommendation7: React.FC = () => {
             <span className="font-vollkornSC  tracking-[3px]">nico e.</span>
             <span className="mx-1"> - </span>
             <span className="text-sm font-vollkorn">Gründer</span>
-            <span className="mx-1"> - </span>
-            <span className="text-sm font-vollkorn">Ergotherapeut</span>
           </div>
           <div className="hidden">
             <Title text="Unternehmensberaterin und Coach" />
@@ -40,7 +38,7 @@ const Recommendation7: React.FC = () => {
         <div className="flex gap-3 my-2 pb-1 sm:pt-0">
           <div className="flex items-center gap-1 rounded-2xl bg-[#DCE5F0] text-[#0B66C2] font-semibold py-1 px-3 w-fit ">
             <GiLaurelCrown size={20} />
-            <p className="text-xs">Top Business </p>
+            <p className="text-xs">Ergotherapeut </p>
           </div>
           {/* <p className=" rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit text-xs">
             Top Business{" "}
@@ -52,6 +50,7 @@ const Recommendation7: React.FC = () => {
             “Anna war mir eine große Stütze bei der Erstellung des Business- und
             des Finanzplans und hat mir darüber hinaus ein sehr hilfreiches
             Buchhaltungs-Coaching gegeben.
+            {" "}
           </span>
           Ich bin sehr dankbar und glücklich, dass sie mir auch weiterhin für
           Fragen zur Verfügung steht und sie mir die Schritte in die

@@ -33,10 +33,6 @@ const Recommendation8: React.FC = () => {
             </span>
             <span className="mx-1"> - </span>
             <span className="text-sm font-vollkorn">Gründerin</span>
-            <span className="mx-1"> - </span>
-            <span className="text-sm font-vollkorn">
-              Freie Rede und Coaching
-            </span>
           </div>
           <div className="hidden">
             <Title
@@ -48,7 +44,7 @@ const Recommendation8: React.FC = () => {
         <div className="flex gap-3 my-2 lg:pl-20 w-full pb-1 sm:pt-0">
           <div className="flex items-center gap-1 rounded-2xl bg-[#DCE5F0] text-[#0B66C2] font-semibold py-1 px-3 w-fit lg:ml-auto">
             <GiLaurelCrown size={20} />
-            <p className="text-xs">Best Work Ethic </p>
+            <p className="text-xs">Freie Rede und Coaching </p>
           </div>
           {/* <p className=" rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit text-xs">
             Top Business{" "}
@@ -67,6 +63,7 @@ const Recommendation8: React.FC = () => {
             Sie unterstützt dich einfach vollkommen. Ich habe mich mit ihr
             jederzeit sehr wohl gefühlt und ohne sie wäre ich schier
             verzweifelt.
+            {" "}
           </span>
           Lass dir die Gelegenheit nicht entgehen, sie für einen erfolgreichen
           Antrag an deiner Seite zu haben. Menschlich und fachlich einfach

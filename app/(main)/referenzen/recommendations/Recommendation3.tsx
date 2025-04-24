@@ -19,10 +19,10 @@ const Recommendation1: React.FC = () => {
             </span>
             <span className="mx-1"> - </span>
             <span className="text-sm font-vollkorn">Gründerin</span>
-            <span className="mx-1"> - </span>
+            {/* <span className="mx-1"> - </span>
             <span className="text-sm font-vollkorn">
               Unternehmensberaterin und Coach
-            </span>
+            </span> */}
           </div>
           <div className="hidden">
             <Title text="Unternehmensberaterin und Coach" />
@@ -31,7 +31,7 @@ const Recommendation1: React.FC = () => {
         <div className="flex gap-3 my-2 pb-1 sm:pt-0">
           <div className="flex items-center gap-1 rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit ">
             <GiLaurelCrown size={20} />
-            <p className="text-xs">Top Partner </p>
+            <p className="text-xs">Psychologische Beratung </p>
           </div>
           {/* <p className=" rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit text-xs">
             Top Business{" "}

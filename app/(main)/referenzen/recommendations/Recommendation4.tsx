@@ -16,9 +16,9 @@ const Recommendation2: React.FC = () => {
         <div className="flex flex-col lg:pl-20 pt-1 sm:pt-0">
           <div className="lg:ml-auto">
             <span className="font-vollkornSC  tracking-[3px]">
-              andreas haug -{" "}
+              andreas haug
             </span>
-            <span className="text-sm font-vollkorn">Architekt</span>
+            <span className="text-sm font-vollkorn"></span>
           </div>
           <div className="hidden">
             <Title
@@ -30,7 +30,7 @@ const Recommendation2: React.FC = () => {
         <div className="flex gap-3 my-2 lg:pl-20 w-full pb-1 sm:pt-0">
           <div className="flex items-center gap-1 rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit lg:ml-auto">
             <GiLaurelCrown size={20} />
-            <p className="text-xs">Best Achiever</p>
+            <p className="text-xs">Architekt</p>
           </div>
           {/* <p className=" rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit text-xs">
             Top Business{" "}

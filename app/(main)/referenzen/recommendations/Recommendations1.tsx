@@ -3,8 +3,6 @@ import Title from "@/app/components/customTags/Title";
 import Wrapper from "@/app/hoc/Wrapper";
 import { GiLaurelCrown } from "react-icons/gi";
 
-
-
 import { IoIosArrowForward } from "react-icons/io";
 
 const Recommendation1: React.FC = () => {
@@ -28,7 +26,7 @@ const Recommendation1: React.FC = () => {
         <div className="flex gap-3 my-2 pb-1 sm:pt-0">
           <div className="flex items-center gap-1 rounded-2xl bg-[#DCE5F0] text-[#0B66C2] font-semibold py-1 px-3 w-fit ">
             <GiLaurelCrown size={20} />
-            <p className="text-xs">Top Business </p>
+            <p className="text-xs">Unternehmensberaterin und Coach </p>
           </div>
           {/* <p className=" rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit text-xs">
             Top Business{" "}
