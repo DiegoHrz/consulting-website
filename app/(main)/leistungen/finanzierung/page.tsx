@@ -1,3 +1,4 @@
+import AppointmentBanner from "@/app/components/AppointmentBanner";
 import React from "react";
 
 const Finanzierung = () => {
@@ -397,7 +398,7 @@ const Finanzierung = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-green-100 rounded-xl p-8 text-center">
+      {/* <div className="bg-green-100 rounded-xl p-8 text-center">
         <h3 className="text-xl font-bold mb-4">
           Bereit für den nächsten Schritt?
         </h3>
@@ -408,6 +409,12 @@ const Finanzierung = () => {
         <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">
           Jetzt Beratungstermin vereinbaren
         </button>
+      </div> */}
+      <div className="my-20 md:my-36">
+        <AppointmentBanner
+          gradientColor2="to-green-100"
+          buttonColor="bg-green-700"
+        />
       </div>
     </div>
   );

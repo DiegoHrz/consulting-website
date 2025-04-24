@@ -6,6 +6,7 @@ import Intro from "./components/Intro";
 import { Table } from "./components/Table";
 
 import PitchBusinessplan from "./components/PitchBusinessplan";
+import AppointmentBanner from "@/app/components/AppointmentBanner";
 
 const Businessplan = () => {
   return (
@@ -27,6 +28,10 @@ const Businessplan = () => {
       />
       <Product />
       {/* <ContactBanner /> */}
+      <div className="mb-20 md:mb-36">
+        <AppointmentBanner  gradientColor2='to-blue-200' buttonColor="bg-blue-900"  />
+        </div> 
+
     </div>
   );
 };

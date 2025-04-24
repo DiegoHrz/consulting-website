@@ -1,11 +1,11 @@
 "use client";
 
-import Subtitle from "@/app/components/customTags/Subtitle";
+import AppointmentBanner from "@/app/components/AppointmentBanner";
 
 
 import HeroSecondary from "@/app/components/HeroSecondary";
 
-import React, { useState } from "react";
+import React from "react";
 
 // const founders = [
 //   {
@@ -29,7 +29,7 @@ import React, { useState } from "react";
 // ];
 
 const About = () => {
-  const [hoverIn, setHoverIn] = useState(false);
+
 
   return (
     <div>
@@ -524,7 +524,11 @@ const About = () => {
         <section className="py-16 px-8 lg:px-16  max-w-7xl mx-auto">
           <div className="">
             <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-7xl text-justify relative border-4">
-              <img src="/logo/logo-no-bg/logo-black-no-bg.png" alt="" className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 opacity-[3%] max-w-full max-h-full w-auto h-auto object-contain "/>
+              <img
+                src="/logo/logo-no-bg/logo-black-no-bg.png"
+                alt=""
+                className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 opacity-[3%] max-w-full max-h-full w-auto h-auto object-contain "
+              />
               <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed ">
                 Als strategisches Netzwerk eng verbundener Partner haben wir es
                 uns zur Aufgabe gemacht, Gründer, Start-Ups und Selbstständige
@@ -1295,52 +1299,8 @@ const About = () => {
                 </a>
               </div>
             </div>
-
-            <div className="mx-auto  w-full rounded-xl h-[26rem] md:h-[22rem] relative overflow-hidden max-w-7xl shadow-gray-400 shadow-[0px_0px_25px] mt-20 md:mt-36 ">
-              <div className=" bg-gradient-to-r from-[#115369] to-gray-800  flex flex-col items-center gap-8 p-6  h-full justify-center text-center text-white">
-                <Subtitle
-                  text="Ready to Start?"
-                  color="white"
-                  position="center"
-                  size="4xl"
-                  mobileSize="text-3xl"
-                />
-                <p className="text-anna-white/70 mb-2 font-thin text-sm sm:text-base">
-                  Unser Workflow – Schritt für Schritt zu deinem Erfolg
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center">
-                  <button className="rounded-3xl bg-anna-maroon text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-700 duration-700 border border-anna-white">
-                    Make an appointment
-                  </button>
-
-                  <button
-                    className="relative rounded-3xl text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 overflow-hidden text-sm sm:text-base w-fit mx-auto"
-                    onMouseEnter={() => setHoverIn(true)}
-                    onMouseLeave={() => setHoverIn(false)}
-                    style={{
-                      background: "rgba(255, 255, 255, 0.02)",
-                      boxShadow:
-                        "rgba(255, 255, 255, 0.05) 0px 1px 10px 0px inset",
-                    }}
-                  >
-                    <p className="text-anna-white">Kontakt</p>
-                    <div
-                      className={`absolute left-1/2 -translate-x-1/2 transition-all duration-500 ${
-                        hoverIn ? "-bottom-3" : "-bottom-8"
-                      } h-8 sm:h-11 w-8 sm:w-11 aspect-square`}
-                      style={{
-                        backgroundColor: "rgb(234, 168, 121)",
-                        filter: "blur(10px)",
-                        borderRadius: "100px",
-                        opacity: 0.3,
-                      }}
-                    ></div>
-                  </button>
-                </div>
-                {/* <div className="absolute right-0 bottom-[0%] " >
-            <img src="/profile/colleagues.png" alt="" className="bg-cover "/>
-          </div> */}
-              </div>
+            <div className="my-20 md:my-36">
+              <AppointmentBanner />
             </div>
           </div>
         </section>

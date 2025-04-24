@@ -5,89 +5,90 @@ import GlassBoxReverse from "./GlassBoxReverse";
 const Product = () => {
   return (
     <div>
-    <div className="relative h-[35rem] md:h-[40rem] w-full  border">
-      <div className="absolute inset-0 flex items-center justify-center z-[3]">
-        <motion.div
-          variants={zoomIn(0.2, 1.25)}
-          initial="hidden"
-          animate="show"
-          className="relative w-full h-full max-w-[90vw] max-h-[90vh]"
-        >
-          {/* Contenedor principal de la imagen */}
-          <div className="w-full h-full flex items-center justify-center">
-            <a className="flex flex-col items-center justify-center relative z-0 w-fit mx-auto bg-[linear-gradient(180deg,_#fff_50%,_#e7dbdb_100%)]"
-              style={{
-                boxSizing: "border-box",
-                boxShadow: "0 5px 50px rgba(0, 0, 0, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.5)",
-              }}
-            >
-              <div className="bg-transparent max-w-[300px] md:max-w-[500px] overflow-hidden">
-                <div className="flex transition-transform duration-700 ease-in-out">
-                  <img
-                    src="/leistungen/businessplan/businessplan-folder.png"
-                    alt="Business Plan"
-                    className="border-2 w-full flex-shrink-0"
-                  />
+      <div className="relative h-[35rem] md:h-[40rem] w-full  border">
+        <div className="absolute inset-0 flex items-center justify-center z-[3]">
+          <motion.div
+            variants={zoomIn(0.2, 1.25)}
+            initial="hidden"
+            animate="show"
+            className="relative w-full h-full max-w-[90vw] max-h-[90vh]"
+          >
+            {/* Contenedor principal de la imagen */}
+            <div className="w-full h-full flex items-center justify-center">
+              <a
+                className="flex flex-col items-center justify-center relative z-0 w-fit mx-auto bg-[linear-gradient(180deg,_#fff_50%,_#e7dbdb_100%)]"
+                style={{
+                  boxSizing: "border-box",
+                  boxShadow:
+                    "0 5px 50px rgba(0, 0, 0, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.5)",
+                }}
+              >
+                <div className="bg-transparent max-w-[300px] md:max-w-[500px] overflow-hidden">
+                  <div className="flex transition-transform duration-700 ease-in-out">
+                    <img
+                      src="/leistungen/businessplan/businessplan-folder.png"
+                      alt="Business Plan"
+                      className="border-2 w-full flex-shrink-0"
+                    />
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
 
-          {/* Elementos GlassBox alrededor - Versión responsive */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[90%] md:max-w-[250px]">
-            <GlassBoxReverse 
-              title="Gründungszuschuss" 
-              text="Your financial kick" 
-              button="See more" 
-            />
-          </div>
+            {/* Elementos GlassBox alrededor - Versión responsive */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[90%] md:max-w-[250px]">
+              <GlassBoxReverse
+                title="Gründungszuschuss"
+                text="Your financial kick"
+                button="See more"
+              />
+            </div>
 
-          <div className="absolute top-1/4 -right-2 md:-right-20 translate-y-1/2 w-[20%] max-w-[200px] md:max-w-[250px]">
-            <GlassBoxReverse 
-              title="Asesoramiento" 
-              text="Professional guidance" 
-              button="Learn more" 
-            />
-          </div>
+            <div className="absolute top-1/4 -right-2 md:-right-20 translate-y-1/2 w-[20%] max-w-[200px] md:max-w-[250px]">
+              <GlassBoxReverse
+                title="Asesoramiento"
+                text="Professional guidance"
+                button="Learn more"
+              />
+            </div>
 
-          <div className="absolute top-1/2 -left-2 md:-left-20 -translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
-            <GlassBoxReverse 
-              title="Planificación" 
-              text="Strategic planning" 
-              button="Details" 
-            />
-          </div>
+            <div className="absolute top-1/2 -left-2 md:-left-20 -translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
+              <GlassBoxReverse
+                title="Planificación"
+                text="Strategic planning"
+                button="Details"
+              />
+            </div>
 
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-[90%] md:max-w-[250px]">
-            <GlassBoxReverse 
-              title="Financiamiento" 
-              text="Funding options" 
-              button="Explore" 
-            />
-          </div>
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-[90%] md:max-w-[250px]">
+              <GlassBoxReverse
+                title="Financiamiento"
+                text="Funding options"
+                button="Explore"
+              />
+            </div>
 
-          <div className="absolute bottom-1/4 -left-2 md:-left-20 translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
-            <GlassBoxReverse 
-              title="Legal" 
-              text="Legal support" 
-              button="View" 
-            />
-          </div>
+            <div className="absolute bottom-1/4 -left-2 md:-left-20 translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
+              <GlassBoxReverse
+                title="Legal"
+                text="Legal support"
+                button="View"
+              />
+            </div>
 
-          <div className="absolute top-3/4 -right-2 md:-right-20 -translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
-            <GlassBoxReverse 
-              title="Networking" 
-              text="Business connections" 
-              button="Connect" 
-            />
-          </div>
-        </motion.div>
-
+            <div className="absolute top-3/4 -right-2 md:-right-20 -translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
+              <GlassBoxReverse
+                title="Networking"
+                text="Business connections"
+                button="Connect"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
       <div className="">
         {/* Hero Section */}
-        <div className="mb-12">
+        <div className="">
           <h6 className="text-lg font-semibold text-gray-500 mb-2">
             Leistungen - Businessplan
           </h6>
@@ -203,7 +204,7 @@ const Product = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="mb-12">
+        <div className="">
           <div className="border-t border-gray-200 my-8"></div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Dein Vorteil mit AS Vision Partners:
@@ -286,7 +287,7 @@ const Product = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-blue-100 rounded-xl p-8 text-center">
+        {/* <div className="bg-blue-100 rounded-xl p-8 text-center">
           <h3 className="text-xl font-bold mb-4">
             Bereit für den nächsten Schritt?
           </h3>
@@ -298,7 +299,7 @@ const Product = () => {
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">
             Jetzt Beratungstermin vereinbaren
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
