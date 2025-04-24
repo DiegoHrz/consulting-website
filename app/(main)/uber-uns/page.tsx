@@ -548,8 +548,8 @@ const About = () => {
               <h3 className="text-2xl font-bold text-indigo-800 mb-6 text-center">
                 Unsere Mission
               </h3>
-              <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-                „Wir begleiten Menschen auf ihrem Weg in die Selbstständigkeit
+              <blockquote className="text-gray-700  text-lg leading-relaxed">
+                Wir begleiten Menschen auf ihrem Weg in die Selbstständigkeit
                 und helfen ihnen, ihre beruflichen Visionen in die Realität
                 umzusetzen. Mit persönlicher Beratung, fachlicher Expertise und
                 individuellen Lösungen bieten wir unseren Kund*innen die
@@ -561,8 +561,8 @@ const About = () => {
               <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">
                 Unsere Vision
               </h3>
-              <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-                „Wir möchten eine zentrale Anlaufstelle für Gründerinnen und
+              <blockquote className="text-gray-700  text-lg leading-relaxed">
+                Wir möchten eine zentrale Anlaufstelle für Gründerinnen und
                 Unternehmerinnen sein, die nach klarer Orientierung, praxisnaher
                 Unterstützung und langfristigem Erfolg streben. Unsere Vision
                 ist es, ein Netzwerk zu schaffen, in dem jede*r die Möglichkeit
@@ -1309,7 +1309,7 @@ const About = () => {
                   Unser Workflow – Schritt für Schritt zu deinem Erfolg
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center">
-                  <button className="rounded-3xl bg-anna-maroon text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-900 duration-700">
+                  <button className="rounded-3xl bg-anna-maroon text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-700 duration-700 border border-anna-white">
                     Make an appointment
                   </button>
 
