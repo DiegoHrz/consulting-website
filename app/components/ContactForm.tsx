@@ -186,7 +186,7 @@ const ContactForm = () => {
             <input
               type="text"
               id="asunto"
-              placeholder="Affäre"
+              placeholder="Betreff"
               {...register("asunto", {
                 required: true,
               })}
