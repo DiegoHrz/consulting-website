@@ -301,7 +301,7 @@ const About = () => {
           right_bottom_image="worker5.jpeg"
         />
       </div> */}
-      <div className="mt-[70px] w-full  mb-[70px] max-w-7xl sm:px-16 px-10 mx-auto">
+      <div className="mt-[70px] w-full  mb-[70px] max-w-7xl px-8 sm:px-16  mx-auto">
         <div>
           <div className="bg-anna-cream rounded-xl p-10">
             <div className="mb-40">
@@ -577,10 +577,10 @@ const About = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+      <section className="py-16 px-8 lg:px-16 max-w-7xl mx-auto">
+        <div className="">
+          <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-7xl">
+            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed ">
               Als strategisches Netzwerk eng verbundener Partner haben wir es uns zur Aufgabe gemacht, Gründer, Start-Ups und Selbstständige dabei zu unterstützen, ihre Visionen zu verwirklichen und ihre Träume in die Realität umzusetzen.
             </p>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
@@ -592,7 +592,7 @@ const About = () => {
 
       {/* Mission & Vision */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 py-16 px-8 lg:px-16 max-w-7xl mx-auto">
           <div className="bg-indigo-50 rounded-xl p-8 shadow-md">
             <h3 className="text-2xl font-bold text-indigo-800 mb-6">Unsere Mission</h3>
             <blockquote className="text-gray-700 italic text-lg leading-relaxed">
@@ -620,7 +620,7 @@ const About = () => {
 
       {/* Promise Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100">
-        <div className="max-w-7xl mx-auto">
+        <div className=" px-8 lg:px-16 max-w-7xl mx-auto">
           <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">Unser Versprechen</h3>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -659,10 +659,10 @@ const About = () => {
 
       {/* Founder Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="px-8 lg:px-16 max-w-7xl mx-auto">
           <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">Meet the Founder - Anna Schenk</h3>
           
-          <div className="flex flex-col md:flex-row gap-12 items-center">
+          <div className="flex flex-col md:flex-row gap-12 ">
             <div className="md:w-1/3">
               <div className="bg-gray-200 rounded-xl overflow-hidden aspect-square w-full max-w-md mx-auto">
                 {/* Placeholder for image */}
@@ -750,7 +750,7 @@ const About = () => {
 
       {/* Team Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100">
-        <div className="max-w-7xl mx-auto">
+        <div className="px-8 lg:px-16 max-w-7xl mx-auto">
           <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">Unser Team</h3>
           
           <div className="grid md:grid-cols-2 gap-8">
