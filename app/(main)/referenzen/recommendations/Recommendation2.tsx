@@ -16,7 +16,7 @@ const Recommendation2: React.FC = () => {
         <div className="flex flex-col lg:pl-20 pt-1 sm:pt-0">
           <div className="lg:ml-auto">
             <span className="font-vollkornSC  tracking-[3px]">
-              Julia Knoll -{" "}
+              julia knoll -{" "}
             </span>
             <span className="text-sm font-vollkorn">Gründerin</span>
           </div>

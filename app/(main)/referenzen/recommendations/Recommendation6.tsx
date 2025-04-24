@@ -27,12 +27,17 @@ const Recommendation6: React.FC = () => {
         </div>
         <div className="flex flex-col lg:pl-20 pt-1 sm:pt-0">
           <div className="lg:ml-auto">
-            <span className="font-vollkornSC  tracking-[3px]">
-              Marcel Köppert -{" "}
-            </span>
-            <span className="text-sm font-vollkorn">
-              Gründerin - Hausmeister- und Terrassenreinigungsservice
-            </span>
+            <div>
+              <span className="font-vollkornSC  tracking-[3px]">
+                marcel köppert
+              </span>
+              <span className="mx-1"> - </span>
+              <span className="text-sm font-vollkorn">Gründer</span>
+              <span className="mx-1"> - </span>
+              <span className="text-sm font-vollkorn">
+                Hausmeister und Terrassenreinigungsservice
+              </span>
+            </div>
           </div>
         </div>
         <div className="flex gap-3 my-2 lg:pl-20 w-full pb-1 sm:pt-0">

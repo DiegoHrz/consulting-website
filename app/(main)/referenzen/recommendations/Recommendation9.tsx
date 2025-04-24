@@ -27,10 +27,11 @@ const Recommendation9: React.FC = () => {
         </div>
         <div className="flex flex-col pt-1 sm:pt-0">
           <div>
-            <span className="font-vollkornSC  tracking-[3px]">German Ohl </span>
-            <span className="text-sm font-vollkorn">
-              - Bootsbau - Gründerin
-            </span>
+            <span className="font-vollkornSC  tracking-[3px]">German Ohl</span>
+            <span className="mx-1" > - </span>
+            <span className="text-sm font-vollkorn">Gründer</span>
+            <span className="mx-1" > - </span>
+            <span className="text-sm font-vollkorn">Bootsbau</span>
           </div>
           <div className="hidden">
             <Title text="Unternehmensberaterin und Coach" />
@@ -62,7 +63,7 @@ const Recommendation9: React.FC = () => {
           hohe Einsatzbereitschaft und ihr Engagement aus. Sie war jederzeit
           erreichbar und kam auch proaktiv mit Ideen auf mich zu. Das alles hat
           mir das Gefühl gegeben, in besten Händen zu sein.
-          <span className="md:text-xl text-anna-maroon font-cabin_sans ">
+          <span className="md:text-xl text-yellow-600 font-cabin_sans ">
             {" "}
             Ich bin überzeugt, dass ihre professionelle Unterstützung zu einer
             erfolgreichen Selbständigkeit maßgeblich beitragen wird.

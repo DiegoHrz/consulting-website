@@ -3,8 +3,6 @@ import Title from "@/app/components/customTags/Title";
 import Wrapper from "@/app/hoc/Wrapper";
 import { GiLaurelCrown } from "react-icons/gi";
 
-
-
 import { IoIosArrowForward } from "react-icons/io";
 
 const Recommendation1: React.FC = () => {
@@ -17,9 +15,14 @@ const Recommendation1: React.FC = () => {
         <div className="flex flex-col pt-1 sm:pt-0">
           <div>
             <span className="font-vollkornSC  tracking-[3px]">
-              Liliya Kurzawa -{" "}
+              liliya kurzawa
             </span>
+            <span className="mx-1"> - </span>
             <span className="text-sm font-vollkorn">Gründerin</span>
+            <span className="mx-1"> - </span>
+            <span className="text-sm font-vollkorn">
+              Unternehmensberaterin und Coach
+            </span>
           </div>
           <div className="hidden">
             <Title text="Unternehmensberaterin und Coach" />
