@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 
 import CustomStar from "./customIcons/Star";
 import BlurBgImage from "./BlurBg/BlurBgImage";
+import Link from "next/link";
 
 export function CarouselDemo() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -31,16 +32,41 @@ export function CarouselDemo() {
     });
   }, [api]);
 
-  const ofertas = [
-    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
-    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
-    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
-    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
-    "Esta es una impresionantte review no te la pierdas leela hasta que no puedas mas. Esta es una impresionantte review no te la pierdas",
+  const clients = [
+    {
+      name: "Sylvia Schnaider ",
+      business: "Unternehmensberaterin und Coach",
+      comment:
+        "         Anna Schenk hat mich mit unglaublich viel Engagement und Herzblut bei der Gründung meines Unternehmens unterstützt. Dank ihrer Expertise und Zuverlässigkeit konnte ich einen fundierten und professionellen Businessplan sowie eine solide Finanzplanung erstellen. Anna war jederzeit verfügbar, hat schnell und effizient gearbeitet und war dabei stets offen für meine Fragen und Anliegen. Ihre Unterstützung war für mich eine große Bereicherung, und ich bin ihr dafür sehr dankbar. Ich kann sie uneingeschränkt weiterempfehlen!",
+    },
+    {
+      name: "Christina Hüttner",
+      business: "Freie Rede und Coaching",
+      comment:
+        "Ich bin unglaublich dankbar, Anna als Gründungsberaterin während des gesamten Prozesses zum Gründungszuschuss an meiner Seite gehabt zu haben. Anna ist super zuverlässig, mega motiviert, kennt sich extrem gut aus und bleibt dran bis du deinen Zuschuss erhältst, du kannst dich immer auf sie verlassen. Sie gibt dir in wirklich allen Bereichen und sogar darüber hinaus wertvolle Tipps und du bekommst von ihr außergewöhnlich schnelle Antworten auf all deine Fragen. Sie unterstützt dich einfach vollkommen. Ich habe mich mit ihr jederzeit sehr wohl gefühlt und ohne sie wäre ich schier verzweifelt. Lass dir die Gelegenheit nicht entgehen, sie für einen erfolgreichen Antrag an deiner Seite zu haben. Menschlich und fachlich einfach wunderbar!",
+    },
+    {
+      name: "Liliya Kurzawa",
+      business: "Psychologische Beratung",
+      comment:
+        "Ich habe Frau Schenk bei der Beantragung des Gründungszuschusses bei der Bundesagentur für Arbeit kennengelernt. Die Arbeit mit Frau Schenk war stets professionell, zuverlässig und freundlich. Sie hat mich bei jeder Phase meines Antrags unterstützt, sei es fachlich als auch emotional/psychisch. Da die Antragsphase sehr nervenaufreibend ist, hat mich gerade das Zwischenmenschliche bei Frau Schenk überzeugt. Am Ende haben wir Erfolg gehabt, sodass ich den Gründungszuschuss, nach gemeinsamer harter Arbeit, auch bewilligt und ausgezahlt bekommen habe. Ich würde Frau Schenk jeder Zeit wieder empfehlen. Wie bereits erwähnt, ist sie nicht nur fachlich kompetent, sondern auch in der Zusammenarbeit sehr hilfsbereit, geduldig und empathisch. Vielen Dank nochmal!",
+    },
+    {
+      name: "Denis Bares",
+      business: "Inhaber Edelmetallhandel",
+      comment:
+        "Anna hat mich fachlich sehr gut mit meinem Businessplan betreut. Bei Fragen war sie stets hilfsbereit. Insbesondere im Finanzteil hat sie mir sehr geholfen, mich auf das Bankengespräch vorzubereiten. Ich bin sehr zufrieden und die Finanzierung ist durchgegangen.",
+    },
+    {
+      name: "Nico E.",
+      business: " Ergotherapeut",
+      comment:
+        "Anna war mir eine große Stütze bei der Erstellung des Business- und des Finanzplans und hat mir darüber hinaus ein sehr hilfreiches Buchhaltungs-Coaching gegeben. Ich bin sehr dankbar und glücklich, dass sie mir auch weiterhin für Fragen zur Verfügung steht und sie mir die Schritte in die Selbstständigkeit derart erleichtert hat.",
+    },
   ];
 
   return (
-    <div className="relative w-full max-w-7xl sm:px-16 px-10 pb-6 pt-4 ">
+    <div className="relative w-full max-w-7xl sm:px-16 px-6 pb-6 pt-4 ">
       <BlurBgImage />
       <Carousel
         setApi={setApi}
@@ -50,72 +76,76 @@ export function CarouselDemo() {
         }}
       >
         <CarouselContent className="py-2 z-0">
-          {ofertas.map((oferta, index) => (
+          {clients.map((client, index) => (
             <CarouselItem
               key={index}
               className="sm:basis-[70%] md:basis-1/2  lg:basis-1/3"
             >
               <div className="p-1 ">
                 <Card className=" mx-4 ">
-                  <CardContent className="flex flex-col items-center justify-center p-4 border-none rounded-lg aspect-square  shadow-anna-blue shadow-[0px_1px_7px_0px] ">
-                    <div className=" w-full h-full px-5">
-                      <div className="flex mx-2 mb-5 gap-5 ">
-                        <div className="">
-                          {/* <SvgShape imageX={1} imageY={25}  /> */}
-                          <img
-                            src="/profile/chino-profesional.png"
-                            alt="f"
-                            className="h-14 "
-                          />
-                        </div>
+                  <Link href="/referenzen">
+                    <CardContent className="flex flex-col items-center justify-center p-4 border-none rounded-lg aspect-square  shadow-anna-blue shadow-[0px_1px_7px_0px] ">
+                      <div className=" w-full h-full px-5">
+                        <div className="flex mb-5 gap-5 ">
+                          {/* <div className="">
 
-                        <div className="flex flex-col  mt-1">
-                          <div className="text-sm font-medium  ">
-                            Morris Clarke
-                          </div>
-                          <div className="text-xs  font-light">IBM</div>
-                          <div className="text-xs flex  gap-[0.12rem]">
-                            <CustomStar
-                              fill="#FFDC38"
-                              stroke="#FFAD2C"
-                              strokeWidth={2}
-                              size={15}
+                            <img
+                              src="/profile/chino-profesional.png"
+                              alt="f"
+                              className="h-14 "
                             />
-                            <CustomStar
-                              fill="#FFDC38"
-                              stroke="#FFAD2C"
-                              strokeWidth={2}
-                              size={15}
-                            />
-                            <CustomStar
-                              fill="#FFDC38"
-                              stroke="#FFAD2C"
-                              strokeWidth={2}
-                              size={15}
-                            />
-                            <CustomStar
-                              fill="#FFDC38"
-                              stroke="#FFAD2C"
-                              strokeWidth={2}
-                              size={15}
-                            />
-                            <CustomStar
-                              fill="#FFDC38"
-                              stroke="#FFAD2C"
-                              strokeWidth={2}
-                              size={15}
-                            />
+                          </div> */}
+
+                          <div className="flex flex-col  mt-1">
+                            <div className="text-sm font-medium  ">
+                              {client.name}
+                            </div>
+                            <div className="text-xs  font-light ">
+                              {client.business}
+                            </div>
+                            <div className="text-xs flex  gap-[0.12rem]">
+                              <CustomStar
+                                fill="#FFDC38"
+                                stroke="#FFAD2C"
+                                strokeWidth={2}
+                                size={15}
+                              />
+                              <CustomStar
+                                fill="#FFDC38"
+                                stroke="#FFAD2C"
+                                strokeWidth={2}
+                                size={15}
+                              />
+                              <CustomStar
+                                fill="#FFDC38"
+                                stroke="#FFAD2C"
+                                strokeWidth={2}
+                                size={15}
+                              />
+                              <CustomStar
+                                fill="#FFDC38"
+                                stroke="#FFAD2C"
+                                strokeWidth={2}
+                                size={15}
+                              />
+                              <CustomStar
+                                fill="#FFDC38"
+                                stroke="#FFAD2C"
+                                strokeWidth={2}
+                                size={15}
+                              />
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      {/* <div className=" font-semibold text-center mb-3 text-anna-brown font-cabin">
+                        {/* <div className=" font-semibold text-center mb-3 text-anna-brown font-cabin">
                         Amazing Review
                       </div> */}
-                      <div className="text-sm text-anna-brown/70 font-cabin_sans">
-                        {oferta}
+                        <div className="text-sm text-anna-brown/70 font-cabin_sans line-clamp-5 overflow-hidden text-ellipsis">
+                          {client.comment}
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
+                    </CardContent>
+                  </Link>
                 </Card>
               </div>
             </CarouselItem>
@@ -129,7 +159,7 @@ export function CarouselDemo() {
         </div>
       </Carousel>
       <div className="flex justify-center gap-2 mt-4">
-        {ofertas.map((_, index) => (
+        {clients.map((_, index) => (
           <Button
             key={index}
             variant="outline"

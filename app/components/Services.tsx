@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import GlassBox from "./GlassBox";
 import ParallaxBanner from "./Parallax/ParallaxBanner";
 import Title from "./customTags/Title";
@@ -84,20 +85,24 @@ const Services: React.FC = ({}) => {
               <img src="/icons/exclusive.png" alt="" className="w-14 h-14" />
             </motion.div> */}
               <div className=" col-span-6 md:col-span-3 lg:col-span-2">
-                <GlassBox
-                  title="Gründungszuschuss"
-                  text="Wir unterstützen dich bei der Beantragung deines Gründungszuschusses – Schritt für Schritt bis zur Förderung."
-                  button="See more"
-                />
+                <Link href="/leistungen/grundungszuschuss">
+                  <GlassBox
+                    title="Gründungszuschuss"
+                    text="Wir unterstützen dich bei der Beantragung deines Gründungszuschusses – Schritt für Schritt bis zur Förderung."
+                    button="See more"
+                  />
+                </Link>
               </div>
 
               <div className=" col-span-6 md:col-span-3 lg:col-span-2">
-                <GlassBox
-                  title="Businessplan"
-                  text="Individuell und professionell – wir erstellen gemeinsam deinen Businessplan für Förderungen, Banken und Investoren."
-                  button="See more"
-                  special="bestSeller"
-                />
+                <Link href="/leistungen/businessplan">
+                  <GlassBox
+                    title="Businessplan"
+                    text="Individuell und professionell – wir erstellen gemeinsam deinen Businessplan für Förderungen, Banken und Investoren."
+                    button="See more"
+                    special="bestSeller"
+                  />
+                </Link>
               </div>
 
               {/* <GlassBox
@@ -105,28 +110,34 @@ const Services: React.FC = ({}) => {
               text="Your financial kick start in independence"
               button="See more"
             /> */}
-              <div className=" col-span-6 md:col-span-3 lg:col-span-2">
-                <GlassBox
-                  title="Finanzierung"
-                  text="Ob Gründungsdarlehen, Bankkredite oder alternative Finanzierungen – wir finden die passende Lösung für dein Vorhaben."
-                  button="See more"
-                />
+              <div className=" col-span-6 md:col-span-3 lg:col-span-2 cursor-pointer">
+                <Link href="/leistungen/finanzierung">
+                  <GlassBox
+                    title="Finanzierung"
+                    text="Ob Gründungsdarlehen, Bankkredite oder alternative Finanzierungen – wir finden die passende Lösung für dein Vorhaben."
+                    button="See more"
+                  />
+                </Link>
               </div>
 
               <div className="col-span-6 md:col-span-3 lg:col-span-2 lg:col-start-2">
-                <GlassBox
-                  title="Buchhaltung"
-                  text="Einfach, verständlich und effizient – wir zeigen dir, wie du deine Buchhaltung sicher im Griff hast."
-                  button="See more"
-                  special="exclusive"
-                />
+                <Link href="/leistungen/buchhaltung">
+                  <GlassBox
+                    title="Buchhaltung"
+                    text="Einfach, verständlich und effizient – wir zeigen dir, wie du deine Buchhaltung sicher im Griff hast."
+                    button="See more"
+                    special="exclusive"
+                  />
+                </Link>
               </div>
               <div className=" col-span-6 md:col-span-4 md:col-start-2 lg:col-span-2 lg:col-start-4">
+              <Link href='/leistungen/websites-marketing'>
                 <GlassBox
                   title="Websites und Marketing"
                   text="Online sichtbar werden – mit einer klaren Website und gezielten Marketingstrategien für deinen Erfolg."
                   button="See more"
-                />
+                  />
+                  </Link>
               </div>
 
               {/* <motion.div
