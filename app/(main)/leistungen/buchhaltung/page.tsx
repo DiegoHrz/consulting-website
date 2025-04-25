@@ -50,7 +50,7 @@ const Buchhaltung = () => {
           </div>
           <div className="md:w-1/3 bg-white p-6 rounded-lg shadow-md border border-purple-100">
             <img
-              src="https://www.lexware.de/sites/default/files/styles/logo/public/2020-09/lexware-office-logo.png"
+              src="/lexware.jpeg"
               alt="Lexware Office Logo"
               className="w-full h-auto mb-4"
             />
