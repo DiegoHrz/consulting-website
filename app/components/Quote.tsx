@@ -10,7 +10,7 @@ const Quote = () => {
       className=" rounded-lg my-[80px]"
       style={{
         background:
-          "radial-gradient(21% 42% at 50% 50%, rgba(27, 119, 150,0.2) 0%, rgba(56, 54, 61, 0) 100%)",
+          "radial-gradient(50% 50% at 50% 50%, rgba(27, 119, 150,0.15) 0%, rgba(56, 54, 61, 0) 100%)",
       }}
     >
       {/* <BlurBgImage/> */}
@@ -78,6 +78,7 @@ const Quote = () => {
           Know us
         </button>
       </div> */}
+
     </div>
   );
 };
