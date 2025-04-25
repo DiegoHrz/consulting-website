@@ -30,12 +30,12 @@ const Carousel: React.FC = () => {
             <img src="/brands/brand4.png" alt=""  />
           </div>
           <div className="item" style={{ "--position": 5 } as React.CSSProperties}>
-            <img src="/brands/brand5.jpeg" alt=""  />
+            <img src="/brands/brand6.2.jpg" alt=""  />
           </div>
           <div className="item" style={{ "--position": 6 } as React.CSSProperties}>
             <img src="/brands/brand6.jpeg" alt=""  />
           </div>
-          <div className="item" style={{ "--position": 7 } as React.CSSProperties}>
+          {/* <div className="item" style={{ "--position": 7 } as React.CSSProperties}>
             <img src="/brands/1.png.png" alt="" />
           </div>
           <div className="item" style={{ "--position": 8 } as React.CSSProperties}>
@@ -43,7 +43,7 @@ const Carousel: React.FC = () => {
           </div>
           <div className="item" style={{ "--position": 9 } as React.CSSProperties}>
             <img src="/images/tech/reactjs.png" alt="" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

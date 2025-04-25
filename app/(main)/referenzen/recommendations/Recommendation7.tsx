@@ -75,7 +75,7 @@ const Recommendation7: React.FC = () => {
           className=" object-cover hidden lg:block"
           alt=""
         /> */}
-        <div className="w-full h-full bg-gradient-to-br from-white to-gray-200 flex items-center justify-center text-gray-500">
+        <div className="w-full h-full bg-gradient-to-br from-white to-gray-100 flex items-center justify-center text-gray-500">
           <svg
             className="w-20 h-20"
             fill="none"
