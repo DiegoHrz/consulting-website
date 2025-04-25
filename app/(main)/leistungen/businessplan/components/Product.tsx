@@ -88,7 +88,7 @@ const Product = () => {
       </div>
       <div className="">
         {/* Hero Section */}
-        <div className="">
+        {/* <div className="">
           <h6 className="text-lg font-semibold text-gray-500 mb-2">
             Leistungen - Businessplan
           </h6>
@@ -102,10 +102,10 @@ const Product = () => {
             als überzeugendes Werkzeug, um Partner, Banken und Investoren von
             deiner Idee zu begeistern.
           </p>
-        </div>
+        </div> */}
 
         {/* Why Important Section */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <div className="border-t border-gray-200 my-8"></div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Warum ist ein Businessplan wichtig?
@@ -148,7 +148,7 @@ const Product = () => {
             Ein guter Businessplan ist nicht nur ein Dokument, sondern eine
             Strategie, die dich auf deinem Weg begleitet.
           </p>
-        </div>
+        </div> */}
 
         {/* Content Section */}
         <div className="mb-12">

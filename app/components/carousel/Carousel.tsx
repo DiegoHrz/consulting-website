@@ -18,22 +18,22 @@ const Carousel: React.FC = () => {
       >
         <div className="list ">
           <div className="item" style={{ "--position": 1 } as React.CSSProperties}>
-            <img src="/brands/1.png" alt=""  />
+            <img src="/brands/brand1.avif" alt=""  />
           </div>
           <div className="item" style={{ "--position": 2 } as React.CSSProperties}>
-            <img src="/brands/2.png" alt=""  />
+            <img src="/brands/brand2.webp" alt=""  />
           </div>
           <div className="item" style={{ "--position": 3 } as React.CSSProperties}>
-            <img src="/brands/3.png" alt=""  />
+            <img src="/brands/brand3.png" alt=""  />
           </div>
           <div className="item" style={{ "--position": 4 } as React.CSSProperties}>
-            <img src="/brands/4.png" alt=""  />
+            <img src="/brands/brand4.png" alt=""  />
           </div>
           <div className="item" style={{ "--position": 5 } as React.CSSProperties}>
-            <img src="/brands/5.png" alt=""  />
+            <img src="/brands/brand5.jpeg" alt=""  />
           </div>
           <div className="item" style={{ "--position": 6 } as React.CSSProperties}>
-            <img src="/brands/6.png" alt=""  />
+            <img src="/brands/brand6.jpeg" alt=""  />
           </div>
           <div className="item" style={{ "--position": 7 } as React.CSSProperties}>
             <img src="/brands/1.png.png" alt="" />

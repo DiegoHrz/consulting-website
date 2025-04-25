@@ -50,7 +50,7 @@ const ContactForm = () => {
         Contacto
       </h1> */}
       <p className="font-medium text-xl pt-6 lg:pt-[40px] lg:text-[20px] font-vollkornSC">
-        Wir sind hier, um alle Ihre Fragen anzuhören und den Kurs Ihres
+        Wir sind hier, um alle deine Fragen anzuhören und den Kurs deines
         Unternehmens zu ändern.
       </p>
       <div className="text-[#03b418] py-3 ">
@@ -92,11 +92,6 @@ const ContactForm = () => {
           <header className=" text-3xl pb-4   lg:text-left font-rilke-monecias ">
             Kontakt
           </header>
-          <img
-            src="/assets/rose/rosa-negra.png"
-            className="hidden lg:block  w-12 lg:w-40 z-10 absolute -bottom-3 lg:bottom-3  lg:left-12 -translate-x-1/2 "
-            alt=""
-          />
           <div className="flex flex-col-reverse">
             <input
               type="text"
@@ -245,7 +240,7 @@ const ContactForm = () => {
             <div className="text-left relative text-[#D5CACA]">
               <img
                 src="/logo/logo-no-bg/logo-white-no-bg.png"
-                className="hidden lg:block w-12 lg:w-16 z-10 absolute -bottom-1 lg:-top-[15%]  lg:-right-[27%] -translate-x-1/2 "
+                className="hidden lg:block w-12 lg:w-16 z-10 absolute -bottom-1 lg:-top-[18%]  lg:-right-[27%] -translate-x-1/2 "
               />
               {/* <img
                 src="/assets/rose/rosa-blanca.jpg"
@@ -253,10 +248,10 @@ const ContactForm = () => {
                 alt=""
               /> */}
               <p className="text-3xl pb-8 font-rilke-monecias text-anna-white font-bold">
-                Wir warten auf Sie
+                Wir warten auf dich
               </p>
               <p className="pb-8 text-anna-white">
-                Wir sind stets bereit, Ihrem Unternehmen mit unseren
+                Wir sind stets bereit, deinem Unternehmen mit unseren
                 Geschäftsplänen zum Durchbruch zu verhelfen und sein Wachstum
                 fortzusetzen.
               </p>
@@ -386,10 +381,10 @@ const ContactForm = () => {
                 className="hidden lg:block w-12 lg:w-10 z-10 absolute -bottom-1 lg:-bottom-14  lg:-right-[6.5rem] -translate-x-1/2 "
               /> */}
             <p className="text-3xl pb-8 font-cabin text-anna-white text-center">
-              Wir warten auf Sie
+              Wir warten auf dich
             </p>
             <p className="pb-8 text-justify">
-              Wir sind stets bereit, Ihrem Unternehmen mit unseren
+              Wir sind stets bereit, deinem Unternehmen mit unseren
               Geschäftsplänen zum Durchbruch zu verhelfen und sein Wachstum
               fortzusetzen.
             </p>

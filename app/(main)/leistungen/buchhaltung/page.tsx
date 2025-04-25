@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 
-
 import Subtitle from "@/app/components/customTags/Subtitle";
 
 const Buchhaltung = () => {
@@ -399,20 +398,20 @@ const Buchhaltung = () => {
               className={` bg-gradient-to-r from-purple-200 to-blue-200 flex flex-col items-center gap-8 p-6  h-full justify-center text-center text-white`}
             >
               <Subtitle
-                text="Ready to Start?"
+                text="Bereit loszulegen?"
                 color="gray-700"
                 position="center"
                 size="4xl"
                 mobileSize="text-3xl"
               />
               <p className="text-anna-gray mb-2 font-thin text-sm sm:text-base">
-                Unser Workflow – Schritt für Schritt zu deinem Erfolg
+                Unser Team führt dich zum Erfolg
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center">
                 <button
                   className={`rounded-3xl bg-purple-700  text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-700 duration-700 border border-anna-white`}
                 >
-                  Make an appointment
+                  Vereinbare einen Termin
                 </button>
 
                 <button

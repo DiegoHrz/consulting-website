@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="max-w-[28rem]">
             leistungen
             <Title
-              text="Empower Your Financial Businessplan with AS"
+              text="Der perfekte Businessplan für dich mit AVP"
               textPosition="left"
               additionalClass="text-white font-normal"
               noLengthMax={true}
@@ -24,8 +24,8 @@ const Hero = () => {
           </div>
           <div>
             <p className="text-left max-w-[400px]  text-lg text-anna-white-dark">
-              Modern technology, trusted expertise and{" "}
-              <b className="text-anna-white">limitless potential</b>
+              Dein Businessplan für{" "}
+              <b className="text-anna-white">deinen Erfolg</b>
             </p>
           </div>
           {/* <div>
@@ -42,7 +42,7 @@ const Hero = () => {
                 <li>OV</li>
                 <li>Paypal</li>
               </ul> */}
-            <ButtonAnnaBurgundy text="Get started today" />
+            <ButtonAnnaBurgundy text="Lege heute los" />
             <ButtonAnnaTransparent text="Kontakt" />
           </div>
           {/* <div className="sm:mt-10">
@@ -85,11 +85,11 @@ const Hero = () => {
               </div>
               <div className="ml-3 flex items-center">
                 <span className="font-vollkornSC font-bold text-anna-blue text-[1.5rem]">
-                  60
+                  100
                 </span>
-                <span className="text-sm font-bold text-anna-blue mr-1">+</span>
+                <span className="text-sm font-bold text-anna-blue mr-2">+</span>
                 <span className="font-vollkornSC text-anna-blue font-semibold">
-                  satisfied clients
+                  zufriedene kunden
                 </span>
               </div>
             </div>
@@ -107,7 +107,7 @@ const Hero = () => {
           </div>
           <div className=" relative">
             <p className="text-anna-white-dark  text-sm max-w-40">
-              Smart, Secure and Seamless Solutions for Transactions
+              Individuell und überzeugend auf deine Wünsche angepasst
             </p>
             <div className="absolute top-2 left-1/2 -translate-x-1/2 z-[3]">
               <motion.div

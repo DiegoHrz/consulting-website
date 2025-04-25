@@ -27,7 +27,7 @@ const Recommendation9: React.FC = () => {
         </div>
         <div className="flex flex-col pt-1 sm:pt-0">
           <div>
-            <span className="font-vollkornSC  tracking-[3px]">German Ohl</span>
+            <span className="font-vollkornSC  tracking-[3px]">german ohl</span>
             <span className="mx-1" > - </span>
             <span className="text-sm font-vollkorn">Gründer</span>
           </div>

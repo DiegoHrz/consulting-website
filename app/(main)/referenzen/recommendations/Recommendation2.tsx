@@ -3,7 +3,6 @@ import Title from "@/app/components/customTags/Title";
 import Wrapper from "@/app/hoc/Wrapper";
 import { GiLaurelCrown } from "react-icons/gi";
 
-
 import { IoIosArrowForward } from "react-icons/io";
 
 const Recommendation2: React.FC = () => {
@@ -30,20 +29,21 @@ const Recommendation2: React.FC = () => {
         <div className="flex gap-3 my-2 lg:pl-20 w-full pb-1 sm:pt-0">
           <div className="flex items-center gap-1 rounded-2xl bg-[#DCE5F0] text-[#0B66C2] font-semibold py-1 px-3 w-fit lg:ml-auto">
             <GiLaurelCrown size={20} />
-            <p className="text-xs">Lernbegleitung und astro-psychologisches Coaching </p>
+            <p className="text-xs">
+              Lernbegleitung und astro-psychologisches Coaching{" "}
+            </p>
           </div>
           {/* <p className=" rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit text-xs">
             Top Business{" "}
           </p> */}
         </div>
         <p className="lg:pl-20 font-vollkorn text-[#808080] pt-4 text-justify">
-          Lernbegleitung und astro-psychologisches Coaching: “Frau Schenk habe
-          ich als sehr kompetente Beraterin in ihrem Bereich wahrgenommen. Sie
-          hat mich bei der Fertigstellung des Gründerzuschusses unterstützt und
-          stand mir jederzeit mit Rat und Tat zur Seite. Jederzeit reagierte sie
-          da hoc auf meine Fragen und Nachrichten und antwortete sofort. Mit
-          ihrer freundlichen und ruhigen Art schaffte sie es, mich jedes Mal zu
-          beruhigen und zu motivieren und
+          “Frau Schenk habe ich als sehr kompetente Beraterin in ihrem Bereich
+          wahrgenommen. Sie hat mich bei der Fertigstellung des
+          Gründerzuschusses unterstützt und stand mir jederzeit mit Rat und Tat
+          zur Seite. Jederzeit reagierte sie da hoc auf meine Fragen und
+          Nachrichten und antwortete sofort. Mit ihrer freundlichen und ruhigen
+          Art schaffte sie es, mich jedes Mal zu beruhigen und zu motivieren und
           <span className="text-xl text-[#020100] font-cabin_sans ">
             {" "}
             stellte wichtige Weichen für meine Gründung{" "}

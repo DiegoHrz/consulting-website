@@ -42,7 +42,7 @@ const About = () => {
       {/* <Placeholder text="Uber uns" /> */}
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm uppercase text-gray-500 tracking-wide">
-        Tagtäglich unterstützen wir zahlreiche Unternehmer deutschlandweit
+          Tagtäglich unterstützen wir zahlreiche Unternehmer deutschlandweit
         </p>
         <div className="mt-6 flex flex-row flex-wrap justify-center">
           <div className="col-span-1 flex justify-center relative w-36 h-28 mx-5 ">
@@ -1227,7 +1227,7 @@ const About = () => {
             </h3>
             <p className="text-justify md:text-center my-10 max-w-4xl mx-auto">
               Wir freuen uns, dir die mit AS Vision Partners verbundenen
-              Genossenschaften vorzustellen. Durch diese langjährige,
+              Kooperationspartner vorzustellen. Durch diese langjährige,
               professionelle Zusammenarbeit werden optimale Voraussetzungen für
               die jungen Unternehmer von morgen geschaffen.
             </p>

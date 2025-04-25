@@ -20,20 +20,20 @@ const AppointmentBanner: React.FC<AppointmentBannerProps> = ({
         className={` bg-gradient-to-r ${gradientColor} ${gradientColor2}  flex flex-col items-center gap-8 p-6  h-full justify-center text-center text-white`}
       >
         <Subtitle
-          text="Ready to Start?"
+          text="Bereit loszulegen?"
           color="white"
           position="center"
           size="4xl"
           mobileSize="text-3xl"
         />
         <p className="text-anna-white/70 mb-2 font-thin text-sm sm:text-base">
-          Unser Workflow – Schritt für Schritt zu deinem Erfolg
+          Unser Team führt dich zum Erfolg
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center">
           <button
             className={`rounded-3xl ${buttonColor}  text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-700 duration-700 border border-anna-white`}
           >
-            Make an appointment
+            Vereinbare einen Termin
           </button>
 
           <button
