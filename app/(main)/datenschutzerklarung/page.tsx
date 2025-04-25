@@ -1,24 +1,27 @@
 import Subtitle from "@/app/components/customTags/Subtitle";
 
-import HeroSecondary from "@/app/components/HeroSecondary";
+
 import React from "react";
 
 const PrivacyPolicy = () => {
   return (
     <div>
-      <div>
-        <div className="h-screen w-full m-auto text-black">
-          <HeroSecondary
-            image="balloons.jpg"
-            header="privacy policy"
-            title="Datenschutzerklärung"
-            text="Wir sind eine Beratungsfirma, die Unternehmen mit
-      maßgeschneiderten Lösungen unterstützt. Unser Ziel ist es,
-      gemeinsam Ihre Vision erfolgreich umzusetzen."
+      <div className=" h-1/2">
+        <div className="h-[50vh] w-screen overflow-hidden relative">
+          <img
+            src="/about/hand.jpg"
+            alt="Imagen de una mano"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
         </div>
+        <div className="border max-w-screen-sm mx-auto   absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-6 sm:p-10 sm:min-w-px min-w-[80%] w-48 sm:w-fit ">
+          <h1 className="text-center text-[6vw] sm:text-[3vw] md:text-[2.5vw]">
+            Datenschutzerklärung
+          </h1>
+        </div>
       </div>
-      <div className="mx-auto max-w-7xl px-4 sm:px-16 bg-white font-cabin">
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-16 bg-white font-cabin mt-28 lg:mt-40">
         <div className="bg-[#F8F8F8] p-8">
           <Subtitle
             text="1. Datenschutz auf einen Blick"

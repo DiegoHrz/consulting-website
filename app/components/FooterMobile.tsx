@@ -71,7 +71,7 @@ const FooterMobile: React.FC = () => {
                 Buchhaltung
               </p>
             </Link>
-            <Link href="/">
+            <Link href="/leistungen/websites-marketing">
               <div className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm relative  flex">
                 <span className="relative ">
                   <p className="text-anna-gray-light">Websites und</p>
