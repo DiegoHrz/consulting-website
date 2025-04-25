@@ -151,7 +151,7 @@ const Product = () => {
         </div> */}
 
         {/* Content Section */}
-        <div className="mb-12">
+        <div className="mb-12 block md:hidden">
           <div className="border-t border-gray-200 my-8"></div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Was gehört in einen Businessplan?

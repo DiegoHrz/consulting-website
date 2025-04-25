@@ -7,16 +7,15 @@ import ButtonAnna from "@/app/components/customTags/ButtonAnna";
 export const Table: React.FC = () => {
   return (
     <div className="">
-      <div className="max-w-[50rem] border">
+      <div className="max-w-[50rem]">
         <h1
-          className="text-xl sm:text-2xl lg:text-[40px] text-transparent "
+          className="text-xl sm:text-2xl lg:text-[40px] lg:leading-[2.7rem] text-transparent "
           style={{
             background: "linear-gradient(to right,#125369,#3CA3B5)",
             backgroundClip: "text",
           }}
         >
-          Experience seamless integration of technology and finance, built for
-          your success and convenience.
+          Unsere Erfahrung und erfolgreich betreuten Projekte sprechen für sich.
         </h1>
       </div>
       <div className="mt-10 md:flex flex-col md:flex-row gap-5 lg:gap-8 w-full   max-h-[45rem]  md:h-96 ">
@@ -44,8 +43,10 @@ export const Table: React.FC = () => {
             style={{ gridColumn: "2/3" }}
           >
             <BouncingText>
-              <h3 className="text-anna-black">Vollständiger</h3>
-              <h3 className="text-anna-black text-xs lg:text-base">Business- und Finanzplan</h3>
+              <h3 className="text-anna-black">Fertigstellung </h3>
+              <h3 className="text-anna-black text-xs lg:text-base">
+                nach wenigen Wochen
+              </h3>
             </BouncingText>
           </div>
 
@@ -55,22 +56,27 @@ export const Table: React.FC = () => {
           >
             <div>
               <BouncingText>
-                <span className="text-3xl lg:text-5xl font-medium mr-1">4</span>
-                <span>ever</span>
+                <span className="text-3xl lg:text-5xl font-medium mr-1">
+                  100
+                </span>
+                <span>%</span>
               </BouncingText>
             </div>
-            <p className="text-[#A5A5A5] text-xs lg:text-base ">Learning</p>
+            <p className="text-[#A5A5A5] text-xs lg:text-base ">
+              erfolgreich beim Gründungszuschuss
+            </p>
           </div>
           <div
             className="border flex flex-col justify-center items-center h-full border-[#D5E0E2] rounded-xl bg-white md:shadow-gray-300 md:shadow-[0px_2px_4px_0px]"
             style={{ gridColumn: "2/3" }}
           >
-            <h3 className="text-3xl lg:text-5xl font-medium">
-              <BouncingText>10+</BouncingText>
-            </h3>
-            <p className="text-[#A5A5A5] text-xs lg:text-base">
-              Tecnologías Aplicadas
-            </p>
+                        <BouncingText>
+              <h3 className="text-anna-black">Betreuung bei </h3>
+              <h3 className="text-anna-black text-xs lg:text-base">
+              Finanzierungsmöglichkeiten
+              in ganz Deutschland
+              </h3>
+            </BouncingText>
           </div>
 
           <motion.div
@@ -85,21 +91,22 @@ export const Table: React.FC = () => {
 
         <div className=" border flex flex-col justify-center   md:h-full w-full md:w-1/2 p-5  lg:p-10 mt-6 md:mt-0 border-[#D5E0E2] rounded-xl bg-white md:shadow-[#125369] md:shadow-[0px_3px_10px_0px]">
           <h2 className="text-xl lg:text-[1.85rem] font-cabin">
-            <BouncingText>Tu aliado en el código. Todo o nada</BouncingText>
+            <BouncingText>Jetzt Unternehmer werden</BouncingText>
           </h2>
-          <p className="mt-5 mb-3 text-[#A5A5A5] md:text-sm lg:text-base ">
-            Desarrollo soluciones y las vivo hasta el último detalle. Mi
-            compromiso va más allá del horario: haré lo necesario y más para
-            cumplir las metas. Con experiencia en JavaScript, React, Node.js y
-            otras tecnologías modernas, trabajaré sin descanso para que tus
-            proyectos brillen.
+          <p className="mt-5 mb-3 text-[#A5A5A5] md:text-sm lg:text-base">
+            Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
+            erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
+            schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
+            inspiriert? Die Experten von AS Vision Partners unterstützen Sie
+            dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
+            maximieren. Sind Sie bereit, mit uns durchzustarten?
           </p>
-          <p className="mb-3 text-anna-blue md:text-sm lg:text-base ">
+          {/* <p className="mb-3 text-anna-blue md:text-sm lg:text-base ">
             ¿Listo para un aliado inquebrantable?
           </p>
           <p className="mb-3 text-anna-blue md:text-sm lg:text-base ">
             Hablemos y hagámoslo realidad.
-          </p>
+          </p> */}
           <ButtonAnna text="Kontak" />
         </div>
       </div>

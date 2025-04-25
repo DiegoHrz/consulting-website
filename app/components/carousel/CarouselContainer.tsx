@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "./Carousel";
 
+
 const CarouselContainer = () => {
   return (
     <div className=" w-full  h-24 rounded-lg my-12 md:my-14 lg:mt-28">

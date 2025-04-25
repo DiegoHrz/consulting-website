@@ -53,7 +53,7 @@ const BusinessPlans = () => {
             +100 zufriedene Kunden
           </h6>
           <p className="font-original_text text-base lg:text-lg  text-center max-w-80 py-2 text-anna-gray ">
-            Wir haben bereits zahlreiche Kunden bundesweit betreut
+            Wir haben bereits zahlreiche Kunden bundesweit betreut.
           </p>
         </div>
       </div>

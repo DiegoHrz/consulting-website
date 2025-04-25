@@ -78,7 +78,7 @@ const Grundungszuschuss = () => {
         </h2>
         <p className="text-gray-700">
           Der Gründungszuschuss ist eine finanzielle Förderung für
-          Arbeitslosengeld-1-Empfänger*innen, die ein eigenes Unternehmen
+          Arbeitslosengeld-1-Empfänger, die ein eigenes Unternehmen
           gründen möchten. Er ermöglicht dir, in den ersten sechs Monaten nach
           deiner Gründung einen Zuschuss zu deinen Lebenshaltungskosten zu
           erhalten, sodass du dich voll und ganz auf den Aufbau deines

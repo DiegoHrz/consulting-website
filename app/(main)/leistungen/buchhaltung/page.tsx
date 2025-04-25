@@ -36,7 +36,7 @@ const Buchhaltung = () => {
             </h2>
             <p className="text-gray-700 mb-4">
               Lexware Office ist eine vielseitige Buchhaltungssoftware, die
-              speziell für Kleinunternehmer:innen, Freiberufler:innen und
+              speziell für Kleinunternehmer, Freiberufler und
               Selbstständige entwickelt wurde. Sie vereinfacht komplexe Prozesse
               wie Belegerfassung, Rechnungsstellung, Lohnabrechnung und
               Steuerverwaltung – alles in einer einzigen, benutzerfreundlichen
