@@ -60,20 +60,20 @@ const Navbar = () => {
 
   useEffect(() => {
     const checkFAQVisibility = () => {
-      const faqSection = document.getElementById('faq');
+      const faqSection = document.getElementById("faq");
       if (faqSection) {
         const rect = faqSection.getBoundingClientRect();
-        const isVisible = 
+        const isVisible =
           rect.top >= 0 &&
-          rect.top <= (window.innerHeight || document.documentElement.clientHeight) / 2;
+          rect.top <=
+            (window.innerHeight || document.documentElement.clientHeight) / 2;
         setIsFAQVisible(isVisible);
       }
     };
 
-    window.addEventListener('scroll', checkFAQVisibility);
-    return () => window.removeEventListener('scroll', checkFAQVisibility);
+    window.addEventListener("scroll", checkFAQVisibility);
+    return () => window.removeEventListener("scroll", checkFAQVisibility);
   }, []);
-
 
   //GUARDAR LA URL PRESENTE
   const [currentUrl, setCurrentUrl] = useState("");
@@ -84,7 +84,7 @@ const Navbar = () => {
       const currentUrl = pathname;
       if (currentUrl?.startsWith("/leistungen")) {
         setCurrentUrl("leistungen");
-        
+
         return;
       }
       setCurrentUrl(currentUrl);
@@ -99,7 +99,7 @@ const Navbar = () => {
     scrolled: boolean,
     name: string
   ) => {
-    if (name === "faq" && isFAQVisible && currentUrl==='/') {
+    if (name === "faq" && isFAQVisible && currentUrl === "/") {
       if (scrolled || enterMenu) {
         return "border-b border-anna-burgundy text-anna-burgundy font-semibold";
       }
@@ -131,7 +131,7 @@ const Navbar = () => {
     setIsLoading(true); // Forzar un estado inicial para evitar desajustes en SSR
     setTimeout(() => setIsLoading(false), 100); // Simular la carga completa
     console.log("pathname: ", pathname);
-  },[setIsLoading, pathname]);
+  }, [setIsLoading, pathname]);
 
   const router = useRouter();
 
@@ -267,54 +267,54 @@ const Navbar = () => {
                   onMouseEnter={() => item.hasSubmenu && setOpenSubmenu(true)}
                   onMouseLeave={() => item.hasSubmenu && setOpenSubmenu(false)}
                 >
-              {item.name === "faq" ? (
-                <div
-                  className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
-                  onClick={handleFAQClick}
-                >
-                  <span
-                    className={getDynamicStyles(
-                      currentUrl,
-                      item.href,
-                      scrolled,
-                      item.name
-                    )}
-                  >
-                    {item.name}
-                  </span>
-                </div>
-              ) : (
-                <Link href={item.href}>
-                  <div
-                    className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
-                    onClick={() => {
-                      if (item.hasSubmenu) {
-                        toggleSubmenu();
-                      } else {
-                        tabHandler(item.name, item.href);
-                      }
-                    }}
-                  >
-                    <span
-                      className={getDynamicStyles(
-                        currentUrl,
-                        item.href,
-                        scrolled,
-                        item.name
-                      )}
+                  {item.name === "faq" ? (
+                    <div
+                      className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
+                      onClick={handleFAQClick}
                     >
-                      {item.name}
-                    </span>
-                    {item.hasSubmenu && (
-                      <IoIosArrowDown
-                        className={`ml-1 transition-transform ${
-                          openSubmenu ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
-                  </div>
-                </Link>
-              )}
+                      <span
+                        className={getDynamicStyles(
+                          currentUrl,
+                          item.href,
+                          scrolled,
+                          item.name
+                        )}
+                      >
+                        {item.name}
+                      </span>
+                    </div>
+                  ) : (
+                    <Link href={item.href}>
+                      <div
+                        className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
+                        onClick={() => {
+                          if (item.hasSubmenu) {
+                            toggleSubmenu();
+                          } else {
+                            tabHandler(item.name, item.href);
+                          }
+                        }}
+                      >
+                        <span
+                          className={getDynamicStyles(
+                            currentUrl,
+                            item.href,
+                            scrolled,
+                            item.name
+                          )}
+                        >
+                          {item.name}
+                        </span>
+                        {item.hasSubmenu && (
+                          <IoIosArrowDown
+                            className={`ml-1 transition-transform ${
+                              openSubmenu ? "rotate-180" : ""
+                            }`}
+                          />
+                        )}
+                      </div>
+                    </Link>
+                  )}
 
                   {item.hasSubmenu && openSubmenu && (
                     <div className="absolute top-12 left-1/2 -translate-x-1/2 mt-4 bg-[#F7F7F7] shadow-lg h-auto min-w-[200px] -z-10">
@@ -426,6 +426,10 @@ const Navbar = () => {
                             key={subLink.href}
                             href={subLink.href}
                             className="py-4 hover:bg-gray-100 text-sm"
+                            onClick={() => {
+                              toggleMenu(); // Cierra el menú al seleccionar
+                              setOpenSubmenu(false); // Cierra el submenú
+                            }}
                           >
                             {subLink.name}
                           </Link>

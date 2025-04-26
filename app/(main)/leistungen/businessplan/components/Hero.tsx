@@ -63,7 +63,7 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex  gap-[16px]">
+          <div className="hidden md:flex  gap-[16px]">
             <ButtonAnnaBurgundy text="Lege heute los" />
             <ButtonAnnaTransparent text="Kontakt" />
           </div>
