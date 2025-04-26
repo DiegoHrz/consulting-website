@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 
 import Subtitle from "@/app/components/customTags/Subtitle";
+import Link from "next/link";
 
 const Buchhaltung = () => {
   const [hoverIn, setHoverIn] = useState(false);
@@ -36,9 +37,9 @@ const Buchhaltung = () => {
             </h2>
             <p className="text-gray-700 mb-4">
               Lexware Office ist eine vielseitige Buchhaltungssoftware, die
-              speziell für Kleinunternehmer, Freiberufler und
-              Selbstständige entwickelt wurde. Sie vereinfacht komplexe Prozesse
-              wie Belegerfassung, Rechnungsstellung, Lohnabrechnung und
+              speziell für Kleinunternehmer, Freiberufler und Selbstständige
+              entwickelt wurde. Sie vereinfacht komplexe Prozesse wie
+              Belegerfassung, Rechnungsstellung, Lohnabrechnung und
               Steuerverwaltung – alles in einer einzigen, benutzerfreundlichen
               Plattform.
             </p>
@@ -408,35 +409,40 @@ const Buchhaltung = () => {
                 Unser Team führt dich zum Erfolg
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center">
-                <button
-                  className={`rounded-3xl bg-purple-700  text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-700 duration-700 border border-anna-white`}
-                >
-                  Vereinbare einen Termin
-                </button>
-
-                <button
-                  className="relative rounded-3xl bg-indigo-600 text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 overflow-hidden text-sm sm:text-base w-fit mx-auto border"
-                  onMouseEnter={() => setHoverIn(true)}
-                  onMouseLeave={() => setHoverIn(false)}
-                  style={{
-                    background: "rgba(255, 255, 255, 0.02)",
-                    boxShadow:
-                      "rgba(255, 255, 255, 0.05) 0px 1px 10px 0px inset",
-                  }}
-                >
-                  <p className="text-anna-white">Kontakt</p>
-                  <div
-                    className={`absolute left-1/2 -translate-x-1/2 transition-all duration-500 ${
-                      hoverIn ? "-bottom-3" : "-bottom-8"
-                    } h-8 sm:h-11 w-8 sm:w-11 aspect-square`}
+                <Link href="/kontakt">
+                  <button
+                    className={`rounded-3xl bg-purple-700  text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-700 duration-700 border border-anna-white`}
+                  >
+                    
+                      Vereinbare einen Termin
+                  </button>
+                </Link>
+                <Link href="/kontakt" >
+                  <button
+                    className="relative rounded-3xl  text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 overflow-hidden text-sm sm:text-base w-fit mx-auto border"
+                    onMouseEnter={() => setHoverIn(true)}
+                    onMouseLeave={() => setHoverIn(false)}
                     style={{
-                      backgroundColor: "rgb(234, 168, 121)",
-                      filter: "blur(10px)",
-                      borderRadius: "100px",
-                      opacity: 0.3,
+                      background: "rgba(255, 255, 255, 0.4)",
+                      boxShadow:
+                        "rgba(255, 255, 255, 0.05) 0px 1px 10px 0px inset",
                     }}
-                  ></div>
-                </button>
+                  >
+                    <p className="text-anna-gray">Kontakt</p>
+
+                    <div
+                      className={`absolute left-1/2 -translate-x-1/2 transition-all duration-500 ${
+                        hoverIn ? "-bottom-3" : "-bottom-8"
+                      } h-8 sm:h-11 w-8 sm:w-11 aspect-square`}
+                      style={{
+                        backgroundColor: "rgb(234, 168, 121)",
+                        filter: "blur(10px)",
+                        borderRadius: "100px",
+                        opacity: 0.3,
+                      }}
+                    ></div>
+                  </button>
+                </Link>
               </div>
               {/* <div className="absolute right-0 bottom-[0%] " >
       <img src="/profile/colleagues.png" alt="" className="bg-cover "/>

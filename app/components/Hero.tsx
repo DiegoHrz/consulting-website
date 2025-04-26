@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import CarouselContainer from "./carousel/CarouselContainer";
 import Subtitle from "./customTags/Subtitle";
 
@@ -45,11 +46,13 @@ const Hero = () => {
               className="h-auto w-96  mx-auto px-3 animate-fade-title"
             />
             <Subtitle text="Starte dein Unternehmen mit dem perfekten Businessplan" />
+            <Link href="/kontakt" className="">
             <div className="w-full flex justify-center animate-fade-subtitle pt-8">
               <button className="text-white mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">
                 KONTAKT
               </button>
             </div>
+            </Link>
             {/* <img
             src="/assets/logo/logo-no-bg/logo-cafe-bistre-no-bg.png "
             alt="Cafe Logo"

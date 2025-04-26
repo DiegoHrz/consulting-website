@@ -83,7 +83,10 @@ const FooterDesktop: React.FC = () => {
       {/* Contact */}
 
       <div className=" flex flex-col gap-3">
+      <Link href="/kontakt" className="">
         <p className="text-white text-xl">Kontakt</p>
+      
+      </Link>
         <a
           href="mailto:info@as-vision-partners.com?subject=Kontaktinformationen&body=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
           className=" transition-all duration-700 rounded-xl  text-anna-gray-light flex items-center"

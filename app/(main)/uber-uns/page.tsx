@@ -1014,7 +1014,7 @@ const About = () => {
                             >
                               <img
                                 src="founders/pat-no-bg.png"
-                                alt=""
+                                alt="pat"
                                 className="block w-full h-full object-center object-cover"
                                 style={{ borderRadius: "inherit" }}
                               />

@@ -91,7 +91,9 @@ const FooterMobile: React.FC = () => {
         <div className=" flex flex-col gap-3 w-1/2">
           <div className="flex flex-col text-left gap-3">
             <p className="text-white text-xl border-b border-gray-200 pb-1">
+            <Link href="/kontakt" className="">
               Kontakt
+            </Link>
             </p>
             <a
               href="mailto:info@as-vision-partners.com?subject=Kontaktinformationen&body=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"

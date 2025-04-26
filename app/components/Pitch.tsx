@@ -14,6 +14,7 @@ interface PitchProps {
 
 const Pitch: React.FC<PitchProps> = ({ image, title, text, button, right }) => {
   return (
+    
     <div
       className={`flex w-full flex-col-reverse  md:justify-center max-w-[520px] md:max-w-[630px] lg:max-w-max mx-auto ${
         right ? "lg:flex-row-reverse" : "lg:flex-row"

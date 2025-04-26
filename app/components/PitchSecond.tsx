@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Wrapper from "../hoc/Wrapper";
 import Title from "./customTags/Title";
 
@@ -27,11 +28,13 @@ const PitchSecond: React.FC<PitchProps2> = ({ image, title, text }) => {
         <p className=" font-vollkorn text-[#808080] pt-4 sm:text-right">
         {text}
         </p>
+        <Link href="/kontakt" className="">
         <div className="w-full  animate-fade-subtitle pt-8 sm:text-right ">
           <button className="font-cabin_sans rounded-lg text-anna-blue mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition border-anna-blue">
             KONTAKT
           </button>
         </div>
+        </Link>
       </div>
     </div>
   );

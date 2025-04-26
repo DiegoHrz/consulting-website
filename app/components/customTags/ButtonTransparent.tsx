@@ -23,7 +23,7 @@ const ButtonAnnaTransparent: React.FC<ButtonAnnaTransparentProps> = ({
         onMouseEnter={() => setHoverIn(true)}
         onMouseLeave={() => setHoverIn(false)}
       >
-        <Link href="/" className="block">
+        <Link href="/kontakt" className="block">
           <button
             className="relative rounded-3xl font-medium font-cabin px-[16px] py-[7px] w-full transition-all duration-700 "
             style={
