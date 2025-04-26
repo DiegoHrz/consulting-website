@@ -11,8 +11,10 @@ import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)] text-black flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[180px] ">
+      {/* lentea */}
       <Hero />
       <BusinessPlans />
+      {/* lentea */}
       <Pitch
         image="/profile/profile.jpg"
         title="Dein Business. Deine Vision. Unsere Unterstützung"
@@ -20,6 +22,7 @@ export default function Home() {
 "
         button="Buchung"
       />
+  
       <Pitch
         image="/profile/professional.avif"
         title="Alles, was du für deine Gründung brauchst – an einem Ort."
@@ -29,6 +32,7 @@ export default function Home() {
       />
 
       {/* sin hoc */}
+      {/* lentea */}
       <Services />
 
       <div
@@ -46,6 +50,7 @@ export default function Home() {
 
       <Reviews />
       <div>
+        {/* lentea */}
         <FAQ />
         <Quote />
       </div>

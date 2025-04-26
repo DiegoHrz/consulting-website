@@ -25,16 +25,17 @@ const Hero = () => {
             muted
             loop
             playsInline // 👈 Necesario para iOS/móviles
-            controls={false} // 👈 Oculta controles (opcional)
+            preload="metadata" 
+            disableRemotePlayback 
             className="absolute inset-0 h-full w-full object-cover"
           >
             <source
-              src="/video/hero-video-desktop.mov"
+              src="/video/hero-video-desktop.mp4"
               type="video/mp4"
               className="hidden md:block"
             />
             <source
-              src="/video/hero-video-mobile.mov"
+              src="/video/hero-video-mobile.mp4"
               type="video/mp4"
               className="md:hidden block"
             />
