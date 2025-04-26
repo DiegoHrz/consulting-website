@@ -5,6 +5,12 @@ import GlassBoxReverse from "./GlassBoxReverse";
 const Product = () => {
   return (
     <div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Was gehört in einen Businessplan?
+          </h2>
+          <p className="text-gray-700 mb-4">
+            Ein vollständiger und überzeugender Businessplan umfasst:
+          </p>
       <div className="relative h-[35rem] md:h-[40rem] w-full  border">
         <div className="absolute inset-0 flex items-center justify-center z-[3]">
           <motion.div
@@ -23,7 +29,7 @@ const Product = () => {
                     "0 5px 50px rgba(0, 0, 0, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.5)",
                 }}
               >
-                <div className="bg-transparent max-w-[300px] md:max-w-[500px] overflow-hidden">
+                <div className="bg-transparent max-w-[350px] sm:max-w-[400px]  md:max-w-[430px] overflow-hidden h-auto">
                   <div className="flex transition-transform duration-700 ease-in-out">
                     <img
                       src="/leistungen/businessplan/businessplan-folder.png"
@@ -36,50 +42,52 @@ const Product = () => {
             </div>
 
             {/* Elementos GlassBox alrededor - Versión responsive */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[90%] md:max-w-[250px]">
+            
+            <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:max-w-[250px] ">
+              {/* El de arriba */}
               <GlassBoxReverse
-                title="Gründungszuschuss"
-                text="Your financial kick"
-                button="See more"
+                title="Executive Summary"
+                text="Eine kurze, prägnante Übersicht über dein Vorhaben."
+                button=""
               />
             </div>
-
-            <div className="absolute top-1/4 -right-2 md:-right-20 translate-y-1/2 w-[20%] max-w-[200px] md:max-w-[250px]">
+            {/* El de la derecha */}
+            <div className="hidden md:block absolute top-1/4 -right-2 md:-right-20 translate-y-1/2  max-w-[200px] md:max-w-[250px]">
               <GlassBoxReverse
-                title="Asesoramiento"
-                text="Professional guidance"
-                button="Learn more"
+                title="Beschreibung des Gründers und der Geschäftsidee"
+                text="Was motiviert und qualifiziert dich? Was macht dein Unternehmen besonders und welche Probleme löst es? Welche Produkte oder Leistungen bietest du an?"
+                button=""
               />
             </div>
-
-            <div className="absolute top-1/2 -left-2 md:-left-20 -translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
+            {/* El de la izquierda */}
+            <div className="hidden md:block absolute top-1/2 -left-2 md:-left-20 -translate-y-1/2  max-w-[200px] ">
               <GlassBoxReverse
-                title="Planificación"
-                text="Strategic planning"
-                button="Details"
+                title="Marketing- und Vertriebsstrategie"
+                text="Wie erreichst du deine Kunden und baust deinen Markt auf?"
+                button=""
               />
             </div>
-
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-[90%] md:max-w-[250px]">
+            {/* El de abajo */}
+            <div className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2 ">
               <GlassBoxReverse
-                title="Financiamiento"
-                text="Funding options"
-                button="Explore"
+                title="Organisatorische Struktur"
+                text="Rechtsform, Personalplanung und interne Abläufe."
+                button=""
               />
             </div>
-
-            <div className="absolute bottom-1/4 -left-2 md:-left-20 translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
+            {/* El de la izquierda baja */}
+            <div className="hidden md:block absolute bottom-1/4 -left-2 md:-left-20 translate-y-1/2  max-w-[200px] md:max-w-[250px]">
               <GlassBoxReverse
-                title="Legal"
-                text="Legal support"
-                button="View"
+                title="Marktanalyse"
+                text="Wer sind deine Zielgruppen? Wie sieht der Wettbewerb aus? Was ist die aktuelle Lage am Markt?"
+                button=""
               />
             </div>
-
-            <div className="absolute top-3/4 -right-2 md:-right-20 -translate-y-1/2 w-[80%] max-w-[200px] md:max-w-[250px]">
+            {/* El de la derecha baja */}
+            <div className="hidden md:block absolute top-3/4 -right-2 md:-right-20 -translate-y-1/2  max-w-[200px] md:max-w-[250px]">
               <GlassBoxReverse
-                title="Networking"
-                text="Business connections"
+                title="Finanzplanung"
+                text="Kapitalbedarf, Umsatzprognosen, Rentabilität und Liquiditätsplanung."
                 button="Connect"
               />
             </div>
@@ -151,14 +159,9 @@ const Product = () => {
         </div> */}
 
         {/* Content Section */}
-        <div className="mb-12 block md:hidden">
+        <div className="mb-12">
           <div className="border-t border-gray-200 my-8"></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Was gehört in einen Businessplan?
-          </h2>
-          <p className="text-gray-700 mb-4">
-            Ein vollständiger und überzeugender Businessplan umfasst:
-          </p>
+          
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {

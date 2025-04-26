@@ -114,7 +114,7 @@ const GlassBoxReverse: React.FC<GlassBoxProps> = ({
 
         {/* Content */}
         <div
-          className="z-20 flex  gap-5 p-1 sm:px-[30px] sm:py-[20px] text-left w-full transition-all duration-300 rounded-3xl"
+          className="z-20 flex  gap-5 p-1 sm:px-[10px] sm:py-[10px] text-left w-full transition-all duration-300 rounded-3xl"
           style={
             !hoverIn
               ? {
@@ -127,16 +127,16 @@ const GlassBoxReverse: React.FC<GlassBoxProps> = ({
                 }
           }
         >
-          <div
+          {/* <div
             className={`${
               !hoverIn ? "bg-white" : "bg-[#581D1D]"
             }  w-fit h-fit p-1 rounded-md transition-all duration-500`}
           >
             <GiReactor color={!hoverIn ? "#5B1C31" : "white"} />
-          </div>
+          </div> */}
           <div className="flex flex-col gap-[10px]">
             <h1
-              className={`text-lg lg:text-[22px] font-medium z-10 transition-all duration-100 ${
+              className={`text-lg md:text-[18px] font-medium z-10 transition-all duration-100 ${
                 !hoverIn ? "text-white" : "text-transparent"
               }`}
               style={
@@ -150,13 +150,13 @@ const GlassBoxReverse: React.FC<GlassBoxProps> = ({
             >
               {title}
             </h1>
-            <h3
+            {/* <h3
               className={` text-xs lg:text-[15px] leading-5 z-10 transition-all duration-100 ${
                 !hoverIn ? "text-anna-gray-light" : "text-anna-gray"
               }`}
             >
               {text}
-            </h3>
+            </h3> */}
           </div>
           {/* <Link
             href="/"
