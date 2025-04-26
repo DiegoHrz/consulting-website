@@ -1247,9 +1247,9 @@ const About = () => {
        
                       >
                         <img
-                          src="/brands/logo-inst.png"
+                          src="/brands/logo-inst.jpeg"
                           alt="Descripción del logo"
-                          className="w-auto h-14 object-cover max-w-40 " /* clave para mantener proporciones */
+                          className="w-full  object-cover max-w-40 " /* clave para mantener proporciones */
                           style={{
                             display:
                               "block" /* elimina espacio inferior fantasma */,
