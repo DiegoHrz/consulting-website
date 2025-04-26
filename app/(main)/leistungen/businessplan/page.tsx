@@ -9,7 +9,7 @@ import AppointmentBanner from "@/app/components/AppointmentBanner";
 
 const Businessplan = () => {
   return (
-    <div className="  h-full flex flex-col gap-[80px] md:gap-[150px]  lg:gap-[180px] ">
+    <div className="  h-full flex flex-col gap-[80px] md:gap-[130px]  lg:gap-[180px] ">
       <Hero />
       {/* <Intro /> */}
       <div className="">

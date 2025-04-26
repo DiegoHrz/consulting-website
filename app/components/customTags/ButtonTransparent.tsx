@@ -17,7 +17,7 @@ const ButtonAnnaTransparent: React.FC<ButtonAnnaTransparentProps> = ({
 
   return (
     <div className="w-fit relative">
-      <div className="absolute inset-0 -z-10 backdrop-blur-md rounded-3xl animate-fade-subtitle"></div>
+      {/* <div className="absolute inset-0 -z-10 backdrop-blur-md rounded-3xl animate-fade-subtitle"></div> */}
       <div
         className={`w-fit animate-fade-subtitle overflow-hidden rounded-3xl relative z-10`}
         onMouseEnter={() => setHoverIn(true)}
@@ -25,7 +25,7 @@ const ButtonAnnaTransparent: React.FC<ButtonAnnaTransparentProps> = ({
       >
         <Link href="/" className="block">
           <button
-            className="relative rounded-3xl font-medium font-cabin px-[21px] py-[11px] w-full transition-all duration-700 "
+            className="relative rounded-3xl font-medium font-cabin px-[16px] py-[7px] w-full transition-all duration-700 "
             style={
               hoverIn
                 ? {
@@ -36,7 +36,7 @@ const ButtonAnnaTransparent: React.FC<ButtonAnnaTransparentProps> = ({
                 : {
                     background: "rgba(255, 255, 255, 0.02)",
                     boxShadow:
-                      "rgba(255, 255, 255, 0.5) 0px 1px 10px 0px inset",
+                      "rgba(255, 255, 255, 0.6) 0px 1px 10px 0px inset",
                   }
             }
           >
@@ -50,7 +50,7 @@ const ButtonAnnaTransparent: React.FC<ButtonAnnaTransparentProps> = ({
             <div
               className={`absolute left-1/2 -translate-x-1/2 transition-all duration-700 -z-10
               ${
-                hoverIn ? "-bottom-1 h-14 w-32" : "-bottom-12 h-14 w-14"
+                hoverIn ? "-bottom-1 h-14 w-32" : "-bottom-16 h-14 w-14"
               }  aspect-square`}
               style={{
                 backgroundColor: "#125369",

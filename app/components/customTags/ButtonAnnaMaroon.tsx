@@ -25,7 +25,7 @@ const ButtonAnnaBurgundy: React.FC<ButtonAnnaMaroonProps> = ({
       >
         <Link href="/" className="block">
           <button
-            className="relative rounded-3xl font-medium font-cabin px-[21px] py-[11px] w-full transition-all duration-700 "
+            className="relative rounded-3xl font-medium font-cabin px-[16px] py-[7px] w-full transition-all duration-700 "
             style={
               hoverIn
                 ? {

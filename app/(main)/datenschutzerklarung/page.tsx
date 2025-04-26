@@ -1,6 +1,5 @@
 import Subtitle from "@/app/components/customTags/Subtitle";
 
-
 import React from "react";
 
 const PrivacyPolicy = () => {
