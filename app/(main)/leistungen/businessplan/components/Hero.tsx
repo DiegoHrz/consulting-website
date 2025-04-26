@@ -277,7 +277,7 @@ const Hero = () => {
           <div className="relative w-4/5 max-w-xs pb-32 ">
             <div className="relative">
               {/* Imagen 1 - La primera imagen establece el tamaño base */}
-              <div className="relative lg:top-4 aspect-[1] w-full md:w-[90%] lg:w-[full] z-[3] rounded-xl">
+              <div className="relative lg:top-4 aspect-[1] w-[80%]  md:w-[full] z-[3] rounded-xl">
                 <motion.div
                   variants={zoomIn(0.2, 1.25)}
                   initial="hidden"
@@ -294,7 +294,7 @@ const Hero = () => {
               </div>
 
               {/* Imagen 2 - Posicionada relativamente a la primera */}
-              <div className="absolute top-10 lg:top-[4.5rem] w-full z-[2] aspect-[1]">
+              <div className="absolute top-10 lg:top-[4.5rem] w-[80%]  md:w-[full] z-[2] aspect-[1]">
                 <motion.div
                   variants={fadeIn("up", "tween", 1, 1.25)}
                   initial="hidden"
@@ -311,7 +311,7 @@ const Hero = () => {
               </div>
 
               {/* Imagen 3 - Posicionada relativamente a la primera */}
-              <div className="absolute top-20 lg:top-[8rem] w-full z-[1] aspect-[1]">
+              <div className="absolute top-20 lg:top-[8rem] w-[80%]  md:w-[full] z-[1] aspect-[1]">
                 <motion.div
                   variants={fadeIn("up", "tween", 1.75, 1.25)}
                   initial="hidden"
