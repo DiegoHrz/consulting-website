@@ -5,7 +5,7 @@ import Services from "./components/Services";
 import FAQ from "./components/FAQ";
 import Reviews from "./components/Reviews";
 import Quote from "./components/Quote";
-import CalendlyContainer from "./components/calendly/CalendlyContainer";
+// import CalendlyContainer from "./components/calendly/CalendlyContainer";
 import RoadmapContainer from "./components/roadmapSvg/RoadmapContainer";
 
 export default function Home() {
@@ -42,7 +42,7 @@ export default function Home() {
         <RoadmapContainer />
       </div>
 
-      <CalendlyContainer />
+      {/* <CalendlyContainer /> */}
 
       <Reviews />
       <div>
