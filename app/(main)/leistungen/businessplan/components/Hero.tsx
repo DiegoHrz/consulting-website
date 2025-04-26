@@ -287,7 +287,7 @@ const Hero = () => {
                   <img
                     src="/leistungen/6.png"
                     alt="Imagen 1"
-                    className="w-full h-auto rounded-xl  "
+                    className="w-3/4 sm:w-full h-auto rounded-xl "
                     style={{ transform: "skew(-15deg) rotate(27deg)" }}
                   />
                 </motion.div>
@@ -299,12 +299,12 @@ const Hero = () => {
                   variants={fadeIn("up", "tween", 1, 1.25)}
                   initial="hidden"
                   animate="show"
-                  className="flex justify-center  h-full z-[9] "
+                  className="flex justify-center w-full h-auto z-[9] aspect-[1] "
                 >
                   <img
                     src="/leistungen/12.png"
                     alt="Imagen 2"
-                    className="w-full h-auto rounded-xl"
+                    className="w-3/4 sm:w-full h-auto rounded-xl "
                     style={{ transform: "skew(-15deg) rotate(27deg)" }}
                   />
                 </motion.div>
@@ -316,12 +316,12 @@ const Hero = () => {
                   variants={fadeIn("up", "tween", 1.75, 1.25)}
                   initial="hidden"
                   animate="show"
-                  className="flex justify-center  h-full"
+                  className="flex justify-center h-auto w-full z-[8]  aspect-[1]"
                 >
                   <img
                     src="/leistungen/11.png"
                     alt="Imagen 3"
-                    className="w-full h-auto rounded-xl "
+                    className="w-3/4 sm:w-full h-auto rounded-xl "
                     style={{ transform: "skew(-15deg) rotate(27deg)" }}
                   />
                 </motion.div>
