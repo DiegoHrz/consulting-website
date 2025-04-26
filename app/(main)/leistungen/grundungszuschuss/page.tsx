@@ -10,7 +10,7 @@ const Grundungszuschuss = () => {
         <h6 className="text-lg font-semibold mb-2">
           Leistungen - Gründungszuschuss
         </h6>
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+        <h1 className="text-[26px] leading-9  sm:text-4xl font-bold mb-4 ">
           Gründungszuschuss – Dein Start in die Selbstständigkeit
         </h1>
         <div className="space-y-2">

@@ -39,7 +39,7 @@ const RoadmapContainer = () => {
           <Title
             text="Unser Workflow – Schritt für Schritt zu deinem Erfolg"
             additionalClasses="text-center"
-            additionalTitle="workshops"
+
           />
         </div>
         <RoadmapPath />

@@ -1241,21 +1241,22 @@ const About = () => {
                   className="flex items-center justify-center h-full"
                 >
                   <div className="text-center">
-                    <div className="bg-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center shadow-sm">
-                      <svg
-                        className="w-8 h-8 text-indigo-600"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                  <div className="p-2 rounded-xl w-full mx-auto mb-4 flex items-center justify-center shadow-sm">
+                    <div
+                        className="relative  overflow-hidden"
+       
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                        <img
+                          src="/brands/logo-inst.png"
+                          alt="Descripción del logo"
+                          className="w-auto h-14 object-cover max-w-40 " /* clave para mantener proporciones */
+                          style={{
+                            display:
+                              "block" /* elimina espacio inferior fantasma */,
+                            objectPosition: "center" /* centra la imagen */,
+                          }}
                         />
-                      </svg>
+                      </div>
                     </div>
                     <span className="text-xl font-medium text-gray-800 hover:text-indigo-600 transition-colors">
                       Institut Weisheit
@@ -1272,8 +1273,23 @@ const About = () => {
                   className="flex items-center justify-center h-full"
                 >
                   <div className="text-center">
-                    <div className="bg-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center shadow-sm">
-                      <svg
+                    <div className="bg-black p-2 rounded-xl w-full mx-auto mb-4 flex items-center justify-center shadow-sm">
+                      <div
+                        className="relative  overflow-hidden"
+       
+                      >
+                        <img
+                          src="/brands/logo-sshm.png"
+                          alt="Descripción del logo"
+                          className="w-full h-auto object-cover max-w-40 " /* clave para mantener proporciones */
+                          style={{
+                            display:
+                              "block" /* elimina espacio inferior fantasma */,
+                            objectPosition: "center" /* centra la imagen */,
+                          }}
+                        />
+                      </div>
+                      {/* <svg
                         className="w-8 h-8 text-blue-600"
                         fill="none"
                         stroke="currentColor"
@@ -1286,10 +1302,11 @@ const About = () => {
                           strokeWidth={2}
                           d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                         />
-                      </svg>
+                      </svg> */}
                     </div>
                     <span className="text-xl font-medium text-gray-800 hover:text-blue-600 transition-colors">
                       Starthilfe Marketing
+                      
                     </span>
                   </div>
                 </a>

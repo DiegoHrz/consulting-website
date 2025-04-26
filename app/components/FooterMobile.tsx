@@ -60,11 +60,6 @@ const FooterMobile: React.FC = () => {
                 Businessplan
               </p>
             </Link>
-            <Link href="/">
-              <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                Business Consulting
-              </p>
-            </Link>
             <Link href="/leistungen/finanzierung">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
                 Finanzierung

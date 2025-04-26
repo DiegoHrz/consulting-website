@@ -43,9 +43,9 @@ export const Table: React.FC = () => {
             style={{ gridColumn: "2/3" }}
           >
             <BouncingText>
-              <h3 className="text-anna-black">Fertigstellung </h3>
-              <h3 className="text-anna-black text-xs lg:text-base">
-                nach wenigen Wochen
+              <h3 className="text-anna-black text-xs lg:text-base">Fertigstellung nach</h3>
+              <h3 className="text-anna-black ">
+                 wenigen Wochen
               </h3>
             </BouncingText>
           </div>
@@ -70,11 +70,10 @@ export const Table: React.FC = () => {
             className="border flex flex-col justify-center items-center h-full border-[#D5E0E2] rounded-xl bg-white md:shadow-gray-300 md:shadow-[0px_2px_4px_0px]"
             style={{ gridColumn: "2/3" }}
           >
-                        <BouncingText>
-              <h3 className="text-anna-black">Betreuung bei </h3>
-              <h3 className="text-anna-black text-[0.68rem] lg:text-base">
-              Finanzierungsmöglichkeiten
-              in ganz Deutschland
+            <BouncingText>
+              <h3 className="text-anna-black text-[0.68rem] lg:text-base" >Betreuung bei Finanzierungsmöglichkeiten in </h3>
+              <h3 className="text-anna-black text-xl lg:text-2xl" >
+                ganz Deutschland
               </h3>
             </BouncingText>
           </div>
@@ -91,15 +90,16 @@ export const Table: React.FC = () => {
 
         <div className=" border flex flex-col justify-center   md:h-full w-full md:w-1/2 p-5  lg:p-10 mt-6 md:mt-0 border-[#D5E0E2] rounded-xl bg-white md:shadow-[#125369] md:shadow-[0px_3px_10px_0px]">
           <h2 className="text-xl lg:text-[1.85rem] font-cabin">
-            <BouncingText>Jetzt Unternehmer werden</BouncingText>
+            <BouncingText>Dein Business. Deine Vision. Unsere Unterstützung</BouncingText>
           </h2>
           <p className="mt-5 mb-3 text-[#A5A5A5] md:text-sm lg:text-base">
-            Möchten Sie ein Unternehmen aufbauen, führen oder erweitern, das
-            erfolgreich ist? Träumen Sie davon, eine unverwechselbare Marke zu
-            schaffen, die Ihre Vision widerspiegelt und Ihre Zielgruppe
-            inspiriert? Die Experten von AS Vision Partners unterstützen Sie
-            dabei, Ihr Einkommen, Ihre Reichweite und die Stärke Ihrer Marke zu
-            maximieren. Sind Sie bereit, mit uns durchzustarten?
+            Du willst dich selbstständig machen oder dein bestehendes Business
+            aufs nächste Level bringen? Bei AS Vision Partners bekommst du die
+            Unterstützung, die du wirklich brauchst – individuell, praxisnah und
+            auf Augenhöhe. Wir helfen dir, deine Ideen zu strukturieren, deine
+            Marke klar zu positionieren und den Grundstein für nachhaltigen
+            Erfolg zu legen – egal ob du ganz am Anfang stehst oder schon
+            mittendrin bist.
           </p>
           {/* <p className="mb-3 text-anna-blue md:text-sm lg:text-base ">
             ¿Listo para un aliado inquebrantable?
@@ -107,7 +107,7 @@ export const Table: React.FC = () => {
           <p className="mb-3 text-anna-blue md:text-sm lg:text-base ">
             Hablemos y hagámoslo realidad.
           </p> */}
-          <ButtonAnna text="Kontak" />
+          <ButtonAnna text="Kontakt" />
         </div>
       </div>
     </div>

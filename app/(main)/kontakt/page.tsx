@@ -13,7 +13,7 @@ const Contact = () => {
           title="Kontakt"
           text="Wir sind eine Beratungsfirma, die Unternehmen mit
       maßgeschneiderten Lösungen unterstützt. Unser Ziel ist es,
-      gemeinsam Ihre Vision erfolgreich umzusetzen."
+      gemeinsam deine Vision erfolgreich umzusetzen."
         />
       </div>
       {/* <div>
