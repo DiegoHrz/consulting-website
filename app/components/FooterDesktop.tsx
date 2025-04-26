@@ -1,8 +1,12 @@
 import Link from "next/link";
 import * as React from "react";
 import { FaLinkedin } from "react-icons/fa";
+import { useFAQNavigation } from "../hooks/useFAQNavigation";
 
 const FooterDesktop: React.FC = () => {
+
+  const { handleFAQClick } = useFAQNavigation();
+
   return (
     <div className="hidden md:flex w-full max-w-7xl mx-auto sm:px-16 sm:pt-10">
       {/* Company */}
@@ -28,7 +32,7 @@ const FooterDesktop: React.FC = () => {
             Referenzen
           </p>
         </Link>
-        <Link href="/">
+        <Link href="/" onClick={handleFAQClick}>
           <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
             FAQ
           </p>

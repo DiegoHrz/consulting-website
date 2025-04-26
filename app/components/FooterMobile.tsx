@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
+import { useFAQNavigation } from "../hooks/useFAQNavigation";
 
 const FooterMobile: React.FC = () => {
+  
+  const { handleFAQClick } = useFAQNavigation();
+
   return (
     <div className="md:hidden justify-center flex flex-col gap-10  w-full max-w-7xl mx-auto sm:px-16 pt-10 px-10">
       <div className="flex w-full gap-4">
@@ -31,7 +35,7 @@ const FooterMobile: React.FC = () => {
                 Referenzen
               </p>
             </Link>
-            <Link href="/">
+            <Link href="/" onClick={handleFAQClick}>
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
                 FAQ
               </p>
