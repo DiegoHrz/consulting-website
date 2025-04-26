@@ -72,7 +72,7 @@ export const Table: React.FC = () => {
           >
                         <BouncingText>
               <h3 className="text-anna-black">Betreuung bei </h3>
-              <h3 className="text-anna-black text-xs lg:text-base">
+              <h3 className="text-anna-black text-[0.68rem] lg:text-base">
               Finanzierungsmöglichkeiten
               in ganz Deutschland
               </h3>

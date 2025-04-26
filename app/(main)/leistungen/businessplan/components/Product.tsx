@@ -11,7 +11,7 @@ const Product = () => {
       <p className="text-gray-700 mb-4">
         Ein vollständiger und überzeugender Businessplan umfasst:
       </p>
-      <div className="relative h-[35rem] md:h-[40rem] w-full  border">
+      <div className="relative h-[37rem] md:h-[45rem] w-full">
         <div className="absolute inset-0 flex items-center justify-center z-[3]">
           <motion.div
             variants={zoomIn(0.2, 1.25)}
@@ -20,7 +20,7 @@ const Product = () => {
             className="relative w-full h-full max-w-[90vw] max-h-[90vh]"
           >
             {/* Contenedor principal de la imagen */}
-            <div className="w-full h-full flex items-center justify-center border-red-500 border-2">
+            <div className="w-full h-full flex items-center justify-center  relative">
               <a
                 className="flex flex-col items-center justify-center relative z-0 w-fit mx-auto bg-[linear-gradient(180deg,_#fff_50%,_#e7dbdb_100%)]"
                 style={{
@@ -37,59 +37,47 @@ const Product = () => {
                       className="border-2 w-full flex-shrink-0"
                     />
                   </div>
+
+                  {/* Elementos GlassBox alrededor - Versión responsive */}
+
+                  <div className=" hidden md:block absolute -top-10 lg:-top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 md:max-w-[250px] ">
+                    {/* El de arriba */}
+                    <GlassBoxReverse title="Executive Summary" button="" delay={0.65}/>
+                  </div>
+                  {/* El de la derecha */}
+                  <div className="hidden md:block absolute top-28 -right-40 lg:right-[-16rem]  max-w-[200px] md:max-w-[170px] lg:max-w-[200px]">
+                    <GlassBoxReverse
+                      title="Beschreibung des Gründers und der Geschäftsidee"
+                      button=""
+                      delay={0.8}
+                    />
+                  </div>
+                  {/* El de la izquierda */}
+                  <div className="hidden md:block absolute top-32 -left-40 lg:-left-52 -translate-y-1/2  max-w-[150px] ">
+                    <GlassBoxReverse
+                      title="Marketing- und Vertriebsstrategie"
+                      button=""
+                      delay={0.8}
+                    />
+                  </div>
+                  {/* El de abajo */}
+                  <div className="hidden md:block absolute -bottom-16 lg:-bottom-20 left-1/2 -translate-x-1/2 whitespace-nowrap ">
+                    <GlassBoxReverse
+                      title="Organisatorische Struktur"
+                      button=""
+                      delay={0.5}
+                    />
+                  </div>
+                  {/* El de la izquierda baja */}
+                  <div className="hidden md:block absolute bottom-48 -left-32 lg:-left-40 translate-y-1/2  max-w-[200px] md:max-w-[250px]">
+                    <GlassBoxReverse title="Marktanalyse" button="" delay={0.65}/>
+                  </div>
+                  {/* El de la derecha baja */}
+                  <div className="hidden md:block absolute bottom-24 -right-36 lg:-right-44 -translate-y-1/2  max-w-[200px] md:max-w-[250px]">
+                    <GlassBoxReverse title="Finanzplanung" button="Connect" delay={0.5} />
+                  </div>
                 </div>
               </a>
-            </div>
-
-            {/* Elementos GlassBox alrededor - Versión responsive */}
-
-            <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:max-w-[250px] ">
-              {/* El de arriba */}
-              <GlassBoxReverse
-                title="Executive Summary"
-
-                button=""
-              />
-            </div>
-            {/* El de la derecha */}
-            <div className="hidden md:block absolute top-1/4 -right-2 md:-right-20 translate-y-1/2  max-w-[200px] md:max-w-[250px]">
-              <GlassBoxReverse
-                title="Beschreibung des Gründers und der Geschäftsidee"
-
-                button=""
-              />
-            </div>
-            {/* El de la izquierda */}
-            <div className="hidden md:block absolute top-1/2 -left-2 md:-left-20 -translate-y-1/2  max-w-[200px] ">
-              <GlassBoxReverse
-                title="Marketing- und Vertriebsstrategie"
-
-                button=""
-              />
-            </div>
-            {/* El de abajo */}
-            <div className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2 ">
-              <GlassBoxReverse
-                title="Organisatorische Struktur"
-
-                button=""
-              />
-            </div>
-            {/* El de la izquierda baja */}
-            <div className="hidden md:block absolute bottom-1/4 -left-2 md:-left-20 translate-y-1/2  max-w-[200px] md:max-w-[250px]">
-              <GlassBoxReverse
-                title="Marktanalyse"
-
-                button=""
-              />
-            </div>
-            {/* El de la derecha baja */}
-            <div className="hidden md:block absolute top-3/4 -right-2 md:-right-20 -translate-y-1/2  max-w-[200px] md:max-w-[250px]">
-              <GlassBoxReverse
-                title="Finanzplanung"
-
-                button="Connect"
-              />
             </div>
           </motion.div>
         </div>

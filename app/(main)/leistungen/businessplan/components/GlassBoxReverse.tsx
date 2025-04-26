@@ -2,18 +2,18 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-
-
 interface GlassBoxProps {
   title: string;
   button: string;
   special?: string;
+  delay?: number;
 }
 
 const GlassBoxReverse: React.FC<GlassBoxProps> = ({
   title,
   button,
   special,
+  delay,
 }) => {
   const but = button;
   console.log(but);
@@ -22,15 +22,15 @@ const GlassBoxReverse: React.FC<GlassBoxProps> = ({
   const [hoverIn, setHoverIn] = useState(false);
   return (
     <motion.div
-      className="relative rounded-3xl w-full bg-white/5"
+      className="relative rounded-full w-full bg-white/5"
       initial={{ scale: 0, opacity: 0.5 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+      transition={{ duration: 1, delay: delay, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.1 }}
     >
       {/* Outer container for glass effect */}
       <motion.div
-        className="absolute inset-0 -z-10 backdrop-blur-lg rounded-3xl"
+        className="absolute inset-0 -z-10 backdrop-blur-lg rounded-full"
         // shadow-anna-blue shadow-[0px_1px_7px_0px]
         initial={{ scale: 0, opacity: 0.1 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -40,7 +40,7 @@ const GlassBoxReverse: React.FC<GlassBoxProps> = ({
 
       {/* Main content container with overflow control */}
       <div
-        className={`relative flex flex-col h-full rounded-3xl overflow-hidden w-full z-10 transition-all duration-700 ${
+        className={`relative flex flex-col h-full rounded-full overflow-hidden w-full z-10 transition-all duration-700 items-center ${
           !hoverIn ? "bg-[#125369]" : ""
         }`}
         onMouseEnter={() => setHoverIn(true)}
@@ -132,9 +132,11 @@ const GlassBoxReverse: React.FC<GlassBoxProps> = ({
           >
             <GiReactor color={!hoverIn ? "#5B1C31" : "white"} />
           </div> */}
-          <div className="flex flex-col gap-[10px]">
+          <div className="flex flex-col justify-center items-center text-center gap-[10px]">
             <h1
-              className={`text-lg md:text-[18px] font-medium z-10 transition-all duration-100 ${
+              className={`${
+                title.length > 35 ? "text-[15px] leading-5" : "text-lg md:text-[18px]"
+              } font-medium z-10 transition-all duration-100 ${
                 !hoverIn ? "text-white" : "text-transparent"
               }`}
               style={

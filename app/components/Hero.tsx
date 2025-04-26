@@ -10,9 +10,14 @@ const Hero = () => {
         <div className="h-full w-full relative">
           <div className="absolute w-full h-full"></div>
           {/* <img
-          src="/giphylentils.gif"
-          alt="Full-width GIF"
-          className="w-screen h-screen object-cover"
+            src="/video/hero-foto-desktop.png"
+            alt="Full-width GIF"
+            className="hidden md:block w-screen h-screen object-cover"
+          />
+          <img
+            src="/video/hero-foto-mobile.png"
+            alt="Full-width GIF"
+            className="md:hidden w-screen h-screen object-cover"
           /> */}
           <video
             autoPlay
@@ -39,9 +44,7 @@ const Hero = () => {
               alt="White Logo"
               className="h-auto w-96  mx-auto px-3 animate-fade-title"
             />
-            <Subtitle
-              text="Starte dein Unternehmen mit dem perfekten Businessplan"
-            />
+            <Subtitle text="Starte dein Unternehmen mit dem perfekten Businessplan" />
             <div className="w-full flex justify-center animate-fade-subtitle pt-8">
               <button className="text-white mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">
                 KONTAKT
