@@ -6,11 +6,11 @@ const Product = () => {
   return (
     <div>
       <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Was gehört in einen Businessplan?
-          </h2>
-          <p className="text-gray-700 mb-4">
-            Ein vollständiger und überzeugender Businessplan umfasst:
-          </p>
+        Was gehört in einen Businessplan?
+      </h2>
+      <p className="text-gray-700 mb-4">
+        Ein vollständiger und überzeugender Businessplan umfasst:
+      </p>
       <div className="relative h-[35rem] md:h-[40rem] w-full  border">
         <div className="absolute inset-0 flex items-center justify-center z-[3]">
           <motion.div
@@ -20,7 +20,7 @@ const Product = () => {
             className="relative w-full h-full max-w-[90vw] max-h-[90vh]"
           >
             {/* Contenedor principal de la imagen */}
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-full flex items-center justify-center border-red-500 border-2">
               <a
                 className="flex flex-col items-center justify-center relative z-0 w-fit mx-auto bg-[linear-gradient(180deg,_#fff_50%,_#e7dbdb_100%)]"
                 style={{
@@ -42,12 +42,12 @@ const Product = () => {
             </div>
 
             {/* Elementos GlassBox alrededor - Versión responsive */}
-            
+
             <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:max-w-[250px] ">
               {/* El de arriba */}
               <GlassBoxReverse
                 title="Executive Summary"
-                text="Eine kurze, prägnante Übersicht über dein Vorhaben."
+
                 button=""
               />
             </div>
@@ -55,7 +55,7 @@ const Product = () => {
             <div className="hidden md:block absolute top-1/4 -right-2 md:-right-20 translate-y-1/2  max-w-[200px] md:max-w-[250px]">
               <GlassBoxReverse
                 title="Beschreibung des Gründers und der Geschäftsidee"
-                text="Was motiviert und qualifiziert dich? Was macht dein Unternehmen besonders und welche Probleme löst es? Welche Produkte oder Leistungen bietest du an?"
+
                 button=""
               />
             </div>
@@ -63,7 +63,7 @@ const Product = () => {
             <div className="hidden md:block absolute top-1/2 -left-2 md:-left-20 -translate-y-1/2  max-w-[200px] ">
               <GlassBoxReverse
                 title="Marketing- und Vertriebsstrategie"
-                text="Wie erreichst du deine Kunden und baust deinen Markt auf?"
+
                 button=""
               />
             </div>
@@ -71,7 +71,7 @@ const Product = () => {
             <div className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2 ">
               <GlassBoxReverse
                 title="Organisatorische Struktur"
-                text="Rechtsform, Personalplanung und interne Abläufe."
+
                 button=""
               />
             </div>
@@ -79,7 +79,7 @@ const Product = () => {
             <div className="hidden md:block absolute bottom-1/4 -left-2 md:-left-20 translate-y-1/2  max-w-[200px] md:max-w-[250px]">
               <GlassBoxReverse
                 title="Marktanalyse"
-                text="Wer sind deine Zielgruppen? Wie sieht der Wettbewerb aus? Was ist die aktuelle Lage am Markt?"
+
                 button=""
               />
             </div>
@@ -87,7 +87,7 @@ const Product = () => {
             <div className="hidden md:block absolute top-3/4 -right-2 md:-right-20 -translate-y-1/2  max-w-[200px] md:max-w-[250px]">
               <GlassBoxReverse
                 title="Finanzplanung"
-                text="Kapitalbedarf, Umsatzprognosen, Rentabilität und Liquiditätsplanung."
+
                 button="Connect"
               />
             </div>
@@ -161,7 +161,7 @@ const Product = () => {
         {/* Content Section */}
         <div className="mb-12">
           <div className="border-t border-gray-200 my-8"></div>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {

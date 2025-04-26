@@ -2,18 +2,16 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import { GiReactor } from "react-icons/gi";
+
 
 interface GlassBoxProps {
   title: string;
-  text: string;
   button: string;
   special?: string;
 }
 
 const GlassBoxReverse: React.FC<GlassBoxProps> = ({
   title,
-  text,
   button,
   special,
 }) => {

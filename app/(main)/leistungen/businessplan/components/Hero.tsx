@@ -2,14 +2,14 @@
 import { motion } from "framer-motion";
 import ButtonAnnaBurgundy from "@/app/components/customTags/ButtonAnnaMaroon";
 import ButtonAnnaTransparent from "@/app/components/customTags/ButtonTransparent";
-import Title from "@/app/components/customTags/Title";
 
-import React, { useState } from "react";
+
+
 import { IoShieldCheckmark } from "react-icons/io5";
 import { fadeIn, zoomIn } from "@/app/utils/motion";
 
 const Hero = () => {
-  const [hoverIn, setHoverIn] = useState(false);
+
   return (
     <div className="">
       <div className="z-10 max-w-7xl mx-auto  flex flex-col md:flex-row gap-1 h-full">
