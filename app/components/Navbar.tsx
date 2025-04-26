@@ -379,67 +379,69 @@ const Navbar = () => {
               />
             </div>
             {clickHamburgerMenu && (
-              <div
-                className={`absolute top-[6.3rem] left-0 flex flex-col w-screen border gap-x-[56px] justify-center items-center bg-white text-black ${menuClass}`}
-              >
-                {navLinks.map((item) => (
-                  <div key={item.name} className="w-full text-center">
-                    <div
-                      className="flex justify-center items-center"
-                      onClick={() => item.hasSubmenu && toggleSubmenu()}
-                    >
-                      <Link href={item.href}>
-                        <div
-                          className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] cursor-pointer flex items-center ${
-                            !isLoading &&
-                            item.name.toLowerCase() === currentSection
-                              ? " text-anna-brown"
-                              : ""
-                          }`}
-                          onClick={() => {
-                            if (item.hasSubmenu) {
-                              // Do nothing, submenu will toggle
-                            } else if (item.href === "faq") {
-                              handleFAQClick(); // Call without argument
-                              toggleMenu();
-                            } else {
-                              tabAndToggle(item.name, item.href);
-                            }
-                          }}
-                        >
-                          {item.name}
-                          {item.hasSubmenu && (
-                            <IoIosArrowDown
-                              className={`ml-1 inline-block transition-transform  ${
-                                openSubmenu ? "rotate-180" : ""
-                              }`}
-                            />
-                          )}
-                        </div>
-                      </Link>
-                    </div>
+  <div
+    className={`absolute top-[6.3rem] left-0 flex flex-col w-screen border gap-x-[56px] justify-center items-center bg-white text-black ${menuClass}`}
+  >
+    {navLinks.map((item) => (
+      <div key={item.name} className="w-full text-center">
+        <div
+          className="flex justify-center items-center"
+          onClick={() => item.hasSubmenu && toggleSubmenu()}
+        >
+          <Link href={item.href}>
+            <div
+              className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] cursor-pointer flex items-center ${
+                !isLoading &&
+                item.name.toLowerCase() === currentSection
+                  ? " text-anna-brown"
+                  : ""
+              }`}
+              onClick={(e) => {
+                if (item.hasSubmenu) {
+                  e.preventDefault(); // Previene la navegación
+                  toggleSubmenu();
+                } else if (item.name === "faq") {
+                  e.preventDefault();
+                  handleFAQClick();
+                  toggleMenu();
+                } else {
+                  tabAndToggle(item.name, item.href);
+                }
+              }}
+            >
+              {item.name}
+              {item.hasSubmenu && (
+                <IoIosArrowDown
+                  className={`ml-1 inline-block transition-transform ${
+                    openSubmenu ? "rotate-180" : ""
+                  }`}
+                />
+              )}
+            </div>
+          </Link>
+        </div>
 
-                    {item.hasSubmenu && openSubmenu && (
-                      <div className="flex flex-col bg-anna-gray-light transition-all duration-700">
-                        {leistungenSubLinks.map((subLink) => (
-                          <Link
-                            key={subLink.href}
-                            href={subLink.href}
-                            className="py-4 hover:bg-gray-100 text-sm"
-                            onClick={() => {
-                              toggleMenu(); // Cierra el menú al seleccionar
-                              setOpenSubmenu(false); // Cierra el submenú
-                            }}
-                          >
-                            {subLink.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
+        {item.hasSubmenu && openSubmenu && (
+          <div className="flex flex-col bg-anna-gray-light transition-all duration-700">
+            {leistungenSubLinks.map((subLink) => (
+              <Link
+                key={subLink.href}
+                href={subLink.href}
+                className="py-4 hover:bg-gray-100 text-sm"
+                onClick={() => {
+                  toggleMenu(); // Cierra el menú principal
+                  setOpenSubmenu(false); // Cierra el submenú
+                }}
+              >
+                {subLink.name}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+)}
           </div>
         </div>
       </nav>
