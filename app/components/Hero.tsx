@@ -6,22 +6,30 @@ import CarouselContainer from "./carousel/CarouselContainer";
 import Subtitle from "./customTags/Subtitle";
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Tailwind's md breakpoint
     };
-    handleResize(); // detectar al cargar
-    window.addEventListener("resize", handleResize); // detectar cambios
+
+    // Detectar en el montaje del componente
+    if (typeof window !== "undefined") {
+      handleResize(); // Detectar al cargar
+    }
+
+    window.addEventListener("resize", handleResize); // Detectar cambios
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  if (isMobile === null) {
+    return null; // No renderizar nada mientras no esté determinado el tamaño de la pantalla
+  }
 
   return (
     <div>
       <div className="h-screen relative shadow-anna-blue shadow-[0px_1px_7px_0px]">
         <div className="h-full w-full relative">
-          
           {isMobile ? (
             <video
               autoPlay
