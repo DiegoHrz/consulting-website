@@ -523,6 +523,7 @@ const PrivacyPolicy = () => {
             <a
               className="text-[#0171E3] hover:underline break-words"
               href="https://www.dataprivacyframework.gov/participant/7735"
+              aria-label="dataprivacyframework"
             >
               https://www.dataprivacyframework.gov/participant/7735.
             </a>

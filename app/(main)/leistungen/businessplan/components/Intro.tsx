@@ -29,7 +29,7 @@ const Intro: React.FC = () => {
             <button>See Details</button>
           </div>
         </div> */}
-        <div className="text-black flex flex-col md:flex-row w-full justify-between gap-8  md:gap-2 lg:gap-10  mx-auto  ">
+        <div className="text-black flex flex-col md:flex-row w-full justify-between gap-8  md:gap-2 lg:gap-10 max-w-96 sm:max-w-[55rem] mx-auto  ">
           <div className="flex flex-col   gap-3 p-6 md:p-4  flex-1  border-[#D5E0E2] rounded-xl bg-white  min-h-56 lg:min-h-64">
             {/* md:shadow-gray-300 md:shadow-[0px_4px_2px_0px] */}
             <GoShieldCheck size={80} color="#581D1D" className="mx-auto"  />

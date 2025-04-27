@@ -8,6 +8,7 @@ import ButtonAnnaTransparent from "@/app/components/customTags/ButtonTransparent
 import { IoShieldCheckmark } from "react-icons/io5";
 import { fadeIn, zoomIn } from "@/app/utils/motion";
 
+
 const Hero = () => {
 
   return (

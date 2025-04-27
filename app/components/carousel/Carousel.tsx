@@ -6,7 +6,7 @@ const Carousel: React.FC = () => {
   return (
     <div >
       <div
-        className="slider h-[5rem] pt-10  mx-auto"
+        className="slider h-[5rem] pt-10  mx-auto will-change-transform"
         style={
           {
             "--width": "160px",
@@ -18,22 +18,28 @@ const Carousel: React.FC = () => {
       >
         <div className="list ">
           <div className="item" style={{ "--position": 1 } as React.CSSProperties}>
-            <img src="/brands/brand1.avif" alt=""  />
+            <img src="/brands/brand1.avif" alt="" loading="lazy" 
+              decoding="async" />
           </div>
           <div className="item" style={{ "--position": 2 } as React.CSSProperties}>
-            <img src="/brands/brand2.webp" alt=""  />
+            <img src="/brands/brand2.webp" alt="" loading="lazy" 
+              decoding="async"  />
           </div>
           <div className="item" style={{ "--position": 3 } as React.CSSProperties}>
-            <img src="/brands/brand3.png" alt=""  />
+            <img src="/brands/brand3.png" alt="" loading="lazy" 
+              decoding="async"  />
           </div>
           <div className="item" style={{ "--position": 4 } as React.CSSProperties}>
-            <img src="/brands/brand4.png" alt=""  />
+            <img src="/brands/brand4.png" alt="" loading="lazy" 
+              decoding="async"  />
           </div>
           <div className="item" style={{ "--position": 5 } as React.CSSProperties}>
-            <img src="/brands/brand6.2.jpg" alt=""  />
+            <img src="/brands/brand6.2.jpg" alt="" loading="lazy" 
+              decoding="async"   />
           </div>
           <div className="item" style={{ "--position": 6 } as React.CSSProperties}>
-            <img src="/brands/brand6.jpeg" alt=""  />
+            <img src="/brands/brand6.jpeg" alt="" loading="lazy" 
+              decoding="async"  />
           </div>
           {/* <div className="item" style={{ "--position": 7 } as React.CSSProperties}>
             <img src="/brands/1.png.png" alt="" />
