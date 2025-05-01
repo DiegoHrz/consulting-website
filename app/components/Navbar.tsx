@@ -6,6 +6,7 @@ import logoBlack from "../../public/logo/logo-no-bg/logo-black-no-bg.png";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { IoIosArrowDown, IoIosMenu } from "react-icons/io";
+import { useLanguageStore } from "../store/useLanguageStore";
 import { useNavStore } from "../store/useNavStore";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
@@ -52,12 +53,14 @@ const Navbar = () => {
     setIsLoading,
     setCurrentSection,
   } = useNavStore();
+  const { lang, setLang } = useLanguageStore();
   const [clickHamburgerMenu, setClickHamburgerMenu] = useState(false);
   const [menuClass, setMenuClass] = useState("");
   const [scrollPositionOnClick, setScrollPositionOnClick] = useState(0);
 
   const [isFAQVisible, setIsFAQVisible] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const [isOpenLanguageMenu, setIsOpenLanguageMenu] = useState(false);
 
   // Cerrar menú al hacer clic fuera
   useEffect(() => {
@@ -83,6 +86,7 @@ const Navbar = () => {
       setClickHamburgerMenu(false);
       setOpenSubmenu(false);
     }, 300); // Coincide con la duración de la animación
+    setIsOpenLanguageMenu(false);
   };
 
   useEffect(() => {
@@ -222,6 +226,7 @@ const Navbar = () => {
       if (clickHamburgerMenu && window.scrollY !== scrollPositionOnClick) {
         setTimeout(() => {
           setClickHamburgerMenu(false);
+          setIsOpenLanguageMenu(false);
         }, 700);
         setMenuClass("animate-collapse-out");
       }
@@ -301,7 +306,7 @@ const Navbar = () => {
               {navLinks.map((item) => (
                 <div
                   key={item.name}
-                  className="relative"
+                  className="relative "
                   onMouseEnter={() => item.hasSubmenu && setOpenSubmenu(true)}
                   onMouseLeave={() => item.hasSubmenu && setOpenSubmenu(false)}
                 >
@@ -379,112 +384,244 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
+              {/* flags */}
+              <div className="relative group my-auto ">
+                <div className="flex items-center  gap-2 cursor-pointer">
+                  <div className="w-8 h-6 relative">
+                    <img
+                      src={
+                        lang === "de" ? "/flags/germany.png" : "/flags/usa.avif"
+                      }
+                      alt="Deutsch"
+                      className="object-cover h-full w-full"
+                    />
+                  </div>
+                  <IoIosArrowDown className="text-xs" />
+                </div>
+
+                <div className="absolute left-1/2 top-6 -translate-x-1/2 w-28 h-32 bg-white shadow-lg  hidden group-hover:block z-50">
+                  <button
+                    className="w-full hover:bg-gray-200 duration-500 p-2  h-1/2 flex justify-center items-center"
+                    onClick={() => {
+                      setLang("en");
+                    }}
+                  >
+                    <div className="flex items-center   w-8 h-6 text-sm">
+                      <img
+                        src="/flags/usa.avif"
+                        alt="English"
+                        className="object-contain h-full w-full"
+                      />
+                    </div>
+                  </button>
+
+                  <button
+                    className="w-full hover:bg-gray-200 duration-500 p-2 h-1/2 flex justify-center items-center"
+                    onClick={() => {
+                      setLang("de");
+                    }}
+                  >
+                    <div className="flex items-center   w-8 h-6 text-sm">
+                      <img
+                        src="/flags/germany.png"
+                        alt="English"
+                        className="object-cover h-full w-full"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </nav>
       <nav className="md:hidden w-full items-center justify-between mt-[-16px] md:container md:mx-0 md:px-0 py-2 relative z-50">
-  <div className="fixed z-50 top-0 w-full">
-    {/* Barra superior con logo y botón */}
-    <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center text-xs font-light w-full">
-      <div className="bg-anna-blue/40 h-full w-full p-1 text-anna-burgundy">
-        <p className="text-white">Wo eine Idee ist, ist auch ein Weg</p>
-      </div>
-    </div>
-    
-    <div className={`flex items-center justify-between z-10 top-0 w-full py-2 px-6 text-white ${
-      (scrolled || clickHamburgerMenu) && "bg-white text-black border-b-2 border-b-[#E0E0E0] border-opacity-80"
-    }`}>
-      <div>
-        <Image
-          src={scrolled || clickHamburgerMenu ? logoBlack : logoWhite}
-          alt="Logo"
-          className="w-24 h-15"
-        />
-      </div>
+        <div className="fixed z-50 top-0 w-full">
+          {/* Barra superior con logo y botón */}
+          <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center text-xs font-light w-full">
+            <div className="bg-anna-blue/40 h-full w-full p-1 text-anna-burgundy">
+              <p className="text-white">Wo eine Idee ist, ist auch ein Weg</p>
+            </div>
+          </div>
 
-      <div className="flex gap-x-5 md:hidden">
-        <IoIosMenu
-          size={32}
-          className={`text-anna-burgundy ${
-            scrolled || clickHamburgerMenu ? "text-black" : "text-anna-gray"
-          }`}
-          onClick={toggleMenu}
-        />
-      </div>
-    </div>
+          <div
+            className={`flex items-center justify-between z-10 top-0 w-full py-2 px-6 text-white ${
+              (scrolled || clickHamburgerMenu) &&
+              "bg-white text-black border-b-2 border-b-[#E0E0E0] border-opacity-80"
+            }`}
+          >
+            <div>
+              <Image
+                src={scrolled || clickHamburgerMenu ? logoBlack : logoWhite}
+                alt="Logo"
+                className="w-24 h-15"
+              />
+            </div>
 
-    {/* Menú desplegable y overlay */}
-    {clickHamburgerMenu && (
-      <>
-        {/* Overlay semitransparente */}
-        {/* <div 
+            <div className="flex gap-x-5 md:hidden">
+              <IoIosMenu
+                size={32}
+                className={`text-anna-burgundy ${
+                  scrolled || clickHamburgerMenu
+                    ? "text-black"
+                    : "text-anna-gray"
+                }`}
+                onClick={toggleMenu}
+              />
+            </div>
+          </div>
+
+          {/* Menú desplegable y overlay */}
+          {clickHamburgerMenu && (
+            <>
+              {/* Overlay semitransparente */}
+              {/* <div 
           className="fixed inset-0 bg-black/30 z-50"
           onClick={closeMenu}
         /> */}
-        
-        {/* Contenedor del menú */}
-        <div
-          ref={menuRef}
-          className={`fixed top-[6.3rem] left-0 flex flex-col w-screen bg-white text-black  overflow-hidden ${
-            menuClass === "animate-collapse-in" ? "animate-slide-in" : "animate-slide-out"
-          }`}
-        >
-          {navLinks.map((item) => (
-            <div key={item.name} className="w-full text-center">
-              <div className="flex justify-center items-center" onClick={() => item.hasSubmenu && toggleSubmenu()}>
-                <Link href={item.href}>
-                  <div
-                    className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] cursor-pointer flex items-center ${
-                      !isLoading && item.name.toLowerCase() === currentSection ? "text-anna-brown" : ""
-                    }`}
-                    onClick={(e) => {
-                      if (item.hasSubmenu) {
-                        e.preventDefault();
-                        toggleSubmenu();
-                      } else if (item.name === "faq") {
-                        e.preventDefault();
-                        handleFAQClick();
-                        toggleMenu();
-                      } else {
-                        tabAndToggle(item.name, item.href);
-                      }
-                    }}
-                  >
-                    {item.name}
-                    {item.hasSubmenu && (
-                      <IoIosArrowDown className={`ml-1 inline-block transition-transform ${
-                        openSubmenu ? "rotate-180" : ""
-                      }`}/>
+
+              {/* Contenedor del menú */}
+              <div
+                ref={menuRef}
+                className={`fixed top-[6.3rem] left-0 flex flex-col w-screen bg-white text-black  overflow-hidden ${
+                  menuClass === "animate-collapse-in"
+                    ? "animate-slide-in"
+                    : "animate-slide-out"
+                }`}
+              >
+                {navLinks.map((item) => (
+                  <div key={item.name} className="w-full text-center">
+                    <div
+                      className="flex justify-center items-center"
+                      onClick={() => item.hasSubmenu && toggleSubmenu()}
+                    >
+                      <Link
+                        href={item.href}
+                        className="border-b w-full flex justify-center"
+                      >
+                        <div
+                          className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] cursor-pointer flex items-center  ${
+                            !isLoading &&
+                            item.name.toLowerCase() === currentSection
+                              ? "text-anna-brown"
+                              : ""
+                          }`}
+                          onClick={(e) => {
+                            if (item.hasSubmenu) {
+                              e.preventDefault();
+                              toggleSubmenu();
+                            } else if (item.name === "faq") {
+                              e.preventDefault();
+                              handleFAQClick();
+                              toggleMenu();
+                            } else {
+                              tabAndToggle(item.name, item.href);
+                            }
+                          }}
+                        >
+                          {item.name}
+                          {item.hasSubmenu && (
+                            <IoIosArrowDown
+                              className={`ml-1 inline-block transition-transform ${
+                                openSubmenu ? "rotate-180" : ""
+                              }`}
+                            />
+                          )}
+                        </div>
+                      </Link>
+                    </div>
+
+                    {item.hasSubmenu && openSubmenu && (
+                      <div className="flex flex-col bg-anna-gray-light transition-all duration-700">
+                        {leistungenSubLinks.map((subLink) => (
+                          <Link
+                            key={subLink.href}
+                            href={subLink.href}
+                            className="py-4 hover:bg-gray-100 text-sm "
+                            onClick={() => {
+                              toggleMenu();
+                              setOpenSubmenu(false);
+                            }}
+                          >
+                            {subLink.name}
+                          </Link>
+                        ))}
+                      </div>
                     )}
                   </div>
-                </Link>
-              </div>
-
-              {item.hasSubmenu && openSubmenu && (
-                <div className="flex flex-col bg-anna-gray-light transition-all duration-700">
-                  {leistungenSubLinks.map((subLink) => (
-                    <Link
-                      key={subLink.href}
-                      href={subLink.href}
-                      className="py-4 hover:bg-gray-100 text-sm"
+                ))}
+                {/* translation button */}
+                <div
+                  className="relative group m-auto py-4"
+                  onClick={() => {
+                    setIsOpenLanguageMenu(!isOpenLanguageMenu);
+                  }}
+                >
+                  <div className="flex items-center  gap-2 cursor-pointer">
+                    <div className="w-8 h-6 relative">
+                      <img
+                        src={
+                          lang === "de"
+                            ? "/flags/germany.png"
+                            : "/flags/usa.avif"
+                        }
+                        alt="Deutsch"
+                        className="object-cover h-full w-full"
+                      />
+                    </div>
+                    <IoIosArrowDown className="text-xs" />
+                  </div>
+                </div>
+                {isOpenLanguageMenu && (
+                  <div className="  w-full h-32 bg-white shadow-lg  z-50">
+                    <button
+                      className={`w-full hover:bg-gray-200 duration-500 p-2  h-1/2 flex justify-center items-center gap-2 ${
+                        lang === "en" && "bg-gray-200"
+                      }`}
                       onClick={() => {
-                        toggleMenu();
-                        setOpenSubmenu(false);
+                        setLang("en");
+
+                        setIsOpenLanguageMenu(false);
+                        console.log("Change to english");
                       }}
                     >
-                      {subLink.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+                      <div className="flex items-center   w-8 h-6 text-sm">
+                        <img
+                          src="/flags/usa.avif"
+                          alt="English"
+                          className="object-contain h-full w-full"
+                        />
+                      </div>
+                      <p className="font-vollkornSC">english</p>
+                    </button>
+
+                    <button
+                      className={`w-full hover:bg-gray-200 duration-500 p-2 h-1/2 flex justify-center items-center gap-2 ${
+                        lang === "de" && "bg-gray-200"
+                      }`}
+                      onClick={() => {
+                        setLang("de");
+
+                        setIsOpenLanguageMenu(false);
+                        console.log("Change to german");
+                      }}
+                    >
+                      <div className="flex items-center   w-8 h-6 text-sm">
+                        <img
+                          src="/flags/germany.png"
+                          alt="English"
+                          className="object-cover h-full w-full"
+                        />
+                      </div>
+                      <p className="font-vollkornSC">german</p>
+                    </button>
+                  </div>
+                )}
+              </div>
+            </>
+          )}
         </div>
-      </>
-    )}
-  </div>
-</nav>
+      </nav>
     </>
   );
 };

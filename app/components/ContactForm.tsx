@@ -5,6 +5,8 @@ import { useState } from "react";
 import axios from "axios";
 import { IoCall, IoLogoWhatsapp } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
+import { useLanguageStore } from "../store/useLanguageStore";
+
 
 interface FormData {
   nombre: string; // Nombre y apellido
@@ -13,7 +15,54 @@ interface FormData {
   mensaje: string; // Contenido del mensaje
 }
 
+const translationsContact = {
+  de: {
+    quote:
+      "Wir sind hier, um alle deine Fragen anzuhören und den Kurs deines Unternehmens zu ändern.",
+    title: "Kontakt",
+    title2: "Wir warten auf dich",
+    description:
+      "Wir sind stets bereit, deinem Unternehmen mit unseren Geschäftsplänen zum Durchbruch zu verhelfen und sein Wachstum fortzusetzen.",
+    placeholder_name: "Name",
+    placeholder_email: "E-Mail",
+    placeholder_subject: "Betreff",
+    placeholder_message: "Nachricht",
+    button: "Senden",
+    success_message:
+      "Wir haben Ihre Nachricht erhalten! Wir melden uns in Kürze bei Ihnen. Vielen Dank!",
+    error_name_required: "Name ist erforderlich",
+    error_name_pattern: "Geben Sie Ihren Vor- und Nachnamen ein",
+    error_email_required: "E-Mail ist erforderlich",
+    error_email_pattern: "Die E-Mail ist falsch",
+    error_subject_required: "Betreff ist erforderlich",
+    error_message_required: "Die Nachricht ist erforderlich",
+  },
+  en: {
+    quote:
+      "We are here to listen to all your questions and change the course of your business.",
+    title: "Contact",
+    title2: "We are waiting for you",
+    description:
+      "We are always ready to help your company break through and continue its growth with our business plans.",
+    placeholder_name: "Name",
+    placeholder_email: "Email",
+    placeholder_subject: "Subject",
+    placeholder_message: "Message",
+    button: "Send",
+    success_message:
+      "We have received your message! We will get back to you shortly. Thank you!",
+    error_name_required: "Name is required",
+    error_name_pattern: "Enter your first and last name",
+    error_email_required: "Email is required",
+    error_email_pattern: "The email is incorrect",
+    error_subject_required: "Subject is required",
+    error_message_required: "The message is required",
+  },
+};
+
 const ContactForm = () => {
+  const { lang } = useLanguageStore();
+  const t = translationsContact[lang];
   const {
     register,
     formState: { errors },
@@ -28,9 +77,7 @@ const ContactForm = () => {
       const response = await axios.post("/api/nodemailer", data);
       if (response.data.message === "Email sent successfully!") {
         // ¡Recibimos tu mensaje! Pronto te daremos respuesta. Muchas Gracias!
-        setSuccessMessage(
-          "Wir haben Ihre Nachricht erhalten! Wir melden uns in Kürze bei Ihnen. Vielen Dank!"
-        );
+        setSuccessMessage(t.success_message);
         reset();
       }
       console.log("Respuesta del servidor:", response.data);
@@ -50,11 +97,10 @@ const ContactForm = () => {
         Contacto
       </h1> */}
       <p className="font-medium text-xl pt-6 lg:pt-[40px] lg:text-[20px] font-vollkornSC">
-        Wir sind hier, um alle deine Fragen anzuhören und den Kurs deines
-        Unternehmens zu ändern.
+        {t.quote}
       </p>
-      <div className="text-[#03b418] py-3 ">
-        {successMessage && <p>{successMessage}</p>}
+      <div className=" py-3 ">
+        {successMessage && <p className="text-[#03b418]" >{successMessage}</p>}
       </div>
       <div className="w-full  lg:py-8 lg:pr-44 mt-2 rounded-2xl  sm:px-10 md:px-24 lg:px-0">
         <form
@@ -90,13 +136,13 @@ const ContactForm = () => {
           /> */}
 
           <header className=" text-3xl pb-4   lg:text-left font-rilke-monecias ">
-            Kontakt
+            {t.title}
           </header>
           <div className="flex flex-col-reverse">
             <input
               type="text"
               id="name"
-              placeholder="Name"
+              placeholder={t.placeholder_name}
               {...register("nombre", {
                 required: true,
                 pattern: /^[a-zA-Z]+(?: [a-zA-Z]+)*$/,
@@ -111,13 +157,13 @@ const ContactForm = () => {
                 {errors.nombre?.type === "required" && (
                   <span className="text-red-600 text-[12px] ">
                     {/* //Nombre es requerido */}
-                    Name ist erforderlich
+                    {t.error_email_required}
                   </span>
                 )}
                 {errors.nombre?.type === "pattern" && (
                   <p className="text-red-600 text-[12px]">
                     {/* // Ingresa tu Nombre y Apellido */}
-                    Geben Sie Ihren Vor- und Nachnamen ein
+                    {t.error_name_pattern}
                   </p>
                 )}
               </span>
@@ -128,7 +174,7 @@ const ContactForm = () => {
             <input
               type="email"
               id="email"
-              placeholder="E-Mail"
+              placeholder={t.placeholder_email}
               {...register("correo", {
                 required: true,
                 pattern: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
@@ -141,13 +187,13 @@ const ContactForm = () => {
                 {errors.correo?.type === "pattern" && (
                   <span className="text-red-600 text-[12px]">
                     {/* // El Email es incorrecto */}
-                    Die E-Mail ist falsch
+                    {t.error_email_pattern}
                   </span>
                 )}
                 {errors.correo?.type === "required" && (
                   <span className="text-red-600 text-[12px]">
                     {/* Email es requerido{" "} */}
-                    E-Mail ist erforderlich
+                    {t.error_email_required}
                   </span>
                 )}
               </span>
@@ -181,7 +227,7 @@ const ContactForm = () => {
             <input
               type="text"
               id="asunto"
-              placeholder="Betreff"
+              placeholder={t.placeholder_subject}
               {...register("asunto", {
                 required: true,
               })}
@@ -193,7 +239,7 @@ const ContactForm = () => {
                 {errors.asunto?.type === "required" && (
                   <span className="text-red-600 text-[12px]">
                     {/* Asunto es requerido{" "} */}
-                    Betreff ist erforderlich
+                    {t.error_subject_required}
                   </span>
                 )}
               </span>
@@ -205,7 +251,7 @@ const ContactForm = () => {
               id="mensaje"
               cols={1}
               rows={4}
-              placeholder="Nachricht"
+              placeholder={t.placeholder_message}
               {...register("mensaje", {
                 required: true,
               })}
@@ -217,7 +263,7 @@ const ContactForm = () => {
                 {errors.mensaje?.type === "required" && (
                   <span className="text-red-600 text-[12px]">
                     {/* El Mensaje es requerido{" "} */}
-                    Die Nachricht ist erforderlich
+                    {t.error_message_required}
                   </span>
                 )}
               </span>
@@ -227,7 +273,7 @@ const ContactForm = () => {
           <div className="w-full  lg:flex lg:justify-end">
             <input
               type="submit"
-              value="Senden"
+              value={t.button}
               className="cursor-pointer border rounded-md w-1/2 lg:w-auto text-white bg-[#8CB8D5] sm:px-12 py-2 italic "
               style={{
                 boxShadow:
@@ -248,13 +294,9 @@ const ContactForm = () => {
                 alt=""
               /> */}
               <p className="text-3xl pb-8 font-rilke-monecias text-anna-white font-bold">
-                Wir warten auf dich
+                {t.title2}
               </p>
-              <p className="pb-8 text-anna-white">
-                Wir sind stets bereit, deinem Unternehmen mit unseren
-                Geschäftsplänen zum Durchbruch zu verhelfen und sein Wachstum
-                fortzusetzen.
-              </p>
+              <p className="pb-8 text-anna-white">{t.description}</p>
               <div className="">
                 {/* <a
                   href="https://www.google.com/maps/place/Caf%C3%A9+Rilke+Per%C3%BA/@-12.1213276,-77.0368608,19.77z/data=!4m6!3m5!1s0x9105c9b327b765cb:0x560f84cb9c54101a!8m2!3d-12.1213366!4d-77.0366567!16s%2Fg%2F11vbxjvk1w?entry=ttu"
@@ -381,13 +423,9 @@ const ContactForm = () => {
                 className="hidden lg:block w-12 lg:w-10 z-10 absolute -bottom-1 lg:-bottom-14  lg:-right-[6.5rem] -translate-x-1/2 "
               /> */}
             <p className="text-3xl pb-8 font-cabin text-anna-white text-center">
-              Wir warten auf dich
+              {t.title2}
             </p>
-            <p className="pb-8 text-justify">
-              Wir sind stets bereit, deinem Unternehmen mit unseren
-              Geschäftsplänen zum Durchbruch zu verhelfen und sein Wachstum
-              fortzusetzen.
-            </p>
+            <p className="pb-8 text-justify">{t.description}</p>
             <div className="flex justify-center flex-col">
               {/* <a
                 href="https://www.google.com/maps/place/Caf%C3%A9+Rilke+Per%C3%BA/@-12.1213276,-77.0368608,19.77z/data=!4m6!3m5!1s0x9105c9b327b765cb:0x560f84cb9c54101a!8m2!3d-12.1213366!4d-77.0366567!16s%2Fg%2F11vbxjvk1w?entry=ttu"
