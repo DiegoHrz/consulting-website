@@ -3,6 +3,7 @@
 import AppointmentBanner from "@/app/components/AppointmentBanner";
 
 import HeroSecondary from "@/app/components/HeroSecondary";
+import { useLanguageStore } from "@/app/store/useLanguageStore";
 
 import React from "react";
 
@@ -28,21 +29,123 @@ import React from "react";
 // ];
 
 const About = () => {
+
+  const aboutText ={
+    de:{
+      title: "Über uns",
+      upper_title: "unser team",
+      title_text:"Weil jedes erfolgreiche Business mit der richtigen Unterstützung beginnt.",
+      quote:'Tagtäglich unterstützen wir zahlreiche Unternehmer deutschlandweit',
+      second_title:"Über uns",
+      lower_second_title:"AS Vision Partners",
+      second_title_text:"Unternehmensberatung für Gründer und etablierte Unternehmen",
+      box_text_first:"Als strategisches Netzwerk eng verbundener Partner haben wir es uns zur Aufgabe gemacht, Gründer, Start-Ups und Selbstständige dabei zu unterstützen, ihre Visionen zu verwirklichen und ihre Träume in die Realität umzusetzen.",
+      box_text_second:"Dank unseres remote-first Ansatzes agieren wir flexibel von diversen Standorten aus und verbinden Innovation, Strategie und persönliche Beratung – stets mit einem klaren Fokus auf deine individuellen Bedürfnisse.",
+      mission_title:"Unsere Mission",
+      mission_text:"Wir begleiten Menschen auf ihrem Weg in die Selbstständigkeit und helfen ihnen, ihre beruflichen Visionen in die Realität umzusetzen. Mit persönlicher Beratung, fachlicher Expertise und individuellen Lösungen bieten wir unseren Kunden die Unterstützung, die sie für eine erfolgreiche Zukunft brauchen.",
+      vision_title:"Unsere Vision",
+      vision_text:"Wir möchten eine zentrale Anlaufstelle für Gründerinnen und Unternehmerinnen sein, die nach klarer Orientierung, praxisnaher Unterstützung und langfristigem Erfolg streben. Unsere Vision ist es, ein Netzwerk zu schaffen, in dem jede/r die Möglichkeit hat, mit einer klaren Strategie und nachhaltigen Lösungen seine oder ihre beruflichen Träume zu verwirklichen.",
+      mission_vision_text:"Seit der Gründung konnten wir bereits zahlreiche Kunden erfolgreich unterstützen und sind stolz darauf, Teil ihrer Erfolgsgeschichten zu sein. ",
+      mission_vision_text_second:"Wir arbeiten eng mit dir zusammen, um deine Herausforderungen zu meistern und nachhaltigen Erfolg zu erzielen.",
+      third_title:"Unser Versprechen",
+      third_title_subtitle_one:'Maßgeschneiderte Beratung',
+      third_title_subtitle_one_text:"Passend zu dir und deiner Vision.",
+      third_title_subtitle_two:'Engagiertes Team',
+      third_title_subtitle_two_text:"Fachwissen und Erfahrung an deiner Seite.",
+      third_title_subtitle_three:'Klare Strategie',
+      third_title_subtitle_three_text:"Für ein Unternehmen, das auf das nächste Level wächst.",
+      founder_title:'Meet the Founder - Anna Schenk',
+      founder_position:"Gründerin",
+      founder_first_paragraph:'Mit einem Abschluss in Betriebswirtschaftslehre und dem Schwerpunkt Finanzen habe ich mir fundiertes Fachwissen angeeignet, das ich seit 2023 als selbstständige Beraterin erfolgreich einsetze. Meine Mission ist es, Menschen dabei zu unterstützen, ihre Berufung zum Beruf zu machen – und dadurch einen Alltag zu schaffen, der sich nicht wie Arbeit anfühlt, sondern wie die Erfüllung eines Traums.',
+      founder_second_paragraph:'Stationen in den USA und Peru haben meinen Blick auf die Welt erweitert. Ich durfte nicht nur neue Perspektiven gewinnen, sondern auch interkulturelle Kompetenzen entwickeln – ein wertvoller Vorteil, um Unternehmen mit internationaler Ausrichtung zu unterstützen. Zudem spreche ich mehrere Sprachen, darunter Deutsch, Englisch und Spanisch, was mir ermöglicht, auf die Bedürfnisse einer vielfältigen Kundschaft einzugehen.',
+      founder_points_title:"Werte, die mich antreiben:",
+      founder_points_one:"Freiheit durch Selbstständigkeit:",
+      founder_points_one_text:"Mein Ziel ist es, Menschen die Möglichkeit zu geben, ihr Leben selbstbestimmt zu gestalten, indem sie ihr eigenes Business erfolgreich umsetzen. Freiheit bedeutet für mich, die Kontrolle über die eigene berufliche und private Zukunft zu haben.",
+      founder_points_two:"Gesundheit und Zufriedenheit im Beruf:",
+      founder_points_two_text:"Eine bewusste und gesunde Lebensweise liegt mir am Herzen, denn sie ist die Grundlage für nachhaltigen Erfolg. Dabei ist vor allem die Zufriedenheit im Beruf essenziell – denn nur wer mit Leidenschaft und Freude arbeitet, kann langfristig erfolgreich und erfüllt sein.",
+      founder_points_three:"Entdeckungsfreude:",
+      founder_points_three_text:"Neue Länder, Kulturen und Ideen zu erkunden, bereichert nicht nur mein Leben, sondern auch meine Arbeit. Diese Offenheit ermöglicht es mir, innovative Perspektiven zu entwickeln und flexibel auf die Bedürfnisse meiner Kunden einzugehen.",
+      founder_points_four:"Optimismus:",
+      founder_points_four_text:"Ich bin überzeugt, dass alles möglich ist, wenn man seine Ziele mit Klarheit, Mut und Überzeugung verfolgt. Diese Haltung prägt meinen Ansatz, Menschen auf ihrem Weg in die Selbstständigkeit zu begleiten.",
+      team_title:"Unser Team",
+      team_pat_position:"- Berater -",
+      team_pat_text_one:"Mit mehr als 10 Jahren Erfahrung in der Beratung ist Patrick Rösner eine zentrale Stütze unseres Teams. Seine umfassenden Kenntnisse und sein tiefes Verständnis für verschiedenste Wirtschaftssektoren machen ihn zu einem wertvollen Experten, vor allem in der Entwicklung von Businessplänen, der Optimierung von Geschäftsstrategien und der Analyse von Marktchancen.",
+      team_pat_text_second:"Patrick hat zahlreiche Gründer und Unternehmen auf ihrem Weg begleitet und ihnen geholfen, fundierte Entscheidungen zu treffen sowie ihre Ziele sicher und effizient zu erreichen. Seine strategische Herangehensweise und sein Blick fürs Wesentliche machen ihn zu einem unverzichtbaren Bestandteil unseres Teams.",
+      team_jen_position:"- Beraterin -",
+      team_jen_text_one:"Jennifer Weisheit ist deine kompetente Begleiterin auf dem Weg zur erfolgreichen Gründung. Mit ihrer langjährigen Erfahrung als Unternehmensberaterin hat sie bereits zahlreiche Gründer:innen auf ihrem Weg zum Erfolg unterstützt.",
+      team_jen_text_second:"Nach wertvollen Jahren als angestellte Beraterin entschied sie sich, selbst den Schritt in die Selbstständigkeit zu wagen – ein Weg, der sie geprägt und bereichert hat. Heute nutzt sie ihre umfassende Expertise, um Gründer:innen dabei zu helfen, ihre Vorhaben sicher und gewinnbringend umzusetzen.",
+      team_jen_text_third:"Jennifer legt großen Wert darauf, dir nicht nur praktische Werkzeuge und Strategien an die Hand zu geben, sondern dich auch mental auf die Herausforderungen und Chancen des Unternehmertums vorzubereiten.",
+      cooperation_title:"Kooperationspartner",
+      cooperation_text:"Wir freuen uns, dir die mit AS Vision Partners verbundenen Kooperationspartner vorzustellen. Durch diese langjährige, professionelle Zusammenarbeit werden optimale Voraussetzungen für die jungen Unternehmer von morgen geschaffen."
+
+    },
+    en:{
+      title: "About Us",
+      upper_title: "our team",
+      title_text: "Because every successful business starts with the right support.",
+      quote: "Daily we support numerous entrepreneurs across Germany",
+      second_title: "About Us",
+      lower_second_title: "AS Vision Partners",
+      second_title_text: "Business consulting for startups and established companies",
+      box_text_first: "As a strategic network of closely connected partners, we have made it our mission to support founders, startups and self-employed individuals in realizing their visions and turning their dreams into reality.",
+      box_text_second: "Thanks to our remote-first approach, we operate flexibly from various locations, combining innovation, strategy and personal consulting - always with a clear focus on your individual needs.",
+      mission_title: "Our Mission",
+      mission_text: "We accompany people on their path to self-employment and help them turn their professional visions into reality. With personal advice, professional expertise and individual solutions, we offer our customers the support they need for a successful future.",
+      vision_title: "Our Vision",
+      vision_text: "We want to be a central point of contact for founders and entrepreneurs looking for clear orientation, practical support and long-term success. Our vision is to create a network where everyone has the opportunity to realize their professional dreams with a clear strategy and sustainable solutions.",
+
+  mission_vision_text: "Since our founding, we have already successfully supported numerous clients and are proud to be part of their success stories.",
+  mission_vision_text_second: "We work closely with you to overcome your challenges and achieve sustainable success.",
+      third_title: "Our Promise",
+      third_title_subtitle_one: "Tailored Consulting",
+      third_title_subtitle_one_text: "Customized for you and your vision.",
+      third_title_subtitle_two: "Dedicated Team",
+      third_title_subtitle_two_text: "Expertise and experience by your side.",
+      third_title_subtitle_three: "Clear Strategy",
+      third_title_subtitle_three_text: "For a business ready to grow to the next level.",
+      founder_title: "Meet the Founder - Anna Schenk",
+      founder_position: "Founder",
+      founder_first_paragraph: "With a degree in business administration specializing in finance, I've acquired solid expertise that I've been successfully applying as an independent consultant since 2023. My mission is to help people turn their calling into a career - creating a daily life that doesn't feel like work, but like fulfilling a dream.",
+      founder_second_paragraph: "Time spent in the USA and Peru has broadened my worldview. I've not only gained new perspectives but also developed intercultural competencies - a valuable advantage when supporting businesses with international orientation. Additionally, I speak several languages including German, English and Spanish, allowing me to cater to a diverse clientele.",
+      founder_points_title: "Values that drive me:",
+      founder_points_one: "Freedom through self-employment:",
+      founder_points_one_text: "My goal is to give people the opportunity to shape their lives autonomously by successfully implementing their own business. To me, freedom means having control over one's professional and personal future.",
+      founder_points_two: "Health and job satisfaction:",
+      founder_points_two_text: "A conscious and healthy lifestyle is important to me as it's the foundation for sustainable success. Job satisfaction is particularly essential - because only those who work with passion and joy can be successful and fulfilled in the long term.",
+      founder_points_three: "Love of discovery:",
+      founder_points_three_text: "Exploring new countries, cultures and ideas enriches not only my life but also my work. This openness allows me to develop innovative perspectives and respond flexibly to my clients' needs.",
+      founder_points_four: "Optimism:",
+      founder_points_four_text: "I'm convinced that anything is possible if you pursue your goals with clarity, courage and conviction. This attitude shapes my approach to accompanying people on their path to self-employment.",
+      team_title: "Our Team",
+      team_pat_position: "- Consultant -",
+      team_pat_text_one: "With over 10 years of consulting experience, Patrick Rösner is a central pillar of our team. His comprehensive knowledge and deep understanding of various economic sectors make him a valuable expert, particularly in business plan development, business strategy optimization and market opportunity analysis.",
+      team_pat_text_second: "Patrick has accompanied numerous founders and companies on their journey, helping them make informed decisions and achieve their goals safely and efficiently. His strategic approach and eye for what matters make him an indispensable part of our team.",
+      team_jen_position: "- Consultant -",
+      team_jen_text_one: "Jennifer Weisheit is your competent companion on the path to successful founding. With her many years of experience as a business consultant, she has already supported numerous founders on their path to success.",
+      team_jen_text_second: "After valuable years as an employed consultant, she decided to take the step into self-employment - a path that has shaped and enriched her. Today she uses her comprehensive expertise to help founders implement their projects safely and profitably.",
+      team_jen_text_third: "Jennifer places great emphasis on not only providing you with practical tools and strategies, but also mentally preparing you for the challenges and opportunities of entrepreneurship.",
+      cooperation_title: "Cooperation Partners",
+        cooperation_text: "We are pleased to introduce you to the cooperation partners associated with AS Vision Partners. Through these long-standing, professional collaborations, we create optimal conditions for tomorrow's young entrepreneurs."
+    }
+  }
+  const {lang} =useLanguageStore()
+  const t = aboutText[lang]
+
   return (
     <div>
       <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
         <HeroSecondary
           image="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          header="unser team"
-          title="Über uns"
-          text="Weil jedes erfolgreiche Business mit der richtigen Unterstützung beginnt."
+          header={t.upper_title}
+          title={t.title}
+          text={t.title_text}
           imageStyles=""
         />
       </div>
       {/* <Placeholder text="Uber uns" /> */}
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm uppercase text-gray-500 tracking-wide">
-          Tagtäglich unterstützen wir zahlreiche Unternehmer deutschlandweit
+          {t.quote}
         </p>
         <div className="mt-6 flex flex-row flex-wrap justify-center">
           <div className="col-span-1 flex justify-center relative w-36 h-28 mx-5 ">
@@ -506,12 +609,12 @@ const About = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-anna-cream to-[#D7E2DC]  text-white py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Über uns</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t.second_title}</h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-              AS Vision Partners
+              {t.lower_second_title}
             </h2>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-              Unternehmensberatung für Gründer und etablierte Unternehmen
+              {t.second_title_text}
             </p>
           </div>
         </section>
@@ -526,16 +629,10 @@ const About = () => {
                 className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 opacity-[3%] max-w-full max-h-full w-auto h-auto object-contain "
               />
               <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed ">
-                Als strategisches Netzwerk eng verbundener Partner haben wir es
-                uns zur Aufgabe gemacht, Gründer, Start-Ups und Selbstständige
-                dabei zu unterstützen, ihre Visionen zu verwirklichen und ihre
-                Träume in die Realität umzusetzen.
+                {t.box_text_first}
               </p>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Dank unseres remote-first Ansatzes agieren wir flexibel von
-                diversen Standorten aus und verbinden Innovation, Strategie und
-                persönliche Beratung – stets mit einem klaren Fokus auf deine
-                individuellen Bedürfnisse.
+                {t.box_text_second}
               </p>
             </div>
           </div>
@@ -546,41 +643,29 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 py-16 lg:px-16 max-w-7xl mx-auto">
             <div className="bg-indigo-50 rounded-xl p-8 shadow-md">
               <h3 className="text-2xl font-bold text-indigo-800 mb-6 text-center">
-                Unsere Mission
+                {t.mission_title}
               </h3>
               <blockquote className="text-gray-700  text-lg leading-relaxed">
-                Wir begleiten Menschen auf ihrem Weg in die Selbstständigkeit
-                und helfen ihnen, ihre beruflichen Visionen in die Realität
-                umzusetzen. Mit persönlicher Beratung, fachlicher Expertise und
-                individuellen Lösungen bieten wir unseren Kunden die
-                Unterstützung, die sie für eine erfolgreiche Zukunft brauchen.
+                {t.mission_text}
               </blockquote>
             </div>
 
             <div className="bg-blue-50 rounded-xl p-8 shadow-md">
               <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">
-                Unsere Vision
+                {t.vision_title}
               </h3>
               <blockquote className="text-gray-700  text-lg leading-relaxed">
-                Wir möchten eine zentrale Anlaufstelle für Gründerinnen und
-                Unternehmerinnen sein, die nach klarer Orientierung, praxisnaher
-                Unterstützung und langfristigem Erfolg streben. Unsere Vision
-                ist es, ein Netzwerk zu schaffen, in dem jede/r die Möglichkeit
-                hat, mit einer klaren Strategie und nachhaltigen Lösungen seine
-                oder ihre beruflichen Träume zu verwirklichen.
+                {t.vision_text}
               </blockquote>
             </div>
           </div>
 
           <div className="max-w-7xl mx-auto mt-6 mb-10 text-justify md:text-center px-8 lg:px-16">
             <p className="text-lg text-gray-700 ">
-              Seit der Gründung konnten wir bereits zahlreiche Kunden
-              erfolgreich unterstützen und sind stolz darauf, Teil ihrer
-              Erfolgsgeschichten zu sein.
+              {t.mission_vision_text}
             </p>
             <p className="text-lg text-gray-700">
-              Wir arbeiten eng mit dir zusammen, um deine Herausforderungen zu
-              meistern und nachhaltigen Erfolg zu erzielen.
+              {t.mission_vision_text_second}
             </p>
           </div>
         </section>
@@ -589,7 +674,7 @@ const About = () => {
         <section className="py-16 lg:px-8 bg-gray-100">
           <div className=" px-8 lg:px-16 max-w-7xl mx-auto">
             <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
-              Unser Versprechen
+              {t.third_title}
             </h3>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -611,10 +696,10 @@ const About = () => {
                   </svg>
                 </div>
                 <h4 className="text-xl font-semibold mb-3 text-gray-800">
-                  Maßgeschneiderte Beratung
+                  {t.third_title_subtitle_one}
                 </h4>
                 <p className="text-gray-600">
-                  Passend zu dir und deiner Vision.
+                  {t.third_title_subtitle_one_text}
                 </p>
               </div>
 
@@ -636,10 +721,10 @@ const About = () => {
                   </svg>
                 </div>
                 <h4 className="text-xl font-semibold mb-3 text-gray-800">
-                  Engagiertes Team
+                  {t.third_title_subtitle_two}
                 </h4>
                 <p className="text-gray-600">
-                  Fachwissen und Erfahrung an deiner Seite.
+                  {t.third_title_subtitle_two_text}
                 </p>
               </div>
 
@@ -661,10 +746,10 @@ const About = () => {
                   </svg>
                 </div>
                 <h4 className="text-xl font-semibold mb-3 text-gray-800">
-                  Klare Strategie
+                  {t.third_title_subtitle_three}
                 </h4>
                 <p className="text-gray-600">
-                  Für ein Unternehmen, das auf das nächste Level wächst.
+                  {t.third_title_subtitle_three_text}
                 </p>
               </div>
             </div>
@@ -675,7 +760,7 @@ const About = () => {
         <section className="py-16 sm:px-6 lg:px-8 bg-white">
           <div className="px-8 lg:px-16 max-w-7xl mx-auto">
             <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
-              Meet the Founder - Anna Schenk
+              {t.founder_title}
             </h3>
 
             <div className="flex flex-col md:flex-row gap-12 ">
@@ -761,7 +846,7 @@ const About = () => {
                           <div className="font-vollkornSC font-semibold text-xl  tracking-[3px]">
                             anna schenk
                           </div>
-                          <div className="font-vollkorn">Gründerin</div>
+                          <div className="font-vollkorn">{t.founder_position}</div>
                         </div>
                       </div>
                     </div>
@@ -771,28 +856,15 @@ const About = () => {
 
               <div className="md:w-2/3">
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Mit einem Abschluss in Betriebswirtschaftslehre und dem
-                  Schwerpunkt Finanzen habe ich mir fundiertes Fachwissen
-                  angeeignet, das ich seit 2023 als selbstständige Beraterin
-                  erfolgreich einsetze. Meine Mission ist es, Menschen dabei zu
-                  unterstützen, ihre Berufung zum Beruf zu machen – und dadurch
-                  einen Alltag zu schaffen, der sich nicht wie Arbeit anfühlt,
-                  sondern wie die Erfüllung eines Traums.
+                  {t.founder_first_paragraph}
                 </p>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Stationen in den USA und Peru haben meinen Blick auf die Welt
-                  erweitert. Ich durfte nicht nur neue Perspektiven gewinnen,
-                  sondern auch interkulturelle Kompetenzen entwickeln – ein
-                  wertvoller Vorteil, um Unternehmen mit internationaler
-                  Ausrichtung zu unterstützen. Zudem spreche ich mehrere
-                  Sprachen, darunter Deutsch, Englisch und Spanisch, was mir
-                  ermöglicht, auf die Bedürfnisse einer vielfältigen Kundschaft
-                  einzugehen.
+                  {t.founder_second_paragraph}
                 </p>
 
                 <div className="mt-8">
                   <h4 className="text-xl font-semibold mb-4 text-gray-800">
-                    Werte, die mich antreiben:
+                    {t.founder_points_title}
                   </h4>
 
                   <div className="space-y-4">
@@ -817,14 +889,10 @@ const About = () => {
                       </div>
                       <div className="ml-3">
                         <p className="text-gray-700 font-medium">
-                          Freiheit durch Selbstständigkeit:
+                          {t.founder_points_one}
                         </p>
                         <p className="text-gray-600">
-                          Mein Ziel ist es, Menschen die Möglichkeit zu geben,
-                          ihr Leben selbstbestimmt zu gestalten, indem sie ihr
-                          eigenes Business erfolgreich umsetzen. Freiheit
-                          bedeutet für mich, die Kontrolle über die eigene
-                          berufliche und private Zukunft zu haben.
+                          {t.founder_points_one_text}
                         </p>
                       </div>
                     </div>
@@ -850,15 +918,10 @@ const About = () => {
                       </div>
                       <div className="ml-3">
                         <p className="text-gray-700 font-medium">
-                          Gesundheit und Zufriedenheit im Beruf:
+                          {t.founder_points_two}
                         </p>
                         <p className="text-gray-600">
-                          Eine bewusste und gesunde Lebensweise liegt mir am
-                          Herzen, denn sie ist die Grundlage für nachhaltigen
-                          Erfolg. Dabei ist vor allem die Zufriedenheit im Beruf
-                          essenziell – denn nur wer mit Leidenschaft und Freude
-                          arbeitet, kann langfristig erfolgreich und erfüllt
-                          sein.
+                          {t.founder_points_two_text}
                         </p>
                       </div>
                     </div>
@@ -884,14 +947,10 @@ const About = () => {
                       </div>
                       <div className="ml-3">
                         <p className="text-gray-700 font-medium">
-                          Entdeckungsfreude:
+                          {t.founder_points_three}
                         </p>
                         <p className="text-gray-600">
-                          Neue Länder, Kulturen und Ideen zu erkunden,
-                          bereichert nicht nur mein Leben, sondern auch meine
-                          Arbeit. Diese Offenheit ermöglicht es mir, innovative
-                          Perspektiven zu entwickeln und flexibel auf die
-                          Bedürfnisse meiner Kunden einzugehen.
+                          {t.founder_points_three_text}
                         </p>
                       </div>
                     </div>
@@ -916,12 +975,9 @@ const About = () => {
                         </div>
                       </div>
                       <div className="ml-3">
-                        <p className="text-gray-700 font-medium">Optimismus:</p>
+                        <p className="text-gray-700 font-medium">{t.founder_points_four}</p>
                         <p className="text-gray-600">
-                          Ich bin überzeugt, dass alles möglich ist, wenn man
-                          seine Ziele mit Klarheit, Mut und Überzeugung
-                          verfolgt. Diese Haltung prägt meinen Ansatz, Menschen
-                          auf ihrem Weg in die Selbstständigkeit zu begleiten.
+                          {t.founder_points_four_text}
                         </p>
                       </div>
                     </div>
@@ -936,7 +992,7 @@ const About = () => {
         <section className="py-16 px-8 sm:px-6 lg:px-8 bg-gray-100">
           <div className="lg:px-16 max-w-7xl mx-auto">
             <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
-              Unser Team
+              {t.team_title}
             </h3>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -1026,28 +1082,17 @@ const About = () => {
                           <div className="font-vollkornSC font-semibold text-xl tracking-[3px] md:tracking-[0px] lg:tracking-[3px]">
                             patrick rösner{" "}
                           </div>
-                          <div className="font-vollkorn">- Berater -</div>
+                          <div className="font-vollkorn">{t.team_pat_position}</div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="md:w-full p-6 text-justify">
                     <p className="text-gray-600 mb-4">
-                      Mit mehr als 10 Jahren Erfahrung in der Beratung ist
-                      Patrick Rösner eine zentrale Stütze unseres Teams. Seine
-                      umfassenden Kenntnisse und sein tiefes Verständnis für
-                      verschiedenste Wirtschaftssektoren machen ihn zu einem
-                      wertvollen Experten, vor allem in der Entwicklung von
-                      Businessplänen, der Optimierung von Geschäftsstrategien
-                      und der Analyse von Marktchancen.
+                      {t.team_pat_text_one}
                     </p>
                     <p className="text-gray-600 mb-4">
-                      Patrick hat zahlreiche Gründer und Unternehmen auf ihrem
-                      Weg begleitet und ihnen geholfen, fundierte Entscheidungen
-                      zu treffen sowie ihre Ziele sicher und effizient zu
-                      erreichen. Seine strategische Herangehensweise und sein
-                      Blick fürs Wesentliche machen ihn zu einem unverzichtbaren
-                      Bestandteil unseres Teams.
+                      {t.team_pat_text_second}
                     </p>
                     <a
                       href="https://www.linkedin.com/in/patrick-r%C3%B6sner-8763031bb/"
@@ -1160,7 +1205,7 @@ const About = () => {
                           <div className="font-vollkornSC font-semibold text-xl tracking-tighter">
                             jennifer weisheit{" "}
                           </div>
-                          <div className="font-vollkorn">- Beraterin -</div>
+                          <div className="font-vollkorn">{t.team_jen_position}</div>
                         </div>
                       </div>
                     </div>
@@ -1170,25 +1215,13 @@ const About = () => {
                       Jennifer Weisheit - Beraterin
                     </h4> */}
                     <p className="text-gray-600 mb-4">
-                      Jennifer Weisheit ist deine kompetente Begleiterin auf dem
-                      Weg zur erfolgreichen Gründung. Mit ihrer langjährigen
-                      Erfahrung als Unternehmensberaterin hat sie bereits
-                      zahlreiche Gründer:innen auf ihrem Weg zum Erfolg
-                      unterstützt.
+                     {t.team_jen_text_one}
                     </p>
                     <p className="text-gray-600 mb-4">
-                      Nach wertvollen Jahren als angestellte Beraterin entschied
-                      sie sich, selbst den Schritt in die Selbstständigkeit zu
-                      wagen – ein Weg, der sie geprägt und bereichert hat. Heute
-                      nutzt sie ihre umfassende Expertise, um Gründer:innen
-                      dabei zu helfen, ihre Vorhaben sicher und gewinnbringend
-                      umzusetzen.
+                     {t.team_jen_text_second}
                     </p>
                     <p className="text-gray-600 mb-4">
-                      Jennifer legt großen Wert darauf, dir nicht nur praktische
-                      Werkzeuge und Strategien an die Hand zu geben, sondern
-                      dich auch mental auf die Herausforderungen und Chancen des
-                      Unternehmertums vorzubereiten.
+                      {t.team_jen_text_third}
                     </p>
                     <a
                       href="https://www.linkedin.com/in/jennifer-weisheit/"
@@ -1223,13 +1256,10 @@ const About = () => {
         <section className="py-16 px-8 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto lg:px-16">
             <h3 className="text-3xl font-bold text-center  text-gray-800">
-              Kooperationspartner
+              {t.cooperation_title}
             </h3>
             <p className="text-justify md:text-center my-10 max-w-4xl mx-auto">
-              Wir freuen uns, dir die mit AS Vision Partners verbundenen
-              Kooperationspartner vorzustellen. Durch diese langjährige,
-              professionelle Zusammenarbeit werden optimale Voraussetzungen für
-              die jungen Unternehmer von morgen geschaffen.
+              {t.cooperation_text}
             </p>
 
             <div className="grid md:grid-cols-2 gap-10 md:gap-20 max-w-7xl mx-auto">

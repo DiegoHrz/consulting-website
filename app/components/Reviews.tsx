@@ -3,14 +3,18 @@ import Title from "./customTags/Title";
 import { CarouselDemo } from "./CarouselDemo";
 import Wrapper from "../hoc/Wrapper";
 
-const Reviews = () => {
+interface ReviewsProps{
+  lang:string,
+}
+
+const Reviews:React.FC<ReviewsProps> = ({lang}) => {
   return (
     <div className=" rounded-lg  flex flex-col gap-16">
       <div className="flex flex-col gap-[24px]">
         <Title
-          text="Was unsere Kunden berichten"
+          text={lang === 'de'?'Was unsere Kunden berichten':"What our customers say"}
           additionalClasses="text-center"
-          additionalTitle="referenzen"
+          additionalTitle={lang === 'de'?'referenzen':"references"}
         />
       </div>
       {/* <p className="font-vollkornSC text-center text-xl pb-6" > reviews</p> */}

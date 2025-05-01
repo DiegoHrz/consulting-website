@@ -6,14 +6,34 @@ import Link from "next/link";
 import { MdPhone } from "react-icons/md";
 import FooterDesktop from "./FooterDesktop";
 import FooterMobile from "./FooterMobile";
+import { useLanguageStore } from "../store/useLanguageStore";
 
 const Footer = () => {
+  const { lang } = useLanguageStore();
+
+  const footerTexts = {
+    de: {
+      booking: "Vereinbare einen Termin",
+      rights: "© 2024 Alle Rechte vorbehalten",
+      imprint: "Impressum",
+      policy: "Datenschutzerklärung",
+    },
+    en: {
+      booking: "Make an appointment",
+      rights: "© 2024 All rights reserved",
+      imprint: "Imprint",
+      policy: "Privacy Policy",
+    },
+  };
+
+  const t = footerTexts[lang];
+
   return (
     <div
       className="sm:mt-0 mt-4 pt-20 pb-[20px] bg-anna-blue text-white lg:text-[#d9d9d9] relative w-full  border-anna-black"
       style={{
         background:
-          "linear-gradient(to bottom, white 0%, #F8F8F8 1%, #d0e8f3 1.5%, #8FB9D0 2%, #3C6D82 2.5%, #125369 3%, #125369 100%)"
+          "linear-gradient(to bottom, white 0%, #F8F8F8 1%, #d0e8f3 1.5%, #8FB9D0 2%, #3C6D82 2.5%, #125369 3%, #125369 100%)",
       }}
     >
       <div className="text-black max-w-7xl mx-auto  sm:px-16 flex  flex-col sm:flex-row items-center sm:justify-between">
@@ -72,7 +92,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="text-[#464646] flex flex-col  gap-3 my-10 items-center sm:items-end">
-          <p className="text-white">Vereinbare einen Termin</p>
+          <p className="text-white">{t.booking}</p>
           <a
             href="https://calendly.com/asvisionpartners/30min"
             target="_blank"
@@ -98,7 +118,7 @@ const Footer = () => {
         <div className="h-[0.1rem] w-full bg-[#DDDDDD] mb-4"></div>
         <div className="flex flex-col sm:flex-row justify-center items-center ">
           <p className="text-anna-white pr-3">
-            © 2024 Alle Rechte vorbehalten{" "}
+            {t.rights}{" "}
           </p>
           <p className="hidden sm:flex pr-3 text-white">|</p>
           <div className="flex">
@@ -106,14 +126,14 @@ const Footer = () => {
               href="/impresum"
               className="text-anna-gray-light hover:text-black transition-all duration-500 pr-3"
             >
-              Impressum{" "}
+              {t.imprint}{" "}
             </Link>
             <span className="block sm:hidden pr-3">|</span>
             <Link
               href="/datenschutzerklarung"
               className="text-anna-gray-light hover:text-black transition-all duration-500 pr-3"
             >
-              Datenschutzerklärung
+              {t.policy}
             </Link>
           </div>
         </div>

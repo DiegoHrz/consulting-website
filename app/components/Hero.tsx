@@ -4,9 +4,24 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import CarouselContainer from "./carousel/CarouselContainer";
 import Subtitle from "./customTags/Subtitle";
+import { useLanguageStore } from "../store/useLanguageStore";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
+  const { lang } = useLanguageStore();
+
+  const heroTexts = {
+    de: {
+      text: "Starte dein Unternehmen mit dem perfekten Businessplan",
+      button: "KONTAKT",
+    },
+    en: {
+      text: "Start your business with the perfect business plan",
+      button: "CONTACT",
+    },
+  };
+
+  const t = heroTexts[lang]
 
   useEffect(() => {
     const handleResize = () => {
@@ -65,16 +80,15 @@ const Hero = () => {
               alt="White Logo"
               className="h-full w-96  mx-auto px-3 animate-fade-title"
             />
-            <Subtitle text="Starte dein Unternehmen mit dem perfekten Businessplan" />
+            <Subtitle text={t.text} />
             <Link href="/kontakt">
               <div className="w-full flex justify-center animate-fade-subtitle pt-8">
                 <button className="text-white mx-auto w-fit border-2 px-10 py-4 font-semibold text-sm hover:text-anna-brown hover:bg-white duration-700 transition">
-                  KONTAKT
+                {t.button}
                 </button>
               </div>
             </Link>
           </div>
-
         </div>
       </div>
 
@@ -112,8 +126,8 @@ export default Hero;
 //             muted
 //             loop
 //             playsInline // 👈 Necesario para iOS/móviles
-//             preload="metadata" 
-//             disableRemotePlayback 
+//             preload="metadata"
+//             disableRemotePlayback
 //             className="absolute inset-0 h-full w-full object-cover"
 //           >
 //             <source
@@ -131,7 +145,7 @@ export default Hero;
 //             <img
 //               src="/logo/logo-no-bg/logo-white-no-bg.webp"
 //               fetchPriority="high"
-//               loading="eager" 
+//               loading="eager"
 //               alt="White Logo"
 //               className="h-full w-96  mx-auto px-3 animate-fade-title"
 //             />

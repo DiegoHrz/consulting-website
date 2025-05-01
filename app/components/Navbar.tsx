@@ -25,23 +25,6 @@ const smoothScroll = (targetId: string) => {
   }
 };
 
-const leistungenSubLinks = [
-  { name: "Gründungszuschuss", href: "/leistungen/grundungszuschuss" },
-  { name: "Businessplan", href: "/leistungen/businessplan" },
-  { name: "Finanzierung", href: "/leistungen/finanzierung" },
-  { name: "Buchhaltung", href: "/leistungen/buchhaltung" },
-  { name: "Websites & Marketing", href: "/leistungen/websites-marketing" },
-];
-
-const navLinks = [
-  { name: "home", href: "/" },
-  { name: "leistungen", href: "", hasSubmenu: true }, // Empty href
-  { name: "über uns", href: "/uber-uns" },
-  { name: "referenzen", href: "/referenzen" },
-  { name: "faq", href: "", isAnId: true }, // Missing leading slash
-  { name: "kontakt", href: "/kontakt" },
-];
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [enterMouse, setEnterMouse] = useState(false);
@@ -61,6 +44,67 @@ const Navbar = () => {
   const [isFAQVisible, setIsFAQVisible] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const [isOpenLanguageMenu, setIsOpenLanguageMenu] = useState(false);
+
+  // const leistungenSubLinks = [
+  //   { name: "Gründungszuschuss", href: "/leistungen/grundungszuschuss" },
+  //   { name: "Businessplan", href: "/leistungen/businessplan" },
+  //   { name: "Finanzierung", href: "/leistungen/finanzierung" },
+  //   { name: "Buchhaltung", href: "/leistungen/buchhaltung" },
+  //   { name: "Websites & Marketing", href: "/leistungen/websites-marketing" },
+  // ];
+  const leistungenSubLinks = [
+    {
+      id: 1,
+      name: { de: "gründungszuschuss", en: "start-up grant" },
+      href: "/leistungen/grundungszuschuss",
+    },
+    {
+      id: 2,
+      name: { de: "businessplan", en: "business plan" },
+      href: "/leistungen/businessplan",
+    },
+    {
+      id: 3,
+      name: { de: "finanzierung", en: "financing" },
+      href: "/leistungen/finanzierung",
+    },
+    {
+      id: 4,
+      name: { de: "buchhaltung", en: "accounting" },
+      href: "/leistungen/buchhaltung",
+    },
+    {
+      id: 5,
+      name: { de: "websites & marketing", en: "websites & marketing" },
+      href: "/leistungen/websites-marketing",
+    },
+  ];
+
+  // const navLinks = [
+  //   { name: "home", href: "/" },
+  //   { name: "leistungen", href: "", hasSubmenu: true }, // Empty href
+  //   { name: "über uns", href: "/uber-uns" },
+  //   { name: "referenzen", href: "/referenzen" },
+  //   { name: "faq", href: "", isAnId: true }, // Missing leading slash
+  //   { name: "kontakt", href: "/kontakt" },
+  // ];
+  const navLinks = [
+    { id: 1, name: { de: "home", en: "home" }, href: "/" },
+    {
+      id: 2,
+      name: { de: "leistungen", en: "services" },
+      href: "",
+      hasSubmenu: true,
+    },
+    { id: 3, name: { de: "über uns", en: "about" }, href: "/uber-uns" },
+    {
+      id: 4,
+      name: { de: "referenzen", en: "references" },
+      href: "/referenzen",
+    },
+
+    { id: 5, name: { de: "kontakt", en: "contact" }, href: "/kontakt" },
+  ];
 
   // Cerrar menú al hacer clic fuera
   useEffect(() => {
@@ -305,12 +349,12 @@ const Navbar = () => {
             <div className="hidden md:flex pl-[74px] md:gap-x-[2rem] lg:gap-x-[40px] font-vollkornSC">
               {navLinks.map((item) => (
                 <div
-                  key={item.name}
+                  key={item.id}
                   className="relative "
                   onMouseEnter={() => item.hasSubmenu && setOpenSubmenu(true)}
                   onMouseLeave={() => item.hasSubmenu && setOpenSubmenu(false)}
                 >
-                  {item.name === "faq" ? (
+                  {item.name[lang] === "faq" ? (
                     <div
                       className={`flex items-center hover:text-anna-burgundy hover:font-semibold cursor-pointer h-16`}
                       onClick={handleFAQClick}
@@ -320,10 +364,10 @@ const Navbar = () => {
                           currentUrl,
                           item.href,
                           scrolled,
-                          item.name
+                          item.name[lang]
                         )}
                       >
-                        {item.name}
+                        {item.name[lang]}
                       </span>
                     </div>
                   ) : (
@@ -334,7 +378,7 @@ const Navbar = () => {
                           if (item.hasSubmenu) {
                             toggleSubmenu();
                           } else {
-                            tabHandler(item.name, item.href);
+                            tabHandler(item.name[lang], item.href);
                           }
                         }}
                       >
@@ -343,10 +387,10 @@ const Navbar = () => {
                             currentUrl,
                             item.href,
                             scrolled,
-                            item.name
+                            item.name[lang]
                           )}
                         >
-                          {item.name}
+                          {item.name[lang]}
                         </span>
                         {item.hasSubmenu && (
                           <IoIosArrowDown
@@ -363,7 +407,7 @@ const Navbar = () => {
                     <div className="absolute top-12 left-1/2 -translate-x-1/2 mt-4 bg-[#F7F7F7] shadow-lg h-auto min-w-[200px] -z-10">
                       {leistungenSubLinks.map((subLink) => (
                         <Link
-                          key={subLink.href}
+                          key={subLink.id}
                           href={subLink.href}
                           onClick={() => {
                             if (item.hasSubmenu) {
@@ -377,7 +421,7 @@ const Navbar = () => {
                               : "text-black"
                           }`}
                         >
-                          {subLink.name}
+                          {subLink.name[lang]}
                         </Link>
                       ))}
                     </div>
@@ -385,51 +429,66 @@ const Navbar = () => {
                 </div>
               ))}
               {/* flags */}
-              <div className="relative group my-auto ">
+              <div
+                className="relative group my-auto "
+                onMouseEnter={() => {
+                  setIsOpenLanguageMenu(true);
+                }}
+                onMouseLeave={() => {
+                  setIsOpenLanguageMenu(false);
+                }}
+              >
                 <div className="flex items-center  gap-2 cursor-pointer">
-                  <div className="w-8 h-6 relative">
+                  <div className="w-8 h-6 relative ">
                     <img
                       src={
                         lang === "de" ? "/flags/germany.png" : "/flags/usa.avif"
                       }
-                      alt="Deutsch"
+                      alt={lang === "de" ? "Deutsch Flag" : "English Flag"}
                       className="object-cover h-full w-full"
                     />
                   </div>
                   <IoIosArrowDown className="text-xs" />
                 </div>
+                {isOpenLanguageMenu && (
+                  <div className="absolute left-1/2 top-6 -translate-x-1/2 w-28 h-32 bg-white shadow-lg  hidden group-hover:block group-checked:hidden z-50">
+                    <button
+                      className={`w-full hover:bg-gray-400 duration-500 p-2  h-1/2 flex justify-center items-center ${
+                        lang === "en" && "bg-gray-100 "
+                      }`}
+                      onClick={() => {
+                        setLang("en");
+                        // setIsOpenLanguageMenu(false);
+                      }}
+                    >
+                      <div className="flex items-center   w-8 h-6 text-sm">
+                        <img
+                          src="/flags/usa.avif"
+                          alt="English"
+                          className="object-contain h-full w-full"
+                        />
+                      </div>
+                    </button>
 
-                <div className="absolute left-1/2 top-6 -translate-x-1/2 w-28 h-32 bg-white shadow-lg  hidden group-hover:block z-50">
-                  <button
-                    className="w-full hover:bg-gray-200 duration-500 p-2  h-1/2 flex justify-center items-center"
-                    onClick={() => {
-                      setLang("en");
-                    }}
-                  >
-                    <div className="flex items-center   w-8 h-6 text-sm">
-                      <img
-                        src="/flags/usa.avif"
-                        alt="English"
-                        className="object-contain h-full w-full"
-                      />
-                    </div>
-                  </button>
-
-                  <button
-                    className="w-full hover:bg-gray-200 duration-500 p-2 h-1/2 flex justify-center items-center"
-                    onClick={() => {
-                      setLang("de");
-                    }}
-                  >
-                    <div className="flex items-center   w-8 h-6 text-sm">
-                      <img
-                        src="/flags/germany.png"
-                        alt="English"
-                        className="object-cover h-full w-full"
-                      />
-                    </div>
-                  </button>
-                </div>
+                    <button
+                      className={`w-full hover:bg-gray-400 duration-500 p-2  h-1/2 flex justify-center items-center ${
+                        lang === "de" && "bg-gray-100"
+                      }`}
+                      onClick={() => {
+                        setLang("de");
+                        // setIsOpenLanguageMenu(false);
+                      }}
+                    >
+                      <div className="flex items-center   w-8 h-6 text-sm">
+                        <img
+                          src="/flags/germany.png"
+                          alt="English"
+                          className="object-cover h-full w-full"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -490,7 +549,7 @@ const Navbar = () => {
                 }`}
               >
                 {navLinks.map((item) => (
-                  <div key={item.name} className="w-full text-center">
+                  <div key={item.id} className="w-full text-center">
                     <div
                       className="flex justify-center items-center"
                       onClick={() => item.hasSubmenu && toggleSubmenu()}
@@ -502,7 +561,7 @@ const Navbar = () => {
                         <div
                           className={`-tracking-tighter font-extralight hover:text-rilke-red py-[0.6rem] cursor-pointer flex items-center  ${
                             !isLoading &&
-                            item.name.toLowerCase() === currentSection
+                            item.name[lang].toLowerCase() === currentSection
                               ? "text-anna-brown"
                               : ""
                           }`}
@@ -510,16 +569,16 @@ const Navbar = () => {
                             if (item.hasSubmenu) {
                               e.preventDefault();
                               toggleSubmenu();
-                            } else if (item.name === "faq") {
+                            } else if (item.name[lang] === "faq") {
                               e.preventDefault();
                               handleFAQClick();
                               toggleMenu();
                             } else {
-                              tabAndToggle(item.name, item.href);
+                              tabAndToggle(item.name[lang], item.href);
                             }
                           }}
                         >
-                          {item.name}
+                          {item.name[lang]}
                           {item.hasSubmenu && (
                             <IoIosArrowDown
                               className={`ml-1 inline-block transition-transform ${
@@ -535,7 +594,7 @@ const Navbar = () => {
                       <div className="flex flex-col bg-anna-gray-light transition-all duration-700">
                         {leistungenSubLinks.map((subLink) => (
                           <Link
-                            key={subLink.href}
+                            key={subLink.id}
                             href={subLink.href}
                             className="py-4 hover:bg-gray-100 text-sm "
                             onClick={() => {
@@ -543,7 +602,7 @@ const Navbar = () => {
                               setOpenSubmenu(false);
                             }}
                           >
-                            {subLink.name}
+                            {subLink.name[lang]}
                           </Link>
                         ))}
                       </div>
@@ -580,7 +639,6 @@ const Navbar = () => {
                       }`}
                       onClick={() => {
                         setLang("en");
-
                         setIsOpenLanguageMenu(false);
                         console.log("Change to english");
                       }}

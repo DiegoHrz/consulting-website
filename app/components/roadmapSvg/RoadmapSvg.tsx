@@ -1,11 +1,13 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import "./styles.css";
+import { useLanguageStore } from "@/app/store/useLanguageStore";
 interface Point {
   id: number;
   x: number;
   y: number;
-  text: string;
+  text_de: string;
+  text_en:string;
   description: string;
   pinDirection: string;
   color: string;
@@ -19,12 +21,15 @@ const RoadmapPath: React.FC = () => {
     { x: number; y: number; angle: number }[]
   >([]);
 
+  const {lang} = useLanguageStore()
+
   const points: Point[] = [
     {
       id: 1,
       x: 150,
       y: 150,
-      text: "erstgespräch",
+      text_de: "erstgespräch",
+      text_en:"initial consultation",
       description: "Erste Kontaktaufnahme und Bedarfsanalyse",
       pinDirection: "down",
       color: "#696D62",
@@ -35,7 +40,8 @@ const RoadmapPath: React.FC = () => {
       id: 2,
       x: 350,
       y: 250,
-      text: "organisatorisches",
+      text_de: "organisatorisches",
+      text_en:"organizational",
       description: "Planung und Abstimmung der Details",
       pinDirection: "down",
       color: "#89ACA6",
@@ -46,7 +52,8 @@ const RoadmapPath: React.FC = () => {
       id: 3,
       x: 550,
       y: 150,
-      text: "projektphase",
+      text_de: "projektphase",
+      text_en:"project phase",
       description: "Offizielle Projektinitiierung",
       pinDirection: "down",
       color: "#A1755D",
@@ -57,7 +64,8 @@ const RoadmapPath: React.FC = () => {
       id: 4,
       x: 750,
       y: 250,
-      text: "nachbetreuung",
+      text_de: "nachbetreuung",
+      text_en:"aftercare",
       description: "Kontinuierliche Unterstützung",
       pinDirection: "down",
       color: "#125369",
@@ -287,7 +295,7 @@ const RoadmapPath: React.FC = () => {
                     fill={point.colorPoint}
                     className="select-none"
                   >
-                    {point.text}
+                    {lang==='de'? point.text_de:point.text_en}
                   </text>
                   {/* <image
                     href={point.image} // Ruta de la imagen
@@ -312,7 +320,7 @@ const RoadmapPath: React.FC = () => {
                     fill={point.colorPoint}
                     className="select-none"
                   >
-                    {point.text}
+                    {lang==='de'? point.text_de:point.text_en}
                   </text>
                   {/* <image
                     href={point.image} // Ruta de la imagen

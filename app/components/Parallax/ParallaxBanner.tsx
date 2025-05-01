@@ -1,8 +1,11 @@
 import React from "react";
 import ParallaxImage from "./ParallaxImage";
 import ButtonAnnaTransparent from "../customTags/ButtonTransparent";
+import { useLanguageStore } from "@/app/store/useLanguageStore";
 
 const ParallaxBanner = () => {
+  const {lang} =useLanguageStore()
+
   return (
     <section className="relative w-screen h-[30vh] sm:h-[60vh]  overflow-hidden flex justify-center items-center max-w-7xl mx-auto max-h-[26rem] ">
       <div className=" absolute top-0 left-0 w-full h-full overflow-hidden ">
@@ -47,10 +50,10 @@ const ParallaxBanner = () => {
           className="h-auto w-40  mx-auto px-3 animate-fade-title"
         />
         <h1 className=" w-full text-[28px] text-center font-medium  text-anna-white">
-          Bereit für die Veränderung ?
+          {lang==='de'?'Bereit für die Veränderung ?':'Ready for change?'}
         </h1>
         <div className="hidden md:block mx-auto w-fit  rounded-3xl mt-7" >
-          <ButtonAnnaTransparent text="Kontakt"  colorText='text-anna-black' />
+          <ButtonAnnaTransparent text={lang==='de'?"Kontakt":"Contact"}  colorText='text-anna-black' />
         </div>
       </div>
     </section>

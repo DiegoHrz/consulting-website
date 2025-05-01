@@ -4,8 +4,46 @@ import Link from "next/link";
 import GlassBox from "./GlassBox";
 import ParallaxBanner from "./Parallax/ParallaxBanner";
 import Title from "./customTags/Title";
+import { useLanguageStore } from "../store/useLanguageStore";
 
 const Services: React.FC = ({}) => {
+
+  const {lang}=useLanguageStore()
+  const servicesTexts ={
+    de:{
+      title:"Unsere Angebote – Deine Möglichkeiten",
+      upper_title:"bis zu 100% kostenfrei für dich",
+      text:"Stelle dir dein individuelles Leistungspaket zusammen – ganz nach deinem Bedarf.",
+      first_service:"Gründungszuschuss",
+      first_service_description:"Wir unterstützen dich bei der Beantragung deines Gründungszuschusses – Schritt für Schritt bis zur Förderung.",
+      second_service:"Businessplan",
+      second_service_description:"Individuell und professionell – wir erstellen gemeinsam deinen Businessplan für Förderungen, Banken und Investoren.",
+      third_service:"Finanzierung",
+      third_service_description:"Ob Gründungsdarlehen, Bankkredite oder alternative Finanzierungen – wir finden die passende Lösung für dein Vorhaben.",
+      fourth_service:"Buchhaltung",
+      fourth_service_description:"Einfach, verständlich und effizient – wir zeigen dir, wie du deine Buchhaltung sicher im Griff hast.",
+      fifth_service:"Websites und Marketing",
+      fifth_service_description:"Online sichtbar werden – mit einer klaren Website und gezielten Marketingstrategien für deinen Erfolg.",
+    },
+    en:{
+      title: "Our Offers – Your Options",
+      upper_title: "Up to 100% free for you",
+      text: "Put together your individual service package – tailored to your needs.",
+      first_service: "Start-up Grant",
+      first_service_description: "We support you in applying for your start-up grant – step by step until you receive funding.",
+      second_service: "Business Plan",
+      second_service_description: "Individual and professional – together we create your business plan for funding, banks, and investors.",
+      third_service: "Financing",
+      third_service_description: "Whether start-up loans, bank loans, or alternative financing – we will find the right solution for your project.",
+      fourth_service: "Accounting",
+      fourth_service_description: "Simple, understandable, and efficient – ​​we'll show you how to keep your accounting under control.",
+      fifth_service: "Websites and Marketing",
+      fifth_service_description: "Become visible online – with a clear Website and targeted marketing strategies for your success.",
+    }
+  }
+
+  const t = servicesTexts[lang]
+
   return (
     <div
       style={{
@@ -23,13 +61,12 @@ const Services: React.FC = ({}) => {
         <div className="  max-w-[1200px] mx-auto relative z-0 flex flex-col gap-16">
           <div className="   relative z-0 flex flex-col gap-[24px]">
             <Title
-              text="Unsere Angebote – Deine Möglichkeiten"
+              text={t.title}
               additionalClasses="text-center"
-              additionalTitle="bis zu 100% kostenfrei für dich"
+              additionalTitle={t.upper_title}
             />
             <p className=" text-anna-gray max-w-[523px] mx-auto text-center">
-              Stelle dir dein individuelles Leistungspaket zusammen – ganz nach
-              deinem Bedarf.
+              {t.text}
             </p>
           </div>
           {/* <motion.div variants={fadeIn("up", "spring", 1 * 0.5, 0.75)}>
@@ -87,8 +124,8 @@ const Services: React.FC = ({}) => {
               <div className=" col-span-6 md:col-span-3 lg:col-span-2">
                 <Link href="/leistungen/grundungszuschuss">
                   <GlassBox
-                    title="Gründungszuschuss"
-                    text="Wir unterstützen dich bei der Beantragung deines Gründungszuschusses – Schritt für Schritt bis zur Förderung."
+                    title={t.first_service}
+                    text={t.first_service_description}
                     button="See more"
                   />
                 </Link>
@@ -97,8 +134,8 @@ const Services: React.FC = ({}) => {
               <div className=" col-span-6 md:col-span-3 lg:col-span-2">
                 <Link href="/leistungen/businessplan">
                   <GlassBox
-                    title="Businessplan"
-                    text="Individuell und professionell – wir erstellen gemeinsam deinen Businessplan für Förderungen, Banken und Investoren."
+                    title={t.second_service}
+                    text={t.second_service_description}
                     button="See more"
                     special="bestSeller"
                   />
@@ -113,8 +150,8 @@ const Services: React.FC = ({}) => {
               <div className=" col-span-6 md:col-span-3 lg:col-span-2 cursor-pointer">
                 <Link href="/leistungen/finanzierung">
                   <GlassBox
-                    title="Finanzierung"
-                    text="Ob Gründungsdarlehen, Bankkredite oder alternative Finanzierungen – wir finden die passende Lösung für dein Vorhaben."
+                    title={t.third_service}
+                    text={t.third_service_description}
                     button="See more"
                   />
                 </Link>
@@ -123,8 +160,8 @@ const Services: React.FC = ({}) => {
               <div className="col-span-6 md:col-span-3 lg:col-span-2 lg:col-start-2">
                 <Link href="/leistungen/buchhaltung">
                   <GlassBox
-                    title="Buchhaltung"
-                    text="Einfach, verständlich und effizient – wir zeigen dir, wie du deine Buchhaltung sicher im Griff hast."
+                    title={t.fourth_service}
+                    text={t.fourth_service_description}
                     button="See more"
                     special="exclusive"
                   />
@@ -133,8 +170,8 @@ const Services: React.FC = ({}) => {
               <div className=" col-span-6 md:col-span-4 md:col-start-2 lg:col-span-2 lg:col-start-4">
               <Link href='/leistungen/websites-marketing'>
                 <GlassBox
-                  title="Websites und Marketing"
-                  text="Online sichtbar werden – mit einer klaren Website und gezielten Marketingstrategien für deinen Erfolg."
+                  title={t.fifth_service}
+                  text={t.fifth_service_description}
                   button="See more"
                   />
                   </Link>

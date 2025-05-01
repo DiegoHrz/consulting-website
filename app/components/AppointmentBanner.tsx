@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Subtitle from "./customTags/Subtitle";
 import Link from "next/link";
+import { useLanguageStore } from "../store/useLanguageStore";
 
 interface AppointmentBannerProps {
   gradientColor?: string;
@@ -14,6 +15,7 @@ const AppointmentBanner: React.FC<AppointmentBannerProps> = ({
   gradientColor2 = "to-gray-800",
   buttonColor = "bg-anna-maroon",
 }) => {
+  const { lang } = useLanguageStore();
   const [hoverIn, setHoverIn] = useState(false);
   return (
     <div className="mx-auto  w-full rounded-xl h-[26rem] md:h-[22rem] relative overflow-hidden max-w-7xl shadow-gray-400 shadow-[-3px_0px_15px_2px_rgba(0,0,0,0.2)] ">
@@ -21,24 +23,26 @@ const AppointmentBanner: React.FC<AppointmentBannerProps> = ({
         className={` bg-gradient-to-r ${gradientColor} ${gradientColor2}  flex flex-col items-center gap-8 p-6  h-full justify-center text-center text-white`}
       >
         <Subtitle
-          text="Bereit loszulegen?"
+          text={lang === "de" ? "Bereit loszulegen?" : "Ready to get started?"}
           color="white"
           position="center"
           size="4xl"
           mobileSize="text-3xl"
         />
         <p className="text-anna-white/70 mb-2 font-thin text-sm sm:text-base">
-          Unser Team führt dich zum Erfolg
+          {lang === "de"
+            ? "Unser Team führt dich zum Erfolg"
+            : "Our team will guide you to success."}
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center">
-          <Link href="/kontakt" >
+          <Link href="/kontakt">
             <button
               className={`rounded-3xl ${buttonColor}  text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-700 duration-700 border-anna-white`}
             >
-              Vereinbare einen Termin
+              {lang==='de'?'Vereinbare einen Termin':'Schedule an appointment.'}
             </button>
           </Link>
-          <Link href="/kontakt" >
+          <Link href="/kontakt">
             <button
               className="relative rounded-3xl text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 overflow-hidden text-sm sm:text-base w-fit mx-auto"
               onMouseEnter={() => setHoverIn(true)}
@@ -48,7 +52,7 @@ const AppointmentBanner: React.FC<AppointmentBannerProps> = ({
                 boxShadow: "rgba(255, 255, 255, 0.05) 0px 1px 10px 0px inset",
               }}
             >
-              <p className="text-anna-white">Kontakt</p>
+              <p className="text-anna-white">{lang==='de'?'Kontakt':'Contact'}</p>
               <div
                 className={`absolute left-1/2 -translate-x-1/2 transition-all duration-500 ${
                   hoverIn ? "-bottom-3" : "-bottom-8"

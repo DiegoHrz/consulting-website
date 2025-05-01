@@ -3,8 +3,41 @@ import { motion } from "framer-motion";
 import * as React from "react";
 import BouncingText from "./BouncingText";
 import ButtonAnna from "@/app/components/customTags/ButtonAnna";
+import { useLanguageStore } from "@/app/store/useLanguageStore";
 
 export const Table: React.FC = () => {
+
+  const {lang} =useLanguageStore()
+
+  const tableText ={
+    de:{
+      title:"Unsere Erfahrung und erfolgreich betreuten Projekte sprechen für sich.",
+      first_grid_text:"zufriedene Kunden",
+      second_grid_headline:"Fertigstellung nach",
+      second_grid_text:"wenigen Wochen",
+      third_grid_text:"erfolgreich beim Gründungszuschuss",
+      fourth_grid_headline:"Betreuung bei Finanzierungsmöglichkeiten in ",
+      fourth_grid_text:"ganz Deutschland",
+      title_text:"Dein Business. Deine Vision. Unsere Unterstützung",
+      text:"Du willst dich selbstständig machen oder dein bestehendes Business aufs nächste Level bringen? Bei AS Vision Partners bekommst du die Unterstützung, die du wirklich brauchst – individuell, praxisnah und auf Augenhöhe. Wir helfen dir, deine Ideen zu strukturieren, deine Marke klar zu positionieren und den Grundstein für nachhaltigen Erfolg zu legen – egal ob du ganz am Anfang stehst oder schon mittendrin bist.",
+      button:"Kontakt",
+    },
+    en:{
+      title:"Our experience and successfully managed projects speak for themselves.",
+      first_grid_text:"satisfied customers",
+      second_grid_headline:"Completion after",
+      second_grid_text:"a few weeks",
+      third_grid_text:"successful with start-up grant",
+      fourth_grid_headline:"Support with financing options in ",
+      fourth_grid_text:"all of Germany",
+      title_text:"Your business. Your vision. Our support",
+      text:"Do you want to start your own business or take your existing business to the next level? At AS Vision Partners, you get the support you really need – personalized, practical, and at eye level. We help you structure your ideas, clearly position your brand, and lay the foundation for sustainable success – whether you're just starting out or already in the thick of it.",
+      button:"Contact",
+    }
+  }
+
+  const t = tableText[lang]
+
   return (
     <div className="">
       <div className="max-w-[50rem]">
@@ -15,7 +48,7 @@ export const Table: React.FC = () => {
             backgroundClip: "text",
           }}
         >
-          Unsere Erfahrung und erfolgreich betreuten Projekte sprechen für sich.
+          {t.title}
         </h1>
       </div>
       <div className="mt-10 md:flex flex-col md:flex-row gap-5 lg:gap-8 w-full   max-h-[45rem]  md:h-96 ">
@@ -35,7 +68,7 @@ export const Table: React.FC = () => {
             </h3>
             <p className="text-[#A5A5A5] text-xs lg:text-base ">
               {/* Completed Projects */}
-              zufriedene Kunden
+              {t.first_grid_text}
             </p>
           </div>
           <div
@@ -43,9 +76,9 @@ export const Table: React.FC = () => {
             style={{ gridColumn: "2/3" }}
           >
             <BouncingText>
-              <h3 className="text-anna-black text-xs lg:text-base">Fertigstellung nach</h3>
+              <h3 className="text-anna-black text-xs lg:text-base">{t.second_grid_headline}</h3>
               <h3 className="text-anna-black ">
-                 wenigen Wochen
+                 {t.second_grid_text}
               </h3>
             </BouncingText>
           </div>
@@ -63,7 +96,7 @@ export const Table: React.FC = () => {
               </BouncingText>
             </div>
             <p className="text-[#A5A5A5] text-xs lg:text-base ">
-              erfolgreich beim Gründungszuschuss
+              {t.third_grid_text}
             </p>
           </div>
           <div
@@ -71,9 +104,9 @@ export const Table: React.FC = () => {
             style={{ gridColumn: "2/3" }}
           >
             <BouncingText>
-              <h3 className="text-anna-black text-[0.68rem] lg:text-base" >Betreuung bei Finanzierungsmöglichkeiten in </h3>
+              <h3 className="text-anna-black text-[0.68rem] lg:text-base" >{t.fourth_grid_headline} </h3>
               <h3 className="text-anna-black text-xl lg:text-2xl" >
-                ganz Deutschland
+                {t.fourth_grid_text}
               </h3>
             </BouncingText>
           </div>
@@ -90,16 +123,10 @@ export const Table: React.FC = () => {
 
         <div className=" border flex flex-col justify-center   md:h-full w-full md:w-1/2 p-5  lg:p-10 mt-6 md:mt-0 border-[#D5E0E2] rounded-xl bg-white md:shadow-[#125369] md:shadow-[0px_3px_10px_0px]">
           <h2 className="text-xl lg:text-[1.85rem] font-cabin">
-            <BouncingText>Dein Business. Deine Vision. Unsere Unterstützung</BouncingText>
+            <BouncingText>{t.title_text}</BouncingText>
           </h2>
           <p className="mt-5 mb-3 text-[#A5A5A5] md:text-sm lg:text-base">
-            Du willst dich selbstständig machen oder dein bestehendes Business
-            aufs nächste Level bringen? Bei AS Vision Partners bekommst du die
-            Unterstützung, die du wirklich brauchst – individuell, praxisnah und
-            auf Augenhöhe. Wir helfen dir, deine Ideen zu strukturieren, deine
-            Marke klar zu positionieren und den Grundstein für nachhaltigen
-            Erfolg zu legen – egal ob du ganz am Anfang stehst oder schon
-            mittendrin bist.
+            {t.text}
           </p>
           {/* <p className="mb-3 text-anna-blue md:text-sm lg:text-base ">
             ¿Listo para un aliado inquebrantable?
@@ -107,7 +134,7 @@ export const Table: React.FC = () => {
           <p className="mb-3 text-anna-blue md:text-sm lg:text-base ">
             Hablemos y hagámoslo realidad.
           </p> */}
-          <ButtonAnna text="Kontakt" />
+          <ButtonAnna text={t.button} />
         </div>
       </div>
     </div>

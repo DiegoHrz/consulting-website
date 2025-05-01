@@ -3,8 +3,24 @@ import React from "react";
 import Wrapper from "../hoc/Wrapper";
 import Title from "./customTags/Title";
 import ButtonAnna from "./customTags/ButtonAnna";
+import { useLanguageStore } from "../store/useLanguageStore";
 
 const Quote = () => {
+  const quoteTexts = {
+    de: {
+      title: "Bereit für deinen nächsten großen Schritt?",
+      text: "Buche dir jetzt ein kostenloses Gespräch und finde heraus, wie wir dich unterstützen können.",
+      button: "Buchung",
+    },
+    en: {
+      title: "Ready for your next big step?",
+      text: "Book a free consultation now and find out how we can support you.",
+      button: "Booking",
+    },
+  };
+
+  const { lang } = useLanguageStore();
+  const t = quoteTexts[lang];
   return (
     <div
       className=" rounded-lg my-[80px]"
@@ -29,14 +45,12 @@ const Quote = () => {
             />
           </div>
           <Title
-            text="Bereit für deinen nächsten großen Schritt?
-"
+            text={t.title}
             additionalClasses="text-center"
             rainbow={true}
           />
           <p className="text-center max-w-[450px] mx-auto text-lg text-balance">
-            Buche dir jetzt ein kostenloses Gespräch und finde heraus, wie wir
-            dich unterstützen können.
+            {t.text}
           </p>
           <div>
             <div className="w-fit  animate-fade-subtitle  overflow-hidden rounded-3xl mx-auto">
@@ -63,7 +77,7 @@ const Quote = () => {
                   ></div>
                 </button>
               </Link> */}
-              <ButtonAnna text="Buchung" />
+              <ButtonAnna text={t.button} />
             </div>
             {/* <p className="w-fit mx-auto mt-1 font-vollkornSC">
               it&apos;s{" "}
@@ -78,7 +92,6 @@ const Quote = () => {
           Know us
         </button>
       </div> */}
-
     </div>
   );
 };

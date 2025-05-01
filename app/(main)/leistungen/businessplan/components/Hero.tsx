@@ -3,13 +3,38 @@ import { motion } from "framer-motion";
 import ButtonAnnaBurgundy from "@/app/components/customTags/ButtonAnnaMaroon";
 import ButtonAnnaTransparent from "@/app/components/customTags/ButtonTransparent";
 
-
-
 import { IoShieldCheckmark } from "react-icons/io5";
 import { fadeIn, zoomIn } from "@/app/utils/motion";
-
+import { useLanguageStore } from "@/app/store/useLanguageStore";
 
 const Hero = () => {
+  const { lang } = useLanguageStore();
+
+  const businessplantTextHero = {
+    de: {
+      upper_title: "Leistungen - Businessplan",
+      title: "Der perfekte Businessplan für dich mit AVP",
+      text: "Dein Businessplan für",
+      text_bold: "deinen Erfolg",
+      additionalText: "Individuell und überzeugend auf deine Wünsche angepasst",
+      first_button: "Lege heute los",
+      second_button: "Kontakt",
+      clients_text: "zufriedene kunden",
+    },
+    en: {
+      upper_title: "Services - Business Plan",
+      title: "The perfect business plan for you with AVP",
+      text: "Your business plan for",
+      text_bold: "your success",
+      additionalText: "Individually and convincingly tailored to your needs",
+      first_button: "Get started today",
+      second_button: "Contact",
+      clients_text: "satisfied customers",
+    },
+  };
+
+
+  const t = businessplantTextHero[lang]
 
   return (
     <div className="">
@@ -17,16 +42,15 @@ const Hero = () => {
         <div className="flex flex-col md:w-[55%] gap-4 sm:gap-[28px] relative">
           <div className="max-w-[32rem] md:max-w-[28rem]">
             <div className="rounded-3xl w-fit px-2 sm:px-4 sm:py-1 text-white bg-[#273641] mb-2 border border-gray-600">
-            <p
-              className=" text-transparent"
-              style={{
-                background: "linear-gradient(to right,#3CA3B5,#fff)",
-                backgroundClip: "text",
-              }}
-            >
-              Leistungen - Businessplan
-
-            </p>
+              <p
+                className=" text-transparent"
+                style={{
+                  background: "linear-gradient(to right,#3CA3B5,#fff)",
+                  backgroundClip: "text",
+                }}
+              >
+                {t.upper_title}
+              </p>
             </div>
             {/* 
             <Title
@@ -36,7 +60,7 @@ const Hero = () => {
               noLengthMax={true}
             /> */}
             <h1 className="text-[36px] sm:text-[42px] md:text-[46px] lg:text-[58px] text-anna-white font-semibold sm:font-medium leading-[2.7rem] sm:leading-[3.5rem] md:leading-[4rem] ">
-              Der perfekte Businessplan für dich mit AVP
+              {t.title}
             </h1>
           </div>
           <div className="hidden top-0 right-0 absolute lg:flex flex-col w-full  justify-center items-start gap-1  max-w-40 translate-x-1/2">
@@ -54,19 +78,19 @@ const Hero = () => {
                 backgroundClip: "text",
               }}
             >
-              Individuell und überzeugend auf deine Wünsche angepasst
+              {t.additionalText}
             </p>
           </div>
           <div>
             <p className="text-left md:max-w-[200px]  text-lg text-anna-white-dark">
-              Dein Businessplan für{" "}
-              <b className="text-anna-white">deinen Erfolg</b>
+              {t.text}{" "}
+              <b className="text-anna-white">{t.text_bold}</b>
             </p>
           </div>
 
           <div className="hidden md:flex  gap-[16px]">
-            <ButtonAnnaBurgundy text="Lege heute los" />
-            <ButtonAnnaTransparent text="Kontakt" />
+            <ButtonAnnaBurgundy text={t.first_button} />
+            <ButtonAnnaTransparent text={t.second_button} />
           </div>
           {/* <div className="sm:mt-10">
             <div className=" flex gap-4  w-fit p-8 rounded-lg backdrop-blur-3xl">
@@ -166,7 +190,7 @@ const Hero = () => {
                 </span>
 
                 <span className="font-vollkornSC text-anna-black font-bold text-xl">
-                  zufriedene kunden
+                  {t.clients_text}
                 </span>
               </div>
               <div className="flex gap-[10px] items-center">
@@ -348,7 +372,7 @@ const Hero = () => {
                 backgroundClip: "text",
               }}
             >
-              Individuell und überzeugend auf deine Wünsche angepasst
+              {t.additionalText}
             </p>
           </div>
 
@@ -359,7 +383,7 @@ const Hero = () => {
               </span>
 
               <span className="font-vollkornSC text-anna-black font-bold text-lg">
-                zufriedene kunden
+                {t.clients_text}
               </span>
             </div>
             <div className="flex flex-wrap gap-4 items-center justify-center">
@@ -421,7 +445,7 @@ const Hero = () => {
             backgroundClip: "text",
           }}
         >
-          Individuell und überzeugend auf deine Wünsche angepasst
+          {t.additionalText}
         </p>
       </div>
     </div>

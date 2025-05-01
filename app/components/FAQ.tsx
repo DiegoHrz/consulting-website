@@ -1,15 +1,20 @@
 "use client";
 import Wrapper from "../hoc/Wrapper";
+import { useLanguageStore } from "../store/useLanguageStore";
 import AccordionElement from "./AccordionElement";
 import Title from "./customTags/Title";
 
 const FAQ = () => {
+  const { lang } = useLanguageStore();
   return (
     <div className="flex flex-col gap-16" id="faq">
       <div className="flex flex-col gap-[24px]">
         <Title
-          text="Die meistgestellten Fragen unserer Kunden
-"
+          text={
+            lang === "de"
+              ? "Die meistgestellten Fragen unserer Kunden"
+              : "The most frequently asked questions from our customers"
+          }
           additionalTitle="faq"
           additionalClasses="text-center"
         />
@@ -19,7 +24,7 @@ const FAQ = () => {
       </h1> */}
         {/* any text */}
       </div>
-      <div className="rounded-lg " >
+      <div className="rounded-lg ">
         <AccordionElement />
       </div>
     </div>

@@ -1,9 +1,38 @@
 "use client";
 
 import Wrapper from "@/app/hoc/Wrapper";
+import { useLanguageStore } from "@/app/store/useLanguageStore";
 import { GiLaurelCrown } from "react-icons/gi";
 
 const Recommendation6: React.FC = () => {
+  const { lang } = useLanguageStore();
+
+  const recommendationText = {
+    de: {
+      name: "marcel köppert",
+      position: "Gründer",
+      role: "Hausmeister und Terrassenreinigungsservice",
+      text: {
+        part1:
+          "“Wir hatten eine gute Zusammenarbeit, du konntest mir bei vielen offenen Fragen helfen.",
+        highlight: "Außerdem warst du immer erreichbar und ich konnte sehr viele positive Erfahrungen sammeln",
+        part2: ", was die Planung einer Unternehmensgründung angeht, wie z.B. Erstellen eines Businessplans. Erstellen eines Businessplans. Und ich finde es sehr gut, dass man bis zum Beginn der Firma begleitet wird.”",
+      },
+    },
+    en: {
+      name: "marcel köppert",
+      position: "Founder",
+      role: "Caretaker and patio cleaning service",
+      text: {
+        part1: "“We had a good collaboration, you were able to help me with many questions.",
+        highlight: "You were also always available and I was able to gain many positive experiences.",
+        part2: ", regarding the planning of starting a business, such as creating a business plan. And I think it's very good that you are supported right up until the start of the company.“",
+      },
+    },
+  };
+
+  const t = recommendationText[lang];
+
   return (
     <div className="flex w-full flex-col-reverse  md:justify-center  md:flex-row-reverse  overflow-visible md:mb-0 md:h-fit h-full gap-10 md:gap-6 p-0 md:p-10 lg:p-0">
       <div className="lg:w-2/3">
@@ -32,30 +61,28 @@ const Recommendation6: React.FC = () => {
                 marcel köppert
               </span>
               <span className="mx-1"> - </span>
-              <span className="text-sm font-vollkorn">Gründer</span>
+              <span className="text-sm font-vollkorn">{t.position}</span>
             </div>
           </div>
         </div>
         <div className="flex gap-3 my-2 lg:pl-20 w-full pb-1 sm:pt-0">
           <div className="flex items-center gap-1 rounded-2xl bg-[#DCE5F0] text-[#0B66C2] font-semibold py-1 px-3 w-fit lg:ml-auto">
             <GiLaurelCrown size={20} />
-            <p className="text-xs">Hausmeister und Terrassenreinigungsservice </p>
+            <p className="text-xs">
+              {t.role}{" "}
+            </p>
           </div>
           {/* <p className=" rounded-2xl bg-[#FDE3B9] text-[#925908] font-semibold py-1 px-3 w-fit text-xs">
             Top Business{" "}
           </p> */}
         </div>
         <p className="lg:pl-20 font-vollkorn text-[#808080] pt-4 text-justify">
-          “Wir hatten eine gute Zusammenarbeit, du konntest mir bei vielen
-          offenen Fragen helfen.
+          {t.text.part1}
           <span className="md:text-xl text-anna-brown font-cabin_sans ">
             {" "}
-            Außerdem warst du immer erreichbar und ich konnte sehr viele
-            positive Erfahrungen sammeln
+            {t.text.highlight}
           </span>
-          , was die Planung einer Unternehmensgründung angeht, wie z.B.
-          Erstellen eines Businessplans. Erstellen eines Businessplans. Und ich
-          finde es sehr gut, dass man bis zum Beginn der Firma begleitet wird.”
+          {t.text.part2}
         </p>
         {/* <div className="w-full  animate-fade-subtitle pt-6 lg:pr-auto lg:text-right flex lg:justify-end">
           <a
