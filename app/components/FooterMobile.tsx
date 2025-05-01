@@ -1,10 +1,36 @@
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { useFAQNavigation } from "../hooks/useFAQNavigation";
+import { useLanguageStore } from "../store/useLanguageStore";
 
 const FooterMobile: React.FC = () => {
-  
   const { handleFAQClick } = useFAQNavigation();
+  const { lang } = useLanguageStore();
+  const footerMobileTexts = {
+    de: {
+      title_one: "Unternehmen",
+      title_one_subtitle_two: "Über uns",
+      title_one_subtitle_three: "Referenzen",
+      title_two: "Leistungen",
+      title_two_subtitle_one: "Gründungszuschuss",
+      title_two_subtitle_two: "Businessplan",
+      title_two_subtitle_three: "Finanzierung",
+      title_two_subtitle_four: "Buchhaltung",
+      title_three: "Kontakt",
+    },
+    en: {
+      title_one: "Company",
+      title_one_subtitle_two: "About",
+      title_one_subtitle_three: "References",
+      title_two: "Services",
+      title_two_subtitle_one: "Start-up Grant",
+      title_two_subtitle_two: "Business Plan",
+      title_two_subtitle_three: "Financing",
+      title_two_subtitle_four: "Accounting",
+      title_three: "Contact",
+    },
+  };
+  const t = footerMobileTexts[lang];
 
   return (
     <div className="md:hidden justify-center flex flex-col gap-10  w-full max-w-7xl mx-auto sm:px-16 pt-10 px-10">
@@ -13,7 +39,7 @@ const FooterMobile: React.FC = () => {
         <div className="flex flex-col gap-3 w-1/2 ">
           <div className="flex flex-col text-left gap-3">
             <p className="text-white text-xl border-b border-gray-200 pb-1">
-              Unternehmen
+              {t.title_one}
             </p>
             <Link href="/">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
@@ -22,7 +48,7 @@ const FooterMobile: React.FC = () => {
             </Link>
             <Link href="/uber-uns">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                Über uns
+                {t.title_one_subtitle_two}
               </p>
             </Link>
             {/* <Link href="/leistungen">
@@ -32,7 +58,7 @@ const FooterMobile: React.FC = () => {
               </Link> */}
             <Link href="/referenzen">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                Referenzen
+                {t.title_one_subtitle_three}
               </p>
             </Link>
             <Link href="/" onClick={handleFAQClick}>
@@ -48,26 +74,26 @@ const FooterMobile: React.FC = () => {
         <div className="flex flex-col  w-1/2">
           <div className="flex flex-col text-left gap-3">
             <p className="text-white text-xl border-b border-gray-200 pb-1">
-              Leistungen
+              {t.title_two}
             </p>
             <Link href="/leistungen/grundungszuschuss">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                Gründungszuschuss
+                {t.title_two_subtitle_one}
               </p>
             </Link>
             <Link href="/leistungen/businessplan">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                Businessplan
+                {t.title_two_subtitle_two}
               </p>
             </Link>
             <Link href="/leistungen/finanzierung">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                Finanzierung
+                {t.title_two_subtitle_three}
               </p>
             </Link>
             <Link href="/leistungen/buchhaltung">
               <p className="text-anna-gray-light hover:text-black transition-all duration-500 text-sm">
-                Buchhaltung
+                {t.title_two_subtitle_four}
               </p>
             </Link>
             <Link href="/leistungen/websites-marketing">
@@ -90,9 +116,9 @@ const FooterMobile: React.FC = () => {
         <div className=" flex flex-col gap-3 w-1/2">
           <div className="flex flex-col text-left gap-3">
             <p className="text-white text-xl border-b border-gray-200 pb-1">
-            <Link href="/kontakt" className="">
-              Kontakt
-            </Link>
+              <Link href="/kontakt" className="">
+                {t.title_three}
+              </Link>
             </p>
             <a
               href="mailto:info@as-vision-partners.com?subject=Kontaktinformationen&body=Hallo,%20ich%20würde%20gerne%20mit%20Ihnen%20zusammenarbeiten%20"
