@@ -13,7 +13,7 @@ import { useLanguageStore } from "./store/useLanguageStore";
 export default function Home() {
   const pitchTexts={
     de:{
-      first_title:'Dein Business. Deine Vision. Unsere Unterstützung',
+      first_title:'Dein Business. Deine Vision. Unsere Unterstützung.',
       first_text:"Du willst dich selbstständig machen oder dein bestehendes Business aufs nächste Level bringen? Bei AS Vision Partners bekommst du die Unterstützung, die du wirklich brauchst – individuell, praxisnah und auf Augenhöhe. Wir helfen dir, deine Ideen zu strukturieren, deine Marke klar zu positionieren und den Grundstein für nachhaltigen Erfolg zu legen – egal ob du ganz am Anfang stehst oder schon mittendrin bist.",
       first_button:"Buchung",
       second_title:'Alles, was du für deine Gründung brauchst – an einem Ort.',
@@ -21,11 +21,11 @@ export default function Home() {
       second_button:"Buchung",
     },
     en:{
-      first_title:'Your Business. Your Vision. Our Support',
-      first_text:"Do you want to start your own business or take your existing business to the next level? At AS Vision Partners, you get the support you really need – personalized, practical, and on an equal footing. We help you structure your ideas, clearly position your brand, and lay the foundation for sustainable success – whether you're just starting out or already in the thick of it.",
+      first_title:'Your Business. Your Vision. Our Support.',
+      first_text:"Do you want to start your own business or take your existing business to the next level? At AS Vision Partners, you get the support you really need – personalized, practical, and at eye level. We help you structure your ideas, clearly position your brand, and lay the foundation for sustainable success – whether you're just starting out or in the middle of it.",
       first_button:"Booking",
       second_title:'Everything you need for your startup – in one place.',
-      second_text:"From applying for a start-up grant and a professional business plan to finding the right financing – we'll guide you through every step of your startup. And we'll be there for you even afterward: with solutions for accounting, website, marketing, and strategic growth. You flexibly choose the services you need – and we'll provide you with clarity, structure, and real implementation power.",
+      second_text:"From applying for a start-up grant and a professional business plan to finding the right financing – we'll guide you through every step of your startup. And we'll be there for you even afterwards: with solutions for accounting, website, marketing, and strategic growth. You flexibly choose the services you need – and we'll provide you with clarity, structure, and real implementation power.",
       second_button:"Booking",
     },
   }

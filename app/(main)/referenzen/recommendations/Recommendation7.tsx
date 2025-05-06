@@ -13,9 +13,9 @@ const Recommendation7: React.FC = () => {
       position: "Gründer",
       role: "Ergotherapeut",
       text: {
-        part1: "“Anna war mir eine große Stütze bei der Erstellung des Business- und des Finanzplans und hat mir darüber hinaus ein sehr hilfreiches Buchhaltungs-Coaching gegeben.",
+        part1: "Anna war mir eine große Stütze bei der Erstellung des Business- und des Finanzplans und hat mir darüber hinaus ein sehr hilfreiches Buchhaltungs-Coaching gegeben.",
         highlight: "",
-        part2: "Ich bin sehr dankbar und glücklich, dass sie mir auch weiterhin für Fragen zur Verfügung steht und sie mir die Schritte in die Selbstständigkeit derart erleichtert hat.”",
+        part2: "Ich bin sehr dankbar und glücklich, dass sie mir auch weiterhin für Fragen zur Verfügung steht und sie mir die Schritte in die Selbstständigkeit derart erleichtert hat.",
       },
     },
     en: {
@@ -23,9 +23,9 @@ const Recommendation7: React.FC = () => {
       position: "Founder",
       role: "Occupational therapist",
       text: {
-        part1: "“Anna was a great support in creating the business and financial plan and also gave me very helpful accounting coaching.",
+        part1: "Anna was a great support in creating the business and financial plan and also gave me very helpful accounting coaching.",
         highlight: "",
-        part2: "I am very grateful and happy that she continues to be available for questions and has made the steps to self-employment so much easier for me.”",
+        part2: "I am very grateful and happy that she continues to be available for questions and has made the steps to self-employment so much easier for me.",
       },
     },
   };

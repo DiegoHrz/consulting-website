@@ -86,8 +86,8 @@ const About = () => {
       quote: "Daily we support numerous entrepreneurs across Germany",
       second_title: "About Us",
       lower_second_title: "AS Vision Partners",
-      second_title_text: "Business consulting for startups and established companies",
-      box_text_first: "As a strategic network of closely connected partners, we have made it our mission to support founders, startups and self-employed individuals in realizing their visions and turning their dreams into reality.",
+      second_title_text: "Business consulting for start-ups and established companies",
+      box_text_first: "As a strategic network of closely connected partners, we have made it our mission to support founders, start-ups and self-employed individuals in realizing their visions and turning their dreams into reality.",
       box_text_second: "Thanks to our remote-first approach, we operate flexibly from various locations, combining innovation, strategy and personal consulting - always with a clear focus on your individual needs.",
       mission_title: "Our Mission",
       mission_text: "We accompany people on their path to self-employment and help them turn their professional visions into reality. With personal advice, professional expertise and individual solutions, we offer our customers the support they need for a successful future.",
@@ -106,7 +106,7 @@ const About = () => {
       founder_title: "Meet the Founder - Anna Schenk",
       founder_position: "Founder",
       founder_first_paragraph: "With a degree in business administration specializing in finance, I've acquired solid expertise that I've been successfully applying as an independent consultant since 2023. My mission is to help people turn their calling into a career - creating a daily life that doesn't feel like work, but like fulfilling a dream.",
-      founder_second_paragraph: "Time spent in the USA and Peru has broadened my worldview. I've not only gained new perspectives but also developed intercultural competencies - a valuable advantage when supporting businesses with international orientation. Additionally, I speak several languages including German, English and Spanish, allowing me to cater to a diverse clientele.",
+      founder_second_paragraph: "Time spent in the USA and Peru has broadened my worldview. I've not only gained new perspectives but also developed intercultural competencies - a valuable advantage when supporting businesses with international orientation. Additionally, I speak several languages including German, English and Spanish, allowing me to work with a diverse clientele.",
       founder_points_title: "Values that drive me:",
       founder_points_one: "Freedom through self-employment:",
       founder_points_one_text: "My goal is to give people the opportunity to shape their lives autonomously by successfully implementing their own business. To me, freedom means having control over one's professional and personal future.",
@@ -1100,7 +1100,8 @@ const About = () => {
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
                     >
-                      LinkedIn Profil
+                      {lang==='de'?'LinkedIn Profil':'LinkedIn Profile'}
+                      
                       <svg
                         className="w-4 h-4 ml-1"
                         fill="none"

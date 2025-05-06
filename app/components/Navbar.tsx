@@ -325,7 +325,7 @@ const Navbar = () => {
         >
           <div className="bg-transparent backdrop-blur-3xl text-anna-4 text-center   text-xs  font-light w-full">
             <div className="bg-anna-blue/40 h-full w-full p-1 text-anna-burgundy">
-              <p className="text-white">Wo eine Idee ist, ist auch ein Weg</p>
+              <p className="text-white">{lang==='de'?'Wo eine Idee ist, ist auch ein Weg':"Where there's an idea, there's a way"}</p>
             </div>
           </div>
           <div
@@ -439,7 +439,7 @@ const Navbar = () => {
                 }}
               >
                 <div className="flex items-center  gap-2 cursor-pointer">
-                  <div className="w-8 h-6 relative ">
+                  <div className="w-7 h-5 relative ">
                     <img
                       src={
                         lang === "de" ? "/flags/germany.png" : "/flags/usa.avif"
@@ -451,7 +451,7 @@ const Navbar = () => {
                   <IoIosArrowDown className="text-xs" />
                 </div>
                 {isOpenLanguageMenu && (
-                  <div className="absolute left-1/2 top-6 -translate-x-1/2 w-28 h-32 bg-white shadow-lg  hidden group-hover:block group-checked:hidden z-50">
+                  <div className="absolute left-1/2 top-5 -translate-x-1/2 w-28 h-32 bg-white shadow-lg  hidden group-hover:block group-checked:hidden z-50">
                     <button
                       className={`w-full hover:bg-gray-400 duration-500 p-2  h-1/2 flex justify-center items-center ${
                         lang === "en" && "bg-gray-100 "
@@ -461,7 +461,7 @@ const Navbar = () => {
                         // setIsOpenLanguageMenu(false);
                       }}
                     >
-                      <div className="flex items-center   w-8 h-6 text-sm">
+                      <div className="flex items-center   w-7 h-5 text-sm">
                         <img
                           src="/flags/usa.avif"
                           alt="English"
@@ -479,7 +479,7 @@ const Navbar = () => {
                         // setIsOpenLanguageMenu(false);
                       }}
                     >
-                      <div className="flex items-center   w-8 h-6 text-sm">
+                      <div className="flex items-center   w-7 h-5 text-sm">
                         <img
                           src="/flags/germany.png"
                           alt="English"

@@ -39,7 +39,7 @@ const AppointmentBanner: React.FC<AppointmentBannerProps> = ({
             <button
               className={`rounded-3xl ${buttonColor}  text-anna-white font-medium font-cabin px-4 py-2 sm:px-5 text-sm sm:text-base hover:bg-red-700 duration-700 border-anna-white`}
             >
-              {lang==='de'?'Vereinbare einen Termin':'Schedule an appointment.'}
+              {lang==='de'?'Vereinbare einen Termin':'Schedule an appointment'}
             </button>
           </Link>
           <Link href="/kontakt">

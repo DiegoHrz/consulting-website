@@ -50,7 +50,7 @@ const RoadmapContainer = () => {
         },
         {
           id: "2",
-          title: "organizational",
+          title: "organizational steps",
           description: "Planning and coordination of details",
           color: "#89ACA6",
         },
@@ -62,7 +62,7 @@ const RoadmapContainer = () => {
         },
         {
           id: "4",
-          title: "aftercare",
+          title: "longterm mentoring",
           description: "Continuous support",
           color: "#125369",
         },

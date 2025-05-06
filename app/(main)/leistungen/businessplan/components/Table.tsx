@@ -18,7 +18,7 @@ export const Table: React.FC = () => {
       third_grid_text:"erfolgreich beim Gründungszuschuss",
       fourth_grid_headline:"Betreuung bei Finanzierungsmöglichkeiten in ",
       fourth_grid_text:"ganz Deutschland",
-      title_text:"Dein Business. Deine Vision. Unsere Unterstützung",
+      title_text:"Dein Business. Deine Vision. Unsere Unterstützung.",
       text:"Du willst dich selbstständig machen oder dein bestehendes Business aufs nächste Level bringen? Bei AS Vision Partners bekommst du die Unterstützung, die du wirklich brauchst – individuell, praxisnah und auf Augenhöhe. Wir helfen dir, deine Ideen zu strukturieren, deine Marke klar zu positionieren und den Grundstein für nachhaltigen Erfolg zu legen – egal ob du ganz am Anfang stehst oder schon mittendrin bist.",
       button:"Kontakt",
     },
@@ -30,8 +30,8 @@ export const Table: React.FC = () => {
       third_grid_text:"successful with start-up grant",
       fourth_grid_headline:"Support with financing options in ",
       fourth_grid_text:"all of Germany",
-      title_text:"Your business. Your vision. Our support",
-      text:"Do you want to start your own business or take your existing business to the next level? At AS Vision Partners, you get the support you really need – personalized, practical, and at eye level. We help you structure your ideas, clearly position your brand, and lay the foundation for sustainable success – whether you're just starting out or already in the thick of it.",
+      title_text:"Your business. Your vision. Our support.",
+      text:"Do you want to start your own business or take your existing business to the next level? At AS Vision Partners, you get the support you really need – personalized, practical, and at eye level. We help you structure your ideas, clearly position your brand, and lay the foundation for sustainable success – whether you're just starting out or in the middle of it.",
       button:"Contact",
     }
   }

@@ -29,7 +29,7 @@ const BusinessPlans = () => {
       items: [
         {
           title: "100% success rate",
-          description: "Every single application for start-up funding from our customers has been approved."
+          description: "Every single application for the start-up grant from our customers has been approved."
         },
         {
           title: "Free consultation",

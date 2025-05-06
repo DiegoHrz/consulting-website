@@ -14,9 +14,9 @@ const Recommendation6: React.FC = () => {
       role: "Hausmeister und Terrassenreinigungsservice",
       text: {
         part1:
-          "“Wir hatten eine gute Zusammenarbeit, du konntest mir bei vielen offenen Fragen helfen.",
+          "Wir hatten eine gute Zusammenarbeit, du konntest mir bei vielen offenen Fragen helfen.",
         highlight: "Außerdem warst du immer erreichbar und ich konnte sehr viele positive Erfahrungen sammeln",
-        part2: ", was die Planung einer Unternehmensgründung angeht, wie z.B. Erstellen eines Businessplans. Erstellen eines Businessplans. Und ich finde es sehr gut, dass man bis zum Beginn der Firma begleitet wird.”",
+        part2: ", was die Planung einer Unternehmensgründung angeht, wie z.B. Erstellen eines Businessplans. Erstellen eines Businessplans. Und ich finde es sehr gut, dass man bis zum Beginn der Firma begleitet wird.",
       },
     },
     en: {
@@ -24,9 +24,9 @@ const Recommendation6: React.FC = () => {
       position: "Founder",
       role: "Caretaker and patio cleaning service",
       text: {
-        part1: "“We had a good collaboration, you were able to help me with many questions.",
-        highlight: "You were also always available and I was able to gain many positive experiences.",
-        part2: ", regarding the planning of starting a business, such as creating a business plan. And I think it's very good that you are supported right up until the start of the company.“",
+        part1: "We had a good collaboration, you were able to help me with many questions.",
+        highlight: "You were also always available and I was able to gain many positive experiences",
+        part2: ", regarding the planning of starting a business, such as creating a business plan. And I think it's very good that you are supported right up until the start of the company.",
       },
     },
   };

@@ -89,7 +89,7 @@ const Website = () => {
   return (
     <div className="">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 rounded-xl p-8 mb-12 text-white">
+      <div className="bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-xl p-8 mb-12 text-white">
         <h6 className="text-lg font-semibold mb-2">
           {t.services}
         </h6>

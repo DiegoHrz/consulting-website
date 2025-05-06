@@ -13,8 +13,8 @@ const Recommendation5: React.FC = () => {
       position: "Gründer",
       role: "Inhaber Edelmetallhandel",
       text: {
-        part1: "“Anna hat mich fachlich sehr gut mit meinem Businessplan betreut. Bei Fragen war sie stets hilfsbereit. Insbesondere im Finanzteil hat sie mir sehr geholfen, mich auf das Bankengespräch vorzubereiten.",
-        highlight: "Ich bin sehr zufrieden und die Finanzierung ist durchgegangen.”",
+        part1: "Anna hat mich fachlich sehr gut mit meinem Businessplan betreut. Bei Fragen war sie stets hilfsbereit. Insbesondere im Finanzteil hat sie mir sehr geholfen, mich auf das Bankengespräch vorzubereiten.",
+        highlight: "Ich bin sehr zufrieden und die Finanzierung ist durchgegangen.",
       }
     },
     en: {
@@ -22,8 +22,8 @@ const Recommendation5: React.FC = () => {
       position: "Founder",
       role: "Owner Precious Metals Trade",
       text: {
-        part1: "“Anna provided me with excellent professional support for my business plan. She was always helpful with any questions. She particularly helped me a lot with the financial part to prepare for the bank meeting.",
-        highlight: "I am very satisfied and the financing went through.”",
+        part1: "Anna provided me with excellent professional support for my business plan. She was always helpful with any questions. She particularly helped me a lot with the financial part to prepare for the bank meeting.",
+        highlight: "I am very satisfied and the financing went through.",
       }
     }
   };

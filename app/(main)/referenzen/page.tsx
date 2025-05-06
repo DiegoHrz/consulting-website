@@ -1,3 +1,4 @@
+'use client'
 import HeroSecondary from "@/app/components/HeroSecondary";
 
 
@@ -11,18 +12,20 @@ import Recommendation6 from "./recommendations/Recommendation6";
 import Recommendation7 from "./recommendations/Recommendation7";
 import Recommendation8 from "./recommendations/Recommendation8";
 import Recommendation9 from "./recommendations/Recommendation9";
+import { useLanguageStore } from "@/app/store/useLanguageStore";
 
 const Referenzen = () => {
+
+  const {lang} =useLanguageStore()
+
   return (
     <div className="pb-10 sm:pb-24">
       <div className="h-screen w-full m-auto text-black  bg-anna-turquoise  ">
         <HeroSecondary
           image="/pages-imgs/referenzen.avif"
           header="our customers"
-          title="Referenzen"
-          text="Wir sind eine Beratungsfirma, die Unternehmen mit
-      maßgeschneiderten Lösungen unterstützt. Unser Ziel ist es,
-      gemeinsam Ihre Vision erfolgreich umzusetzen."
+          title={lang==='de'?'Referenzen':'Opinions'}
+          text=""
         />
       </div>
       {/* <div>
