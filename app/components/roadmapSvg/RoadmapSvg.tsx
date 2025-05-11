@@ -65,7 +65,7 @@ const RoadmapPath: React.FC = () => {
       x: 750,
       y: 250,
       text_de: "nachbetreuung",
-      text_en:"longterm mentoring",
+      text_en:"long-term mentoring",
       description: "Kontinuierliche Unterstützung",
       pinDirection: "down",
       color: "#125369",

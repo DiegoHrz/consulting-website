@@ -38,7 +38,7 @@ const Services: React.FC = ({}) => {
       fourth_service: "Accounting",
       fourth_service_description: "Simple, understandable, and efficient – ​​we'll show you how to keep your accounting under control.",
       fifth_service: "Websites and Marketing",
-      fifth_service_description: "Become visible online – with a clear Website and targeted marketing strategies for your success.",
+      fifth_service_description: "Become visible online – with a clear website and targeted marketing strategies for your success.",
     }
   }
 

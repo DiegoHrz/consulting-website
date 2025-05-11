@@ -16,7 +16,7 @@ const Recommendation1: React.FC = () => {
       text: {
         part1: "Ich habe Frau Schenk bei der Beantragung des Gründungszuschusses bei der Bundesagentur für Arbeit kennengelernt. Die Arbeit mit Frau Schenk war stets professionell, zuverlässig und freundlich. Sie hat mich bei jeder Phase meines Antrags unterstützt, sei es fachlich als auch emotional/psychisch. Da die Antragsphase sehr nervenaufreibend ist, hat mich gerade das Zwischenmenschliche bei Frau Schenk überzeugt. Am Ende haben wir Erfolg gehabt,",
         highlight: "sodass ich den Gründungszuschuss, nach gemeinsamer harter Arbeit, auch bewilligt und ausgezahlt bekommen habe.",
-        part2: "Ich würde Frau Schenk jeder Zeit wieder empfehlen. Wie bereits erwähnt, ist sie nicht nur fachlich kompetent, sondern auch in der Zusammenarbeit sehr hilfsbereit, geduldig und empathisch. Vielen Dank nochmal!."
+        part2: "Ich würde Frau Schenk jeder Zeit wieder empfehlen. Wie bereits erwähnt, ist sie nicht nur fachlich kompetent, sondern auch in der Zusammenarbeit sehr hilfsbereit, geduldig und empathisch. Vielen Dank nochmal!"
       },
       website: "WEBSITE"
     },
@@ -27,7 +27,7 @@ const Recommendation1: React.FC = () => {
       text: {
         part1: "I met Ms. Schenk when applying for the start-up grant at the Federal Employment Agency. Working with Ms. Schenk was always professional, reliable and friendly. She supported me in every phase of my application, both professionally and emotionally/psychologically. Since the application phase is very nerve-wracking, it was particularly the interpersonal aspect with Ms. Schenk that convinced me. In the end, we were successful,",
         highlight: "so that I received the start-up grant after our hard work together.",
-        part2: "I would recommend Ms. Schenk again at any time. As already mentioned, she is not only professionally competent, but also very helpful, patient and empathetic in her cooperation. Thank you again!."
+        part2: "I would recommend Ms. Schenk again at any time. As already mentioned, she is not only professionally competent, but also very helpful, patient and empathetic in her cooperation. Thank you again!"
       },
       website: "WEBSITE"
     }

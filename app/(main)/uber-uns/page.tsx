@@ -186,56 +186,94 @@ const About = () => {
       </div>
       {/* <Placeholder text="Uber uns" /> */}
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <motion.div
+                              className=""
+                              initial={{ opacity: 0, y: -15 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{
+                                duration: 1,
+                                delay: 0.8,
+                                ease: "easeOut",
+                              }}
+                              viewport={{ once: true, amount: 0.1 }}
+                            >
+
         <p className="text-center text-sm uppercase text-gray-500 tracking-wide">
           {t.quote}
         </p>
+                            </motion.div>
         <div className="mt-6 flex flex-row flex-wrap justify-center">
-          <div className="col-span-1 flex justify-center relative w-36 h-28 mx-5 ">
-            <span
-              style={{
-                boxSizing: "border-box",
-                display: "block",
-                overflow: "hidden",
-                width: "initial",
-                height: "initial",
-                background: "none",
-                opacity: 1,
-                border: 0,
-                margin: 0,
-                padding: 0,
-                position: "absolute",
-                top: 0,
-                left: 0,
-                bottom: 0,
-                right: 0,
-              }}
-            >
-              <img
-                src="/brands/brand1.avif"
-                alt=""
+          <motion.div
+            className="col-span-1 flex justify-center relative w-36 h-28 mx-5 "
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            <div>
+              <span
                 style={{
+                  boxSizing: "border-box",
+                  display: "block",
+                  overflow: "hidden",
+                  width: "initial",
+                  height: "initial",
+                  background: "none",
+                  opacity: 1,
+                  border: 0,
+                  margin: 0,
+                  padding: 0,
                   position: "absolute",
                   top: 0,
                   left: 0,
                   bottom: 0,
                   right: 0,
-                  boxSizing: "border-box",
-                  padding: 0,
-                  border: "none",
-                  margin: "auto",
-                  display: "block",
-                  width: 0,
-                  height: 0,
-                  minWidth: "100%",
-                  maxWidth: "100%",
-                  minHeight: "100%",
-                  maxHeight: "100%",
-                  objectFit: "contain",
                 }}
-              />
-            </span>
-          </div>
-          <div className="col-span-1 flex justify-center relative w-36 h-28 mx-5">
+              >
+                <img
+                  src="/brands/brand1.avif"
+                  alt=""
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    bottom: 0,
+                    right: 0,
+                    boxSizing: "border-box",
+                    padding: 0,
+                    border: "none",
+                    margin: "auto",
+                    display: "block",
+                    width: 0,
+                    height: 0,
+                    minWidth: "100%",
+                    maxWidth: "100%",
+                    minHeight: "100%",
+                    maxHeight: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+              </span>
+            </div>
+          </motion.div>
+          <motion.div
+            className="col-span-1 flex justify-center relative w-36 h-28 mx-5"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true, amount: 0.15 }}
+          >
+
+          
+          <div >
             <span
               style={{
                 boxSizing: "border-box",
@@ -280,7 +318,21 @@ const About = () => {
               />
             </span>
           </div>
-          <div className="col-span-1 flex justify-center relative w-36 h-28 mx-5">
+          </motion.div>
+          <motion.div
+            className="col-span-1 flex justify-center relative w-36 h-28 mx-5"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0.8,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true, amount: 0.15 }}
+          >
+
+          
+          <div >
             <span
               style={{
                 boxSizing: "border-box",
@@ -325,7 +377,21 @@ const About = () => {
               />
             </span>
           </div>
-          <div className="col-span-1 flex justify-center relative w-36 h-28 mx-5">
+          </motion.div>
+          <motion.div
+             className="col-span-1 flex justify-center relative w-36 h-28 mx-5"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true, amount: 0.15 }}
+          >
+
+          
+          <div>
             <span
               style={{
                 boxSizing: "border-box",
@@ -370,7 +436,21 @@ const About = () => {
               />
             </span>
           </div>
-          <div className="col-span-1 flex justify-center relative w-36 h-28 mx-5">
+          </motion.div>
+          <motion.div
+            className="col-span-1 flex justify-center relative w-36 h-28 mx-5"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true, amount: 0.1 }}
+          >
+
+          
+          <div >
             <span
               style={{
                 boxSizing: "border-box",
@@ -415,6 +495,7 @@ const About = () => {
               />
             </span>
           </div>
+          </motion.div>
         </div>
       </div>
 
@@ -1166,7 +1247,7 @@ const About = () => {
                               whileInView={{ opacity: 1, y: 0 }}
                               transition={{
                                 duration: 1,
-                                delay: 0.3,
+                                delay: 1.3,
                                 ease: "easeOut",
                               }}
                               viewport={{ once: true, amount: 0.1 }}
@@ -1341,7 +1422,7 @@ const About = () => {
                               whileInView={{ opacity: 1, y: 0 }}
                               transition={{
                                 duration: 1,
-                                delay: 0.3,
+                                delay: 1.3,
                                 ease: "easeOut",
                               }}
                               viewport={{ once: true, amount: 0.1 }}
@@ -1421,21 +1502,20 @@ const About = () => {
               {t.cooperation_title}
             </h3>
             <motion.div
-                      className=""
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 1.2,
-                        delay: 0.5,
-                        ease: "easeOut",
-                      }}
-                      viewport={{ once: true, amount: 0.2 }}
-                    >
-
-            <p className="text-justify md:text-center my-10 max-w-4xl mx-auto">
-              {t.cooperation_text}
-            </p>
-                    </motion.div>
+              className=""
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.2,
+                delay: 0.5,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <p className="text-justify md:text-center my-10 max-w-4xl mx-auto">
+                {t.cooperation_text}
+              </p>
+            </motion.div>
 
             <div className="grid md:grid-cols-2 gap-10 md:gap-20 max-w-7xl mx-auto">
               <motion.div
@@ -1489,7 +1569,7 @@ const About = () => {
                 }}
                 viewport={{ once: true, amount: 0.1 }}
               >
-                <div >
+                <div>
                   <a
                     href="https://starthilfe-marketing.de/"
                     target="_blank"

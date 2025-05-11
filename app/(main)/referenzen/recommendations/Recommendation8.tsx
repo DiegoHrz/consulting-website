@@ -15,7 +15,7 @@ const Recommendation8: React.FC = () => {
       text: {
         part1: "Ich bin unglaublich dankbar, Anna als Gründungsberaterin während des gesamten Prozesses zum Gründungszuschuss an meiner Seite gehabt zu haben. Anna ist super zuverlässig, mega motiviert, kennt sich extrem gut aus und bleibt dran bis du deinen Zuschuss erhältst, du kannst dich immer auf sie verlassen. Sie gibt dir in wirklich allen Bereichen und sogar darüber hinaus wertvolle Tipps und du bekommst von ihr außergewöhnlich schnelle Antworten auf all deine Fragen.",
         highlight: "Sie unterstützt dich einfach vollkommen. Ich habe mich mit ihr jederzeit sehr wohl gefühlt und ohne sie wäre ich schier verzweifelt.",
-        part2: "Lass dir die Gelegenheit nicht entgehen, sie für einen erfolgreichen Antrag an deiner Seite zu haben. Menschlich und fachlich einfach wunderbar!.",
+        part2: "Lass dir die Gelegenheit nicht entgehen, sie für einen erfolgreichen Antrag an deiner Seite zu haben. Menschlich und fachlich einfach wunderbar!",
       },
     },
     en: {
@@ -25,7 +25,7 @@ const Recommendation8: React.FC = () => {
       text: {
         part1: "I am incredibly grateful to have Anna as a startup consultant by my side throughout the entire startup grant process. Anna is super reliable, mega motivated, extremely knowledgeable and stays with you until you receive your grant, you can always count on her. She gives you valuable tips in absolutely all areas and even beyond, and you get exceptionally quick answers to all your questions.",
         highlight: "She simply supports you completely. I always felt very comfortable with her and without her I would have been utterly desperate.",
-        part2: "Don't miss the opportunity to have her by your side for a successful application. Simply wonderful, both personally and professionally!.",
+        part2: "Don't miss the opportunity to have her by your side for a successful application. Simply wonderful, both personally and professionally!",
       },
     },
   };

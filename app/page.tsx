@@ -22,7 +22,7 @@ export default function Home() {
     },
     en:{
       first_title:'Your Business. Your Vision. Our Support.',
-      first_text:"Do you want to start your own business or take your existing business to the next level? At AS Vision Partners, you get the support you really need – personalized, practical, and at eye level. We help you structure your ideas, clearly position your brand, and lay the foundation for sustainable success – whether you're just starting out or in the middle of it.",
+      first_text:"Do you want to start your own business or take your existing business to the next level? At AS Vision Partners, you get the support you really need – personalized, practical, and at eye level. We help you structure your ideas, clearly position your brand, and lay the foundation for sustainable success – whether you're just starting out or are in the middle of it.",
       first_button:"Booking",
       second_title:'Everything you need for your startup – in one place.',
       second_text:"From applying for a start-up grant and a professional business plan to finding the right financing – we'll guide you through every step of your startup. And we'll be there for you even afterwards: with solutions for accounting, website, marketing, and strategic growth. You flexibly choose the services you need – and we'll provide you with clarity, structure, and real implementation power.",

@@ -62,7 +62,7 @@ const RoadmapContainer = () => {
         },
         {
           id: "4",
-          title: "longterm mentoring",
+          title: "long-term mentoring",
           description: "Continuous support",
           color: "#125369",
         },
